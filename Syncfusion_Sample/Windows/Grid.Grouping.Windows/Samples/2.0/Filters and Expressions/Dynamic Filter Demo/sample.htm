@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2462334">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Dynamic Filter Demo</H1>
+<P>This sample showcases the new Dynamic Filter feature of the Grid Grouping 
+control. This filter implements a custom filter bar to be wired with the Grid 
+Grouping control by replacing the default filter bar. The existing filter bar 
+logic is extended to make the filter easy to use. This feature displays filtered results 
+as you type each
+character.</P>
+<P>Code to invoke the dynamic filter:</P>
+<PRE><FONT COLOR="#8d2e1c">        GridDynamicFilter filter = new GridDynamicFilter();</FONT>
+<FONT COLOR="#8d2e1c">        filter.WireGrid(gridGroupingControl1);</FONT>
+
+<FONT COLOR="#8d2e1c">        //To remove dynamic filter</FONT>
+<FONT COLOR="#8d2e1c">        filter.UnWireGrid(gridGroupingControl1);</FONT></PRE>
+<h3><FONT SIZE=4><B>Features</B></FONT></h3>
+    <p>The appearence of the Filter is classified into two based on its leagcay styles. 
+        If the LegacyStyle is disabled then the Dynamic Filter will be appeared as a 
+        Context Menu and the FilterDropDown buttons will be painted with images. Else 
+        the existing appearance as ListBox and normal dropdown button will be maintained 
+        in the Grid</p>
+    <p>Below is the FilterBar with Grid&#39;s Legacy Style (<b>Model.EnableLegacyStyle</b>) 
+        disabled.</p>
+<UL>
+	<LI><P>The <STRONG>Filter</STRONG> button in the filter bar displays a list of available compare operators in a 
+        context menu. The
+selected operator will then be associated with the value present in the filter-bar cell to form a filter string.</P>
+	</UL>
+
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="ExtendedFilterBar" ALIGN=BOTTOM  BORDER=0></P>
+<LI>&nbsp;<ul>
+    <li>The selected filter value willThe selected filter value will be remains selected in the menu and if the filter 
+        is applied in the Grid then then the applied filter value will be indicated with 
+        a new image </li>
+    </ul>
+<P ALIGN=CENTER><img src="images/sample1.png" NAME="graphics1" ALT="ExtendedFilterBar" ALIGN=BOTTOM  BORDER=0></P>
+    <p align="Left">
+        <b>Filter With LegacyStyles</b></p>
+    <p align="Left">
+        <img src="images/sample2.png" NAME="graphics2" ALT="ExtendedFilterBar" 
+            ALIGN=BOTTOM  BORDER=0></p>
+</BODY>
+</HTML>

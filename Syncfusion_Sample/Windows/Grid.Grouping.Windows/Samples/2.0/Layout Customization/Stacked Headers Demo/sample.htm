@@ -1,0 +1,92 @@
+﻿<html>
+<h1>Stacked Headers Demo</h1>
+
+<p>Essential Grid&#39;s grouping control provides built-in support for stacked multi-headers. </p>
+<p>This feature allows you to  create additional header rows that span across visible grid columns. You can group columns under each header row. It also supports 
+drag-and-drop operations for these header rows. Grouped columns will also be rearranged along with the header. </p>
+<p>This sample gives you step-by-step instructions on how to achieve this feature in your application. </p>
+<p>
+<p><ul><li>As a first step, select <strong>TableDescriptor -> StackedHeaderRows</strong> in the 
+	Properties window. This will open the <strong>GridStackedHeaderRowDescriptor</strong> 
+	collection editor.</li></ul></p>
+
+<div align=center><img src="images/sample1.png" alt="Stacked Multiheaders screenshot" title="Stacked Multiheaders" /></div>
+
+
+<p><ul><li>Click <strong>Add</strong>, to add a stacked header row and set the 
+	appearance properties for a new header row. Then select 
+	the <strong>Headers</strong> property. You will see the <strong>GridStackedHeaderDescriptor</strong> 
+	collection editor as shown in the image below.</li></ul></p>
+
+<div align=center><img src="images/sample2.png" alt="Stacked Multiheaders screenshot" title="Stacked Multiheaders" /></div>
+
+
+<p><ul><li> Click <strong>Add</strong>, to add a stacked header to this new header row. Change the 
+	header text to <em>Header</em> <em>One</em> and set the appearance properties as needed. Then select 
+	the
+	<strong>VisibleColumns</strong> property to open the <strong>GridStackedHeaderVisibleColumnDescriptor</strong> 
+	collection editor.</li></ul></p>
+
+<div align=center><img src="images/sample3.png" alt="Stacked Multiheaders screenshot" title="Stacked Multiheaders" /></div>
+
+
+<p><ul><li> The above editor can be used to specify the <strong>VisibleColumnsCollection</strong> for a 
+	stacked header. If the<strong> VisibleColumnsCollection</strong> of a stacked 
+	header 
+	is empty, then this header will be used for all columns. To add a column to 
+	this collection, click <strong>Add</strong> and set the <strong>Name</strong> 
+	property to <strong>OrderID</strong>. Likewise, add two more columns,
+	<strong>CustomerID</strong> and <strong>EmployeeID</strong>. <br><br>Now, the editor will look like the following.</li>
+</ul></p>
+
+<div align=center><img src="images/sample4.png" alt="Stacked Multiheaders screenshot" title="Stacked Multiheaders" /></div>
+
+
+<p><ul><li> Close the above editor window. Add three more stacked headers:
+	<strong>StackedHeader2</strong> 
+	with the columns order date, freight, and required date; <strong>StackedHeader3</strong> with 
+	the shipped date, ship via, and ship name; and 
+	<strong>StackedHeader4</strong> with the remaining columns. <br><br>Now the 
+	<strong>GridStackedHeaderDescriptor</strong> collection editor looks like 
+	this:</li>
+</ul></p>
+
+<div align=center><img src="images/sample5.png" alt="Stacked Multiheaders screenshot" title="Stacked Multiheaders" /></div>
+
+
+<p><ul><li> Close both the editor windows. <br><br>Now, the grid grouping control appears as 
+	given below. </li></ul></p>
+
+<div align=center><img src="images/sample6.png" alt="Stacked Multiheaders screenshot" title="Stacked Multiheaders" /></div>
+
+
+<p><ul><li>Notice that the extra headers are applied only to the top-level group 
+	and not to the child groups. To have these stacked headers also in the child 
+	groups, set <strong>ChildGroupOptions.ShowStackedHeaders </strong>to 
+	<em>true</em>, provided that <strong>ShowColumnHeaders</strong> is also set to 
+	<em>true</em>.</li></ul></p>
+
+<pre><code><font color="#8D2E1C">			this.gridGroupingControl1.ChildGroupOptions.ShowColumnHeaders = true;
+			this.gridGroupingControl1.ChildGroupOptions.ShowStackedHeaders = true;</font></code></pre>
+<br>
+<p>
+<p>
+<p>Here is an image showing the grid after setting the above property. Now the stacked
+	headers are also applied to 
+	child groups.</p>
+</p>
+
+<div align=center><img src="images/sample7.png" alt="Stacked Multiheaders screenshot" title="Stacked Multiheaders" /></div>
+
+<p>
+<ul>
+	<li>Now, run the sample to see the effect of the stacked-header rows. </li>
+</ul>
+<p>Given below is an image of the sample.</p>
+</p>
+
+<div align=center><img src="images/sample8.png" alt="Stacked Multiheaders screenshot" title="Stacked Multiheaders" /></div>
+
+</p>
+
+</html>

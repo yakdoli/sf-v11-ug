@@ -1,0 +1,106 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+.style2 {
+	margin-left: 80px;
+}
+</style>
+</head>
+
+<body>
+    <h1>
+        Chart Breaks</h1>
+    <p >
+        This sample demonstrates how breaks can be drawn in a chart when 
+		chart-point values differ greatly.</p>
+    <div align=center >
+        <img src="images/sample.png" alt="Chart Breaks Sample" title="" /></div>
+        <h3>
+        <strong>Features</strong></h3>
+    <p>
+        To enable breaks in a chart, the <b>MakeBreaks</b> property should be set to 
+		<em>true.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em></p>
+    <font color="#8D2E1C">
+        <pre><code>this.chartControl1.PrimaryYAxis.MakeBreaks = true;</code></pre>
+    </font>
+	
+    <h4 class="style1">
+        Breaks Mode</h4>
+    <p class="style1">
+        There are three possible modes in which breaks are set. They are:</p>
+    <ul class="style2">
+        <li><b>ChartBreaksMode.None</b><br />
+            If the breaks mode is set to <em>None</em>, then breaks are not used for the specific axis in the chart control.
+            <font color="#8D2E1C">
+        <pre><code>this.chartControl1.PrimaryYAxis.BreakRanges.BreaksMode = ChartBreaksMode.None;</code></pre>
+    </font>
+            </li>
+        <li><b>ChartBreaksMode.Manual</b><br />
+        If the breaks mode is set to <em>Manual</em>, the break range can be 
+		specified manually. The following methods are available to set breaks 
+		manually:
+        <font color="#8D2E1C"><pre><code>this.chartControl1.PrimaryYAxis.BreakRanges.BreaksMode = ChartBreaksMode.Manual;<br />
+<font color="#008000">//Clears all break ranges</font>
+this.chartControl1.PrimaryYAxis.BreakRanges.Clear();<font color="#008000">
+//Adds a break range</font> 
+this.chartControl1.PrimaryYAxis.BreakRanges.Union(new DoubleRange(500,600));<font color="#008000">
+//Removes a break range</font> 
+this.chartControl1.PrimaryYAxis.BreakRanges.Exclude(new DoubleRange(500,600));</code></pre></font></li>
+ <li><b>ChartBreaksMode.Auto</b><br />
+        In auto-mode, the break range will be computed automatically by the chart control itself, and the 
+ break amount
+        is used to specify the minimal relative difference between values.
+        <font color="#8D2E1C"><pre><code><font color="#008000">//Sets the mode to auto</font>
+this.chartControl1.PrimaryYAxis.BreakRanges.BreaksMode = ChartBreaksMode.Auto;<font color="#008000">
+//Sets the value of Break Amount</font> 
+this.chartControl1.PrimaryYAxis.BreakRanges.BreakAmount = 0.3;
+        </code></pre></font>
+            In auto-mode, only primary axes can be enabled with breaks, but this mode is not suitable 
+ for zooming 
+            and stacked charts.
+            </li>
+    </ul>
+    <h4 class="style1">Break-Line Settings</h4>
+    <p class="style1">There are various options available for customizing the appearance of a break line. They are discussed below.</p>
+    <ul class="style2"><li><b>Line Type</b><br />
+    	The type of line used in a break line can be customized. The types offered are: <b>Wave</b>, <b>Straight</b>, and <b>Randomize</b>.<font color="#8D2E1C"><pre><code>this.chartControl1.PrimaryYAxis.BreakInfo.LineType = ChartBreakLineType.Wave;</code></pre>
+    </font>
+    </li>
+    <li><b>Line Spacing</b><br />
+    Spacing of the break line is set using the <strong>LineSpacing</strong> property.
+        <font color="#8D2E1C">
+        <pre><code>this.chartControl1.PrimaryYAxis.BreakInfo.LineSpacing = 5;</code></pre>
+    </font>
+    </li>
+    <li><b>Line Color</b><br />
+    The border color of the break line is set using the <strong>LineColor</strong> property.
+        <font color="#8D2E1C">
+        <pre><code>this.chartControl1.PrimaryYAxis.BreakInfo.LineColor = Color.Black;</code></pre>
+    </font>
+    </li>
+    <li><b>Line Width</b><br />
+    The border width of the break line is set using the <strong>LineWidth</strong> property.
+        <font color="#8D2E1C">
+        <pre><code>this.chartControl1.PrimaryYAxis.BreakInfo.LineWidth = 1;</code></pre>
+    </font>
+    </li>
+    <li><b>Line Style</b><br />
+    The line style of the break line is set using the <strong>LineStyle</strong> property.
+        <font color="#8D2E1C">
+        <pre><code>this.chartControl1.PrimaryYAxis.BreakInfo.LineStyle = DashStyle.Dot;</code></pre>
+    </font>
+    </li>
+    <li><b>Spacing Color</b><br />
+    The color that fills the inside of the break line is set using the 
+	<strong>SpacingColor</strong> property.
+        <font color="#8D2E1C">
+        <pre><code>this.chartControl1.PrimaryYAxis.BreakInfo.SpacingColor = Color.White;</code></pre>
+    </font>
+    </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,129 @@
+﻿<html>
+<h1>Chart Labels Customization</h1>
+
+<p>This sample illustrates various customization options for chart axis labels.</p>
+
+<div align=center><img src="images/sample.png" alt="Chart Custom Label Chart Sample" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Chart Labels</b></TD>
+</TR><tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<p> <strong>Features</strong>:</p>
+<ul>
+<li><b>Text Formatting</b>
+<ul>
+<li><b>Label Format</b>
+<p>The axis labels that need to be displayed can be of various types, such as double, 
+date-time, logarithmic, or custom.</p>
+<OL TYPE="1">
+<li><b>Double</b>
+<br>The y-axis labels are set as double-types by using the code given below.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryYAxis.ValueType = ChartValueType.Double;
+</code></pre></font>
+
+Also, the labels can support various formats by setting the <strong>Format</strong> property, shown below.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryYAxis.Format = "0.00";
+</code></pre></font>
+</li>
+<li><b>Date-Time</b>
+<br>
+The x-axis labels are set as date-time types by using the code given below.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.ValueType = ChartValueType.DateTime;
+</code></pre></font>
+<br>
+The labels can support various date-time formats using the <b>DateTimeFormat</b> property
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.DateTimeFormat = "MM/dd/yy";
+</code></pre></font>
+</li>
+</OL>
+</li>
+<li><b>Font Settings</b>
+<p>Font settings for the primary axis can be set separately with the <strong>Font
+</strong>property</p>
+<font color="#8D2E1C"><pre><code>
+ this.chartControl1.PrimaryXAxis.Font = new Font("Verdana", 8.0f, FontStyle.Bold);
+</code></pre></font>
+</li>
+
+<li><b>Label Settings</b>
+<ul>
+<li><b>Label Alignment</b>
+<p>By using the <b>LabelAlignment</b> property, label alignment can be set as center, near, or far.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.LabelAlignment = StringAlignment.Center;
+</code></pre></font>
+</li>
+<li><b>Label Rotate</b>
+<p>By setting the <b>LabelRotate</b> property,&nbsp; labels can be rotated to an angle specified by the <b>LabelRotateAngle</b> property.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.LabelRotate = true;
+this.chartControl1.PrimaryXAxis.LabelRotateAngle = 45;
+</code></pre></font>
+</li>
+</ul>
+</ul>
+</li>
+
+<li><b>Custom Label Text</b>
+<ul>
+<li><b>Default Intervals</b>
+<p>For default intervals, the <b>ChartFormatAxisLabel</b> event is used to customize the labels.</p>
+<font color="#8D2E1C"><pre><code>
+private void chartControl1_ChartFormatAxisLabel(object sender, Syncfusion.Windows.Forms.Chart.ChartFormatAxisLabelEventArgs e)
+        {           
+            int index = (int)e.Value;
+            if (e.AxisOrientation == ChartOrientation.Horizontal)
+            {
+                e.Label = arr[index].ToString();
+            }                
+            e.Handled = true;          
+        }
+</code></pre></font>
+</li>
+
+
+<li><b>Custom Intervals</b>
+<p>The labels of a chart axis can be customized by setting the <b>TickLabelsDrawingMode</b> 
+property to <b>UserMode</b> and adding a new set of labels to the <strong>Labels</strong> collection using the
+<b>ChartAxisLabel</b> class. 
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.TickLabelsDrawingMode = ChartAxisTickLabelDrawingMode.UserMode;
+this.chartControl1.PrimaryXAxis.Labels.Clear();
+this.chartControl1.PrimaryXAxis.Labels.Add(new ChartAxisLabel("Mon", Color.MidnightBlue, new Font("Verdana", 11), 2, "", ChartValueType.Custom));
+this.chartControl1.PrimaryXAxis.Labels.Add(new Ch
+artAxisLabel("Wed", Color.MidnightBlue, new Font("Verdana", 11), 4, "", ChartValueType.Custom));
+this.chartControl1.PrimaryXAxis.Labels.Add(new ChartAxisLabel("Fri", Color.MidnightBlue, new Font("Verdana", 11), 6, "", ChartValueType.Custom));
+</code></pre></font>
+             
+</li>
+</ul>
+
+<li><b>Intersecting Labels</b>
+<ul>
+<li><b>Label Intersect Action</b>
+<p>Labels intersect on an axis if they are too close to each other. Several options, such as <b>Multiple Rows</b>, <b>Wrap</b>, <b>Rotate,</b> and so on, are 
+available to enhance the displaying of labels. Labels can be set in multiple rows, as shown below.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.LabelIntersectAction = ChartLabelIntersectAction.MultipleRows;
+</code></pre></font>
+</li>
+<li><b>Edge Labels Drawing Mode</b>
+<p>Using the <b>EdgeLabelsDrawingMode</b> property, labels that are rendered at 
+the edge of an axis can be adjusted. The possible values are <strong>Center</strong>, 
+<strong>Shift</strong>, and <strong>ClippingProtection</strong>.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.EdgeLabelsDrawingMode = ChartAxisEdgeLabelsDrawingMode.Center;
+</code></pre></font>
+</li>
+<li><b>Hide Partial Labels</b>
+<p>Partially visible labels are made invisible by using the <b>HidePartialLabels</b> property.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.HidePartialLabels = true;
+</code></pre></font>
+</li>
+</ul>
+</html>

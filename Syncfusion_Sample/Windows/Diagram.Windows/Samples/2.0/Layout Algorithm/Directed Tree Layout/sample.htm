@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Directed Tree Layout</h1>
+
+<p>The directed trees sample demonstrates the <strong>DirectedTreeLayoutManager</strong> layout management class in Essential Diagram.</p>
+<p>The <strong>DirectedTreeLayoutManager</strong> implements a layout management solution for the diagrams which are composed of nodes forming a directed tree graph. It lets you orient the tree in any direction around the root node by specifying a suitable angle of rotation.</p>
+<p>This sample also demonstrates a more conventional top-to-bottom, bottom-to-top, left-to-right and right-to-left tree layouts implemented using the DirectedTreeLayoutManager.</p>
+
+<p><div align=center><img src="images/sample.png" alt="DirectedTrees Image" title="" /></div></p>
+
+<p><strong>Features</strong></p>
+<ul>
+<li>	Horizontal Spacing - Sets the horizontal spacing between the adjacent nodes.</li>
+<li>	Vertical Spacing - Sets the vertical spacing between the adjacent nodes.</li>
+<li>	Top Margin - Sets the top margin of the layout manager.</li>
+<li>	Left Margin - Sets the left margin of the layout manager.</li>
+<li>	Different tree orientations that specifies how nodes are arranged.</li>
+<ul>
+	<li>ToptoBottom - Places the parent nodes at the top and the child nodes are below the root node.</li>
+	<li>BottomtoTop  - Places the parent nodes at the bottom and the child nodes above the root node.</li>
+	<li>LeftToRight  - Places the parent nodes at the left and the child nodes on the right side of the root node.</li>
+	<li>RightToLeft - Places the parent nodes at the right and the child nodes on the left side of the root node.</li>
+</ul>
+<li>	RotationAngle - Sets the rotation angle for the layout manager.</li>
+<li>	DirectedTreeLayoutManager supports two different type of LayoutType.</li>
+<ul>
+		<li>Horizontal</li>
+		<li>Waterfall</li>
+</ul>
+
+<li>	AutoLayout - Updates the layout of the model, automatically.</li>
+</ul>
+<ul>
+<p>	To create the <strong>DirectedTreeLayoutManager</strong> with the tree rotation as &quot;TopToBottom&quot; (i.e.RotationAngle =0),  horizontal and vertical spacing as 50 and 60 respectively, use the following code.</p>
+<p><font color="#8D2E1C"><pre>
+				DirectedTreeLayoutManager dtlm = new DirectedTreeLayoutManager(this.diagram1.Model, 0, 50, 60);
+				//Sets the DirectedTreeLayoutManager as responsible for updating the layout of the diagram.
+	            this.diagram1.LayoutManager = dtlm;
+	            // Updates the layout of the nodes in the model.
+	            this.diagram1.LayoutManager.UpdateLayout(null);
+</pre></font></p></ul>
+</html>

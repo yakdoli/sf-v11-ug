@@ -1,0 +1,35 @@
+
+<HTML>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Self Referential Grid Demo</H1>
+<P>This sample demonstrates how to manually specify self relations in
+a table. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<ul>
+	<li><p>You can manually
+	specify relations in the grouping engine.</p>
+	<li><p>The data table does not
+	need to have any data relationships.</p>
+</ul>
+<p>This is how the sample looks.</p>
+<p align=center><img src="images/sample.png" name="graphics1" alt="Manually specified self relations" align=BOTTOM BORDER=0></P>
+<p ALIGN=CENTER><BR><BR>
+</P>
+<P>The following code shows registering the data table with the source-list set 
+so that the relation descriptor can resolve the name.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">                 this.gridGroupingControl1.Engine.SourceListSet.Add(&quot;SelfReferencialTable&quot;, selfreferentialTable);  </FONT></PRE><P>
+The following code illustrates how to manually specify the
+self-relation without using the data table.</P>
+<PRE><FONT COLOR="#8d2e1c">                GridRelationDescriptor parentToChildRelationDescriptor = new GridRelationDescriptor();</FONT>
+<FONT COLOR="#8d2e1c">            parentToChildRelationDescriptor.ChildTableName = &quot;SelfReferencialTable&quot;;    // same as SourceListSetEntry.Name for childTable (see below)</FONT>
+<FONT COLOR="#8d2e1c">            parentToChildRelationDescriptor.RelationKind = RelationKind.RelatedMasterDetails;</FONT>
+<FONT COLOR="#8d2e1c">                        //Relations specified within different columns of the same table.</FONT>
+<FONT COLOR="#8d2e1c">            parentToChildRelationDescriptor.RelationKeys.Add(&quot;ID&quot;, &quot;RelatedTo&quot;);</FONT>
+
+<FONT COLOR="#8d2e1c">           </FONT>
+
+<FONT COLOR="#8d2e1c">                 // Add relation to ParentTable </FONT>
+<FONT COLOR="#8d2e1c">            parentgridTableDescriptor.Relations.Add(parentToChildRelationDescriptor);</FONT></PRE>
+</BODY>
+</HTML>

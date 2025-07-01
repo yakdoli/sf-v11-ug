@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3494931">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Excel Export Demo</H1>
+<P>This sample demonstrates the conversion of content in a Grid
+Grouping control to an XLS file. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>There are two options for exporting a Grid Grouping Control: 
+	</P>
+	<UL>
+		<LI><P>Converting the entire content of a grid 
+		</P>
+		<LI><P>Only converting the visible content of a grid 
+		</P>
+	</UL>
+	<LI><P>Advanced settings include options to export styles, preview
+	rows, borders, record plus-minus, and group plus-minus cells.</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample1.png" NAME="graphics1" ALT="Excel Export screenshot" ALIGN=BOTTOM  BORDER=0>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P ALIGN=CENTER><img src="images/sample2.png" NAME="graphics2" ALT="Excel Export screenshot" ALIGN=BOTTOM  BORDER=0>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<UL>
+	<P></P>
+	<LI><P>XlsIO libraries are used to convert grid content to
+	Excel. The dependent&nbsp;.dll files are <STRONG>Syncfusion.XlsIO.Base</STRONG>
+	and <STRONG>Syncfusion.GridConverter.Windows</STRONG>. 
+	</P>
+	<P></P>
+	<PRE><FONT COLOR="#8d2e1c">                Syncfusion.GroupingGridExcelConverter.GroupingGridExcelConverterControl converter = new</FONT>
+<FONT COLOR="#8d2e1c">                Syncfusion.GroupingGridExcelConverter.GroupingGridExcelConverterControl();</FONT>
+<FONT COLOR="#8d2e1c">                converter.GroupingGridToExcel(this.gridGroupingControl1, </FONT>
+<FONT COLOR="#8d2e1c">                saveFileDialog.FileName,Syncfusion.GridExcelConverter.ConverterOptions.Default);   </FONT></PRE><P>
+	The above code converts the entire content of the grid. The code to
+	export the visible or expanded records and groups is given below.</P>
+	<P></P>
+	<PRE><FONT COLOR="#8d2e1c">                converter.GroupingGridToExcel(this.gridGroupingControl1, saveFileDialog.FileName, </FONT>
+<FONT COLOR="#8d2e1c">                Syncfusion.GridExcelConverter.ConverterOptions.Visible);  </FONT></PRE><P>
+	The code to launch the XLS file is given below.</P>
+	<PRE><FONT COLOR="#8d2e1c">                System.Diagnostics.Process proc = new System.Diagnostics.Process();</FONT>
+<FONT COLOR="#8d2e1c">                proc.StartInfo.FileName = saveFileDialog.FileName;</FONT>
+<FONT COLOR="#8d2e1c">                proc.Start();  </FONT></PRE>
+</UL>
+</BODY>
+</HTML>

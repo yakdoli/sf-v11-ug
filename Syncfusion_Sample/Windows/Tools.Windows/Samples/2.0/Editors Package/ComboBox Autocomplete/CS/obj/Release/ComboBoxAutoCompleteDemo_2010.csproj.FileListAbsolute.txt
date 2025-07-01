@@ -1,0 +1,6 @@
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\ComboBox Autocomplete\cs\bin\Release\ComboBoxAutoCompleteDemo.exe
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\ComboBox Autocomplete\cs\bin\Release\EnvDTE.dll
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\ComboBox Autocomplete\cs\obj\Release\ComboBoxAutoCompleteDemo_2010.csprojResolveAssemblyReference.cache
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\ComboBox Autocomplete\cs\obj\Release\ComboBoxAutoCompleteDemo.Form1.resources
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\ComboBox Autocomplete\cs\obj\Release\ComboBoxAutoCompleteDemo_2010.csproj.GenerateResource.Cache
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\ComboBox Autocomplete\cs\obj\Release\ComboBoxAutoCompleteDemo.exe

@@ -1,0 +1,112 @@
+﻿<html><h1>Chart ToolTips</h1>
+
+<p>This sample demonstrates how to create and customize<strong> </strong> ToolTips for Essential Chart.</p>
+
+
+<p><div align=center><TABLE>
+<TR>
+<TD><div align=center><img src="images/sample.png" alt="ChartTooltips" title="" /></div></TD>
+<TD><div align=center><img src="images/FancyTooltips.png" alt="FancyTooltips" title="" /></div></TD>
+</TR>
+<TR>
+<TD align=center><b>Formatted Chart ToolTips</b></TD>
+<TD align=center><b>Fancy Chart ToolTips</b></TD>
+</TR>	
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+
+<p><strong>Features</strong>: </p>
+
+<ul>
+	<li><b>ToolTips</b>
+<p>ToolTips can be enabled in a chart control using the <b>ShowToolTip</b> property. By enabling this property, 
+ToolTips associated with all the chart regions, such as <strong>Chart</strong>,
+<strong>Chart Area</strong>, <strong>Chart Series</strong>, and <strong>ToolBar</strong>, 
+will be visible when the pointer hovers on the corresponding region.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ShowToolTips = true;
+</code></pre></font>
+
+<ol>
+<li><b>Chart ToolTip</b>
+<p>The ToolTip for a chart control is set using the <b>ChartTooltip</b> property.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ChartToolTip = "Chart ToolTip";
+</code></pre></font>
+</li>
+<li><b>Chart Area ToolTip</b>
+<p>The ToolTip for the chart-area control is set using the <b>ChartAreaTooltip</b> property.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ChartAreaToolTip = "Chart Area ToolTip";
+</code></pre></font>
+</li>
+
+<li><b>Series ToolTip</b>
+<p>This gives information about the series of a chart control. 
+<p>It has the following formats:</p>
+<p>"{0}"  -  Series Name</p>
+<p>"{1}"  -  SeriesStyle.Tooltip </p>
+<p>"{2}"  -  SeriesStyle[i].Tooltip</p>
+<p>"{3}"  -  SeriesPoints[index]Tooltip</p>
+<p>"{4}"  -  SeriesPoints[index].YValues</p>
+
+The ToolTip format is set using the series <b>PointsTooltipFormat</b> property.
+<font color="#8D2E1C"><pre><code>
+series1.PointsToolTipFormat = "{0}";
+</code></pre></font>
+</p>
+</li></ol>
+</li>
+
+<li><b>Fancy ToolTip</b>
+<p>Essential chart also supports fancy ToolTips for a chart series. </p>
+<p>A fancy ToolTip, as the name implies, displays the ToolTip in an attractive 
+manner, which is different from other default ToolTips. The appearance of fancy 
+ToolTips can be customized.</p>
+
+
+<ol>
+<li><b>Fancy ToolTip Visibility</b>
+<p>Fancy ToolTips can be visible, as shown in the following code.
+<font color="#8D2E1C"><pre><code>
+series1.FancyToolTip.Visible = true;
+series2.FancyToolTip.Visible = true;
+</pre></font></code>
+
+<li><b>Fancy ToolTip Color</b>
+<p>The background color and foreground color of a fancy ToolTip can be set using 
+the following code.</p>
+<font color="#8D2E1C"><pre><code>
+series.FancyToolTip.BackColor = Color.Yellow;
+series.FancyToolTip.ForeColor = Color.Green;
+</code></pre></font>         
+</li>
+
+<li><b>Fancy ToolTip Border</b>
+<p>The border width and color of a fancy ToolTip can be customized.</p>
+<font color="#8D2E1C"><pre><code>
+series.FancyToolTip.Border.Width = width;
+series.FancyToolTip.Border.ForeColor = this.BorderColorPicker.SelectedColor;
+</code></pre></font>           
+</li>
+
+<li><b>Fancy ToolTip Style</b>
+<p>The style of a fancy ToolTip can be set as <em>Ellipse</em>, <em>Rectangle</em>, or
+<em>SmoothRectangle</em>, using the <b>Style</b> property.</p>
+<font color="#8D2E1C"><pre><code>
+series.FancyToolTip.Style = MarkerStyle.Ellipse;
+</code></pre></font>
+</li>
+
+<li><b>Fancy ToolTip Symbol</b>
+<p>The symbol of a chart ToolTip can be set using the <b>Symbol</b> property.</p> 
+<font color="#8D2E1C"><pre><code>
+series.FancyToolTip.Symbol = ChartSymbolShape.Circle;
+</code></pre></font>
+
+</li>
+
+</ol>
+</li>
+</ul>
+</html>

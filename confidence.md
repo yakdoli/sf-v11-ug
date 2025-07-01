@@ -1,0 +1,61 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template}![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+::::: {#nsbanner .d2h_main_nsbanner style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px"}
+:::: {#TitleRow .d2h_main_titlerow style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px"}
+::: {#ienav .d2h_main_ienav style="DISPLAY: none"}
+[](ms-xhelp:///?Id=554890e6-fdd5-4748-8917-0d0c27d3de93){#D2HPrevious .D2HPreviousEnabled}  [](ms-xhelp:///?Id=8d2641f2-789a-4df8-b190-84ad54ed687e){#D2HNext .D2HNextEnabled}
+:::
+::::
+:::::
+
+:::: {#nstext .d2h_main_nstext style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" hasuserbackground="true" valign="bottom"}
+::: {#d2h_breadcrumbs .d2h_breadcrumbs}
+[Essential Studio User Guide Documentation](ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Reporting Edition](ms-xhelp:///?Id=027aa5b6-6676-4f93-ad23-c20e8c45792e){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Essential Calculate](ms-xhelp:///?Id=2ea52c7f-a332-43bd-9ca7-2ea0898ff54e){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Concepts and Features](ms-xhelp:///?Id=91222e44-d3ca-4392-8f0f-41bd2ae3dd3f){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Function Reference Section](ms-xhelp:///?Id=64c2cb3d-2548-4fe4-b0d1-0c2249ee26c8){.d2h_breadcrumbsNormal}
+:::
+
+### CONFIDENCE {#confidence style="tab-stops: 0pt"}
+
+ 
+
+Returns a value that you can use to construct a confidence interval about a population mean. The confidence interval is a range of values. In your sample, mean x is at the center of this range and the range is x ± CONFIDENCE. For example, if x is the sample mean of delivery times for products ordered through the mail, x ± CONFIDENCE is a range of population means.
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+Syntax
+
+[]{style="FONT-SIZE: 9pt"} 
+
+[CONFIDENCE(alpha, standard_dev,size)]{style="FONT-SIZE: 9pt"}
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+where:
+
+**alpha** is the significance level used to compute the confidence level. The confidence level equals 100\*(1 - alpha)%, or in other words, an alpha of 0.05 indicates a 95 percent confidence level.
+
+**standard_dev**[ ]{style="FONT-FAMILY: 'Times New Roman','serif'; FONT-SIZE: 12pt"}is the population standard deviation for the data range and is assumed to be known.
+
+**size** is the sample size.
+
+ 
+
+**Remarks**
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+[·      ]{style="FONT-FAMILY: Symbol"}All arguments must be non-numeric.
+
+[·      ]{style="FONT-FAMILY: Symbol"}Alpha must be \> 0 and \< 1.
+
+[·      ]{style="FONT-FAMILY: Symbol"}Standard_dev must be \> 0.
+
+[·      ]{style="FONT-FAMILY: Symbol"}Size must be \>= 1.
+
+ 
+
+[]{#p93} 
+
+[]{#related-topics}
+::::

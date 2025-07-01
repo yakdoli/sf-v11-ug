@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfConfigLanguage>
+<!--
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="file://d:\Projects\EditControl\Syncfusion.Windows.Forms.Edit\config.xsd" -->
+  <ConfigLanguage name="LISP" CaseInsensitive="true">
+    <formats>
+      <format name="Text" Font="Courier New, 10pt" FontColor="Black" />
+      <format name="Whitespace" Font="Courier New, 10pt" FontColor="Black" />
+      <format name="KeyWord" Font="Courier New, 10pt" FontColor="Blue" />
+      <format name="String" Font="Courier New, 10pt, style=Bold" FontColor="Red" />
+      <format name="Number" Font="Courier New, 10pt, style=Bold" FontColor="Navy" />
+      <format name="Operator" Font="Courier New, 10pt" FontColor="DarkCyan" />
+      <format name="Comment" Font="Courier New, 10pt, style=Bold" FontColor="Green" />
+      <format name="PreprocessorKeyword" Font="Courier New, 10pt" FontColor="Gray" />
+      <format name="SelectedText" Font="Courier New, 10pt" BackColor="Highlight" FontColor="HighlightText" />
+      <format name="CommentXML" Font="Courier New, 10pt, style=Bold" FontColor="Gray" />
+      <format name="CollapsedText" Font="Courier New, 10pt" FontColor="Black" BackColor="White" ForeColor="Gray"/>
+    </formats>
+    <extensions>
+    <extension>lsp</extension>
+    </extensions>
+    <lexems>
+      <lexem BeginBlock="(" Type="Operator" />
+      <lexem BeginBlock=")" Type="Operator" />
+      <lexem BeginBlock="'" Type="Operator" />
+	  <lexem BeginBlock="car" Type="KeyWord" />
+      <lexem BeginBlock="cdr" Type="KeyWord" />
+      <lexem BeginBlock="cons" Type="KeyWord" />
+      <lexem BeginBlock="not" Type="KeyWord" />
+      <lexem BeginBlock="defun" Type="KeyWord" />
+      <lexem BeginBlock="cond" Type="KeyWord" />
+      <lexem BeginBlock="atom" Type="KeyWord" />
+      <lexem BeginBlock="nil" Type="KeyWord" />
+      <lexem BeginBlock="evenp" Type="KeyWord" />
+      <lexem BeginBlock="expon" Type="KeyWord" />
+      <lexem BeginBlock="truncate" Type="KeyWord" />
+      <lexem BeginBlock="squash" Type="KeyWord" />
+      <lexem BeginBlock="setq" Type="KeyWord" />
+      <lexem BeginBlock="equal" Type="KeyWord" />
+      <lexem BeginBlock="append" Type="KeyWord" />
+      <lexem BeginBlock="itemx" Type="KeyWord" />
+      <lexem BeginBlock="base" Type="KeyWord" />
+      <lexem BeginBlock="null" Type="KeyWord" />
+      <lexem BeginBlock="#region" EndBlock="#end region" Type="PreprocessorKeyword" IsEndRegex="true"
+        IsComplex="true" IsCollapsable="true" AutoNameExpression="#region\s+(?&lt;text>.*)\s*\n" AutoNameTemplate="${text} "
+        IsCollapseAutoNamed="true" CollapseName="#region">
+        <SubLexems>
+          <lexem BeginBlock="\n" IsBeginRegex="true" />
+        </SubLexems>
+      </lexem>
+    </lexems>
+    <splits>
+	  <split>#region</split>
+    <split>#end region</split>
+    </splits>
+  </ConfigLanguage>  
+  </ArrayOfConfigLanguage>

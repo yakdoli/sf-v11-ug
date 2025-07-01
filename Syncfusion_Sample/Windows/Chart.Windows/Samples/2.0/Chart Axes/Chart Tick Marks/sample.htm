@@ -1,0 +1,63 @@
+
+<html>
+<h1>Chart Tick Marks</h1>
+
+<p>This sample illustrates the various customization options for a chart control's 
+axis tick marks.</p>
+
+<div align=center><img src="images/sample.png" alt="chart axis Tick Marks Demo" title="" /></div>
+<p><div align=center><table><tr>
+		<td align=center><b>Chart Tick Marks Demo</b></td>
+	</tr>
+		
+		<tr><td style="height:5"> </td></tr>
+		</table></div></p>
+<p><strong>Features:</strong></p>
+<ul>
+<li><b>Tick Label Grid</b>
+<p>The axis-label grid is made visible by the <b>DrawTickLabelGrid </b>property.</p>
+<font color="#8d2e1c"><pre><code>
+ this.chartControl1.PrimaryXAxis.DrawTickLabelGrid = true;
+</code></pre></font>
+</li>
+<li><b>Tick Label Grid Padding</b>
+<p>Padding of the tick-label grid is set using the <b>TickLabelGridPadding </b>property.</p>
+<font color="#8d2e1c"><pre><code>
+  this.chartControl1.PrimaryXAxis.TickLabelGridPadding = 5;
+</code></pre></font>
+</li>
+<li><b>Tick Color</b>
+<p>The color of the ticks rendered on an axis is set using the <b>TickColor </b>property.</p>
+<font color="#8d2e1c"><pre><code>
+ this.chartControl1.PrimaryXAxis.TickColor = Color.Red;
+</code></pre></font>
+</li>
+<li><b>Tick size</b>
+<p>Major tick size of the axis is set using the <b>TickSize </b>property, as 
+shown in the following.</p>
+<font color="#8d2e1c"><pre><code>
+ this.chartControl1.PrimaryXAxis.TickSize = new Size(8,2);
+</code></pre></font>
+</li>
+<li><b>Small Ticks Per Interval</b>
+<p>The number of small ticks displayed per major interval is set using the <b>SmallTicksPerInterval </b>property.</p>
+<font color="#8d2e1c"><pre><code>
+ this.chartControl1.PrimaryXAxis.SmallTicksPerInterval = 5;
+</code></pre></font>
+</li>
+<li><b>Small Tick Size</b>
+<p>The size of small ticks displayed on the axis is set using the <b>SmallTickSize </b>
+property. By default, small ticks are not visible.</p>
+<font color="#8d2e1c"><pre><code>
+ this.chartControl1.PrimaryXAxis.SmallTickSize = new Size(5,1);
+</code></pre></font>
+</li>
+<li><b>Tick Drawing Operation Mode</b>
+<p>To set the tick-drawing operation mode while the chart is zoomed, the <b>TickDrawingOperationMode</b> property can be used.</p>
+<font color="#8d2e1c"><pre><code>
+<font color="#008000">//Intervals remains unchanged during zooming when the mode is set as "IntervalFixed".</font>
+this.chartControl1.PrimaryXAxis.TickDrawingOperationMode = ChartAxisTickDrawingOperationMode.IntervalFixed;
+<font color="#008000">//Intervals are kept constant when the mode is set as "NumberOfIntervalsFixed".</font>
+this.chartControl1.PrimaryXAxis.TickDrawingOperationMode = ChartAxisTickDrawingOperationMode.NumberOfIntervalsFixed;
+</code></pre></font></li>
+</ul>

@@ -1,0 +1,85 @@
+<html><h1>Custom Collections</h1>
+<p>
+The
+Essential Chart control can be bound to custom-generated collections. Such collections must subscribe to one of the standard collection interfaces, such as 
+<strong>IList</strong>, <strong>IListSource</strong>, <strong>IBindingList</strong>, 
+etc. This sample illustrates the binding of a chart control to two kinds of 
+collections built using <b>ArrayList</b> and <b>BindingList&lt;T&gt;</b>, 
+the built-in collection classes that implement the <strong>IList</strong> and 
+<strong>IBindingList</strong> interfaces respectively.</p>
+<p>
+The advantage of using a binding list is that it can listen to data-source changes 
+and fire the <b>ListChanged</b> 
+event.&nbsp; The bound chart control will then be notified of these changes and will update itself automatically.
+</p>
+
+<p> An illustration follows.</p>
+<p><div align =center> <img src="images/sample.png" alt="Custom Collections Sample" title="" /></div></p>
+
+<p><strong>Interactive Features:</strong><ul>
+<li>Define a custom class that represents the data source structure.</li>
+<font color="#8D2E1C"><pre><code>
+//Setup custom class that represents the structure of the datasource.
+class PopulationData
+{
+	private string cname;
+	private double population;
+
+            public PopulationData(string cname, double population)
+            {
+                this.cname = cname;
+                this.population = population;
+            }
+            
+	//City/Country Name
+            public string Name
+	{
+		get { return cname; }
+		set { cname = value; }
+	}
+	
+	//Population
+	public double Population
+	{
+		get { return population; }
+		set { population = value; }
+	}
+}
+</code></pre></font>
+<br>
+<li>Create an array of population data objects using the <strong>ArrayList</strong> class.</li>
+<font color="#8D2E1C"><pre><code>
+ArrayList populations = new ArrayList();
+populations.Add(new PopulationData("New York", 13));
+populations.Add(new PopulationData("Houston", 11));
+</code></pre></font>
+<br>
+<li>Bind an array to a chart control.</li>
+<font color="#8D2E1C"><pre><code>
+ChartSeries series = new ChartSeries("Populations");
+ChartDataBindModel dataSeriesModel = new ChartDataBindModel(populations);
+
+// If ChartDataBindModel.XName is empty or null, X value is index of point.
+dataSeriesModel.YNames = new string[] { "Population" };
+series.SeriesModel = dataSeriesModel;
+</code></pre></font>
+
+<li>Create a list of population data objects using the <strong>BindingList</strong> class.</li>
+<font color="#8D2E1C"><pre><code>
+BindingList<PopulationData> bindList = new BindingList<PopulationData>();
+bindList.Add(new PopulationData("India", 13));
+bindList.Add(new PopulationData("USA", 11));
+</code></pre></font>
+<br>
+<li>Bind the above list to a chart control.</li>
+<font color="#8D2E1C"><pre><code>
+ChartSeries series = new ChartSeries("Populations");
+ChartDataBindModel dataSeriesModel = new ChartDataBindModel(bindList);
+
+// If ChartDataBindModel.XName is empty or null, X value is index of point.
+dataSeriesModel.YNames = new string[] { "Population" };
+series.SeriesModel = dataSeriesModel;
+</code></pre></font>
+</ul>
+</p>
+</html>

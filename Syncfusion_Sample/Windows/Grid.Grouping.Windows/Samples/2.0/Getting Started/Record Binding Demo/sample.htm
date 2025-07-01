@@ -1,0 +1,36 @@
+<html><h1>Record Binding Demo</h1>
+
+<p>This sample shows you how to set up Windows Forms<strong>  
+</strong>data binding<strong>
+</strong>between the current record of the Grid Grouping control and the external text boxes on a form. </p>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>Creates binding between the current grid record and the external text boxes.</P>
+	<LI><P>Changing the current record will also change the bound text-box values.</P>
+</UL>
+
+<p>This is how the sample looks.</p>
+
+<p><p align=center><img src="images/sample.png" alt="Record Binding" title="Record Binding" /></p>
+
+<P><FONT SIZE=4>Implementation:</FONT></P>
+<UL>
+	<LI><p> Here is the code snippet:</p>
+<font color="#8D2E1C"><pre> 	
+    		// Code showing how the Data is bound to the GridGroupingControl.
+    		this.gridGroupingControl1.DataSource = this.dt.DefaultView;<font color="#8D2E1C"><pre>
+    		// Code showing how the Data is bound to the External TextBoxes.
+    		this.textBox1.DataBindings.Add("Text", this.dt.DefaultView, "Col1");
+    		this.textBox2.DataBindings.Add("Text", this.dt.DefaultView,"Col2");            <font color="#8D2E1C"><pre>
+    		// Optional Code.
+    		// At the time this ctor is running there is no Form.BindingContext.
+    		// We need to create a BindingContext and assign it manually, to avoid each control from creating it's own BindingContext.
+    		// If we delay accessing the GridGroupingControl records until Form1_Load is called, this work around will not be necessary.
+    		BindingContext bc = new BindingContext();
+    		this.gridGroupingControl1.BindingContext = bc;
+    		this.textBox1.BindingContext = bc;
+    		this.BindingContext = bc;  </pre></font></font></font><p>The code that accesses  the records (like <strong>SetCurrent</strong>, calling 
+<strong>Records.Count</strong>, etc.) and the 
+data-binding code should go into the <strong>Form1_Load</strong> to avoid flickering.</p>
+</UL>
+</html>

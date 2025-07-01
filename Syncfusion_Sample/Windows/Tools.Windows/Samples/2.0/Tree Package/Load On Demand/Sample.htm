@@ -1,0 +1,88 @@
+
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Load on Demand</h1>
+
+<p>This sample illustrates how loading nodes in the <strong>TreeViewAdv</strong> can be 
+delayed until the nodes have been expanded.</p>
+
+<p><div align=center><img src="images/sample.png" alt="TreeViewAdv LoadOnDemand" title="" /></div></p>
+
+<p><strong>Features:</strong></p>
+<ul>
+	<li><strong>Load on Demand</strong></li>
+</ul>
+
+<p class="style1">This provides a way of delaying nodes from loading in trees until a node is expanded. In this sample, when <strong>LoadOnDemand</strong>
+ is set to <em>true</em>, all the nodes will have a visible plus-minus sign. 
+Then the 
+<strong>BeforeExpand</strong> event of the nodes should be handled and sub-nodes 
+should be added to the respective nodes. The tree will keep or hide the plus-minus 
+sign based on whether or not child nodes were added.</p>
+
+<p><strong>BeforeExpand Event</strong></p>
+
+<p class="style1">The <strong>BeforeExpand</strong> event is handled when a user wants process 
+a specified node before it is expanded.<p class="style1">
+To add child nodes to a specified node before it is expanded, use this event 
+with the <strong>LoadOnDemand</strong> property set to <em>true</em>. The
+<strong>BeforeExpand</strong> event is used to dynamically populate the <strong>TreeViewAdv</strong>.&nbsp;&nbsp;&nbsp; 
+<p class="style1">In the 
+<strong>BeforeExpand</strong> event, users can retrieve the path string for a specific node 
+by using the <strong>TreeNodeAdv.GetPath</strong>
+method, where they can also specify the separator. <p>
+<p class="style1">When calling the <strong>Node.GetPath</strong> method, it is important to 
+know that the <strong>TreeViewAdv.AddSeparatorAtEnd</strong> property must be set to 
+<em>True </em>to add the <strong>\\</strong> 
+characters at the end of the node path.</p>
+
+<pre><code>
+private void treeViewAdv1_BeforeExpand(object sender, Syncfusion.Windows.Forms.Tools.TreeViewAdvCancelableNodeEventArgs e)
+{
+if(e.Node.ExpandedOnce) return;
+string path = e.Node.GetPath("\\");
+ArrayList dirs = new  ArrayList(Directory.GetDirectories(path));
+for(int i=0;i&lt;dirs.Count;i++)
+{
+string dir = (string)dirs[i];
+int lastIndex = dir.LastIndexOf("\\")+1;
+TreeNodeAdv node = new TreeNodeAdv(dir.Substring(lastIndex));
+e.Node.Nodes.Add(node);
+}
+}
+</code></pre>
+
+<ul>
+	<li><strong>ShowPlusOnExpand</strong></li>
+</ul>
+
+<p class="style1">The advantages of this event are as follows.</p>
+
+<p class="style1">1. It continues displaying the plus sign on a node, even when expanded and while it is still in 
+&quot;<strong>LoadOnDemand</strong>&quot; mode.</p>
+<p class="style1">2. The <strong>BeforeExpand</strong> event will still be triggered if the plus 
+sign is clicked again, even if it is in the expanded mode; this allows you to check the data source
+ for changes.</p>
+<p class="style1">3. This property will affect the <strong>TreeNodeAdv</strong> only if the
+<strong>LoadOnDemand</strong> property is  set to <em>true</em>.</p>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

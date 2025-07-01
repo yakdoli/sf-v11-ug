@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditFeaturesDemo_2008", "EditFeaturesDemo_2008.csproj", "{F6EBB8FC-F29A-471D-A400-28FD339CEB7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F6EBB8FC-F29A-471D-A400-28FD339CEB7C}.Debug.ActiveCfg = Debug|.NET
+		{F6EBB8FC-F29A-471D-A400-28FD339CEB7C}.Debug.Build.0 = Debug|.NET
+		{F6EBB8FC-F29A-471D-A400-28FD339CEB7C}.Release.ActiveCfg = Release|.NET
+		{F6EBB8FC-F29A-471D-A400-28FD339CEB7C}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

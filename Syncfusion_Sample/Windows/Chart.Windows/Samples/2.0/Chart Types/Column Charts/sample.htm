@@ -1,0 +1,95 @@
+﻿<html>
+	<h1>Column Charts</h1>
+
+	<p>This sample illustrates column, column-range, and stacked-column charts.</p>
+
+<p><div align=center>
+		<TABLE id="Table1">
+			<TR>
+				<TD align=center><b>Column Chart</b></TD>
+				<TD>&nbsp;&nbsp;</TD>
+				<TD align=center><b>Column-Range Chart</b></TD>
+			</TR>
+			<tr><td style="height:10"></td></tr>
+			<TR>
+				<TD><div align=center><img src="images/Sample1.png" alt= "Column Chart "title=""/></div></TD><TD>&nbsp;&nbsp;</TD>
+				<TD><div align=center><img src="images/Sample2.png" alt= "Column Range Chart "title=""/></div></TD>
+			</TR>
+		
+	<tr><td style="height:10"></td></tr>
+	</TABLE>
+		<TABLE id="Table2">
+		
+			<TR>
+				<TD align=center><b>Stacked-Column Chart</b></TD>
+			</TR>
+			<TR><TD style="height:10"></TD></TR>
+    		<TR>
+    			<TD><div align=center><img src="images/Sample3.png" alt= "Stacked Column Chart "title=""/></div></TD>
+    		</TR>
+		</TABLE>
+	</div></p>
+
+<h3><strong>Features</strong></h3>
+
+<ul>
+<li><b>Column Charts</b><p>Various column charts can be applied to a chart control 
+by using the 
+following code.<font color="#8D2E1C"><pre><code>
+<font color="#008000">//sets the Chart Type as Column</font>
+this.chartControl1.Series[0].Type = ChartSeriesType.Column;
+<font color="#008000">//sets the Chart Type as ColumnRange</font>
+this.chartControl1.Series[0].Type = ChartSeriesType.ColumnRange;
+<font color="#008000">//sets the Chart Type as StackingColumn</font>
+this.chartControl1.Series[0].Type = ChartSeriesType.StackingColumn;</code></pre></font>
+</li>
+
+<li><b>Column-Width Mode</b>
+<p>There are three column-width calculation modes that can be set through the 
+<strong>ColumnWidthMode</strong> property: <strong>DefaultWidthMode</strong>,<strong> FixedWidthMode</strong>, and <strong>RelativeWidthMode</strong>.</p>
+
+<ul>
+<li><b>DefaultWidthMode</b>
+<font color="#8D2E1C">
+<pre><code>
+<font color="#008000">// The width of the columns will always be calculated to fill the space between the columns.</font>
+this.chartControl1.ColumnWidthMode = ChartColumnWidthMode.DefaultWidthMode;
+<font color="#008000">// A single Y value is used as shown below</font>
+series.Points.Add(2, 22);
+</font></code></pre>
+</li>
+<li><b>FixedWidthMode</b>
+<pre><code><font color="#8D2E1C">
+<font color="#008000">//The Width values can be given in measure units of X-axis.</font>
+this.chartControl1.ColumnWidthMode = ChartColumnWidthMode.FixedWidthMode;
+<font color="#008000">//YValues[1] set as 12 for each series point</font>
+series.Points.Add(2, 22, 12);
+</font></code></pre>
+</li>
+<li><b>RelativeWidthMode</b>
+<pre><code><font color="#8D2E1C">
+<font color="#008000">// width of the columns are relative to the range of X-axis. Width always corresponds to 1.0 on range.</font>
+this.chartControl1.ColumnWidthMode = ChartColumnWidthMode.RelativeWidthMode;
+<font color="#008000">//YValues[1] set as 0.75 for each series point</font>
+series.Points.Add(2, 22, 0.75);
+</font></code></pre>
+</li>
+
+</ul>	
+		<li><b>Column Spacing</b>
+<p>Spacing between columns of different series is specified through the
+<strong>Spacing</strong> property. 
+<font color="#8D2E1C">
+<pre><code>
+<font color="#008000">// The value specifies the fraction of the column width.</font>
+this.chartControl1.Spacing = 0.1;
+</code></pre></font></p>
+	<li><b>3D Style</b>
+<p>The 3D chart can be render with effective color in 3D walls by enabling the
+<strong>Style3D</strong> property. 
+<font color="#8D2E1C">
+<pre><code>
+<font color="#008000">// The value specifies the fraction of the column width.</font>
+this.chartControl1.Style3D = true;
+</code></pre></font></p>
+</html>

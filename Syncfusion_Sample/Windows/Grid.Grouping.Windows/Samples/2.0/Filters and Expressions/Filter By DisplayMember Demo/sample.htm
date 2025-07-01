@@ -1,0 +1,48 @@
+<HTML>
+<H1>Filter by DisplayMember Demo</H1>
+<P>This sample implements a solution for filtering a column by its display member instead of the value member of the column. This is accomplished by 
+implementing a custom filter bar cell.
+</P>
+
+<p><b>GridFilterByDisplayMemberCellModel</b> - This is the cell model class that loads the filter drop-down with the display strings of the respective filter bar column, and 
+it creates a cell renderer.</p>
+<p><b>GridFilterByDisplayMemberCellRenderer</b> - This is the cell renderer class that sets up the actual filter string by replacing the display string with the value string.</p>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="GroupingGrid screenshot" ALIGN=BOTTOM  BORDER=0></P>
+
+<P>This custom filter bar is implemented in the grid through <STRONG>GroupingGridFilterBarExt</STRONG> class using <STRONG>WireGrid</STRONG> method.</P>
+<P><FONT color="#8D2E1C"><PRE>
+	GroupingGridFilterBarExt gGCFilter = new GroupingGridFilterBarExt();
+	gGCFilter.WireGrid(this.gridGroupingControl1);</PRE></FONT></P>
+<P><STRONG>Note:</STRONG> This class is accessed through <STRONG>GridHelperClasses</STRONG> reference.</P>
+<H1>Usage of Desired Filter for Specific Columns</H1>
+<p>Here, a single grid may have different filters wired within it.The filters could be wired to each column by changing the cell type of the corresponding column.</p>
+<p>In Order to apply filter to individual column, a property <STRONG>AllowIndividualColumnWiring</STRONG> has to be set to True. By, default, it is set to False.</p>
+<p>The Object of the class can be used for accessing the Property and wiring the grid To filter by using the code:</p>
+<P><FONT color="#8D2E1C"><PRE>
+         GridDynamicFilter filter = new GridDynamicFilter();
+         filter.AllowIndividualColumnWiring= true;
+         filter.WireGrid(gridGroupingControl1);</PRE></FONT></p>
+<p>The individual columns can be applied with the filters by setting the cell types to the concerned columns.</p>
+<P><FONT color="#8D2E1C"><PRE>
+
+        //Apply Dynamic Filter to the 0th column
+         this.gridGroupingControl1.TableDescriptor.Columns[0].Appearance.FilterBarCell.CellType = "DynamicFilterBar";</PRE></font></p>
+
+<p>Similarly, <STRONG>FilterByDisplayMember</STRONG> and <STRONG>GridExcelFilter</STRONG> could be wired to the specified column using the code as follows:
+<p><b>FilterByDisplayMember:</b></p>
+<P><FONT color="#8D2E1C"><PRE>
+	  GroupingGridFilterBarExt filter1=new GroupingGridFilterBarExt();
+          filter1.AllowIndividualColumnWiring= true;
+          filter1.WireGrid(gridGroupingControl1);
+          this.gridGroupingControl1.TableDescriptor.Columns[1].Appearance.FilterBarCell.CellType = "FilterByDisplayMemberCell";</pre></font></p>
+
+<p><b>GridExcelFilter:</b></p>
+<P><FONT color="#8D2E1C"><PRE>
+	  GridExcelFilter filter1=new GridExcelFilter();
+          filter1.AllowIndividualColumnWiring= true;
+          filter1.WireGrid(gridGroupingControl1);
+          this.gridGroupingControl1.TableDescriptor.Columns[2].Appearance.ColumnHeaderCell.CellType = "GridExcelFilterCell";</pre></font></p>
+
+<P ALIGN=CENTER><img src="images/sample1.png" NAME="graphics1" ALT="GroupingGrid screenshot" ALIGN=BOTTOM  BORDER=0></P>        
+ 
+</HTML>

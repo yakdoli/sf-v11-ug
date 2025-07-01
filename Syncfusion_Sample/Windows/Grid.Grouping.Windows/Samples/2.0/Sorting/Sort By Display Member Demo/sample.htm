@@ -1,0 +1,90 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2540914">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Sort By Display Member Demo</H1>
+<P>This sample demonstrates a solution for sorting by display members
+of the foreign-key combo boxes instead of their value members.</P>
+<P> <FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>Features:</B></FONT></FONT></FONT></P>
+<UL>
+	<LI><P>Setting up a foreign-key reference
+	relation between tables</P>
+	</UL>
+<UL>
+	<LI><P>&quot;Customer Name&quot; displayed in the foreign table where a column named &quot;Customer&quot;
+	is located in the main table</P>
+	<LI><P>A Customer column with key values that match the values in a
+	column named &quot;Customer ID&quot; in the foreign table</P>
+</UL>
+<P><b>Interactive Features:</b></P>
+<UL>
+	<LI><P>Steps to accomplish sorting by display member:</P>
+	<UL>
+		<LI><P>Save the location of the<STRONG> mainTable.Customer</STRONG> column
+		so that it can be swapped after a foreign-table reference is set.</P>
+		<LI><P>Add the foreign table to the engine's <STRONG>SourceList</STRONG>.</P>
+		<LI><P>Create and set up a <STRONG>RelationKind.ForeignKeyReference</STRONG>
+		relation.&nbsp; </P>
+		<LI>
+		<P>Set any optional properties on the relation.</P>
+	</UL>
+	<LI><P>Add a relation descriptor to the <STRONG>MainTableDescriptor</STRONG>.
+	Replace<STRONG> mainTable.Customer</STRONG> with
+	<STRONG>foreignTable.CustomerName</STRONG>. 
+	</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="SortByDisplayMember screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P><BR><BR>
+</P>
+<P>In this sample, a column named &quot;Customer Name&quot; is
+displayed in the foreign table where a column named &quot;Customer&quot;
+is located in the main table. The customer column holds key values that
+match the values in a column named &quot;Customer ID&quot; in the
+foreign table.</P>
+<P><B>Here are the steps to accomplish this:</B></P>
+<OL>
+	<LI><P>Save the location of the <STRONG>mainTable.Customer</STRONG>
+	column so that it can be swapped after the foreign table reference
+	is set. 
+	</P>
+	<PRE><FONT COLOR="#8d2e1c">        GridTableDescriptor td = this.gridGroupingControl1.TableDescriptor;</FONT>
+<FONT COLOR="#8d2e1c">        td.VisibleColumns.LoadDefault();</FONT>
+<FONT COLOR="#8d2e1c">        int lookUpIndex = td.VisibleColumns.IndexOf(&quot;Customer&quot;);</FONT></PRE>
+	<LI><P>Add the foreign table to the engine's <STRONG>SourceList</STRONG>.
+		</P>
+	<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">        this.gridGroupingControl1.Engine.SourceListSet.Add(ForeignTableName, ForeignTable.DefaultView);</FONT></PRE>
+	<LI><P>Create and set up a <STRONG>RelationKind.ForeignKeyReference</STRONG>
+	relation. 
+	</P>
+	<PRE><FONT COLOR="#8d2e1c">        GridRelationDescriptor rd = new GridRelationDescriptor();</FONT>
+<FONT COLOR="#8d2e1c">        rd.Name = &quot;CustomerColDisplay&quot;;</FONT>
+<FONT COLOR="#8d2e1c">        rd.RelationKind = RelationKind.ForeignKeyReference;</FONT>
+<FONT COLOR="#8d2e1c">        rd.ChildTableName = ForeignTableName;</FONT></PRE>
+	<LI><P>Set any optional properties on the relation. 
+	</P>
+	<PRE><FONT COLOR="#8d2e1c">        //display column</FONT>
+<FONT COLOR="#8d2e1c">        rd.ChildTableDescriptor.VisibleColumns.Add(&quot;CustomerName&quot;); </FONT>
+<FONT COLOR="#8d2e1c">        //sort it for dropdown display.</FONT>
+<FONT COLOR="#8d2e1c">        rd.ChildTableDescriptor.SortedColumns.Add(&quot;CustomerName&quot;);</FONT></PRE>
+	<LI><P>Add a relation descriptor to the <STRONG>MainTableDescriptor</STRONG>.
+		</P>
+	<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">        td.Relations.Add(rd);</FONT></PRE>
+	<LI><P>Replace<STRONG> mainTable.Customer</STRONG> with
+	<STRONG>foreignTable.CustomerName</STRONG>. 
+	</P>
+	<PRE><FONT COLOR="#8d2e1c">        string foreignCustomerColInMainTable = rd.Name+&quot;_&quot; + &quot;CustomerName&quot;;</FONT>
+<FONT COLOR="#8d2e1c">        td.VisibleColumns.Insert(CustomerColIndex, foreignCustomerColInMainTable);</FONT></PRE>
+</OL>
+</BODY>
+</HTML>

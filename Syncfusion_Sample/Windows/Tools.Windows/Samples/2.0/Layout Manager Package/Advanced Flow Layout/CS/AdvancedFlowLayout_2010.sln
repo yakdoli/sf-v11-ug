@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedFlowLayout_2010", "AdvancedFlowLayout_2010.csproj", "{64DDBA5F-5AAA-4CBD-81C5-CB9018DCDF45}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{64DDBA5F-5AAA-4CBD-81C5-CB9018DCDF45}.Debug.ActiveCfg = Debug|.NET
+		{64DDBA5F-5AAA-4CBD-81C5-CB9018DCDF45}.Debug.Build.0 = Debug|.NET
+		{64DDBA5F-5AAA-4CBD-81C5-CB9018DCDF45}.Release.ActiveCfg = Release|.NET
+		{64DDBA5F-5AAA-4CBD-81C5-CB9018DCDF45}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

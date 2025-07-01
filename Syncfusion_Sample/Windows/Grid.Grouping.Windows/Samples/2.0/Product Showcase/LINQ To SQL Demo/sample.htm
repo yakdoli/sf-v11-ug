@@ -1,0 +1,42 @@
+<html><h1>LINQ To SQL Demo</h1>
+
+<p>This sample implements the LINQ to SQL feature with the Essential Grouping 
+grid control.</p>
+<p><strong>LINQ To SQL</strong></p>
+
+<div align=center><img src="images/sample.png" alt="Word 2007 Image" title="" /></div>
+<P><FONT SIZE=4><strong>Features:</strong></FONT></P>
+<UL>
+<LI><P>&nbsp;It generates language-integrated queries for data retrieval, which means that the relational data is represented as objects in these queries. These queries will then be translated into 
+SQL queries that interact with the database. </P>
+    <LI>
+        <P>The tabular results are then translated back into the objects the user defines. These objects can be manipulated in applications. 
+For example, they can be bound to a grid control for display.</P>
+
+</UL>
+
+<p>
+    <FONT SIZE=4><strong>Advantages:</strong></FONT></p>
+<ul>
+    <li>By using these language-integrated queries, you will receive greater 
+benefits from the languages, such as<br />
+        <ol style="margin-left: 80px">
+            <li>Compile-time verification </li>
+            <li>Design-time features similar to IntelliSense.</li>
+        </ol>
+    </li>
+</ul>
+
+<P><FONT SIZE=4><strong>Interactive Features:</strong></FONT></P>
+<UL>
+<LI><P>
+The class, <b>NorthwindDataContext</b>, plays a role similar to the <b>DataContext</b> class of the .NET framework. This is the main channel by which you retrieve objects from the database and restore changes. It does the translation of LINQ to SQL queries and retranslates the results back to the objects.</p>
+
+<LI><p>This sample allows users to build data relations--such as list item reference, 
+master detail, and many-to-many--using 
+LINQ queries. Below is an example code snippet that represents LINQ queries.</p>
+<p><font color="#8D2E1C"><pre>
+NorthwindDataContext db = NorthwindDataContext.DataContext;
+object query = from cust in db.Customers orderby cust.CompanyName select cust;
+</pre></font></p>
+</UL>

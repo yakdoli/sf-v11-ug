@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DiagramDataBindingSample_2010", "DiagramDataBindingSample_2010.vbproj", "{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DiagramDBiManager_2010", "DiagramDataBindingManager\DiagramDBiManager_2010.vbproj", "{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Debug|x86.ActiveCfg = Debug|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Debug|x86.Build.0 = Debug|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Release|Any CPU.ActiveCfg = Release|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Release|Mixed Platforms.Build.0 = Release|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Release|x86.ActiveCfg = Release|x86
+		{78B4348E-4B11-4BEB-97EE-DCA889F45EF6}.Release|x86.Build.0 = Release|x86
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9E7AA31A-2F5D-4734-8C3E-FC6A8DE38D7D}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

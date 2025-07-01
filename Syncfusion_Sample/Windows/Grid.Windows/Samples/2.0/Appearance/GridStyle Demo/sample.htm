@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;2163521">
+	<META NAME="CHANGEDBY" CONTENT="Kalai">
+	<META NAME="CHANGED" CONTENT="20090102;2203392">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Grid Styles Demo</H1>
+<P>Essential GridControl offers a wide range of support for the appearance of the Grid. This sample illustrates the application of different
+skins  by using the new color scheme <STRONG>ColorStyles</STRONG> in the Essential GridControl. You will be able to switch between themes, 
+while running this sample.</P>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="GridVisualStyles screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P><BR><BR>
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<p></p>
+<UL>
+	
+    <LI><P ALIGN=LEFT>New color scheme property <strong>ColorStyles</strong> is used.</P>
+	<LI><P ALIGN=LEFT>Styles can be set to the GridControl by assigning a <STRONG>ColorStyles
+	</STRONG> enumeration value to the
+	<STRONG>ColorStyles</STRONG> 
+	property.</P>
+	
+</UL>
+<P>The following sample code sets an Office2010Black skin theme to
+the Essential GridControl by using ColorStyles.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">        gridControl1.ColorStyles = Syncfusion.Windows.Forms.ColorStyles.Office2010Black;</FONT></PRE><P>
+
+<P> The Colorstyles property will be enable only when the <STRONG>EnableLegacyStyle</STRONG> is <strong>False</strong>, by default the <STRONG>EnableLegacyStyle</STRONG> is <strong>True</strong>.
+The following sample code sets the LegacyStyle as false to apply the <strong>ColorStyles</strong>skins.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">        gridControl1.Model.EnableLegacyStyle = false; </FONT></PRE><P>
+
+<P></P>
+
+</P>
+<P><STRONG>Note</STRONG> 
+</P>
+<UL>
+	<LI><P ALIGN=LEFT>To enable the <strong>ColorStyles</strong> property, the <strong>LegacyStyle</strong> must be false.</P>
+    <LI><P ALIGN=LEFT>ColorStyles property is similar to the GridVisualStyles property,  but it provides support to change the scrollbars corresponding to the skins applied,
+ without any explicit code to change the scrollbars.</P>
+</UL>
+ <P ALIGN=CENTER><BR><BR>
+</P>
+
+
+</BODY>
+</HTML>

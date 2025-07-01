@@ -1,0 +1,40 @@
+﻿<html><h1>Text Handling</h1>
+
+<p>This sample illustrates the use of <strong>Text Handling</strong> features of the 
+edit control, like the programmatic setting of text, inserting text at a given location, and appending text to the existing content of the 
+edit control. It also demonstrates how to programmatically delete the selected text or delete the text in a specified text range.</p>
+
+<p><div align=center><img src="images/TextHandlingDemo.png" alt="Text Handling Image" title="" /></div></p>
+<p><h3>Features</h3></p>
+<p><ul><li>Essential Edit offers rich support for text manipulation operations like 
+	Insert, Delete, Append, and Insertion of Multiple Lines. </li><li>All these operations can be performed programmatically as well.</li></ul></p>
+<p><h3>Interactive Features</h3></p>
+<p><ul><li>When clicking SetText menu item, a dialog opens and the text entered into the dialog will 
+	be added to the Edit control, when clicking the Dialog's Accept button.</li>
+<li>When clicking the AppendText menu item, a dialog opens and the text entered into the dialog will 
+be appended to the Edit control, when clicking the Dialog's Accept button.</li>
+<li>When clicking the InsertText menu item, a dialog opens and the text entered into the dialog will 
+be inserted at the current cursor point, when clicking the Dialog's Accept button.</li>
+<li>All the text entered into the Edit control will be deleted when clicking the DeleteAll menu item.</li>
+<li>The selected text in the Edit control will be deleted when clicking the DeleteSelection menu item.</li>
+</ul></p>
+
+<font color="#8D2E1C">
+<code>
+<pre>
+// To append text.
+this.editControl1.AppendText(this.inputString);
+
+// To insert text at a particular line and a column.
+this.editControl1.InsertText(this.editControl1.CurrentLine, this.editControl1.CurrentColumn, this.inputString);
+
+// To delete all the text.
+this.editControl1.DeleteAll();
+
+// To delete a selection.
+this.editControl1.DeleteText(this.editControl1.Selection.Top, this.editControl1.Selection.Bottom);
+</pre>
+</code>
+</font>
+</ul>
+</html>

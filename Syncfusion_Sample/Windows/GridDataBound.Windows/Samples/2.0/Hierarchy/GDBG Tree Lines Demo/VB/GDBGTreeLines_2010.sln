@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GDBGTreeLines_2010", "GDBGTreeLines_2010.vbproj", "{E57D85DD-35E7-4F4D-9C25-C6900CB342BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E57D85DD-35E7-4F4D-9C25-C6900CB342BE}.Debug.ActiveCfg = Debug|.NET
+		{E57D85DD-35E7-4F4D-9C25-C6900CB342BE}.Debug.Build.0 = Debug|.NET
+		{E57D85DD-35E7-4F4D-9C25-C6900CB342BE}.Release.ActiveCfg = Release|.NET
+		{E57D85DD-35E7-4F4D-9C25-C6900CB342BE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

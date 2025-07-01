@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>  Spark Line Chart </h1>
+
+<p>This sample illustrates the various types of sparkline charts supported by Essential sparkline.</p>
+
+<p><div align=center><TABLE><TR>
+<TD align=center><b>Sparkline Chart Demo</b></TD></TR>
+<TR><TD>
+<div align=center><img src="images/sparkline.png" alt="Chart Spark Line" title="" /></div></TD>
+		
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+
+<h3><strong>Features</strong></h3>
+<ul>
+	<li><b>Sparkline Chart Types</b><p>The sparkline chart type is set as shown below 
+</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//sets the Sparkline Type as Line</font>
+this.sparkLine1.Type = SparkLine.SparkLineType.Line;
+<font color="#008000">//sets the Sparkline Type as Column</font>
+this.sparkLine1.Type = SparkLine.SparkLineType.Column;
+<font color="#008000">//sets the Sparkline Type as WinLoss</font>
+this.sparkLine1.Type = SparkLine.SparkLineType.WinLoss;
+</code></pre></font></li>
+<li><b>Marker Support</b><p>The markers are visual indicator to represent the location of data points in the Sparkline graph. 
+</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//To enable the markers should be display at every data point location in line sparkline graph</font>
+this.sparkLine1.Markers.ShowMarker = true;
+<font color="#008000">//To enable the markers for highest value shown in the all types of sparkline.</font>
+this.sparkLine1.Markers.ShowHighPoint = true;
+<font color="#008000">//To enable the markers for lowest value shown in the all types of sparkline.</font>
+this.sparkLine1.Markers.ShowLowPoint = true;
+<font color="#008000">//To enable the markers for start value shown in the all types of sparkline.</font>
+this.sparkLine1.Markers.ShowStartPoint = true;
+<font color="#008000">//To enable the markers for end value shown in the all types of sparkline.</font>
+this.sparkLine1.Markers.ShowEndPoint = true;
+<font color="#008000">//To enable the markers for negative value shown in the all types of sparkline.</font>
+this.sparkLine1.Markers.ShowNegativePoint = true;
+</code></pre></font>
+</li>
+<li><b>Color Setting</b><p>Customized the markers , line, column and background colors for sparkline charts through the below properties. 
+</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Gets or Sets color to line, column and backgroung. </font>
+this.sparkLine1.LineStyle.LineColor  = this.colorPickerButton1.SelectedColor;
+this.sparkLine1.ColumnStyle.ColumnColor = new Syncfusion.Drawing.BrushInfo(this.colorPickerButton2.SelectedColor);
+this.sparkLine1.BackInterior = new Syncfusion.Drawing.BrushInfo(Color.White);
+<font color="#008000">//Gets or Sets marker color to line type sparkline. </font>
+this.sparkLine1.Markers.MarkerColor = new Syncfusion.Drawing.BrushInfo(this.colorPickerButton6.SelectedColor);
+<font color="#008000">//Gets or Sets marker color to High, Low, Start,End and Negative points</font>
+this.sparkLine1.Markers.HighPointColor = new Syncfusion.Drawing.BrushInfo(this.colorPickerButton6.SelectedColor);
+this.sparkLine1.Markers.LowPointColor = new Syncfusion.Drawing.BrushInfo(this.colorPickerButton6.SelectedColor);
+this.sparkLine1.Markers.StartPointColor = new Syncfusion.Drawing.BrushInfo(this.colorPickerButton6.SelectedColor);
+this.sparkLine1.Markers.EndPointColor = new Syncfusion.Drawing.BrushInfo(this.colorPickerButton6.SelectedColor);
+this.sparkLine1.Markers.NegativePointColor = new Syncfusion.Drawing.BrushInfo(this.colorPickerButton6.SelectedColor);
+</code></pre></font>
+</ul>
+
+</html>

@@ -1,0 +1,98 @@
+<html><h1> Chart Axis Customization</h1>
+
+<p>This sample demonstrates customizing the axis lines and axis grid lines of a 
+chart control.</p>
+
+<div align=center><img src="images/sample.png" alt="Chart Axis Customize Sample" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Customized Chart Axis</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<p><strong>Features</strong>:</p>
+<ul>
+	<li>Axis<b> </b>
+Position
+<p>An axis can be reversed using the <strong>Inversed</strong> property so that its points render from right to left,  if horizontal; and top to bottom, if vertical. The <b>OpposedPosition</b> 
+property sets the axis on the opposite side of the primary axis</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the axis points as reversed</font>
+this.chartControl1.PrimaryXAxis.Inversed = true;
+this.chartControl1.PrimaryYAxis.Inversed = true;
+<font color="#008000">//Moves the axis to the opposite side of Primary Axis</font>
+this.chartControl1.PrimaryXAxis.OpposedPosition = true;
+this.chartControl1.PrimaryYAxis.OpposedPosition = true;
+      
+</code></pre></font></li>
+
+
+<li><b>Dash Style</b>
+<p>The <b> Dash Style</b> property is used to set the style of a line.
+
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the style of axis lines</font>
+this.chartControl1.PrimaryXAxis.LineType.DashStyle = DashStyle.Solid;
+this.chartControl1.PrimaryYAxis.LineType.DashStyle = DashStyle.Solid;
+<font color="#008000">//Sets the style of axis grid lines</font>
+this.chartControl1.PrimaryXAxis.GridLineType.DashStyle = DashStyle.Solid;
+this.chartControl1.PrimaryYAxis.GridLineType.DashStyle = DashStyle.Solid;
+</code></pre></font></li>
+
+<li><b>Line Width</b>
+<p>Width of the axis lines and axis grid lines are set using the code below. </p>
+<font color="#8D2E1C"><pre><code>     
+<font color="#008000">//Sets the axis lines width</font>
+this.chartControl1.PrimaryXAxis.LineType.Width = 1;
+this.chartControl1.PrimaryYAxis.LineType.Width = 1;
+<font color="#008000">//Sets the axis grid lines width</font>
+this.chartControl1.PrimaryXAxis.GridLineType.Width = 1;
+this.chartControl1.PrimaryYAxis.GridLineType.Width = 1;   
+</code></pre></font></li>
+
+<li><b>Tick Size</b>
+<p>The size of the ticks rendered on the primary axis lines are set using the <b>TickSize</b> property.</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the axis tick size</font>
+this.chartControl1.PrimaryXAxis.TickSize = 1;
+this.chartControl1.PrimaryYAxis.TickSize = 1;
+           
+</code></pre></font></li>
+
+<li><b>Foreground Color</b>
+<p>Foreground color of the axis lines and axis grid lines can be set separately using the <b>LineType.ForeColor</b> property and 
+the <b>GridLineType.ForeColor</b> property, as shown below.</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the fore color of axis lines</font>
+this.chartControl1.PrimaryXAxis.LineType.ForeColor = Color.Black;
+this.chartControl1.PrimaryYAxis.LineType.ForeColor = Color.Black;
+<font color="#008000">//Sets the fore color of axis grid lines</font>
+this.chartControl1.PrimaryXAxis.GridLineType.ForeColor = Color.Black;
+this.chartControl1.PrimaryYAxis.GridLineType.ForeColor = Color.Black;
+</code></pre></font></li>   
+
+<li><b>Axes Titles</b>
+<p>The <b> TitleColor </b> and <b> TitleFont</b> properties are used to set the 
+color and font of axes titles.
+
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the Title color of axis title</font>
+this.chartControl1.PrimaryXAxis.TitleColor=Color.Blue;
+this.chartControl1.PrimaryYAxis.TitleColor=Color.Red;
+<font color="#008000">//Sets the Title font of axis title</font>
+this.chartControl1.PrimaryXAxis.TitleFont=new Fot("Arial",10);
+this.chartControl1.PrimaryYAxis.TitleFont=new Fot("Arial",10);
+</code></pre></font></li>
+
+ <li><b>Axes Label Placement</b>
+<p>The <b> AxisLabelPlacement </b> property of axis used to set the label position in axis.It can be placed Inside or Outside the plotted chart area using ChartPlacement enum.
+
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Set the label placement inside of plotted chart area</font>
+this.chartControl1.PrimaryYAxis.AxisLabelPlacement = ChartPlacement.Inside;
+<font color="#008000">//Set the label placement outside of plotted chart area</font>
+ this.chartControl1.PrimaryYAxis.AxisLabelPlacement = ChartPlacement.Outside;
+</code></pre></font></li>
+</ul>
+
+</html>

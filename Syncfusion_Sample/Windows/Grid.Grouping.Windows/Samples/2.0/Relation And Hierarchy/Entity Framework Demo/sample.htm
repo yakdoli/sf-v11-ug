@@ -1,0 +1,46 @@
+<html>
+<h1>Entity Framework Demo</h1>
+<p>This sample illustrates implementing ADO.NET Entity Framework support in the GridGroupingControl.</p>
+
+<p>Below is an image of a GridGroupingControl Entity Framework.</p>
+
+<p align=center><img src="images/GGCEntity.png" alt="GGC Entity Framework" title="GGC Entity Framework" /></p>
+
+<p align=center><b>Entity Framework.</b></p>
+
+<p><strong>Features</strong></p>
+<ul>
+	    <li><p>The ADO.NET Entity Framework enables you to create data access applications by programming against a conceptual application model instead of programming directly against a relational storage schema.</p> 
+	    
+</ul>
+<p><strong>Interactive Features</strong></p>
+<ul>
+	 <li><p>The Entity Data Model Wizard is used to generate an Entity Data Model (EDM) for Entity Framework support, allowing you to create a model from an existing database in this sample.</STRONG>.</p>
+
+</ul>
+
+<p>The following code illustrates binding a datasource to theGridGroupingControlthrough an Entity Data Model.
+<font color="#8D2E1C"><pre>
+                //Creates an object for entity connection.
+                EntityConnection con = new EntityConnection("name=NorthwindGridEntities");
+
+                con.StoreConnection.ConnectionString = "Data Source=" + FindFile("NorthwindwithImage.sdf");
+                NorthwindGridEntities db = new NorthwindGridEntities(con);
+
+                //Bind the datasource to GridGroupingControl.    
+                this.gridGroupingControl1.DataSource = db.Customers;
+</pre></font>
+<p><strong>Note: </strong></p>
+<p>To run the Entity Framework_2008 project file, you must have the following installed:
+               <font color="#8D2E1C">
+               <ul>
+               <li>Microsoft Visual Studio 2008.<li>The ADO.NET Entity Framework runtime and tools.<li>Microsoft SQL Server 2005 or later with Database Services, or the Express edition of SQL Server 2005 or later.                         
+               </ul>
+</font>
+<p>To run the  Entity Framework_2010 project file, you must have the following installed:
+               <font color="#8D2E1C">
+               <ul>
+               <li>Microsoft Visual Studio 2010.<li>.NET Framework 4.0<li>Microsoft SQL Server 2005 or later with Database Services, or the Express edition of SQL Server 2005 or later.                         
+               </ul>
+</font>
+</html>

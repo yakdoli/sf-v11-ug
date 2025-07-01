@@ -1,0 +1,153 @@
+﻿<html><h1>Chart Legend</h1>
+
+<p>Essential Chart offers extensive customization for legends. The position of a legend as well as its representation aspects can be completely customized. 
+The default legend items can also be customized through events.</p>
+
+<p>This sample demonstrates the legend customization options available in Essential Chart.</p>
+
+<p><div align=center><img src="images/sample.png" alt="Chart Legend Sample" title="Chart Legend Sample" /></div></p>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Chart Legend</b></TD>
+	</TR>
+		</TABLE></div></p>
+
+<p><strong>Features:</strong></p>
+<ul>
+<li><b>Back Interior</b>
+<p>The back interior of the legend can be set with gradient colors, as shown below.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.BackInterior = new BrushInfo(GradientStyle.Vertical, Color.FromArgb(192, 192, 255), Color.White);
+</code></pre></font>
+</li>
+<li><b>Legend Title</b>
+<p>The legend title can be customized with the <b>Text</b>, <b>ForeColor</b>, and <b>TextAlignment</b> properties.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.Text = "Legend Title"
+this.chartControl1.Legend.ForeColor = Color.Black;
+this.chartControl1.Legend.TextAlignment = StringAlignment.Center;
+</code></pre></font>
+</li>
+
+<li><b>Shadow Settings</b>
+<p>A legend item can display a shadow for the item&#39;s text and icon. Shadow color and 
+offset can also be customized with the code below.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.ShowItemsShadow = true;
+this.chartControl1.Legend.ItemsShadowColor = Color.Black;
+<font color="#008000">Sets the offset of the shadow of the legend items</font>
+this.chartControl1.Legend.ItemsShadowOffset = new Size(2,2);
+</code></pre></font>
+</li>
+
+<li><b>Item Position</b>
+<p>Items inside the legend can be aligned with various properties, as shown below.</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">Sets the number of rows to be used in the legend</font>
+this.chartControl1.Legend.RowsCount = 2;
+<font color="#008000">Sets the spacing between the element borders and the legend</font>
+this.chartControl1.Legend.Spacing = 4;
+<font color="#008000">Sets the alignment of the legend items</font>
+this.chartControl1.Legend.ItemsAlignment = StringAlignment.Center;
+<font color="#008000">Sets the text alignment of the legend items.</font>
+this.chartControl1.Legend.ItemsTextAligment = VerticalAlignment.Center;
+</code></pre></font>
+</li>
+
+<li><b>Border settings</b>
+<p>The border of a legend can be shown or hidden using the <b>ShowBorder</b> property.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.ShowBorder = true;
+<font color="#008000">Sets the style of the border line</font>
+this.chartControl1.Legend.Border.DashStyle = DashStyle.Solid;
+<font color="#008000">Sets the width of the border line</font>
+this.chartControl1.Legend.Border.Width = 1;
+<font color="#008000">Sets the forecolor of the border line</font>
+this.chartControl1.Legend.Border.ForeColor = Color.Black;
+</code></pre></font>
+</li>
+
+<li><b>Font Settings</b>
+<p>A legend&#39;s font can be set by the <b>Font</b> property. The text color of each item in the 
+legend can be set by the <b>TextColor</b> property; this happens by retrieving items from the <b>ChartLegendItem</b> collection.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.Font = new Font("Verdana", 7.0f, FontStyle.Bold);
+foreach (ChartLegendItem item in this.chartControl1.Legend.Items)
+{
+   item.TextColor = Color.Black;
+}
+</code></pre></font>
+</li>
+
+<li><b>Legend Alignment</b>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">Specifies the legend to be placed outside the ChartArea</font>
+this.chartControl1.LegendsPlacement = ChartPlacement.Outside;
+this.chartControl1.LegendAlignment = ChartAlignment.Center;
+<font color="#008000">Specifies the legend position as Bottom. It provides other options like, Top, Left, Right and Floating</font>
+this.chartControl1.LegendPosition = ChartDock.Bottom;
+<font color="#008000">Indicates that the control is docking free. With this property set to true, the Legend will be in floating mode, without getting docked to any of the sides. </font>
+this.chartControl1.Legend.DockingFree = true;
+</code></pre></font>
+</li>
+<li><b>Item Representation</b>
+<p>The code below displays the check box of a legend. With this check box, the 
+user can show or hide a whole series.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.VisibleCheckBox = true;
+</code></pre></font>
+The <b> ShowSymbol</b> property is used to show a symbol rendered in a series 
+and in the legend icon as well.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.ShowSymbol = true;
+</code></pre></font>Using the <b>Visible</b> property of the legend item, individual 
+items 
+can be hidden, as shown below.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.Items[1].Visible = false;
+</code></pre></font>
+The code below shows how legend items can be represented by a series image. The <b>ChartLegendRepresentationType</b> collection provides many other options, such as 
+<em>Circle</em>, <em>Diamond</em>, <em>Triangle</em>, and so on.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.RepresentationType = ChartLegendRepresentationType.SeriesImage;
+</code></pre></font>
+</li>
+
+<li><b>Custom Items and Images</b>
+<p>Custom items can be added to the legend as shown below.</p>
+<font color="#8D2E1C"><pre><code>
+ChartLegendItem cli = new ChartLegendItem("Custom Image");
+ChartLegendItemsCollection clic = new ChartLegendItemsCollection();
+cli.Type = ChartLegendItemType.Image;
+cli.ImageList = new ChartImageCollection();
+cli.ImageList.Add(this.imageListAdv1.Images[12]);
+cli.ImageIndex = 0;
+clic.Add(cli);
+this.chartControl1.Legend.CustomItems = clic.ToArray();
+</code></pre></font>
+
+With this coding, items other than those representing the series can be added to the legend.
+<p>Custom images to existing legend items can be added as shown below.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.Items[0].ImageList = new ChartImageCollection();
+this.chartControl1.Legend.Items[0].ImageList.Add(this.imageListAdv1.Images[12]);
+this.chartControl1.Legend.Items[0].ImageIndex = 0;
+this.chartControl1.Legend.Items[0].Type = ChartLegendItemType.Image;
+</code></pre></font>
+</li>
+
+<li><b>Disallow the Chart Legend</b>
+<p>The chart control supports preventing the moving of chart legends, toolbars, 
+and titles by utilizing the <strong>Behavior</strong> property.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.Behavior=ChartDockingFlags.Movable;
+this.chartControl1.Legend.Behavior=ChartDockingFlags.Dockable;
+this.chartControl1.Legend.Behavior=ChartDockingFlags.All;
+this.chartControl1.Legend.Behavior=ChartDockingFlags.None;
+
+this.chartControl1.ToolBar.Behavior=ChartDockingFlags.All;
+
+this.chartControl1.Title.Behavior=ChartDockingFlags.All;
+</code></pre></font></li>
+
+</ul>
+</html>

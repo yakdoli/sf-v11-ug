@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PivotSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Fields>
+    <string>City</string>
+    <string>Sex</string>
+    <string>Age</string>
+    <string>Profession</string>
+    <string>Salary</string>
+    <string>State</string>
+    <string>Married</string>
+    <string>Children</string>
+    <string>Siblings</string>
+    <string>CC Debt</string>
+  </Fields>
+  <RowFields>
+    <string>Sex</string>
+    <string>Profession</string>
+  </RowFields>
+  <ColumnFields>
+    <string>State</string>
+    <string>City</string>
+  </ColumnFields>
+  <ValueComputations>
+    <PivotComputationInfo>
+      <FieldName>Salary</FieldName>
+      <Description>Average of Salary</Description>
+      <CalculationName>Average</CalculationName>
+      <Format>#.##</Format>
+    </PivotComputationInfo>
+    <PivotComputationInfo>
+      <FieldName>CC Debt</FieldName>
+      <Description>Average of CC Debt</Description>
+      <CalculationName>Average</CalculationName>
+      <Format>#.##</Format>
+    </PivotComputationInfo>
+  </ValueComputations>
+  <FilterFields />
+  <FilterValues />
+</PivotSchema>

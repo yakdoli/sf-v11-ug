@@ -1,0 +1,34 @@
+<h1>OCR Process in PDF</h1>
+
+<p>This sample illustrates the process of a Optical Character Recognition in PDF format.</p>
+<p>Essential PDF allows to process a OCR in PDF document. Use the <b>Process</b> method of 
+the <b>OCRProcessor</b> class to process a OCR in a PDF.</p>
+
+<p><P>Below is an illustration of the processed file.</P></p>
+<p><div align = "Center"><img src="images/sample.png" alt="PDF" title="" /></div></p>
+
+<p>Here is a code snippet to process a OCR in PDF document using 
+Essential PDF.</p>
+<pre>
+                //Load the PDF document 
+                PdfLoadedDocument lDoc = new PdfLoadedDocument("Region.pdf");
+               
+               //Process OCR by providing loaded PDF document, Data dictionary and language
+                processor.PerformOCR(lDoc, @"../../Tessdata/");
+				
+                //Save the OCR processed PDF document in the disk
+                lDoc.Save("Sample.pdf");
+                lDoc.Close(true);</pre>
+<p style="font-size:large">Features:</p>
+<ul>
+	<li>Essential PDF allows you to convert a non-searchable PDF document into a searchable PDF document.</li>		
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+  <li>Click the Process OCR button to convert the Non-searchable PDF document into searchable PDF document</li>
+  <li>Click Yes on the message box to view the generated Pdf file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+
+</ul>
+</html>

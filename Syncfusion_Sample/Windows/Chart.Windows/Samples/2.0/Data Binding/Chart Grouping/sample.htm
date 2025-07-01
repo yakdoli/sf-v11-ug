@@ -1,0 +1,62 @@
+﻿<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Chart Grouping</h1>
+
+<p>This sample demonstrates plotting filtered data using the grouping engine 
+in Essential Chart. Many features of Essential Grouping have been implemented to filter out chart data.  </p>
+
+<div align=center><img src="images/sample.png" alt= "ChartGroupingSample"title=""/></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Chart Grouping</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<h3><strong>Features</strong></h3>
+<ul>
+	<li>
+	<p class="style1">This sample shows how to filter data and display it in a chart. 
+	</p>
+	</li>
+	<li>
+	<p class="style1">Filtering<strong> </strong>is performed using the grouping engine and data changes are reflected in 
+the chart.</p>
+	</li>
+	<p><font color="#8D2E1C">
+	<pre><code>
+// Minimum requirement for Grouping Engine - DataSource should be a IList collection.
+			
+Engine group=new Engine();
+group.SetSourceList (list);
+
+ExpressionFieldDescriptor exp = new ExpressionFieldDescriptor();
+exp.Expression = "[Y] > "+this.textBox1.Text.ToString();
+
+RecordFilterDescriptor rfd = new RecordFilterDescriptor(exp.Expression);
+group.TableDescriptor.RecordFilters.Add (rfd);
+
+System.Diagnostics.Trace.WriteLine("Filtered Record Count:" + group.Table.FilteredRecords.Count);
+this.chartControl1.Series[0].Points.Clear();
+int j = 0;
+foreach(Record rec in group.Table.FilteredRecords)
+ {
+  string b=rec.GetData().ToString();
+  System.Diagnostics.Trace.WriteLine(b);	
+  this.chartControl1.Series[0].Points.Add(j,Convert.ToDouble(b));
+  j++;
+ }
+ this.label2.Text = "Number of Filtered points: "+group.Table.FilteredRecords.Count.ToString();
+}
+</pre>
+	</code></font></p>
+</ul>
+
+</html>

@@ -1,0 +1,21 @@
+<html><h1>List-Item Reference Demo</h1>
+
+<p><strong>Features</strong>:</p>
+<p>This sample shows the <strong>RelationKind.ListItemReference</strong> relation.</p>
+
+<p>The following is a sample code snippet showing this relation.</p>
+
+<font color="#8D2E1C"><pre>
+		USStatesCollection usStates = USStatesCollection.CreateDefaultCollection();
+
+		this.engine1.SourceListSet.Add("Countries", countries);
+
+		RelationDescriptor usStatesRd = new RelationDescriptor();
+		usStatesRd.Name = "State";
+		usStatesRd.MappingName = "State";  // FieldName in table
+		usStatesRd.ChildTableName = "USStates";  // SourceListSet name for lookup.
+		usStatesRd.RelationKind = RelationKind.ListItemReference;
+		usStatesRd.ChildTableDescriptor.SortedColumns.Add("Name");
+		mainTd.Relations.Add(usStatesRd);
+</pre></font>
+</html>

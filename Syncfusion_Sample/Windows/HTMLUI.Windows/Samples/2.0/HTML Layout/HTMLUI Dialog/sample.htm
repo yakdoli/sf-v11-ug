@@ -1,0 +1,38 @@
+﻿<html><h1>HTMLUI Dialog</h1>
+
+<p>This sample shows how to create a <strong>form-based dialog</strong> using the HTMLUI control.</p>
+
+<p><p align=center>
+<img src="images/sample.png" alt="HTMLUI Dialog" title="" width="591" height="432" /></p>
+
+<p><strong>Features</strong>:</p>
+
+<ul>
+	<li>Only one form with a HTMLUI control is used to create a multiple dialog application.</ul>
+
+<ul><li>The application separates the display definition into HTML and the logic into C# code.</ul>
+
+<ul><li>The flexible nature of HTML makes it easy to display validation messages.</ul>
+
+<p>The code below shows how to create a class with first name, last name, user name, and password attributes to hold the values of a user.</p>
+
+
+
+
+<p>
+<blockquote>
+  <pre><font color="#8D2E1C">//To View a user
+
+if(path == GetFilesLocation() + "viewusers.htm")
+{
+	htmlelements = this.htmluiControl1.Document.GetElementsByUserIdHash();
+	BaseElement list = htmlelements["allusersList"] as BaseElement;
+	string listString = String.Empty;;
+	foreach(UserClass c in this.listUsers)
+	{
+	listString += c.userName + "(" + c.fName+ " " + c.lName+ ")&lt;p/>"; } list.InnerHTML = listString;
+} 
+</pre>
+</blockquote>
+</font></p>
+</html>

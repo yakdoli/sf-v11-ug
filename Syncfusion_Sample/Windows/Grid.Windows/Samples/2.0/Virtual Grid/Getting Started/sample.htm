@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081230;6484850">
+	<META NAME="CHANGED" CONTENT="20081230;6502232">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Getting Started - Virtual Grid Tutorial</H1>
+<P>Virtual grids allow you to display large data sources very quickly.
+</P>
+<P>This sample illustrates binding a grid to an external data source so that no data actually resides in the grid. The data is provided
+to the grid on-demand through an event that allows you to furnish
+requested data in the handler. 
+</P>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="Virtual Grid screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+<UL>
+	<LI><P><STRONG>QueryCellInfo</STRONG>, <STRONG>QueryColCount</STRONG>,
+	and <STRONG>QueryRowCount</STRONG> are events to be handled to
+	implement a virtual grid.</P>
+</UL>
+<P STYLE="margin-left: 0.49in"> They provide the basic information
+about the number of rows and columns and the values of data.</P>
+<UL>
+	<LI><P>Data from the data source is set through the <STRONG>QueryCellInfo</STRONG>
+	handler:</P>
+</UL>
+<PRE><FONT COLOR="#8d2e1c">            void GridQueryCellInfo(object sender, GridQueryCellInfoEventArgs e) </FONT>
+<FONT COLOR="#8d2e1c">            {</FONT>
+<FONT COLOR="#8d2e1c">                if (e.RowIndex &gt; 0 &amp;&amp; e.ColIndex &gt; 0)</FONT>
+<FONT COLOR="#8d2e1c">                {</FONT>
+<FONT COLOR="#8d2e1c">                    e.Style.CellValue = this._extData[e.RowIndex - 1, e.ColIndex - 1];</FONT>
+<FONT COLOR="#8d2e1c">                    e.Handled = true;</FONT>
+<FONT COLOR="#8d2e1c">                }</FONT>
+<FONT COLOR="#8d2e1c">            } </FONT> </PRE>
+<UL>
+	<LI><P>Conditional formatting can be done in the <STRONG>QueryCellInfo</STRONG>
+	handler. Those data that are divisible by three is set with the background color
+	<STRONG>LightPink</STRONG>.</P>
+</UL>
+<PRE><FONT COLOR="#8d2e1c">            if(this._extData[e.RowIndex - 1, e.ColIndex - 1] % 3 == 0)</FONT>
+<FONT COLOR="#8d2e1c">                e.Style.BackColor = Color.LightPink;</FONT>
+<FONT COLOR="#8d2e1c">                e.Handled = true;</FONT>  </PRE>
+<UL>
+	<LI><P><STRONG>QueryColCount</STRONG> and <STRONG>QueryRowCount</STRONG>
+	events are used to return column and row count on-demand.</P>
+</UL>
+<UL>
+	<LI><P>The<STRONG> SaveCellInfo</STRONG> event is used to store data,
+	back into the data source when it is modified.</P>
+</UL>
+<PRE><FONT COLOR="#8d2e1c">            void GridSaveCellInfo(object sender, GridSaveCellInfoEventArgs e)</FONT>
+<FONT COLOR="#8d2e1c">            {</FONT>
+<FONT COLOR="#8d2e1c">            this._extData[e.RowIndex - 1, e.ColIndex - 1] =   int.Parse(e.Style.CellValue.ToString());</FONT>
+<FONT COLOR="#8d2e1c">                e.Handled = true;</FONT>
+<FONT COLOR="#8d2e1c">            } </FONT> </PRE>
+<UL>
+	<LI><P>The grid is purely virtual only when<STRONG> e.Handled</STRONG>
+	is set to <EM>true.</EM></P>
+</UL>
+<UL>
+	<LI><P><STRONG>e.RowIndex</STRONG> and <STRONG>e.ColIndex</STRONG>
+	start from (-1,-1).</P>
+</UL>
+<P STYLE="margin-left: 0.49in"> The reason to query with -1 is to
+denote -1 for <STRONG>colstyles</STRONG> and <STRONG>rowstyles</STRONG>.
+When the table style is requested, both the <STRONG>e.RowIndex</STRONG>
+and <STRONG>e.ColIndex </STRONG>will be -1. Therefore, a condition
+check, if (<STRONG>e.RowIndex &gt; 0 &amp;&amp; e.ColIndex &gt; 0</STRONG>),
+is required in these handlers.</P>
+<UL>
+	<LI><P><STRONG>QueryRowHeight</STRONG> and <STRONG>QueryColWidth
+	</STRONG> handlers are used
+	to set the size of the row or column (optional).</P>
+</UL>
+<UL>
+	<LI><P>The<STRONG> QueryCoveredRange</STRONG> handler (optional) is used
+	to cover specified ranges.</P>
+</UL>
+<P STYLE="margin-left: 0.49in"> Odd rows are covered from columns 1
+to 3 and odd-even row pairs are covered in column 6.</P>
+<UL>
+	<LI><P ALIGN=LEFT>The virtual grid will be refreshed by calling the
+	<STRONG>ResetVolatileData</STRONG>,<STRONG> </STRONG>and all events described above
+	will be triggered for that call.</P>
+</UL>
+</BODY>
+</HTML>

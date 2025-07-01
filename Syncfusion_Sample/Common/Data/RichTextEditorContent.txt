@@ -1,0 +1,1 @@
+<STRONG>RichTextEditor</STRONG> is a WYSIWYG editor for ASP.NET offering advanced rich-client, Word like content creation capabilities, with support for: <UL><LI>Built-in spell checking capabilities</LI><LI>Built-in Toolbars with various Skins</LI><LI>Support for uploading and linking to custom images</LI><LI>Multilevel Undo/Redo support</LI></UL>

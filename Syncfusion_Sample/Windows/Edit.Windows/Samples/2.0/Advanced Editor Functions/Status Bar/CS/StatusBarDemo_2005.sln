@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusBarDemo_2005", "StatusBarDemo_2005.csproj", "{E5DBF915-BAB8-478A-981B-11569C7654AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E5DBF915-BAB8-478A-981B-11569C7654AA}.Debug.ActiveCfg = Debug|.NET
+		{E5DBF915-BAB8-478A-981B-11569C7654AA}.Debug.Build.0 = Debug|.NET
+		{E5DBF915-BAB8-478A-981B-11569C7654AA}.Release.ActiveCfg = Release|.NET
+		{E5DBF915-BAB8-478A-981B-11569C7654AA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

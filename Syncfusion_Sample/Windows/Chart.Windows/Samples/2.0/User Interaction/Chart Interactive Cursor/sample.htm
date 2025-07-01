@@ -1,0 +1,75 @@
+﻿<html><h1> Chart Interactive Cursor</h1>
+
+<p> This sample shows how to implement an interactive cursor using Essential Chart. 
+Interactive cursors can be moved from one data point to another by dragging or move to chart area by specifying the values in XInterval and YInterval.</p>
+
+<div align=center><img src="images/sample.png" alt="Chart Interactive Cursor Sample" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Interactive Charts</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<p><strong>Features</strong>: </p>
+<ul>
+	<li><b>Interactive cursor</b>
+	<p>An Interactive cursor is used to indicate the x-axis and y-axis values of a 
+data point. Interactive cursors are created as shown in the following code.
+	<font color="#8D2E1C">
+	<pre><code>
+ChartInteractiveCursor cursor1 = new ChartInteractiveCursor(this.chartControl1.Series[0]);
+this.chartControl1.ChartArea.InteractiveCursors.Add(cursor1);
+this.chartControl1.ChartArea.InteractiveCursors[0].XPosition = 2;
+this.chartControl1.ChartArea.InteractiveCursors[0].YPosition = 5;
+</code></pre>
+	</font>
+</li>
+
+<li><b>Cursor Color</b>
+<p>The color of an interactive cursor can be set to any system-defined color.
+<font color="#8D2E1C"><pre><code>
+cursor1.Color = Color.Yellow;
+</code></pre></font>
+</li>
+<li><b>MoveTo ChartArea</b>
+<p> An Interactive curosr canbe moved to chart area by using <b>MoveToChartArea</b> property of cursor.</p>
+<font color="#8D2E1C">
+	<pre><code>
+this.chartControl1.ChartArea.InteractiveCursors[0].MoveToChartArea = true;
+</code></pre>
+	</font>
+</li>
+<li><b>XInterval</b>
+<p>Cursor on the X Axis can be moved from left to right or right to left  based on the value provided in XInterval property of interactive cursor.
+</p>
+<font color="#8D2E1C">
+	<pre><code>
+this.chartControl1.ChartArea.InteractiveCursors[0].XInterval = 1;
+</code></pre>
+	</font>
+</li>
+<li><b>YInterval</b>
+<p>Cursor on the Y Axis can be moved from top to bottom or bottom to top based on the value provided in YInterval property of interactive cursor.
+</p>
+<font color="#8D2E1C">
+	<pre><code>
+this.chartControl1.ChartArea.InteractiveCursors[0].YInterval = 2;
+</code></pre>
+	</font>
+</li>
+	<li><b>Moving the Cursor</b>
+<p>The <b>VerticalMove</b> and <b>HorizontalMove</b> methods are used to move 
+a cursor to the next closest data point in a series.</li>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Returns the series index value of the closest point to the specified Y value.</font>
+this.chartControl1.ChartArea.InteractiveCursors[0].VerticalMove(true);
+<font color="#008000">//Returns the series index value of the closest point to the specified X value.</font>
+this.chartControl1.ChartArea.InteractiveCursors[0].HorizontalMove(true);
+</code></pre></font>
+</li>
+<p></p>
+
+	
+</ul>
+
+</html>

@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CustomConfigFile_2005", "CustomConfigFile_2005.vbproj", "{D78507C1-9718-4CB1-8297-38C32E36D6AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D78507C1-9718-4CB1-8297-38C32E36D6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78507C1-9718-4CB1-8297-38C32E36D6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78507C1-9718-4CB1-8297-38C32E36D6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78507C1-9718-4CB1-8297-38C32E36D6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

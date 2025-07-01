@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Diagram Events</h1>
+<p>This sample illustrates the various Diagram.EventSink&quot;s events supported by Essential Diagram.</p>
+<p><div align=center><img src="images/sample.png" alt="Diagram Events Image" title="" /></div></p>
+
+<h3><strong>Features</strong></h3>
+<ul>
+<li>The diagram events are listed below:</li>
+<ul>
+<li>NodeCollectionChanged</li>
+<li>	NodeCollectionChanging</li>
+<li>	NodeSelected</li>
+<li>	NodeDeselected</li>
+<li>	NodeClick</li>
+<li>	NodeDoubleClick</li>
+<li>	NodeMouseEnter</li>
+<li>	NodeMouseLeave</li>
+<li>	SelectionListChanged</li>
+<li>	MagnificationChanged</li>
+<li>	OriginChanged</li>
+</ul></ul>
+<ul><p>Use the following code to trigger the NodeCollectionChanged/Changing event, when a node is added to the Diagram control.</p>
+<p><font color="#8D2E1C"><pre>      
+			// Occurs when the node collection is changing.
+			diagram1.EventSink.NodeCollectionChanging += new CollectionExEventHandler(EventSink_NodeCollectionChanging);
+            // Occurs when the node collection is changed.
+            diagram1.EventSink.NodeCollectionChanged += new CollectionExEventHandler(EventSink_NodeCollectionChanged);   
+
+			void EventSink_NodeCollectionChanged(CollectionExEventArgs evtArgs)
+			{
+	             listBox1.Items.Add( "\nNodeCollectionChanged event Fired.\n"); 
+	        }
+	
+	        void EventSink_NodeCollectionChanging(CollectionExEventArgs evtArgs)
+	        {
+	            listBox1.Items.Add("\nNodeCollectionChanging event Fired.\n"); 
+			}
+
+	   </pre></font></p></ul>
+</html>

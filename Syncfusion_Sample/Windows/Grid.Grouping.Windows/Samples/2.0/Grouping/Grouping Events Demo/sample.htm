@@ -1,0 +1,48 @@
+﻿<html><h1>Grouping Events Demo</h1>
+
+<p>This sample demonstrates the creation of an event log that will show the 
+order of various grouping events that are fired. You will be able to see different grouping events like 
+Group Added, Group Expanded, Group Collapsed, etc. 
+</p>
+
+<ul>
+	<li>The first step is to create an event tracer and customize it by adding 
+	the required event handlers. The <strong>GridEngine</strong> class is used 
+	for this purpose. By using an instance of this class, the event handlers are 
+	generated. In this sample, the <strong>EngineEventTracer</strong> is implemented, which contains two methods: <strong>HookEvents</strong> and 
+	<strong>UnHookEvents</strong>. These events hook-up the events on demand and 
+	unhook them when they are not  traced. </li>
+
+<p>The following is an image of the sample.</p>
+
+<p><p align=center><img src="images/sample.png" alt="Grouping Events screenshot" title="Grouping Events" /></p>
+
+<p>Here is the code to hook-up an event:</p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.groupingEngine.GroupAdded+=new GroupEventHandler(groupingEngine_GroupAdded);  </pre></font></p>
+
+<p>Here is the code to unhook the event:</p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.groupingEngine.GroupAdded-=new GroupEventHandler(groupingEngine_GroupAdded);  </pre></font></p>
+
+<p>Here is the code to add an event handler:</p>
+
+<p><font color="#8D2E1C"><pre>
+    		private void groupingEngine_GroupAdded(object sender, GroupEventArgs e)
+    		{
+    			AppendOutput("GroupAdded",e);
+    		}  </pre></font></p>
+
+	<li>The second step is to initialize the event tracer with the Grid Grouping 
+	control in which the events are to be traced. The event log is displayed in 
+	an output window, which is <strong>ListBoxControl</strong>. The <strong>AppendOuput</strong> method of the 
+	event tracer is used to send the results to the 
+	list-box control for display.</li>
+
+<p><font color="#8D2E1C"><pre>
+    		this.eventTracer=new EventTracer(this.groupinggrid.Engine, this.listBox1);
+    		this.eventTracer.HookEvents();  </pre></font></p>
+</ul>
+</html>

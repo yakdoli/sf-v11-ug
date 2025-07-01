@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;3591928">
+	<META NAME="CHANGEDBY" CONTENT="jisha j">
+	<META NAME="CHANGED" CONTENT="20090102;3595543">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Formula Range Demo</H1>
+<P>This sample describes about <STRONG>FormulaRangeSelectionController</STRONG> class,
+which implements an <STRONG>IMouseController</STRONG> interface. 
+</P>
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+<UL>
+	<LI><P>Allows you to apply a formula for the entire selected range of cells. For 
+	example, you can type a formula such as <STRONG>=Sum()</STRONG> in a cell and 
+	use your mouse to drag the required range to which the same formula has to be applied.</P>
+	<LI><P>You can use this functionality in your projects by adding the
+	<STRONG>FormulaRangeSelectionController </STRONG>class file and including
+	the following code to your <STRONG>Form_Load</STRONG> to create the controller and wire 
+	it to the grid control.</P>
+	<PRE STYLE="margin-left: 0.49in"><FONT COLOR="#8d2e1c">	FormulaRangeSelectionController formulaController = new FormulaRangeSelectionController(gridControl1);</FONT>
+	<FONT COLOR="#8d2e1c">gridControl1.MouseControllerDispatcher.Add(formulaController);</FONT></PRE>
+</UL>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="FormulaCellSelection screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<UL>
+	<LI><P><STRONG>FormulaRangeSelectionController</STRONG> class implements
+	the <STRONG>IMouseController</STRONG> interface, which handles mouse
+	events for formula range selection.</P>	
+</UL>
+<H1 ALIGN=LEFT STYLE="margin-top: 0in; font-weight: medium"></H1>
+</BODY>
+</HTML>

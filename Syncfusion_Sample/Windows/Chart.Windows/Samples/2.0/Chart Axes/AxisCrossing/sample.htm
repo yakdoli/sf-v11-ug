@@ -1,0 +1,33 @@
+<html><h1>Crossing Demo</h1>
+
+<p>This sample demonstrates crossing the x- and y-axis of a chart control.</p>
+
+<div align=center><img src="images/Crossing.png" alt="Crossing" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Crossing of X and Y axis</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<p><strong>Features</strong>:</p>
+<ul>
+	<li>Axis<b> </b>
+Crossing
+
+<p>An axis can be crossed using the Crossing property so that its points render from right to left, if horizontal; and top to bottom, if vertical. The OpposedPosition property sets the axis on the opposite side of the primary axis.</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the Crossing property of Axis</font>
+this.chartControl1.PrimaryXAxis.Crossing = 150;
+this.chartControl1.PrimaryYAxis.Crossing = 6;
+</code></pre></font></li>
+
+<li><b>Value Range</b>
+<p>The value provided to Crossing property must be within the range of the x- and y-axes.</p>
+</li>
+
+<li><b>Primary Axes</b>
+<p>The Crossing property is applied only to the primary axes of a chart control when a chart contains multiple axes. The crossing values must be doubled because the crossing property supports only doubled values.</p>  
+</li>
+</ul>
+
+</html>

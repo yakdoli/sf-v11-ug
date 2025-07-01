@@ -1,0 +1,6 @@
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter By DisplayMember Demo\cs\bin\Release\FilterByDisplayMember.exe
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter By DisplayMember Demo\cs\bin\Release\EnvDTE.dll
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter By DisplayMember Demo\cs\obj\Release\FilterByDisplayMember_2010.csprojResolveAssemblyReference.cache
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter By DisplayMember Demo\cs\obj\Release\FilterByDisplayMember.Form1.resources
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter By DisplayMember Demo\cs\obj\Release\FilterByDisplayMember_2010.csproj.GenerateResource.Cache
+C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter By DisplayMember Demo\cs\obj\Release\FilterByDisplayMember.exe

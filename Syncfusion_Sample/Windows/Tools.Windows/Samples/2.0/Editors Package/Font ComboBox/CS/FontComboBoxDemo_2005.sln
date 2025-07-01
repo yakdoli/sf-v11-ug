@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontComboBoxDemo_2005", "FontComboBoxDemo_2005.csproj", "{32DFC0F8-50A1-47E7-AA77-7166B685F7E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{32DFC0F8-50A1-47E7-AA77-7166B685F7E2}.Debug.ActiveCfg = Debug|.NET
+		{32DFC0F8-50A1-47E7-AA77-7166B685F7E2}.Debug.Build.0 = Debug|.NET
+		{32DFC0F8-50A1-47E7-AA77-7166B685F7E2}.Release.ActiveCfg = Release|.NET
+		{32DFC0F8-50A1-47E7-AA77-7166B685F7E2}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

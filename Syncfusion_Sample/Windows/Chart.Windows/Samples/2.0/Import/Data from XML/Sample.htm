@@ -1,0 +1,44 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Data from XML</h1>
+
+<p>This sample demonstrates loading and displaying chart data from a XML file.</p>
+<div align=center><img src="images/sample.png" alt="Chart Export Sample" title="" /></div>
+
+<h3><strong>Features</strong></h3>
+<p class="style1">Essential Chart exposes a flexible data model, <b>ChartDataBindModel,</b> that can display data from any source (file, database, real time).
+<br>
+The XML file is first converted to a data set; <b>ChartDataBindModel</b> 
+then uses this as a source for populating data.&nbsp;&nbsp;&nbsp; </p>
+<ul>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Initializes a new DataSet.</font>
+DataSet xmlDataSet = new DataSet();
+
+<font color="#008000">//Loads the dataset with xml data.</font>
+xmlDataSet.ReadXmlSchema(@"..\..\..\..\..\Data\dataschema.xslt");
+xmlDataSet.ReadXml(@"..\..\..\..\..\Data\data.xml");
+
+<font color="#008000">//Initializes new chart series.</font>
+ChartSeries series = new ChartSeries();
+series.Name = tableName;
+
+model = new ChartDataBindModel(xmlDataSet, "Products");
+model.XName = "ExpiresDate";
+model.YNames = new string[] { "Quantity" };
+
+series.SeriesModel = model;
+
+<font color="#008000">//Adds the series to the ChartSeriesCollection.</font>
+this.chartControl1.Series.Add(series);
+</code></pre></font>
+</ul>
+</html>

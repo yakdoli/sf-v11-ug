@@ -1,0 +1,33 @@
+<h1>Doc to PDF</h1>
+
+<p>This sample illustrates the conversion of a Microsoft Word document into  PDF format.</p>
+<p>Essential PDF allows exporting a Word document to a PDF document. Use the <b>ConvertToPDF</b> method of 
+the <b>DocToPDFConverter</b> class to convert the Word document to a PDF.</p>
+<p><b>Note:</b>You need to have Essential DocIO installed in order to run this sample.</p>
+
+<p><P>Below is an illustration of the exported file.</P></p>
+<p><div align = "Center"><img src="images/Doc-to-PDF.png" alt="PDF" title="" /></div></p>
+
+<p>Here is a code snippet to convert a Word document to a PDF document using 
+Essential PDF.</p>
+<pre>
+                //Open the word document to convert
+                WordDocument wordDoc = new WordDocument("sample.doc");
+                DocToPDFConverter converter = new DocToPDFConverter();
+                //Convert word document into PDF document
+                PdfDocument pdfDoc = converter.ConvertToPDF(wordDoc);
+                pdfDoc.Save("DoctoPDF.pdf");</pre>
+<p style="font-size:large">Features:</p>
+<ul>
+	<li>Essential PDF allows you to convert a Word document to PDF format.</li>		
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+  <li>Choose any existing Word document using the button near the textbox.</li>
+  <li>Click the DOC to PDF button to convert the specified Word document to Pdf file format.</li>
+  <li>Click Yes on the message box to view the generated Pdf file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+
+</ul>
+</html>

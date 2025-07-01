@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2454720">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Expression Field Demo</H1>
+<P>This sample shows how to create expression fields through the
+designer. </P>
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+<ul>
+	<li>Expression fields allow you to add a column that holds
+calculated values based on other fields in the same record.</li>
+</ul>
+<P><FONT SIZE=4><B>Interactive Features</B></FONT></P>
+<UL>
+	<LI><P>To create an expression column, select <STRONG>TableDescriptor
+	-&gt; ExpressionFields</STRONG> in the Properties window. This
+	will display the ExpressionFieldDescriptor Collection Editor, as shown in the 
+	following image. 
+	</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample1.png" NAME="graphics1" ALT="ExpressionFields screenshot" ALIGN=BOTTOM  BORDER=0>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<UL>
+	<LI><P>Click <STRONG>Add</STRONG>, to add an expression field.
+	Specify a field name and result type. Then enter the required
+	expression in the <STRONG>Expression</STRONG> property. <BR><BR>The
+	following image illustrates this. 
+	</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample2.png" NAME="graphics2" ALT="ExpressionFields screenshot" ALIGN=BOTTOM BORDER=0>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<UL>
+	<LI><P>Add one more expression field, <B>Lossing%</B>, as shown
+	below.</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample3.png" NAME="graphics3" ALT="ExpressionFields screenshot" ALIGN=BOTTOM  BORDER=0>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<UL>
+	<LI><P>Close the editor window to see the effect of the new
+	expression fields. You will notice that, in addition to adding an entry to
+	the ExpressionFields collection, two more new entries would have been
+	added to the <STRONG>Columns</STRONG> collection. <BR><BR>Here is the image
+	that illustrates this.</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample4.png" NAME="graphics4" ALT="ExpressionFields screenshot" ALIGN=BOTTOM  BORDER=0>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P ALIGN=CENTER><img src="images/sample5.png" NAME="graphics5" ALT="ExpressionFields screenshot" ALIGN=BOTTOM  BORDER=0>
+</P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<UL>
+	<LI><P>You can also make use of <STRONG>ExpressionFieldEvaluator</STRONG> class to set expression for ExpressionFields through custom 
+		function referring other column values.</P>
+</UL>
+</BODY>
+</HTML>

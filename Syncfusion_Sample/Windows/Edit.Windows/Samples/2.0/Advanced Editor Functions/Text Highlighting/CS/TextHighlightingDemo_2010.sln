@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextHighlightingDemo_2010", "TextHighlightingDemo_2010.csproj", "{2B42E0AD-FC35-41D2-8E2E-3F0FF171EFF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2B42E0AD-FC35-41D2-8E2E-3F0FF171EFF8}.Debug.ActiveCfg = Debug|.NET
+		{2B42E0AD-FC35-41D2-8E2E-3F0FF171EFF8}.Debug.Build.0 = Debug|.NET
+		{2B42E0AD-FC35-41D2-8E2E-3F0FF171EFF8}.Release.ActiveCfg = Release|.NET
+		{2B42E0AD-FC35-41D2-8E2E-3F0FF171EFF8}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,49 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template}![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+::: {.d2h_secondary_topic style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"}
+#### Customize FrameworkElement's Style
+
+In ToolBarAdv, style for FrameworkElement will be picked from a ResourceDictionary assigned in the *ControlsResourceDictionary* property.
+
+The following code snippet shows the resource dictionary containing FrameworkElement's style assigned for ToolBarAdv:
+
+[[]{style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt; FONT-WEIGHT: normal"}]{.Heading3Char} 
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[XAML\]]{style="FONT-FAMILY: 'Courier New'"}**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| []{style="FONT-FAMILY: Consolas; COLOR: blue; FONT-SIZE: 9.5pt"}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [\<]{style="FONT-FAMILY: Consolas; COLOR: blue"}[shared]{style="FONT-FAMILY: Consolas; COLOR: #a31515"}[:]{style="FONT-FAMILY: Consolas; COLOR: blue"}[ToolBarAdv]{style="FONT-FAMILY: Consolas; COLOR: #a31515"}[ ControlsResourceDictionary]{style="FONT-FAMILY: Consolas; COLOR: red"}[=\"ControlsResource.xaml\"\>\</]{style="FONT-FAMILY: Consolas; COLOR: blue"}[shared]{style="FONT-FAMILY: Consolas; COLOR: #a31515"}[:]{style="FONT-FAMILY: Consolas; COLOR: blue"}[ToolBarAdv]{style="FONT-FAMILY: Consolas; COLOR: #a31515"}[\>]{style="FONT-FAMILY: Consolas; COLOR: blue"} |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **[]{style="FONT-FAMILY: 'Courier New'"}**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[[]{style="FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 11pt; FONT-WEIGHT: normal"}]{.Heading3Char} 
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]{style="FONT-FAMILY: 'Courier New'"}**                                                                                                                                                                                |
+|                                                                                                                                                                                                                                 |
+| [ToolBarAdv]{style="FONT-FAMILY: 'Courier New'; COLOR: #2b91af"}[ toolBar = [new]{style="COLOR: blue"} [ToolBarAdv]{style="COLOR: #2b91af"}();]{style="FONT-FAMILY: 'Courier New'"}                                             |
+|                                                                                                                                                                                                                                 |
+| [            toolBar.ControlsResourceDictionary = [new]{style="COLOR: blue"} [ResourceDictionary]{style="COLOR: #2b91af"}()]{style="FONT-FAMILY: 'Courier New'"}                                                                |
+|                                                                                                                                                                                                                                 |
+| [            {]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                             |
+|                                                                                                                                                                                                                                 |
+| [                Source=[new]{style="COLOR: blue"} [Uri]{style="COLOR: #2b91af"}([\"ControlsResouce.xaml\"]{style="COLOR: #a31515"}, [UriKind]{style="COLOR: #2b91af"}.RelativeOrAbsolute)]{style="FONT-FAMILY: 'Courier New'"} |
+|                                                                                                                                                                                                                                 |
+| [            }]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                             |
+|                                                                                                                                                                                                                                 |
+| **[]{style="FONT-FAMILY: 'Courier New'"}**                                                                                                                                                                                      |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[[        ]{style="FONT-SIZE: 16pt; FONT-WEIGHT: normal"}]{.Heading3Char}
+
+ 
+
+ 
+
+[]{#related-topics}
+:::

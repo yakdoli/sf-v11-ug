@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTabControls_2005", "CustomTabControls_2005.csproj", "{E3EBAD0A-1433-4126-9640-4DE86C2095BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E3EBAD0A-1433-4126-9640-4DE86C2095BC}.Debug.ActiveCfg = Debug|.NET
+		{E3EBAD0A-1433-4126-9640-4DE86C2095BC}.Debug.Build.0 = Debug|.NET
+		{E3EBAD0A-1433-4126-9640-4DE86C2095BC}.Release.ActiveCfg = Release|.NET
+		{E3EBAD0A-1433-4126-9640-4DE86C2095BC}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

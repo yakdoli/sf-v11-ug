@@ -1,0 +1,98 @@
+<html><h1>Print Demo</h1>
+
+<p>The Printing sample demonstrates Essential Diagram's printing 
+and print-preview infrastructure.</p>
+
+
+<p><div align=center><img src="images/printing.png" alt="Printing Image" title="" /></div></p>
+<p><div align=center><img src="images/printing1.png" alt="Printing Image" title="" /></div></p>
+<p>
+<p><strong>Features</strong></p>
+
+<ul>
+	<li>Some of the printing-related features demonstrated in this sample are headers 
+and footers, print zoom, zoom to fit, 
+page borders, and page layout setup.</li>
+	<li>This sample illustrates the use of pre-built &quot;Header-Footer,&quot; &quot;Page Setup,&quot; and 
+&quot;Page Border&quot; dialogs for configuring the respective 
+attributes. These configuration dialogs are shipped with Essential Diagram and can be reused in customer applications.</li>
+</ul>
+<ul>
+	<li> To set the page-setup properties, use the following code.</ul>
+<p><font color="#8D2E1C"><pre>
+					if (this.diagram1 != null && this.diagram1.Model != null)
+					{
+						PageSetupDialog dlgPageSetup = new PageSetupDialog(diagram1.View);
+
+						// Made to make values more user friendly 
+						dlgPageSetup.PrintSettings = this.diagram1.View.PageSettings;
+						dlgPageSetup.PrintZoom = this.diagram1.View.PrintZoom;
+
+						if (dlgPageSetup.ShowDialog() == DialogResult.OK)
+						{
+							this.diagram1.View.PageSettings = dlgPageSetup.PrintSettings;
+							this.diagram1.View.PrintZoom = dlgPageSetup.PrintZoom;
+							this.diagram1.View.RefreshPageSettings();
+						}
+					}</pre></font></p>
+
+<ul><li> To perform the print-preview function, use the code that follows.</ul>
+<p><font color="#8D2E1C"><pre>
+					if(this.diagram1 != null)
+					{
+						PrintDocument printDoc = this.diagram1.CreatePrintDocument();
+						PrintPreviewDialog printPreviewDlg = new PrintPreviewDialog();
+
+						printDoc.PrinterSettings.FromPage = 0;
+						printDoc.PrinterSettings.ToPage = 0;
+						printDoc.PrinterSettings.PrintRange = PrintRange.AllPages;
+			   
+						printPreviewDlg.Document = printDoc;
+						printPreviewDlg.ShowDialog(this);
+					}</pre></font></p>
+
+<ul><li> To print the diagram document, employ the following code.</ul>
+
+<p><font color="#8D2E1C"><pre>
+					if(this.diagram1 != null)
+					{
+						PrintDocument printDoc = this.diagram1.CreatePrintDocument();
+						PrintDialog printDlg = new PrintDialog();
+						printDlg.Document = printDoc;
+			
+						printDlg.AllowSomePages = true;
+						
+						if (printDlg.ShowDialog(this) == DialogResult.OK)
+						{
+							printDoc.PrinterSettings = printDlg.PrinterSettings;
+							printDoc.Print();
+						}
+					}</pre></font></p>
+<ul><li> Header-footer properties can be set by using the following code.</ul>
+<p><font color="#8D2E1C"><pre>
+					if(this.diagram1 != null && this.diagram1.Model != null )
+					{
+						HeaderFooterDialog dlgHF = new HeaderFooterDialog();
+						dlgHF.Header = this.diagram1.Model.HeaderFooterData.Header;
+						dlgHF.Footer = this.diagram1.Model.HeaderFooterData.Footer;
+						dlgHF.MeasurementUnits = this.diagram1.Model.MeasurementUnits;
+						if ( dlgHF.ShowDialog() == DialogResult.OK )
+						{
+							this.diagram1.Model.HeaderFooterData.Header = dlgHF.Header;
+							this.diagram1.Model.HeaderFooterData.Footer = dlgHF.Footer;
+						}
+					}</pre></font></p>
+
+<ul><li> To set the page border properties, use the following code.</ul>
+<p><font color="#8D2E1C"><pre>
+					if(this.diagram1 != null && this.diagram1.View != null )
+					{
+						PageBorderDialog borderDialog = new PageBorderDialog();
+						borderDialog.PageBorderStyle = this.diagram1.View.PageBorderStyle;				
+						if(borderDialog.ShowDialog() == DialogResult.OK)
+						{
+							this.diagram1.View.PageBorderStyle = borderDialog.PageBorderStyle;
+						}
+					}</pre></font></p></p>
+
+</html>

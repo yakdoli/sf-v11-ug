@@ -1,0 +1,52 @@
+<html><h1>Data from Excel</h1>
+
+<p>This sample demonstrates loading and displaying chart data from an Excel 
+file.</p>
+<div align=center><img src="images/sample.png" alt="Chart Export Sample" title="" /></div>
+
+<h3><strong>Features</strong></h3>
+<ul>
+<p>Essential Chart exposes a flexible data model, <b>ChartDataBindModel,</b> 
+that can display data from any source (file, database, real time).
+</p>
+	<p>The Excel file is first converted to a data set; <b>ChartDataBindModel </b> 
+then<b> </b> 
+uses this as a source for populating data.</p>
+
+<font color="#8D2E1C"><pre><code>
+string fileName = @"..\..\..\..\..\Data\ChartData.xls";
+
+<font color="#008000">//The Oledbconnection.</font>
+OleDbConnection excelConn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source="+fileName+ ";Extended Properties=\"Excel 8.0;HDR=Yes;\"");
+excelConn.Open();
+
+<font color="#008000">//Query for retriving the data from the excel sheet.</font>
+string query = "Select * From [Sheet1$A1:B11]";
+
+OleDbCommand excelCommand = new OleDbCommand(query,excelConn);
+
+OleDbDataReader excelReader = excelCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+<font color="#008000">//Load the contents to a dataset.</font>
+DataSet excelDataSet = ConvertToDataSet(excelReader,"ExcelTable");
+
+<font color="#008000">//Initializes new chart series.</font>
+ChartSeries series = new ChartSeries();
+series.Name = tableName;
+
+model = new ChartDataBindModel(excelDataSet,"ExcelTable");
+model.XName = "X Value";
+model.YNames = new string[]{"Y Value"};
+
+series.SeriesModel = model;
+
+<font color="#008000">//Adds the series to the ChartSeriesCollection.</font>
+this.chartControl1.Series.Add(series);
+
+<font color="#008000">//Close the connection.</font>
+excelReader.Close();
+excelConn.Close();            
+</code></pre></font>
+</ul>
+
+</html>

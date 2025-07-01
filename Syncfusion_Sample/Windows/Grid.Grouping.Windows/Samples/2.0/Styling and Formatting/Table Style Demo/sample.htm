@@ -1,0 +1,68 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3141132">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Table Style Demo</H1>
+<P>This sample demonstrates how you can customize the appearance of
+nested tables in a hierarchical data set through the designer. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>This sample is built with a hierarchical data set with two tables
+	that have been customized at design-time.</P>
+	<LI><P>Apply style settings to a nested table through the designer
+	using the <STRONG>Appearance.NestedTableCell</STRONG> property on
+	the instances of a Grid Grouping control.</P>
+	<LI><P>This property will let you take control of all aspects of the
+	appearance of nested table cells such as cell background color, text
+	color, value, and font.</P>
+	<LI><P>Properties such as <STRONG>Appearance.NestedTableRowHeaderCell
+	</STRONG>and
+	<STRONG>Appearance.NestedTableIndentCell </STRONG>can be used to set
+	row header styles and indent the cells of nested tables 
+	</P>
+	<LI><P>Also set styles through code: 
+	</P>
+	<UL>
+		<LI><P>The table descriptor of the nested table should be retrieved.</P>
+		<LI><P>Format the cells of the nested table using the <STRONG>Appearance</STRONG>
+		property.</P>
+	</UL>
+</UL>
+<P><BR><BR>
+</P>
+<PRE><FONT COLOR="#8d2e1c">                // Formatting nested table cells.</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.Appearance.NestedTableCell.Interior = new Syncfusion.Drawing.BrushInfo</FONT>
+<FONT COLOR="#8d2e1c">                (System.Drawing.Color.FromArgb(((System.Byte)(206)), ((System.Byte)(213)), ((System.Byte)(231))));    </FONT>
+<FONT COLOR="#8d2e1c">                // Formatting nested table row headers.</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.Appearance.NestedTableRowHeaderCell.Interior = new Syncfusion.Drawing.BrushInfo</FONT>
+<FONT COLOR="#8d2e1c">                (Syncfusion.Drawing.GradientStyle.Horizontal,System.Drawing.SystemColors.Window,</FONT>
+<FONT COLOR="#8d2e1c">                System.Drawing.Color.FromArgb(((System.Byte)(133)),((System.Byte)(191)),((System.Byte)(117))));</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.Appearance.NestedTableRowHeaderCell.Themed = false;   </FONT></PRE><P>
+You can also set the styles through code. 
+</P>
+<P>&nbsp;The first step is that the table descriptor of the nested
+table should be retrieved. 
+</P>
+<P><BR><BR>
+</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">                GridTableDescriptor gtd=this.gridGroupingControl1.GetTableDescriptor(&quot;Orders&quot;);    </FONT></PRE><P>
+The second step is to format the cells of the nested table by using
+the <STRONG>Appearance</STRONG> property.</P>
+<PRE><FONT COLOR="#8d2e1c">                gtd.Appearance.AddNewRecordFieldCell.BackColor=Color.FromArgb(255,228,221);</FONT>
+<FONT COLOR="#8d2e1c">                gtd.Appearance.AnyRecordFieldCell.BackColor=Color.FromArgb(223,247,252);   </FONT></PRE><P>
+Given below is a sample illustration.</P>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="Styles At Table Level screenshot" ALIGN=BOTTOM  BORDER=0></P>
+</BODY>
+</HTML>

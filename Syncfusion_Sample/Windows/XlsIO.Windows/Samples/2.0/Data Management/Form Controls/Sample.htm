@@ -1,0 +1,52 @@
+<h1>Form Controls</h1>
+
+<p>Essential XlsIO can read and write form controls such as text boxes, check boxes, and combo boxes.</p>
+
+<p><b>Note: </b>The option button is supported in XLSX format alone.</p>
+
+<p style="font-size:large">Features:</p>
+<ul>
+<li>Creating rich reports with text boxes, check boxes, and combo boxes using XlsIO</li>
+<li>Text box formatting</li>
+<li>Check boxes with Cell Link</li>
+<li>Comboboxes boxes with formatting</li>
+<li>Option button with formatting</li>
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+<li>Choose one from the options--Excel 2003,Excel 2007,Excel 2010--to generate 
+a document in Excel 2003, Excel 2007,Excel 2010 respectively.</li>
+<li>Click <b>Create</b> to generate and view the document.</li>
+<li>All features in the preceding list are illustrated in this file.</li>
+</ul>
+
+
+<p> Below is an illustration of the output.</p>
+<p><div align = "Center"><img src="images/formControl.png" alt="XlsIO" title="" /></div></p>
+
+<p>Here are code snippets that show how to insert text boxes, check boxes, combo boxes and option buttons:</p>
+<pre>
+// Create a textbox and apply backcolor to it
+ITextBoxShape textBox1 = sheet.TextBoxes.AddTextBox(15, 5, 23, 190);
+textBox1.Fill.FillType = ExcelFillType.SolidColor;
+textBox1.Fill.ForeColor = Color.FromArgb(255, 255, 204);
+
+// Create a checkbox
+ICheckBoxShape checkBox1 = sheet.CheckBoxes.AddCheckBox(25, 5, 20, 75);
+checkBox1.Text = "Studio";
+
+ // Create a combobox
+IComboBoxShape comboBox1 = sheet.ComboBoxes.AddComboBox(27, 5, 20, 100);
+
+// Assign value
+comboBox1.ListFillRange = sheet2["A1:A12"];
+
+// Select item
+comboBox1.SelectedIndex = 6;
+
+// Create an option button
+IOptionButtonShape optionButton1 = sheet.OptionButtons.AddOptionButton(46, 5);
+
+// Assign value
+optionButton1.Text = "American Express";
+</pre>

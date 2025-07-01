@@ -1,0 +1,44 @@
+<h1>Custom Colors</h1>
+
+<p>This sample illustrates how to incorporate custom colors and backgrounds for menus and toolbars.</p>
+
+<div align=center><img src="images/sample.png" alt="xpmenuscustomcolors sample" title="" /></div>
+<h3>Feature :</h3>
+<ul>
+	<li>Custom Colors can be applied for Menus and toolbars.</li>
+</ul>
+
+<h3>Interactive Features : </h3>
+<ul>
+	<li>Custom background can be seen when mouse hover the bar items in the 
+	form.</li>
+	<li>Right click to show the popupmenu and mouse hover each baritem to see 
+	the custom background.</li>
+</ul>
+<p>This sample uses the <strong>MenuColors</strong> class and sets a custom color for the 
+bar items. A custom background has been set using the 
+<strong>DrawBackground</strong> event handler.</p>
+
+<font color="#8D2E1C">
+<pre>
+// SelColor - Color for the background of active barItem in Menu dropdown and ToolBar.
+MenuColors.SelColor            = Color.FromArgb(179, 71, 59);<br>
+// SelTextColor - Forecolor used by the active barItem.
+MenuColors.SelTextColor        = Color.White;<br>
+// SelBorderColor - BorderColor to be drawn around the active BarItem.
+MenuColors.SelBorderColor      = Color.FromArgb(183, 214, 242);<br>
+// MenuBGColor - Color used to draw the background of dropdown.
+MenuColors.MenuBGColor         = Color.White;<br>
+// MenuLeftStripColor - Color used to draw the left strip of menu dropdown.
+MenuColors.MenuLeftStripColor  = Color.White;<br>
+// DropDownBorderColor - BorderColor used to draw the dropdown border.
+MenuColors.DropDownBorderColor = Color.FromArgb(166, 205, 226);<br>
+// PressedSelColor - Color used for the background of pressed barItem.
+MenuColors.PressedSelColor     = Color.FromArgb(166, 201, 232);<br>
+// CheckedSelColor - Color used to draw the background of checked barItem when mouse hovers over it.
+MenuColors.CheckedSelColor     = Color.FromArgb(215, 236, 255);<br>
+// FloatingCommandBarCaptionColor - Color of caption of floating command bar.
+MenuColors.FloatingCommandBarCaptionColor = Color.FromArgb(183, 214, 242);<br>
+</pre>
+</font>
+</p>

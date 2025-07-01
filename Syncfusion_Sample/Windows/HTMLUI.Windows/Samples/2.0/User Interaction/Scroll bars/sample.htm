@@ -1,0 +1,36 @@
+﻿<html><h1>Scroll Bars</h1>
+
+<p>This sample illustrates the <strong>scrolling feature</strong> supported in HTMLUI.</p>
+
+<p><p align=center><img src="images/sample.png" /> </p>
+
+<p><strong>Features</strong>:</p>
+
+<ul>
+	<li>
+	<p>HTMLUI supports scrolling, which helps the user to load large documents into the HTMLUI control and navigate to desired locations easily.</p></li>
+<li><p>The user can toggle the scroll control visibility at run time.</p></li>
+<li><p>The user can also customize the scroll position using the methods available like <strong>ScrollToElement </strong>
+and<strong> ScrollToRectangle</strong>.</p></li>
+</ul>
+
+<p>Here is the code that adds a scroll bar to the HTMLUI control.</p><br>
+
+
+<p><font color="#8D2E1C"><pre>	this.htmluiControl1.AutoScroll = true;
+
+	//To scroll to a particular element in the HTMLUI control.
+
+	IHTMLElement elem = this.htmluiControl1.Document.GetElementByUserId("pre");
+
+	this.htmluiControl1.ScrollToElement(elem);
+
+	//To scroll to the end of the control.
+
+	IHTMLElement elem = this.htmluiControl1.Document.RenderRoot;
+	Point lastPoint = new Point(0, (elem.Location.Y + elem.Size.Height));
+	Rectangle rect = new Rectangle(new Point(10, lastPoint.Y-10), new Size(10,10));
+	this.htmluiControl1.ScrollToRectangle(rect, this.htmluiControl1.Document);
+	
+ </pre></font></p>
+</html>

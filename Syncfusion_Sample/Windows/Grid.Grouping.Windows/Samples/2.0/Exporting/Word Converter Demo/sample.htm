@@ -1,0 +1,31 @@
+<html>
+<h1>Word Converter Demo</h1>
+<p>This sample demonstrates the conversion of Grouping Grid data into a Word document. It also supports headers and footers.</p>
+
+<p>The following is an image of a Word export.</p>
+
+<p><p align=center><img src="images/sample1.png" alt="Word Export screenshot" title="Word Export" /></p>
+
+<p>
+<ul>
+	<li>Essential DocIO libraries are used to support the conversion of grid content into a Word file. The dependent 
+	.dll files are 
+	<strong>Syncfusion.DocIO.Base</strong> and <strong>Syncfusion.GridHelperClasses.Windows</strong>.</li>
+
+
+<p><font color="#8D2E1C"><pre>
+    		GroupingGridWordConverter converter = new GroupingGridWordConverter(true, true);
+    		converter.GroupingGridToWord("Sample.doc", gridGroupingControl1);
+
+		//Header event to create an header, that will display on each page
+           		 converter.DrawHeader += new GridWordConverterBase.DrawDocHeaderFooterEventHandler(converter_DrawHeader);
+		//Footer event to create a footer, that will display on each page
+				 converter.DrawFooter += new GridWordConverterBase.DrawDocHeaderFooterEventHandler(converter_DrawFooter);
+</pre></font></p>
+</p>
+
+<p><p>The following is an image of the exported file.</p>
+
+<p><p align=center><img src="images/sample2.png" alt="Word Export screenshot" title="Word Export" /></p>
+
+</html>

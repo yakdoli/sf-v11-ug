@@ -1,0 +1,29 @@
+<html><h1>Foreign-Key Reference Demo</h1>
+
+<p>This sample shows the <strong>RelationKind.ForeignKeyReference</strong> relation.</p>
+<h3><FONT SIZE=4><B>Features</B></FONT></h3>
+<UL>
+	<LI><P>Sets up a relation between two tables using a foreign key.
+	</P></UL>
+<P><FONT SIZE=4><B>Implementation</B></FONT></P>
+<UL>
+	<LI>
+<p>The following is a sample code snippet showing this relation.</p>
+
+<font color="#8D2E1C"><pre>
+		USStatesCollection usStates = USStatesCollection.CreateDefaultCollection();
+
+		this.engine1.SourceListSet.Add("Countries", countries);
+
+		RelationDescriptor usStatesRd = new RelationDescriptor();
+		usStatesRd.Name = "State";
+		usStatesRd.RelationKind = RelationKind.ForeignKeyReference;
+		usStatesRd.ChildTableName = "USStates";  // SourceListSet name for lookup.
+		usStatesRd.RelationKeys.Add("State", "Key");
+		usStatesRd.ChildTableDescriptor.SortedColumns.Add("Name");
+		usStatesRd.ChildTableDescriptor.AllowEdit = false;
+		usStatesRd.ChildTableDescriptor.AllowNew = false;  // Make pencil icon disappear, users can't modify states.
+		mainTd.Relations.Add(usStatesRd);
+</pre></font>
+</UL>
+</html>

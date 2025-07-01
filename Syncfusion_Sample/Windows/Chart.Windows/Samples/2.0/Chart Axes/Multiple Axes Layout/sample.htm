@@ -1,0 +1,69 @@
+﻿<html><h1>Multiple Axes Layout</h1>
+
+<p> This sample demonstrates the usage of a multiple axes layout in Essential Chart. </p>
+
+<div align=center><img src="images/sample.png" alt="Chart Multiple Axes Layout Sample" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Multiple Axes Layout </b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<p><strong>Features:</strong></p>
+<ul>
+	<li><b>Multiple Axes</b> 
+<p>Multiple axes are created in the chart as shown below. </p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Initialize a ChartAxis</font>
+private ChartAxis secYAxis = new ChartAxis();
+</code></pre></font>
+
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">// To render this axis at a position opposite to that of the primary Axis.</font>
+secYAxis.OpposedPosition = true;
+secYAxis.Orientation = ChartOrientation.Vertical;
+<font color="#008000">//Add the ChartAxis to the Axes collection</font>
+this.chartControl1.Axes.Add(secYAxis);
+<font color="#008000">// Specify that the 3rd series should be plotted against this secondary Y axis</font>
+this.chartControl1.Series[2].YAxis = secYAxis;
+</code></pre></font>
+</li>
+
+<li><b>Layout Mode</b>
+<p>The layout mode of an axis is set using the <b>YAxesLayoutMode</b> property. </p>
+<font color="#8D2E1C"><pre><code>
+ this.chartControl1.ChartArea.YAxesLayoutMode = ChartAxesLayoutMode.SideBySide;
+</pre></code></font>
+
+<p>The chart control supports combining both stacking and side-by-side chart axes 
+layouts when multiple axes are used.</p>
+
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Created chart axes.</font>
+ChartAxis axis = this.chartControl1.PrimaryYAxis;
+ChartAxis axis0 = new ChartAxis(ChartOrientation.Vertical);
+ChartAxis axis1 = new ChartAxis(ChartOrientation.Vertical);
+
+<font color="#008000">//Added chart axes into the chart:</font>
+chartControl1.Axes.Add(axis0);
+chartControl1.Axes.Add(axis1);
+
+<font color="#008000">//Created chart axis layout using ChartAxisLayout class.</font>
+ChartAxisLayout layout1 = new ChartAxisLayout();
+
+<font color="#008000">//Added the secondary and Primary axes into the layout.</font>
+layout1.Axes.Add(axis);
+layout1.Axes.Add(axis0);
+layout1.Axes.Add(axis1); 
+
+<font color="#008000">//Added the layout into ChartArea.</font>
+chartControl1.ChartArea.YLayouts.Add(layout1);
+
+</pre>
+</code>		
+</font>
+
+All axes with the same orientation must be added to <strong>ChartAxisLayout</strong>&nbsp; 
+and <strong>PrimaryAxis</strong>.
+
+</html>

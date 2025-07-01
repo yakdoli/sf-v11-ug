@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;2080985">
+	<META NAME="CHANGEDBY" CONTENT="jisha j">
+	<META NAME="CHANGED" CONTENT="20090102;2093098">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Cell Comment Tip Demo</H1>
+<P>This sample demonstrates the addition of Excel-style comments to a
+grid. The sample contains a class library assembly, which can be used
+in projects to display the Excel comment functionality in your grid.
+The derived mouse controller in the class library performs the action. 
+</P>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="CellComment Tips screenshot" ALIGN=BOTTOM BORDER=0></P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>The comment text is a custom
+	style property added to cells that hold comments.</P>
+	<LI><P>To change, add, or delete
+	a cell comment, you have to click the cell using right mouse button, or click the red flag at the top right corner.
+	A context menu with options pops up. The required option can be selected to perform respective operations.</P>
+	<LI><P>The comment window displayed is a
+	form with a rich text box.</P>
+</UL>
+<UL>
+	<LI><P><SPAN LANG="en-US">A red
+	comment indicator is drawn in the cell-drawn handler using the
+	graphics class </SPAN><STRONG><SPAN LANG="en-US">FillPolygon</SPAN></STRONG><SPAN LANG="en-US">
+	function.</SPAN></P>
+</UL>
+<UL>
+	<LI><P><SPAN LANG="en-US">A black
+	arrow is drawn when the mouse pointer is hovered over the comment indicator
+	using the graphics class </SPAN><STRONG><SPAN LANG="en-US">FillPolygon</SPAN></STRONG><SPAN LANG="en-US">
+	and </SPAN><STRONG><SPAN LANG="en-US">DrawLine</SPAN></STRONG><SPAN LANG="en-US">
+	function.</SPAN></P>
+</UL>
+<UL>
+	<LI><P ALIGN=LEFT><SPAN LANG="en-US">When
+	the mouse pointer hovers over the comment indicator through the </SPAN><STRONG><SPAN LANG="en-US">PointToRowCol
+	</SPAN></STRONG><SPAN LANG="en-US">function,
+	it is  converted to a row index on the layout using the
+	</SPAN><STRONG><SPAN LANG="en-US">ViewLayout.RowIndexToVisibleClient.
+	</SPAN></STRONG><SPAN LANG="en-US">Then
+	it is converted to drawing points using the
+	</SPAN><STRONG><SPAN LANG="en-US">ViewLayout.ClientRowColToPoint</SPAN></STRONG><SPAN LANG="en-US">
+	function.</SPAN></P>
+</UL>
+</BODY>
+</HTML>

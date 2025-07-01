@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>  Chart Real Time </h1>
+
+<p>This sample illustrates a real-time chart with thread application implemented using Essential Chart.</p>
+
+<div align=center><img src="images/sample.png" alt="Chart Realtime Sample" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Real-Time Application</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<h3><strong>Features</strong></h3>
+<p class="style1">In this sample, the data points for a chart series are fed by thread for each one second of thread excution.  
+<ul>
+<font color="#8D2E1C"><pre><code>
+ //Create a new single thread to add points to chart series
+ Start = new ThreadStart(DataThreadLoop);
+ addRealData = new Thread(Start);
+ addDataDel += new AddDataDelegate(AddChartData);
+</code></pre></font>
+</ul>
+<p class="style1">The last 20 seconds points are only visible in chart, other invisible points are removed from chart series to improve performance of chart.</p>
+<ul>
+<font color="#8D2E1C"><pre><code>
+// remove all points from the source series older than 20 seconds.
+double removePointVal = timeStamp.AddSeconds((double)(20) * (-1)).ToOADate();
+
+while (Series.Points[0].DateX.ToOADate() < removePointVal)
+{
+    Series.Points.RemoveAt(0);
+}
+</code></pre></font>
+</li></ul></p>
+
+</html>

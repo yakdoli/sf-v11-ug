@@ -1,0 +1,62 @@
+<h1>HTML to PDF</h1>
+<p>Web pages and HTML pages can be imported to a PDF with the help of the HTML converter. The HTML 
+converter<strong> </strong>converts an HTML Web page to a bitmap or metafile 
+image using MSHTML. MSHTML is a rendering library used to render HTML documents. 
+The MSHTML library is the engine used to drive Internet Explorer. </p>
+<h3>
+    Features:</h3>
+<ul>
+<p>Essential PDF renders the converted image into a PDF. You can convert any Web page to 
+a PDF using either of the above options. Rendering Web pages as bitmaps will 
+produce excellent performance, and as 
+metafiles, you will be provided with an attractive, high-resolution document.</p>
+<p>Essential PDF now provides support for the tagged PDF during HTML to PDF conversion. Tagged PDF is a stylized use of PDF that defines a set of standard structures and attributes to allow the page contents such as text, graphics, and images, to be extracted and reused for other purposes.</p>
+
+<p>Below is an image of the output.</p>
+<div align=center><img src="images/Sample.png" alt="PDF" title="" /></div>
+
+<p><b>Note: </b>You should have the <strong>Syncfusion.HtmlConverter.Base</strong> assembly installed to run this sample.</p>
+
+<p>Here is the code snippet used in convert when this sample runs:</p>
+<pre>
+//Convert web page to image
+HtmlConverter html = new HtmlConverter();
+Image img = html.ConvertToImage("www.syncfusion.com", ImageType.Metafile)
+
+//Create metafile image
+PdfMetafile metafile = (PdfMetafile)PdfImage.FromImage(img);
+
+//Set the layout format
+PdfMetafileLayoutFormat format = new PdfMetafileLayoutFormat();
+format.Break = PdfLayoutBreakType.FitPage;
+format.Layout = PdfLayoutType.Paginate;
+
+//Prevent text getting break at the page breaks
+format.SplitTextLines = false;
+
+//Draw the converted image to PDF
+metafile.Draw(page, new RectangleF(0, 0, img.Width, img.Height), format);
+</pre>
+
+<p>Here is the code snippet to generate tagged PDF after conversion:</p>
+<pre>
+PdfDocument document = new PdfDocument();
+HtmlConverter html = new HtmlConverter();
+html.ConvertToTaggedPDF(document, "www.syncfusion.com");
+</pre>
+</ul>
+<h3>
+    Interactive Features:</h3>
+
+
+<ul>
+  <li>Provide an Url or choose an existing html file using the button near the URL textbox.</li>
+<li>Choose the converter options.</li>
+<li>Choose the Page Settings options.</li>
+  <li>Click the PDF button to generate the PDF file.</li>
+  <li>Click Yes on the message box to view the generated Pdf file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+<li>All features in the preceding list are illustrated in this file.</li>
+</ul>
+	
+	

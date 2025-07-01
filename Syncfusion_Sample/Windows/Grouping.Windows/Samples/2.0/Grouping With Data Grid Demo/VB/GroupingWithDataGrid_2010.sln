@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GroupingWithDataGrid_2010", "GroupingWithDataGrid_2010.vbproj", "{5A8ED847-8DBE-40D7-B8B3-2E45BFA688D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5A8ED847-8DBE-40D7-B8B3-2E45BFA688D5}.Debug.ActiveCfg = Debug|.NET
+		{5A8ED847-8DBE-40D7-B8B3-2E45BFA688D5}.Debug.Build.0 = Debug|.NET
+		{5A8ED847-8DBE-40D7-B8B3-2E45BFA688D5}.Release.ActiveCfg = Release|.NET
+		{5A8ED847-8DBE-40D7-B8B3-2E45BFA688D5}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

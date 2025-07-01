@@ -1,0 +1,28 @@
+﻿<html><h1>Load from Resource</h1>
+
+<p><p>This sample shows how a HTML file that is embedded in a resource is loaded into the HTMLUI control.</p>
+
+<p><p align=center>
+<img src="images/sample.png" alt="HTMLUI Load File From Resource" title="" width="591" height="433" /></p>
+
+<p><p align=center><b>Filtering Tutorial</b></p>
+
+<ul><li> A HTML file that is loaded into the embedded resource is accessed in HTMLUI by loading the HTML file from the specified stream where the HTML document is placed.</ul>
+
+<ul><li> The <strong>LoadHTML()</strong> method of the HTMLUI control can load HTML documents from the specified stream.</ul>
+
+<br/>
+
+<p>Here is the code to load the specified HTML file that is marked as the project's embedded resource.</p>
+
+<p><font color="#8D2E1C"><pre><ul> 
+Assembly assembly = Assembly.GetExecutingAssembly();
+
+Stream htmlStream = (Stream)Assembly.GetExecutingAssembly().GetManifestResourceStream(LoadingFileFromResource.resfile.htm&quot;); 
+                    
+this.htmluiControl1.LoadHTML(htmlStream);
+</ul>
+ </pre>
+</font></p>
+ 
+</html>

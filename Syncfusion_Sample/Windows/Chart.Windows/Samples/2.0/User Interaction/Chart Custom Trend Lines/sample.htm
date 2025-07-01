@@ -1,0 +1,69 @@
+﻿<html>
+<h1>Chart Custom Trend Lines</h1>
+
+<p>This sample demonstrates drawing custom trend lines in Essential Chart.</p>
+<p>It features drawing custom lines using the <strong>TrendLineAdder</strong> 
+utility. By listening to the <strong>MouseDown</strong> and <strong>MouseUp</strong> events, trend lines can be generated. The color, 
+border styles, symbols, and ToolTips of the trend lines are customizable. 
+</p>
+
+<div align=center><img src="images/Trend.png" alt= "ChartGroupingSample"title=""/></div>
+<p><div align=center><TABLE><TR>
+		
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<p> 
+<p><strong>Features</strong>:</p>
+<ul>
+	<li><b>Create trend lines</b>
+<p>Custom lines are drawn by simply dragging the pointer over the chart area. 
+This will trigger the <strong>MouseDown </strong>and <strong>MouseUp</strong> 
+events to retrieve the start and end points of the trend lines. These points are 
+added as data points of a line chart.
+</p>
+<p>
+The color of a line is specified by the <strong>Interior</strong> property of the 
+chart series.&nbsp; This color value depends upon mouse movements. If the starting-point mouse value is greater than the ending point, 
+it will render a blue line; a dark-green line will be rendered for a greater end value.
+</p>
+<p>
+The following code shows how to generate a trend line for a chart in accordance 
+with pointer movement.</p>
+<font color="#8D2E1C"><pre><code>
+	private void AddTrendLine(Point start, Point end)
+	{
+
+		ChartPoint ptStart = this.chart.ChartArea.GetValueByPoint(start);
+		ChartPoint ptEnd = this.chart.ChartArea.GetValueByPoint(end);
+		ChartSeries tseries = new ChartSeries("Dragging TrendLine", ChartSeriesType.Line);
+
+		tseries.Points.Add(ptStart);
+		tseries.Points.Add(ptEnd);
+
+		this.chart.Series.Add(tseries);
+
+		// Specify the color for the lines
+		tseries.Style.Interior = new Syncfusion.Drawing.BrushInfo(ptStart.YValues[0] < ptEnd.YValues[0] ? this.LineUpColor : this.LineDownColor);
+		tseries.Style.Border.Width = this.LineWidth;
+		tseries.Style.Border.DashStyle = this.lineStyle;
+		tseries.Style.Symbol.Color = this.LinesymbolColor;
+		tseries.Style.Symbol.Shape = this.LineSymbol;
+		tseries.Style.Symbol.Size = this.LineSymbolSize;
+		tseries.Style.ToolTip = "Date  : " + newSeries.Points[0].DateX.ToString() + "\nValue :" + newSeries.Points[0].YValues[0].ToString();          
+
+	}
+
+</code></pre></font>
+</li>
+
+<li><b>Add a trend line to a chart</b>
+<p>A trend line can be added to a chart control as shown in the following code.
+<font color="#8D2E1C"><pre><code>
+	private TrendLineRenderer tlineRenderer;
+	this.tlineRenderer = new TrendLineRenderer(this.chartControl1);   
+</code></pre></font>
+</li></ul>
+</p>
+</html>

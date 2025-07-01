@@ -1,0 +1,47 @@
+<h1>Multi Column HTML Text</h1>
+
+<p>Essential PDF supports drawing HTML strings in a PDF document in column format.</p>
+
+<h3>Features</h3>
+<ul>
+	<li>The <strong>PdfHTMLTextElement</strong> class is used to render an HTML string into a PDF document. 
+With the help of the <strong>Draw()</strong> overload method, you can draw the text in a specified region. 
+	</li>
+	<li>This sample explains how to render the HTML string in column format.</li>
+
+
+<div align=center><img src="images/image.png" alt="PDF" title="" /></div>
+<p>Here is the code snippet used to stamp a PDF document:</p>
+
+<pre>
+
+    // Html String
+string htmlText ="&ltfont color='#FF0000F'&ltb&gtPDF&lt/b&gt&lt/font&gt stands for &lti&gt\"Portable Document Format\"&lt/i&gt." +
+                " The key word is &lti&gtportable&lt/i&gt, intended to combine the qualities of &ltu&gtauthenticity," +
+                " reliability and ease of use together into a single packaged concept&lt/u&gt.&ltbr/&gt&ltbr/&gt" +
+                "Adobe Systems invented PDF technology in the early 1990s to smooth the " +
+                "process of moving text and graphics from publishers to printing-presses." +
+
+  //Rendering HtmlText
+PdfHTMLTextElement richTextElement = new PdfHTMLTextElement(htmlText, font, brush);
+richTextElement.TextAlign = TextAlign.Justify;
+
+  // Formatting Layout
+PdfMetafileLayoutFormat format = new PdfMetafileLayoutFormat();
+format.Layout = PdfLayoutType.OnePage;
+format.Break = PdfLayoutBreakType.FitPage;
+
+   //Drawing htmlString in specified region
+richTextElement.Draw(page, new RectangleF(0, 15, 250, page.GetClientSize().Height), format);     
+
+</pre>
+	</ul>
+<h3>
+    Interactive Features</h3>
+
+<Ul>
+  <li>Click the PDF button to generate the Pdf document.</li>
+  <li>Click Yes on the message box to view the generated Pdf file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+</Ul>

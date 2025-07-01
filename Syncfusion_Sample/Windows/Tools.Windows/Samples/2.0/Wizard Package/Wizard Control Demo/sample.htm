@@ -1,0 +1,39 @@
+﻿<html><h1>Wizard Control Demo</h1>
+
+<p>This sample illustrates how the Wizard control can be used to create full-fledged Wizards.</p>
+
+<div align=center><img src="images/sample.PNG" alt="Wizard Control Demo Image" title="" /></div>
+
+<p>
+<h3>Features:</h3>
+<h3>Page Selection</h3>
+
+<p>Usually, events occur before and after button clicks and after a page is selected. </p>
+<p>The events fired during page selection are listed below in the 
+order in which they are fired.</p>
+
+<ul>
+	<li>The<strong> ValidatePage</strong> event occurs if the Next or Finish button is clicked. This is a good place to validate whether the user has provided valid information before moving to the next step. If canceled, further events will not occur.  </li>
+	<br><br></li>
+	<li>The<strong> BeforeBack</strong>, <strong>BeforeNext</strong>, and <strong>BeforeFinish</strong> events occur before the corresponding action happens. If canceled, further events will not occur. These events provide you 
+	with more ways to validate pages.</li><br>
+	<br></li>
+	<li>A<strong> Click</strong> event, <strong>NextClick </strong>for example, is used to notify 
+	you regarding button clicks. </li>
+	<br><br></li>
+	<li>The<strong> BeforePageSelected</strong> event has a reference to the new page that will be selected 
+	in the event handler, if you can 
+specify a different page to be selected in the event arguments. </li>
+	<br><br></li>
+	<li>The<strong> AfterPageSelected</strong> event is used to notify you when a new page has been selected. </li> 
+	<br><br></li>
+	<li>The newly selected <strong>WizardControlPage</strong> fires its <strong>PageLoad</strong> event to notify 
+	you that a page has been loaded.</li><br>
+	<br></li>
+	<li><strong>Back</strong>, <strong>Next</strong>, <strong>Finish</strong>, 
+	<strong>Cancel</strong>, or <strong>Help</strong> events occur with respect to button clicks.  
+	</li>
+</ul>
+</p>
+
+</html>

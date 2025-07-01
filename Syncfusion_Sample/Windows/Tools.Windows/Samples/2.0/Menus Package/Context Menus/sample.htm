@@ -1,0 +1,26 @@
+<h1>Context Menus</h1>
+
+<p>This sample illustrates pop-up menus used to display a context menu with items.</p>
+
+<p><div align=center><img src="images/sample.png" alt="ContextMenu sample" title="" /></div></p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+	<li>A pop-up menu can easily be displayed and associated with any control using 
+the 
+<strong>Pop-Up Menus Manager</strong> component. </li>
+	<li>Adding the Pop-Up Menus Manager to a form will add an extended property for the controls.</li>
+	<li><strong>PopupMenu.ParentBarItem - </strong>This property specifies the parent-bar 
+item that lists items in a drop-down menu.</font></li>
+</ul>
+</li></p>
+
+<code>
+<pre>
+// To cancel the popupmenu before showing up
+private void popupMenu2_BeforePopup(object sender, CancelMouseEventArgs e)
+{
+	e.cancel = true;
+}
+</pre>
+</code>

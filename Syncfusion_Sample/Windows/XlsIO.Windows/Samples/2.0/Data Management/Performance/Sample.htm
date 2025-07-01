@@ -1,0 +1,50 @@
+<h1>Performance</h1>
+
+<p> Essential XlsIO is known for its high performance and simple APIs
+that have most of the
+functionalities of Excel.</p>
+
+<p style="font-size:large">Features:</p>
+<ul>
+<li>Creating rich, large reports with styles</li>
+<li>Performance optimization methods</li>
+
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+<li>Select the check box to apply column styles.</li>
+<li>Select the number of rows and columns from the drop-down.</li>
+<li>Choose one from the options--Excel 2003,Excel 2007,Excel 2010--to generate 
+a document in Excel 2003, Excel 2007,Excel 2010 respectively.</li>
+<li>Click <b>Create</b> to generate and view the document and its performance.</li>
+
+</ul>
+
+<p><b>Note:</b></p><ul>
+<li>When more styles are added, it is recommended that you use global styles within
+<strong>BeginUpdate</strong> and <strong>EndUpdate</strong> calls.</li>
+<li>The use of <strong>IMigrant Range</strong> will reduce the amount of memory used when large amounts
+of strings are involved.</li>
+</ul>
+<p> Below is an image of the output.</p>
+<p><div align = "Center"><img src="images/sample.png" alt="XlsIO" title="" /></div></p>
+
+<p>Below is an image showing the time and memory performance of XlsIO for a given number of rows and columns.</p>
+<p><div align = "Center"><img src="images/sample1.png" alt="XlsIO" title="" /></div></p>
+
+<p>Here are code snippets that improve performance:</p>
+<pre>
+//Style description that can be applied to any range
+IStyle bodyStyle = workbook.Styles.Add("BodyStyle");
+bodyStyle.BeginUpdate();
+
+//Add custom colors to the palette.
+workbook.SetPaletteColor(9,Color.FromArgb(239,243,247));
+bodyStyle.Color = Color.FromArgb(239,243,247);
+bodyStyle.Borders[ExcelBordersIndex.EdgeLeft].LineStyle = ExcelLineStyle.Thin;
+bodyStyle.Borders[ExcelBordersIndex.EdgeRight].LineStyle = ExcelLineStyle.Thin;
+bodyStyle.EndUpdate();
+
+//Sets style for the whole column
+sheet.SetDefaultColumnStyle(1,colCount,bodyStyle);
+</pre>

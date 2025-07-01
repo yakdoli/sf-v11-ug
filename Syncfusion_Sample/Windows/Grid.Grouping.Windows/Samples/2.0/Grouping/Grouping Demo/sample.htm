@@ -1,0 +1,69 @@
+<html><h1>Grouping Demo</h1>
+
+<p><p>Essential Grid's Grid Grouping Control supports grouping data at design time. 
+<p>This sample uses a flat data set that has been created with the designer. The 
+group drop area can be added by setting the <strong>ShowGroupDropArea</strong> property to 
+<em>true</em>. The data can be grouped by a given column by specifying the 
+column name in the <strong>TableDescriptor.GroupedColumns</strong> property.&nbsp; 
+    Also this sample features the Grid Cell&#39;s ability to merge cells even with the 
+    dynamic change in Grid&#39;s layout after Sorting / Grouping<p>The GroupDropArea supports displaying the Grouped columns in a Hierarchical 
+    structue too. To enable this feature the <b>HierarchicalGroupDropArea property </b>
+    must be <i>true</i>. Hierarchical Group support avails the following interactive 
+    features with the GridGroupingControl<PRE><FONT COLOR="#8d2e1c">                this.gridGroupingControl1.HierarchicalGroupDropArea = true;  </FONT></PRE>
+<p><b>Interactive Features </b>:<ul>
+<li>AllowRemove&nbsp; -&nbsp; Support to remove the column dynamically from being 
+    grouped&nbsp; (will support in Default GroupDropArea too)</li>
+</ul>
+	<PRE><FONT COLOR="#8d2e1c">                this.gridGroupingControl1.GridGroupDropArea.AllowRemove = true;</FONT></PRE>
+<ul>
+    <li>TreeLine Placement&nbsp; -&nbsp; Support to switch the treeline placement as top 
+        and bottom between the levels</li>
+</ul>
+	<PRE><FONT COLOR="#8d2e1c">                this.gridGroupingControl1.GridGroupDropArea.TreeLinePlacement = TreeLinePlacement.Bottom;</FONT></PRE>
+<ul>
+    <li>Dynamic Resizing -&nbsp; Support to resize the GroupDropArea dynamically till 
+        the last level of Hierarchy</li>
+</ul>
+	<PRE><FONT COLOR="#8d2e1c">                </FONT>this.gridGroupingControl1.GridGroupDropArea.DynamicResizing = true;</PRE>
+<ul>
+    <li>TreeLineColor - Support to paint the treelines with desired color</li>
+</ul>
+	<PRE><FONT COLOR="#8d2e1c">                this.gridGroupingControl1.GridGroupDropArea.TreeLineColor = Color.Red;   </FONT></PRE>
+
+
+
+<p>When you run the sample, you will see an Employees table grouped by three columns 
+    in a Hierarchical structure . <p align=center><img src="images/sample1.png" alt="Hierarchical Grouping screenshot" title="Hierarchical Grouping" /></p>
+
+<p>The following is an image which illustrates the GroupDropArea in its default 
+    style.</p>
+
+<p align=center><img src="images/sample.png" alt="Grouping screenshot" title="Grouping" /></p>
+
+
+
+
+
+<p align="Left">
+    Below is the image of Grid with merged state of cells.</p>
+
+
+<p align=center><img src="images/sample2.png" alt="Grouping screenshot" title="Grouping" /></p>
+
+<p align="Left">
+    Below is the image of Grid with Images in GridHeaderCells.</p>
+
+
+<p align=center><img src="images/sample3.png" alt="Grouping screenshot" title="Grouping" /></p>
+
+
+<p align="Left">
+    Note : The image alignment can be changed using <b>HeaderImageAlignment</b> property of 
+    <b>GridColumnDescriptor</b>.</p>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,27 @@
+﻿<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Custom Command</h1>
+
+<p>The Custom Command sample demonstrates how to perform undo-redo operations in diagram applications.</p>
+
+<p>Click History -> Undo/Redo, to perform the undo-redo operation on actions performed on diagram nodes.</p>
+
+<p><div align=center><img src="images/sample.png" alt="CustomCommand Image" title="" /></div></p>
+<p><strong>Features</strong></p>
+<ul><p><li> To perform undo and redo operations, use the following code.<font color="#8D2E1C"><pre>
+this.diagram1.Model.HistoryManager.Undo();
+this.diagram1.Model.HistoryManager.Redo();  </pre></font>
+
+<li> To start and end a custom action, use the following code.<font color="#8D2E1C"><pre>
+this.diagram1.Model.HistoryManager.StartAtomicAction( "Custom Action" ); 
+this.diagram1.Model.HistoryManager.EndAtomicAction( );  </pre></font></p>
+</ul>
+</html>

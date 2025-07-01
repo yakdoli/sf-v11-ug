@@ -1,0 +1,58 @@
+<h1>Format Cells</h1>
+
+<p>Formatting worksheets makes them more attractive and easier to use. Excel
+provides various options for setting font, font size, color, and  background.</p>
+
+<p>The &quot;Format Cells&quot; dialog in Excel has six tabs, each with several
+characteristics that allow you to set various formats for a cell.
+
+You can set number formats, horizontal and vertical alignment, text control operations, font and font styles, and borders for the cells.</p>
+
+<p>Below is an illustration in Excel showing formatting options.</p>
+<p><div align = "Center"><img src="images/sample1.png" alt="XlsIO" title="" /></div></p>
+
+<p style="font-size:large">Features:</p>
+<ul>
+<li>Various styles such as colors, font settings, borders, and alignments</li>
+<li>Number formats</li>
+<li>Patterns</li>
+<li>Conditional formatting</li>
+<li>RTF</li>
+<li>Image insertion</li>
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+<li>Choose one from the options--Excel 2003,Excel 2007,Excel 2010--to generate 
+a document in Excel 2003, Excel 2007,Excel 2010 respectively.</li>
+<li>Click <b>Create</b> to generate and view the document.</li>
+<li>All features in the preceding list are illustrated in this file.</li>
+</ul>
+
+<p>Below is an image of the output.</p>
+<p><div align = "Center"><img src="images/sample.png" alt="XlsIO" title="" /></div></p>
+
+<p>Here is a code snippet:</p>
+<pre>
+
+//Set Number formatting
+sheet.Range["F24"].Number =5000;
+sheet.Range["F24"].NumberFormat = "$#,##0.00";
+
+//Set alignment
+sheet.Range["D3"].HorizontalAlignment = ExcelHAlign.HAlignCenter;
+
+//Set Text wrap
+sheet.Range["D29"].WrapText = true;
+
+//Set font
+sheet.Range["D7"].CellStyle.Font.FontName = "Arial Black";
+
+//Set borders
+sheet.Range["F9"].CellStyle.Borders.LineStyle = ExcelLineStyle.Medium;
+sheet.Range["F9"].CellStyle.Borders[ ExcelBordersIndex.DiagonalDown ].ShowDiagonalLine= false;
+sheet.Range["F9"].CellStyle.Borders[ ExcelBordersIndex.DiagonalUp].ShowDiagonalLine= false;
+
+//Set color and pattern
+sheet.Range["B7:J7"].CellStyle.FillPattern = ExcelPattern.DarkDownwardDiagonal;
+sheet.Range["B7:J7"].CellStyle.Color = Color.FromArgb(163,245,245);
+</pre>

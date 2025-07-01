@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3193528">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>RecordStyle Demo</H1>
+<P>This sample demonstrates how to format alternate rows in a
+Grouping Grid control. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>Set the <STRONG>Appearance.AlternateRecordFieldCell</STRONG>
+	property of the grouping grid</P>
+	<LI><P>The appearance property lets you control any aspect of the grid
+	grouping appearance such as cell type, value, background color,
+	foreground color, font, and text color. 
+	</P>
+	<LI><P>The sample is built with a flat data set that has been customized
+	at design-time.</P>
+	<LI><P>The sample allows you to edit record values and add new records.</P>
+</UL>
+<P><BR><BR>
+</P>
+<PRE><FONT COLOR="#8d2e1c">                // Applying style settings to alternate rows in the grouping grid.</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.Appearance.AlternateRecordFieldCell.Font.Facename = &quot;Arial Black&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.Appearance.AlternateRecordFieldCell.Font.Italic = true;</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.Appearance.AlternateRecordFieldCell.Interior =new Syncfusion.Drawing.BrushInfo</FONT>
+<FONT COLOR="#8d2e1c">                (System.Drawing.Color.PaleGoldenrod);  </FONT></PRE><P ALIGN=CENTER>
+<img src="images/sample.png" NAME="graphics1" ALT="Alternate RowStyles screenshot" ALIGN=BOTTOM  BORDER=0></P>
+</BODY>
+</HTML>

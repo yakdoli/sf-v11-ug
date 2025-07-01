@@ -1,0 +1,39 @@
+﻿<html>
+<h1> Filtered Data</h1>
+
+<p>This sample shows how to improve the performance of a chart when loading a large number of data points using 
+<strong>IChartSeriesModel</strong>.</p>
+
+<p><div align=center><img src="images/sample.png" alt= "FilteredDataSample"title=""/></div></p>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Chart Filtering</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<ul><p>
+</ul>
+<p><strong>Features</strong>:</p>
+<ul>
+	<li>In this sample, a new set of data points is added every 800 
+	milliseconds.&nbsp; Data points added before five minutes are filtered out by 
+	the 
+	grouping engine. The 
+range along the primary x-axis is held for three minutes during run time in order to improve the performance of the chart.</p>
+
+<p><font color="#8D2E1C"><pre><code>
+// Data points are added as per the Timer Interval.
+
+if (this.chartControl1.Series[7].Points[this.chartControl1.Series[7].Points.Count - 1].DateX  > start)
+{
+this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(DateTime.Now.AddMinutes(-1),DateTime.Now.AddMinutes(2),1,ChartDateTimeIntervalType.Minutes);
+start = this.chartControl1.PrimaryXAxis.DateTimeRange.End;
+}
+</pre></font></code></p>
+<p><li> The styles of the series points can be enabled or disabled. 
+<p><font color="#8D2E1C"><pre><code>
+//Point Symbols and Point Text will not be visible if &#39;EnableStyles&#39; is set to false.
+series.EnableStyles = false;
+</pre></code></font></p>
+</ul>
+</html>

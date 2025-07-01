@@ -1,0 +1,47 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template}![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+::::: {#nsbanner .d2h_main_nsbanner style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px"}
+:::: {#TitleRow .d2h_main_titlerow style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px"}
+::: {#ienav .d2h_main_ienav style="DISPLAY: none"}
+[](ms-xhelp:///?Id=fff208ee-9f3c-4c8c-8f3c-c680b767ceaa){#D2HPrevious .D2HPreviousEnabled}  [](ms-xhelp:///?Id=cf0e6254-8964-4a67-b141-e26bc6e4f04a){#D2HNext .D2HNextEnabled}
+:::
+::::
+:::::
+
+::::: {#nstext .d2h_main_nstext style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" hasuserbackground="true" valign="bottom"}
+::: {#d2h_breadcrumbs .d2h_breadcrumbs}
+[Essential Studio User Guide Documentation](ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[User Interface Edition](ms-xhelp:///?Id=c29296b7-531c-413b-a0ec-488ca1f7f669){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Essential ASP.NET MVC](ms-xhelp:///?Id=4b14e7d1-65c4-4f67-b1aa-2c37709905a5){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Essential Grid]{.d2h_breadcrumbsContentsOnly}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Getting Started](ms-xhelp:///?Id=c7ed3902-b25b-4170-be58-1d3d0b57748a){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Feature Summary](ms-xhelp:///?Id=1923e679-441a-44e0-9bca-e0e50988a857){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Concepts and Features](ms-xhelp:///?Id=4a1657fa-4756-42b9-9153-aebf5dcfc503){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Toolbar](ms-xhelp:///?Id=23189d4a-325f-4b16-ae02-c7743a26d407){.d2h_breadcrumbsNormal}
+:::
+
+### Events {#events style="tab-stops: 0pt"}
+
+The following table provides the events of the **ToolbarOptions** class.
+
+ 
+
+::: {align="center"}
++---------------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+-----------------+
+| Name                | Description                                                                                          | Arguments                                                                                        | Reference type  |
++---------------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+-----------------+
+| OnToolbarClickEvent | Used to add the OnToolbarClickEvent event handlers[]{style="FONT-FAMILY: 'Times New Roman','serif'"} | \_currentItem contains the current clicked toolbar item                                          | NA              |
+|                     |                                                                                                      |                                                                                                  |                 |
+|                     |                                                                                                      | \_currentItemId contains the id of the current clicked toolbar item                              |                 |
+|                     |                                                                                                      |                                                                                                  |                 |
+|                     |                                                                                                      | \_currentItemIndex contains the index of the current clicked toolbar item                        |                 |
+|                     |                                                                                                      |                                                                                                  |                 |
+|                     |                                                                                                      | \_disabled specifies whether the current clicked toolbar item is disabled or not.                |                 |
+|                     |                                                                                                      |                                                                                                  |                 |
+|                     |                                                                                                      | \_itemType specifies whether the current clicked toolbar item is a built-in item or custom item. |                 |
++---------------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+-----------------+
+:::
+
+[]{style="FONT-SIZE: 11pt"} 
+
+ 
+
+ 
+
+[]{#related-topics}
+:::::

@@ -1,0 +1,107 @@
+<html><h1>Hierarchy Demo</h1>
+
+<p>Essential Grid&#8217;s Grid Grouping Control supports hierarchical data sets.  
+</p>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><p>In this sample, you will see five levels of relations being represented with each level having its own nested table. When a user changes the foreign-key value of a record in a nested table, the Grid Grouping 
+	Control will automatically move the record to its new parent table and scroll the table into view. 
+</p></UL>
+
+<p>This image shows how the sample looks after execution.</p>
+
+<p><p align=center><img src="images/sample.png" alt="HierarchySample" title="HierarchySample" /></p>
+
+<P><FONT SIZE=4><B>Implementation</B></FONT></P>
+<UL>
+<LI><P><p>The following code describes the creation of the summary column descriptor and 
+how to add it to the table.</p></p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Creating a new SummaryColumnDescriptor.
+    		GridSummaryColumnDescriptor countCat = new GridSummaryColumnDescriptor("RecordCount");</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Setting it's properties.
+    		countCat.SummaryType = SummaryType.Count;
+    		countCat.Style = GridSummaryStyle.FillRow;</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Initializing it to the Column it is associated with.
+    		countCat.DataMember = "CategoryID";</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Mentioning the format of display.
+    		countCat.Format = "      {Count} Records.";</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Adding the SummaryColumnDescriptor to the SummaryRowDescriptor.
+    		GridSummaryRowDescriptor categoriesSummaryRow = new GridSummaryRowDescriptor("RecordCountRow");
+    		categoriesSummaryRow.SummaryColumns.Add(countCat);</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Adding the SummaryRowDescriptor to the  TableDesriptor.
+    		categoriesTableDescriptor.SummaryRows.Add(categoriesSummaryRow);</p>
+
+<p><font color="#8D2E1C"><pre>
+    		 //Pick a record with the value "Spegesild" and set it as current record.
+    		 r.SetCurrent();</p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Expand records and nested tables.
+    		r.IsExpanded = true;
+    		r.NestedTables[0].IsExpanded = true;
+    		Record orderDetailsRecords = r.NestedTables[0].ChildTable.GetFirstRecord();</p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Expand the Group the record belongs to.
+    		orderDetailsRecords.ParentGroup.IsExpanded = true;</p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Scrolls this record in view.
+    		groupingGrid1.TableControl.ScrollInView(orderDetailsRecords);</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Mention the ColumnIndex to be present at the left-most side of the Grid.
+    		groupingGrid1.TableControl.LeftColIndex = 1;</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Code to disable and enable XP themes.
+    		this.groupingGrid1.ThemesEnabled = true ;</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Code to mention the current position of the scrollbar at the scrollbar control.
+    		groupingGrid1.TableControl.VScrollBar.Value = groupingGrid1.TableControl.VScrollBar.Minimum;</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Code to get the current element, expand and reset the current element. 
+    		// Determine current element. If it is a nested table, get the current element of the child table
+    		Element el = this.groupingGrid1.Table.CurrentElement;
+    		while (el is NestedTable)
+    			el = ((NestedTable) el).ChildTable.ParentTable.CurrentElement;</p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Expand all records.
+    		this.groupingGrid1.Table.ExpandAllRecords();</p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Scroll current record into view.
+    		if (el != null)
+    		{
+    			// Restore Current Field 
+    			el.ParentTable.CurrentRecordManager.NavigateTo(el); </p>
+
+<p><font color="#8D2E1C"><pre>
+    			// Scroll element into view.
+    			groupingGrid1.TableControl.ScrollInView(el);
+    		}</p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Synchronize grid display with engine changes.
+    		this.groupingGrid1.Update();</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//Code to collapse all the records.
+    		this.groupingGrid1.Table.CollapseAllRecords();  </pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></pre></font></p>
+</UL>
+</html>

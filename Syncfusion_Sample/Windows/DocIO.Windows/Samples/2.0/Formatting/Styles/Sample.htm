@@ -1,0 +1,40 @@
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Styles</h1>
+<p>This sample demonstrates built-in and custom styles using Essential DocIO. </p>
+
+<p>Below is the illustration of the output document demonstrating built-in styles applied via DocIO.</p>
+<p><div align = "Center"><img src="images/sample.png" alt="DocIO" title="" /></div></p>
+</p>
+<p>Here is a code snippet for applying built-in styles using Essential DocIO</p><pre>
+doc.LastParagraph.AppendText("Heading 1");
+doc.LastParagraph.ApplyStyle(BuiltinStyle.Heading1);</pre>
+
+<p><strong>Custom Styles</p></strong>
+
+
+<p>Below is the illustration of the output document that demonstrates custom styles applied using Essential DocIO.</p>
+<p><div align = "Center"><img src="images/Styles1.png" alt="DocIO" title="" /></div></p>
+
+<p>Here is a code snippet for creating and applying custom styles.</p><pre>
+WParagraphStyle style = (IWParagraphStyle)doc.AddParagraphStyle("Normal");
+style = (IWParagraphStyle)doc.AddParagraphStyle("UserStyle_Heading1");
+style.CharacterFormat.Bold = true;
+style.CharacterFormat.FontName = "Verdana";
+style.CharacterFormat.FontSize = 25;
+IWParagraph paragraph = section.AddParagraph();
+paragraph.AppendText("[ Style Applied ]: ");
+paragraph.ApplyStyle(style.Name);
+</pre>
+<p style="font-size:large">Features:</p>
+<ul>
+ <li>Supports built-in styles available in MS Word.</li>
+ <li>Supports user-defined custom styles.</li>
+</ul>

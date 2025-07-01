@@ -1,0 +1,93 @@
+<html><h1>Data Binding Demo</h1>
+
+<p>This sample demonstrates the switching of data sources at run time and 
+shows how to reset the Grid Grouping control to its original empty state. <br /><br/>The sample assigns different data sources (retrieved from the Northwind Access 
+database using OLEDB) with a different number of levels at run time. The sample 
+also demonstrates how to show additional nested tables in the group drop area.<br / ><br/>This image shows the 
+menu options in the 
+form.</p><p align=center><img src="images/sample1.png" alt="Rebind-Menu" title="Rebind-Menu" /></p><p>This image shows a form when the option <strong>Customer Order</strong> is clicked.</p><p align=center><img src="images/sample2.png" alt="Rebind-Data" title="Rebind-Data" /></p>
+
+<p>The following code shows how the data set is created and how it is filled with data from the 
+.mdb file.</p><font color="#8D2E1C"><pre>
+    		private DataSet queryOleDb(string name, string query)
+    		{
+    			DataSet ds = new DataSet();
+    			string mdbFileName = FindDatabase(@"Data\Northwind.mdb");
+    			if (connection != null &amp;&amp; connection.Length > 0 &amp;&amp; query != null &amp;&amp; query.Length > 0)
+    			{
+    				OleDbConnection conn = new OleDbConnection(String.Format(Form1.connection, mdbFileName));
+    				OleDbDataAdapter adapter = new OleDbDataAdapter();
+    				adapter.SelectCommand = new OleDbCommand(query, conn);
+    				adapter.Fill(ds);
+    				ds.Tables[0].TableName = name;
+    				conn.Close();
+    			}
+    			return ds;
+    		}
+    		string FindDatabase(string mdbFileName)
+    		{
+    			for (int n = 0; n &lt; 10; n++)
+    			{
+    			if (System.IO.File.Exists(mdbFileName))
+    				{
+    					return mdbFileName;
+    				}
+    				mdbFileName = @"..\" + mdbFileName;
+    			}
+    			return "";
+    		}  </pre></font>
+
+<p><p>Here is the code used to change the data set of the Grid Grouping Control.</p>
+<font color="#8D2E1C"><pre>
+    		private void BindData(DataSet ds)
+    		{
+    			this.gridGroupingControl1.SuspendLayout();
+    			this.gridGroupingControl1.DataSource = ds != null ? ds.Tables[0] : null;
+<font color="#8D2E1C"><pre> 			
+    			// Making columns marked 'ReadOnly' below, marks the schema as modified.
+    			//Once a schema is marked modified, its setting stays even when the source list is changed
+    			// This is by design and allows users to swap the datasource at runtime without having to worry that manual changes to the schema are lost
+    			// In order to Reset the main table descriptor and also the nested relations use the following two lines
+    			this.gridGroupingControl1.ResetTableDescriptor();
+    			this.gridGroupingControl1.TableDescriptor.Relations.Reset();
+<font color="#8D2E1C"><pre> 
+    			// Show group area.
+    			this.gridGroupingControl1.ShowGroupDropArea = true;
+<font color="#8D2E1C"><pre> 
+    			// Additional table descriptors currently have to be added manually. 
+    			//We plan to provide a TableDescriptor.ShowInGroupDropArea property later to make this easier
+    			AddGroupDropAreas(this.gridGroupingControl1.Table);<p><font color="#8D2E1C"><pre>
+    			// Make changes to schema. See above notes that illustrate how to reset changes.
+    			SetReadOnly(this.gridGroupingControl1.Table);
+    			this.gridGroupingControl1.ResumeLayout(true);
+    		}   </pre></font></font></font></font></font><p>Here is the code to add group drop areas for the all the related tables.</p>
+<font color="#8D2E1C"><pre>
+    		private void AddGroupDropAreas(GridTable table)
+    		{
+    			Syncfusion.Grouping.RelationDescriptor rd = table.TableDescriptor.ParentRelation;
+    			if (rd != null &amp;&amp; rd.RelationKind != Syncfusion.Grouping.RelationKind.RelatedMasterDetails)
+    				return;
+    			foreach(GridTable t in table.RelatedTables)
+    			{
+    				Console.WriteLine("AddGroupDropArea " + t.Info);
+    				gridGroupingControl1.AddGroupDropArea(t);
+    				//recurse...
+    				AddGroupDropAreas(t);
+    			}
+    		}   </pre></font><p>Here is the code used to set the table and its related table as read-only. </p>
+<font color="#8D2E1C"><pre>
+    		private void SetReadOnly(GridTable table)
+    		{
+    			table.TableDescriptor.AllowNew = false;
+    			table.TableDescriptor.AllowEdit = false;
+    			table.TableDescriptor.AllowRemove = false;<font color="#8D2E1C"><pre> 		
+    			//recurse...
+    			foreach(GridTable t in table.RelatedTables)
+    			{
+    				SetReadOnly(t);
+    			}
+    		}  </pre></font></font><p>Here is the code to invoke the <strong>Property Dialog  </strongwindow during run time.</p>
+<font color="#8D2E1C"><pre>
+    		GroupingGridPropertyDialog dlg = new GroupingGridPropertyDialog(this.gridGroupingControl1);
+    		dlg.Show();  </pre></font>
+</html>

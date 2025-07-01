@@ -1,0 +1,42 @@
+<h1>Headers and Footers</h1>
+
+<p>Headers and footers include text or graphics; for example, page numbers, 
+date, a company logo, a document's title, or the author's name is usually 
+printed at the top or bottom of each page in a document. A header is printed in 
+the top margin and a footer is printed at the bottom margin.</br>
+</p>
+<h3>Features:</h3>
+<ul>
+	<li>Essential PDF provides support for inserting headers and footers into a PDF document.</li>
+	<li>The header and footer for a page can be created with a template in Essential PDF; 
+this is done by using the <strong>PDFPageTemplateElement</strong> class. </li>
+	<li>Page 
+numbers can be set using dynamic fields. </li>
+	<li>This sample demonstrates the header and footer support in Essential PDF.</li>
+</ul>
+<div align=center>
+	<img src="images/Headerfooter.png" alt="PDF" title="" /></div>
+<p>Here is the code snippet used in this sample:</p>
+<p><code>
+<pre>//Create a header and draw the image.
+RectangleF rect = new RectangleF(0, 0, doc.Pages[0].GetClientSize().Width, 50);
+PdfPageTemplateElement header = new PdfPageTemplateElement(rect);
+PdfImage img = new PdfBitmap("logo.png");
+
+//Draw the image in the Header.
+header.Graphics.DrawImage(img, imageLocation, imageSize);
+
+//Add the header at the top
+doc.Template.Top = header;      
+</pre>
+</code></p>
+<h3>
+
+    Interactive Features:</h3>
+	
+<Ul>
+  <li>Click the PDF button to generate the Pdf document.</li>
+  <li>Click Yes on the message box to view the generated Pdf file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+</Ul>

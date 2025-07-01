@@ -1,0 +1,50 @@
+﻿<html><h1>Resizable Rows Demo</h1>
+
+<p><p>This sample demonstrates resizing individual rows in a grid. It also 
+illustrates how to implement the <strong>IGridRowHeight</strong> interface and its routines for getting and setting row heights for elements. 
+</p></p>
+
+<p>This is how it looks after resizing the rows.</p>
+
+<p><p align=center><img src="images/sample.png" alt="ResizableRows-Resized" title="ResizableRows-Resized" /></p>
+
+<p><p>The resizable row feature is implemented by the <strong>CustomEngine</strong> class. </p>
+<p>It has the following five classes:</p></p>
+
+<p><b>GridEngineFactory class</b></p>
+
+<p>This is inherited from the <strong>GridEngineFactoryBase</strong>. It 
+overrides the <strong>CreateEngine()</strong> method, which returns a new grouping 
+engine.
+</p>
+<p><b>GroupingEngine class</b></p>
+
+<p>This is inherited from the <strong>GridEngine</strong> and overrides the following methods:</p>
+
+<ul><li><b>CreateRecordRow</b> - Returns new <strong>GroupingRecordRow</strong><li><b>CreateCaptionRow</b> - Returns new <strong>GroupingCaptionRow</strong><li><b>CreateColumnHeaderRow</b> - Returns new 
+	<strong>GroupingColumnHeaderRow</strong></ul>
+<p><b>GroupingRecordRow class</b></p>
+<p>&nbsp;This is inherited from the <strong>GroupingRecordRow</strong> and 
+implements the <strong>IGridRowHeight</strong>.
+</p>
+<ul>
+<li>It has a row-height variable initialized to -1.
+<li>In order to support the storing of row heights, the <strong>SupportsRowHeight()</strong> method is made to return 
+<em>true</em>.
+<li>If the <strong>RowHeight</strong> property is changed, then the <strong>InvalidateCounterBottonUp()</strong> method is called to reset the counters.
+<li>The property <strong>HasRowHeight</strong> checks whether the row height is modified or not, and 
+it returns <em>true</em> or <em>false</em>, respectively. The <strong>GetYAmount()</strong> method is overridden to return the new row 
+height, if it is changed.&nbsp; If it is not changed, it calls the base method.</ul>    
+
+<p><p> This same functionality is implemented in the <strong>GroupingCaptionRow</strong> and the 
+<strong>GroupingColumnHeaderRow</strong> classes.  </p>
+<p> In the main form, the <strong>CustomEngine</strong> class is invoked using 
+the following code:</p></p>
+
+<p><font color="#8D2E1C"><pre>
+    		GridEngineFactory.Factory = new GroupingEngineFactory();  </pre></font></p>
+
+<p>Note: To use the class, <b>CustomEngine</b> (included with this sample), instead of 
+an instance from the <b>GridHelperClass</b>, include '//' before <b>#define HELPERCLASS</b> to mark it as a comment from 
+the <i>Form.cs</i> file in the sample. </P>
+</html>

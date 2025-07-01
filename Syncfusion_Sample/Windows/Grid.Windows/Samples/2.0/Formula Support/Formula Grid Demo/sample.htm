@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;3532981">
+	<META NAME="CHANGEDBY" CONTENT="jisha j">
+	<META NAME="CHANGED" CONTENT="20090102;3541281">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Formula Grid Demo</H1>
+<P>This sample implements a grid control that can have algebraic
+formulas in its cells. 
+</P>
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+<UL>
+	<LI><P><STRONG>GridFormulaCellModel </STRONG>class gives access to a formula library 
+	of functions with its formula engine support.</P>
+	<LI><P>This sample lists the library functions that ship with the formula
+	engine.</P>
+	<LI><P>It also has an example of how you can add your own
+	calculations to the library.</P>
+	<LI><P>The following code illustrates how to display <STRONG>GridAwareTextBox</STRONG> above the grid.
+	above the grid.</P>
+	<PRE STYLE="margin-left: 0.49in"><FONT COLOR="#8d2e1c">	private GridAwareTextBox textBox1;</FONT>
+	<FONT COLOR="#8d2e1c">this.textBox1.WireGrid(this.gridControl1);</FONT></PRE>
+	<LI><P>The grid-aware text box internally binds to the current cell of the grid
+	and allows you to make changes to the grid cell through the text box.</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="FormulaGrid screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P><b>Interactive Features</b></P>
+<UL>
+	<LI>
+	<P>The formulae are similar to Excel formulae. For using formula in a cell, set the cell type to
+	<STRONG>FormulaCell</STRONG>.</P>
+</UL>
+<UL>
+	<LI><P ALIGN=LEFT>You can specify the formulae in the cell through the <STRONG>GridStyleInfo.Text</STRONG> property.</P>
+</UL>
+</BODY>
+</HTML>

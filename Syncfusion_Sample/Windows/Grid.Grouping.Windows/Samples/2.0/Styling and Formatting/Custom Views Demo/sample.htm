@@ -1,0 +1,123 @@
+<html><h1>Custom Views Demo</h1>
+
+<p>For non-nested data tables, you can use Essential Grid's Grid Grouping Control to quickly provide 
+custom views of your data. You can filter, group, sort, and summarize data with summary rows.
+</p>
+
+<p>In this picture, you will see a Customers table, which is filtered by country, showing the cities that are available for that country. It also shows 
+options in the 
+Sorting menu.</p>
+<p>
+<p align=center><img src="images/sample.png" alt="CustomViews" title="CustomViews" /></p>
+
+<p>		The code to invoke the <strong>GridColumnDescriptorCollection</strong> window is given below.</p>
+
+<p><font color="#8D2E1C"><pre>
+    		_ShowGridColumnsDialog(this.groupingGrid1.Engine.TableDescriptor, "Columns", null, typeof(GridColumnDescriptorCollection));   </pre></font></p>
+
+<p>Similarly, other property windows are invoked through the same code but with the exact property as the argument.
+</p>
+
+<p>This is passed into the following method:</p>
+
+<p><font color="#8D2E1C"><pre>
+    		internal DialogResult _ShowGridColumnsDialog(object instance, string propertyName, IServiceProvider provider, Type type)
+    		{
+    			GroupingCollectionEditor ce = new GroupingCollectionEditor(type);
+    			Syncfusion.ComponentModel.WindowsFormsEditorServiceContainer esc = new Syncfusion.ComponentModel.WindowsFormsEditorServiceContainer(provider);
+    			PropertyDescriptor pd = TypeDescriptor.GetProperties(instance)[propertyName];
+    			Syncfusion.ComponentModel.TypeDescriptorContext tdc = new Syncfusion.ComponentModel.TypeDescriptorContext(instance, pd);
+    			tdc.ServiceProvider = esc;</p>
+
+<p><font color="#8D2E1C"><pre>
+    			ce.EditValue(tdc, esc, pd.GetValue(instance));</p>
+
+<p><font color="#8D2E1C"><pre>
+    			return esc.DialogResult;
+    		}  </pre></font></pre></font></pre></font></p>
+
+<p>Here is the code to reset to the  default<strong> </strong>properties:</p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.groupingGrid1.ResetTableDescriptor();   </pre></font></p>
+
+<p>Here is the code to reset the column sets:</p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.groupingGrid1.Engine.TableDescriptor.ResetColumnSets();  </pre></font></p>
+
+<p>Here is the code to reset the column order:</p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.groupingGrid1.Engine.TableDescriptor.VisibleColumns.Reset();  </pre></font></p>
+
+<p>Here is the code to browse the table:</p>
+
+<p><font color="#8D2E1C"><pre>
+    		fprivate void menuItemBrowseTable_Click(object sender, System.EventArgs e)
+    		{
+    			SelectTableForm f = new SelectTableForm();
+    			f.Table = this.groupingGrid1.Engine.DataMember;
+    			if (fileName != "")
+    			{
+    				f.FileName = fileName;
+    				f.Table = this.groupingGrid1.Engine.DataMember;
+    			}
+    			if (f.ShowDialog() == DialogResult.OK &amp;&amp; f.Table != "")
+    			{
+    				fileName = f.FileName;
+    				OleDbDataAdapter dataAdapter = null;
+    				DataSet _dataSet = null;
+    				string tableName = f.Table;
+    				try
+    				{
+    					// Connection object
+    					if (connection == null)
+    					connection = new OleDbConnection(f.ConnectionString);</p>
+
+<p><font color="#8D2E1C"><pre>
+    					// Create data adapter object.
+    					dataAdapter = new OleDbDataAdapter("SELECT * FROM [" + tableName + "]", connection);</p>
+
+<p><font color="#8D2E1C"><pre>
+    					// Create a dataset object and fill it with data using the data adapter's Fill method&#95;dataSet = new DataSet();
+    					dataAdapter.Fill(&#95;dataSet, tableName);
+    					connection.Close();</p>
+
+<p><font color="#8D2E1C"><pre>
+    					this.groupingGrid1.CancelEdit();
+    					if (f.ResetColumnChecked || f.Table != this.groupingGrid1.Engine.DataMember)
+    					{
+    						this.groupingGrid1.ResetTableDescriptor();
+    					}
+    					this.groupingGrid1.Engine.DataMember = "";
+    					this.groupingGrid1.Engine.DataSource = _dataSet.Tables[tableName];
+    					this.Text = tableName;
+    				}
+    				catch(Exception ex)
+    				{
+    					MessageBox.Show("Problem with DB access-\n\n   connection: "
+    						+ f.ConnectionString + "\n\n" + ex.ToString());
+    					return;
+    				}
+    			}  </pre></font></pre></font></pre></font></pre></font></p>
+
+<p>Here is the code to add a summary row with <strong>RecordCount:</strong></p>
+
+<p><font color="#8D2E1C"><pre>
+    		GridSummaryRowDescriptor sd = null;//Creating a new SummaryRowDescriptor </p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Checking if such rows are already present. If not, creating a new one.
+    		if (this.groupingGrid1.Engine.TableDescriptor.SummaryRows.Contains("RecordCount"))
+    			sd = this.groupingGrid1.Engine.TableDescriptor.SummaryRows["RecordCount"];
+    		else
+    			this.groupingGrid1.Engine.TableDescriptor.SummaryRows.Add(sd = new GridSummaryRowDescriptor("RecordCount"));
+    			sd.Title = "Record Count";
+    			GridSummaryColumnDescriptor column = new GridSummaryColumnDescriptor();
+    			column.SummaryType = SummaryType.Count;
+    			column.Style = GridSummaryStyle.FillRow;
+    			column.DataMember = "(Record)";
+    			column.Format = "      {Count} Records.";
+    			sd.SummaryColumns.Add(column);   </pre></font> </pre></font></p>
+</html>

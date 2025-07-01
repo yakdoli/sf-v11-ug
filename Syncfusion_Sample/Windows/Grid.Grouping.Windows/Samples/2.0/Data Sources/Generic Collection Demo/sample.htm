@@ -1,0 +1,53 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3042625">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Generic Collection Demo</H1>
+<P>This sample demonstrates the implementation of a generic
+collection and how you can bind it to a Grid Grouping control. 
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>Features:</B></FONT></FONT></FONT></P>
+<ul>
+	<li>
+	A generic collection is a collection that can handle any
+	<STRONG>Type</STRONG>
+	in a generic and type-safe manner.</li>
+	<li>By creating a generic collection,
+	you have the immediate benefit of type-safety without having to derive
+	it from a base-collection type and implement type-specific members.</li>
+	<li>Type-safety can be achieved by
+	accessing the class <STRONG>BindingList.</STRONG></li>
+	<li>The<STRONG> BindingList </STRONG>class
+	is new to the .NET Framework version 2.0 and provides a generic
+	collection that supports data binding.</li>
+</ul>
+<P>The following code demonstrates binding to a <STRONG>BindingList
+</STRONG>component containing a <STRONG>CustomClass </STRONG>object.
+The code can be used to create a binding list.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">                BindingList&lt;T&gt; bl = new BindingList&lt;T&gt; ();  </FONT></PRE><P>
+&quot;T&quot; is a placeholder that will accept the type of the custom collection class.</P>
+<P>Here is sample code that creates a binding list with a custom-class object.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">                BindingList&lt;CustomClass&gt; bl = new BindingList&lt;CustomClass&gt;();  </FONT></PRE><P>
+New custom-class objects are added to the binding list.</P>
+<PRE><FONT COLOR="#8d2e1c">                bl.Add(new CustomClass(0101, &quot;Charlotte&quot;, &quot;Cooper&quot;, &quot;49 Gilbert St.&quot;, &quot;London&quot;));</FONT>
+<FONT COLOR="#8d2e1c">                bl.Add(new CustomClass(0102, &quot;Shelley&quot;, &quot;Burke&quot;, &quot;P.O. Box 78934&quot;, &quot;New Orleans&quot;));</FONT>
+<FONT COLOR="#8d2e1c">                bl.Add(new CustomClass(0103, &quot;Regina&quot;, &quot;Murphy&quot;, &quot;707 Oxford Rd.&quot;, &quot;Ann Arbor&quot;));</FONT>
+<FONT COLOR="#8d2e1c">                bl.Add(new CustomClass(0104, &quot;Yoshi&quot;, &quot;Nagase&quot;, &quot;9-8 Sekimai Musashino-shi&quot;, &quot;Tokyo&quot;));  </FONT></PRE><P>
+The binding list that has been created with the custom-class object
+is bound to the Grid Grouping control.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">                gridGroupingControl1.DataSource = bl;  </FONT></PRE><P ALIGN=CENTER>
+<img src="images/sample.png" NAME="graphics1" ALT="GenericCollection screenshot" ALIGN=BOTTOM BORDER=0>
+</P>
+</BODY>
+</HTML>

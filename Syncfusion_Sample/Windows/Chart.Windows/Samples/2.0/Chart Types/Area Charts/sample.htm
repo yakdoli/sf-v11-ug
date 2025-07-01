@@ -1,0 +1,64 @@
+﻿<html><h1>Area Charts</h1>
+
+<p>This sample illustrates the various types of<strong> </strong> area charts supported by Essential Chart.</p>
+
+<p><div align=center>
+<TABLE id="Table1" >
+
+    		<TR>
+    				<TD align=center><div align=center><img src="images/Sample1.png" alt= "Area Chart"title=""/></div></TD><TD>&nbsp;&nbsp;</TD>
+    				<TD align=center><div align=center><img src="images/Sample4.png" alt= "StepArea Chart "title=""/></div></TD>
+    			</TR><TR></TR>
+
+    			<TR>
+    				<TD align=center><div align=center><img src="images/Sample2.png" alt= "Spline Area Chart "title=""/></div></TD><TD>&nbsp;&nbsp;</TD>
+    				<TD align=center><div align=center><img src="images/Sample3.png" alt= "Stacked Area Chart "title=""/></div></TD>
+    			</TR>	
+</TABLE></div>&nbsp;</p>
+<h3><strong>Features</strong></h3>
+<ul>
+	<li><b>Area Chart Types</b><p>There are four types of area charts you can use. 
+They are as follows.</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//sets the Chart Type as Area</font>
+this.chartControl1.Series[0].Type = ChartSeriesType.Area;
+<font color="#008000">//sets the Chart Type as StepArea</font>
+this.chartControl1.Series[0].Type = ChartSeriesType.StepArea;
+<font color="#008000">//sets the Chart Type as SplineArea</font>
+this.chartControl1.Series[0].Type = ChartSeriesType.SplineArea;
+<font color="#008000">//sets the Chart Type as StackingArea</font>
+this.chartControl1.Series[0].Type = ChartSeriesType.StackingArea;</code></pre></font>
+</li>
+
+
+	<li><b>Series Color Settings</b><p>Background and foreground colors for area 
+	charts are customized through the <strong>Interior</strong> property of the 
+	<strong>ChartStyleInfo</strong> class.</p></li>
+
+<font color="#8D2E1C">
+<pre><code>this.chartControl1.Series[0].Style.Interior = new BrushInfo(200, new BrushInfo(GradientStyle.ForwardDiagonal,Color.Gray,Color.White));
+</code></pre></font>
+
+
+	<li><b>Chart 3-D Mode</b>
+<p>A chart is rendered in 3-D mode by enabling the <strong>Series3D</strong> property.</p></li>
+
+<font color="#8D2E1C">
+<pre><code>this.chartControl1.Series3D = true;
+</code></pre></font>
+
+
+	<li><b>Border settings</b>
+<p>Border color and border width of an area chart can be changed through the
+<strong>Border.Color</strong> and <strong>Border.Width</strong> 
+	properties.<font color="#8D2E1C"><pre><code>this.chartControl1.Series[0].Style.Border.Color=Color.Red.
+this.chartControl1.Series[0].Style.Border.Width = 1;
+</code></pre></font></p></li>
+</ul>
+<h3><strong>Interactive Features</strong></h3>
+<ul>
+<li>Chart series type can be changed when selecting the chart type combo box option in the application.</li>
+<li>Chart series color can be customized when select the Forecolor and Backcolor buttons in the application.</li>
+<li>Series border width has been changed when changing the numeric up-down button option in the sample.</li>
+</ul>
+</html>

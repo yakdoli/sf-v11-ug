@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Multiple Views Demo</h1>
+
+<p><p>This sample shows you how easy it is to share data among grids. In this way, it is straight forward to support multiple view implementations that are similar to the MFC&#8217;s Doc/View architecture. In this sample, changes that are made to one grid immediately appear in the other.
+<p><strong>Features</strong><p></p>
+
+<p class="style1">When you have split views of a grid, the same data is accessed by all views, as all views 
+share the same <strong>GridModel</strong> object. The 
+<strong>GridModel </strong>object holds all the data that is associated with a grid. As a result, changes that are made to any one of the views are immediately reflected in all the other views that share this  
+<strong>GridModel</strong> object.
+<p></p>
+
+<p class="style1">The following screenshot illustrates this clearly.</p>
+
+<p><p align=center><img src="images/sample.png" alt="Multiple Views screenshot" title="Multiple Views" /></p>
+
+<p><p><strong>Interactive Features</strong></p>
+<ul>
+	<li>
+	<p class="style1">The second grid shares the Model with the first grid in order to produce a multiple view.</p>
+	</li>
+</ul>
+
+<p><font color="#8D2E1C"><pre>
+    		gridControl2.Model = gridControl1.Model;  </pre></font></p>
+
+</html>

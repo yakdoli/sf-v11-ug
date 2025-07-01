@@ -1,0 +1,38 @@
+﻿<html><h1>Chart Grouping Labels</h1>
+
+<p> This sample illustrates customizing an axis label.</p>
+
+<div align=center><img src="images/sample.png" alt="Chart Axis Label Sample" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Axis Label</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+<h3><strong>Features</strong></h3>
+<ul>
+	<li><b>Grouping Label</b>
+<p>The grouping label in a chart is created using the <strong>ChartAxisGroupingLabel</strong> class. This class contains properties such as 
+<strong>Row</strong>, <strong>Rotation</strong>, <strong>Border Style</strong>, 
+and so on. The code below shows how a grouping label can be created. </p>
+
+<p><font color="#8D2E1C"><code>
+<font color="#008000"><pre><code>// Adding grouping labels.</font>
+ChartAxisGroupingLabel cagl = new ChartAxisGroupingLabel( new DoubleRange( 0.5, 2.5 ), "GroupingLabel1" );
+cagl.BorderStyle = ChartAxisGroupingLabelBorderStyle.Rectangle;
+cagl.RotateAngle = 90;
+cagl.MaxTextWidth = 80;
+this.chartControl1.PrimaryXAxis.GroupingLabels.Add( cagl );
+</code></pre></font></p>
+</li>
+
+<li><b>Chart Format Axis Label</b>
+<p>The <strong>ChartFormatAxisLabel </strong>event is used to customize the labels, as shown below.</p>
+<p><font color="#8D2E1C"><pre><code>
+ private void chartControl1_ChartFormatAxisLabel(object sender, Syncfusion.Windows.Forms.Chart.ChartFormatAxisLabelEventArgs e)
+ {
+     e.Label = e.Value.ToString(".00");
+     e.Handled = true;
+ }  
+</pre></code></font></p> </li> 
+</html>

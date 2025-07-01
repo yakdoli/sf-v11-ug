@@ -1,0 +1,75 @@
+﻿<html><h1>Custom Config File</h1>
+
+<p>This sample illustrates how you could write a custom configuration file for a LISP-like language and apply syntax coloring, automatic outlining, and a rich set of other features to the 
+edit control.</p>
+
+<p><div align=center><img src="images/CustomConfigFileDemo.png" alt="Custom Configuration File Image" title="" /></div></p>
+
+<p><strong>Features</strong>:</p>
+
+<ul>
+	<li><strong>Syntax highlighting </strong>is accomplished in Essential Edit through the use of XML-based configuration files. Configuration files control how Essential Edit interprets and displays text. The configuration files also support language-based syntax coloring of embedded scripts. If requirements are more complex, our syntax configuration model will easily allow customization of the configuration file to meet any requirements.
+	</li>
+
+<font color="#8D2E1C">
+<p><pre class="cs_code">
+&lt;?xml version="1.0" encoding="utf-8" ?>
+&lt;ArrayOfConfigLanguage>
+	&lt;ConfigLanguage name="SQL" CaseInsensitive="true" Known="SQl" StartComment="--">
+		&lt;formats>
+			&lt;format name="Text" Font="Courier New, 10pt" FontColor="Black" />			
+			&lt;format name="Whitespace" Font="Courier New, 10pt" FontColor="Black" />
+			&lt;format name="KeyWord" Font="Courier New, 10pt" FontColor="Blue" />
+			&lt;format name="String" Font="Courier New, 10pt, style=Bold" FontColor="Red" />
+			&lt;format name="Number" Font="Courier New, 10pt, style=Bold" FontColor="Navy" />
+			&lt;format name="Operator" Font="Courier New, 10pt" FontColor="DarkCyan" />
+		&lt;/formats>
+		&lt;extensions>
+			&lt;extension>sql&lt;/extension>
+		&lt;/extensions>
+		&lt;lexems>
+			&lt;lexem BeginBlock="(" Type="Operator" />
+			&lt;lexem BeginBlock=")" Type="Operator" />
+			&lt;lexem BeginBlock="&quot;" Type="Operator" />
+			&lt;lexem BeginBlock="|" Type="Operator" />
+			&lt;lexem BeginBlock="=" Type="Operator" />
+			&lt;lexem BeginBlock="." Type="Operator" />
+			&lt;lexem BeginBlock="," Type="Operator" />
+			&lt;lexem BeginBlock=";" Type="Operator" />
+			&lt;lexem BeginBlock="--" Type="Operator" />
+			&lt;lexem BeginBlock="boolean" Type="KeyWord" />
+			&lt;lexem BeginBlock="varchar2" Type="KeyWord" />	
+			&lt;lexem BeginBlock="from" Type="KeyWord" />
+			&lt;lexem BeginBlock="group" Type="KeyWord" />
+			&lt;lexem BeginBlock="create" Type="KeyWord" />
+			&lt;lexem BeginBlock="distinct" Type="KeyWord" />
+			&lt;lexem BeginBlock="delete" Type="KeyWord" />
+			&lt;lexem BeginBlock="tab" Type="KeyWord" />
+			&lt;lexem BeginBlock="select" Type="KeyWord" />
+			&lt;lexem BeginBlock="where" Type="KeyWord" />
+			&lt;lexem BeginBlock="table" Type="KeyWord" />
+			&lt;lexem BeginBlock="rows" Type="KeyWord" />
+			&lt;lexem BeginBlock="&quot;" EndBlock="&quot;" Type="String" IsEndRegex="true" IsComplex="true" OnlyLocalSublexems="true">
+				&lt;SubLexems>
+				&lt;lexem BeginBlock="\" EndBlock=".+" IsEndRegex="true" Type="String" />
+				&lt;/SubLexems>
+			&lt;/lexem>
+		&lt;/lexems>
+		&lt;splits>			
+			&lt;split>/*&lt;/split>
+			&lt;split>*/&lt;/split>
+			&lt;split>--&lt;/split>
+			&lt;split>@@&lt;/split>
+		&lt;/splits>
+	&lt;/ConfigLanguage>
+&lt;/ArrayOfConfigLanguage>
+</pre></p>
+</font>
+
+	<li>Essential Edit supports the creation of custom configuration files for highlighting code, and it is possible to plug-in an external configuration file to Essential Edit using the 
+	<strong>Configurator.Open</strong> method. <br><br>The above illustration shows how a typical configuration file looks.</li>
+</ul>
+
+
+
+</html>

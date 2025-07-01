@@ -1,0 +1,95 @@
+﻿<html>
+<head>
+    <style type="text/css">
+        .style2
+        {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<h1>DropDownCell Demo</h1>
+
+<p>DropDownCell Demo illustrates the usage of different dropdown controls as celltypes in grid cells. You will learn how to place 
+    Date Time pickers, user control, calculators 
+into cells. </p></p>
+
+<p>Essential Grid uses a control-sharing architecture. While a combo box may appear in many different cells (even with different drop-list content), there is usually only a single combo box that is moved around and populated as needed. This architecture allows Essential Grid to have many different controls without the overhead of creating multiple controls of the same type. You can even create your own custom control types. Other samples like Derived Cell Control Tutorial, Cell Buttons and Virtual Tree Grid have examples of derived cell controls. </p><p>Given below is an image of the sample.</p>
+
+<p><p align=center><img src="images/sample.png" alt="Cell Types screenshot" title="Cell Types" /></p>
+
+<p><strong>Features</strong>:</p>
+
+<p>
+    <i><b>DateTimePicker</b></i></p>
+<UL>
+	<LI><P ALIGN=LEFT>In
+	this sample <strong class="style2">GridStaticCellModel</strong> class is inherited. The derived cellmodel class
+	handles the serialization requirements for the control and also
+	creates the renderer class. The renderer class handles the UI
+	requirements of the cell, like drawing, handling key actions, etc.</P>
+	<LI><P><strong class="style2">GridStaticCellRenderer</strong> is useful if you need support for embedding
+	any custom .NET control inside a cell. 
+	</P>
+	<LI><P ALIGN=LEFT><STRONG class="style2">StyleInfo.CellType</STRONG>
+	is set for the cells that need to have custom cell control. 
+	</P>	
+</UL>
+<PRE><FONT COLOR="#8d2e1c">            this.gridControl1[4,2].CellType = &quot;DateTimePicker&quot;;</FONT>
+<FONT COLOR="#8d2e1c">            this.gridControl1[4,2].CellValueType = typeof(DateTime);</FONT>
+<FONT COLOR="#8d2e1c">            this.gridControl1[4,2].CellValue = DateTime.Now;</FONT>
+<FONT COLOR="#8d2e1c">            this.gridControl1[4,2].Format = &quot;MM/dd/yyyy hh:mm&quot;;  </FONT></PRE>
+<p>
+    <i><b>DropDownGrid Cells</b></i></p>
+<UL>
+	<LI><P>It uses a custom cell,
+	<STRONG class="style2">DropDownGridCellModel/DropDownGridCellRenderer</STRONG> that
+	is derived from
+	<STRONG class="style2">GridDropDownGridCellModel/GridDropDownGridCellRenderer</STRONG>
+	to display a drop-down grid.</P>
+	<LI><P><STRONG class="style2">GridDropDownGridCellModel </STRONG>class receives an
+	instance of <STRONG class="style2">GridControlBase</STRONG> class and displays it through
+	<STRONG class="style2">GridDropDownGridCellRenderer</STRONG> class. For more information,
+	refer to the DropDownGridCell.cs file in this sample.</P>
+	<LI><P>The<strong class="style2"> GridCellComboBoxButton </strong>object is created and
+	assigned to <STRONG class="style2">DropDownButton</STRONG> in
+	<STRONG class="style2">DropDownGridCellRenderer</STRONG>&rsquo;s constructor.</P>
+	</UL>
+<p>
+    <i><b>DropDown Form and UserControl </b></i>
+</p>
+<P>It demonstrates the display of a model form using,</P>
+<UL>
+	<LI><P>The <STRONG class="style2">Form.Show</STRONG> dialog box, which appears on a
+	button click within the cell; this happens by deriving
+	<STRONG class="style2">GridStaticCellModel </STRONG>or<STRONG class="style2">
+	GridStaticCellRenderer</STRONG> classes.</P>
+	<LI><P>Deriving <STRONG class="style2">GridDropDownCellModel </STRONG>or<STRONG 
+            class="style2">
+	GridDropDownCellRenderer </STRONG>classes to drop a user control in a manner
+	that handles the focus issues involved with pop-up windows. 
+	</P>
+</UL>
+<P>The cell controls in both the above cases display
+a checked list box in the drop-down. The cell value lists the
+selected options as a comma delimited string. See the <STRONG class="style2">Derived Cell
+Control</STRONG> section in the Grid&rsquo;s User Guide for more information
+on custom cell controls. 
+</P>
+<p>
+    <i><b>DropDown Calculator</b></i></p>
+<UL>
+	<LI><P> This is done 
+	by creating custom <STRONG class="style2">cell model</STRONG>
+	and <STRONG class="style2">cell renderer</STRONG>
+	classes from <STRONG class="style2">GridStaticCellModel</STRONG> and 
+        <STRONG class="style2">GridStaticCellRenderer</STRONG> classes respectively.</P>
+	<LI><P> In cell renderer,
+	the drop-down container is added by initializing the drop-down part.
+	A grid-combo-box cell button is created by clicking the cell
+	renderer. This lets the container to be dropped down.</P>
+</UL>
+<p>
+    &nbsp;</p>
+
+
+</html>

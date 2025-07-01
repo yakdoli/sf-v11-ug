@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2275292">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	.style1 {
+	text-align: left;
+}
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Summary Tutorial</H1>
+<P>This sample will give you a step-by-step tutorial on how to create
+summaries for a table and for each group that is created in a
+table. 
+</P>
+<h3><FONT SIZE=4><B>Features</B></FONT></h3>
+	<P><B>Steps to create a summary through a designer</B></P>
+<UL>
+	<LI><P>To add a summary row, select <STRONG>TableDescriptor -&gt;
+	SummaryRows</STRONG> in the Properties window. This will open the
+	<STRONG>GridSummaryRowDescriptor</STRONG> collection editor, as
+	shown in the image below. 
+	</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample1.png" NAME="graphics1" ALT="Summary Tutorial" ALIGN=BOTTOM  BORDER=0></P>
+<UL>	
+	<LI><P class="style1">Click <STRONG>Add</STRONG>, to add a new summary row to the
+	collection. Click the <STRONG>SummaryColumns</STRONG> property to
+	open up the <strong>GridSummaryColumnDescriptor</strong> editor. The editor will let
+	you add summary columns that define the summary elements that you
+	want to see.</LI> 
+	<P ALIGN=CENTER><img src="images/sample2.png" NAME="graphics2" ALT="Summary Tutorial" ALIGN=BOTTOM  BORDER=0></P>
+	<LI><P>Click <STRONG>Add</STRONG> to add a summary column. Add a
+	summary item that totals the wins in a group. To do this, name it
+	<EM>Wins</EM>, give it a summary type of <STRONG>Int32Aggregate</STRONG>,
+	set its data member to <EM>wins</EM>, and format it to <STRONG>{Sum}</STRONG>.</P></LI>
+</UL>
+<P ALIGN=CENTER><img src="images/sample3.png" NAME="graphics3" ALT="Summary Tutorial" ALIGN=BOTTOM  BORDER=0></P>
+<UL>
+	<LI><P>Add one more column, <STRONG>Losses</STRONG>, to compute
+	summary statistics for the losses column.</P></LI>
+	<P ALIGN=CENTER><img src="images/sample4.png" NAME="graphics4" ALT="Summary Tutorial" ALIGN=BOTTOM  BORDER=0></P>
+	<LI><P>Close the two collection editor windows to see how the
+	addition of the summary row has affected the look of the grid. 
+	</P></LI>
+</UL>
+<P ALIGN=CENTER><img src="images/sample5.png" NAME="graphics5" ALT="Summary Tutorial" ALIGN=BOTTOM  BORDER=0></P>
+	<P ALIGN=CENTER><img src="images/sample6.png" NAME="graphics6" ALT="Summary Tutorial" ALIGN=BOTTOM  BORDER=0></P></BODY>
+</HTML>

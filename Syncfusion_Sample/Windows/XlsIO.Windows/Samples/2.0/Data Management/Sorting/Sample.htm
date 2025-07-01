@@ -1,0 +1,37 @@
+<h1>Data Sorting</h1>
+
+<p>Essential XlsIO can sorts a range of cells dynamically, at runtime without any dependency on MS Excel.<br />
+It supports to sorts the data based on values and colors.</p>
+<br />
+<p style="font-size:large">Features:</p>
+<br />
+<ul>
+<li>Supports to sort the large data.</li>
+<li>Sorts based on the selected algorithm.</li>
+<li>Sorts the data based on the cell and font color.</li>
+</ul><br/>
+<p style="font-size:large">Interactive Features:</p>
+<br/>
+<ul>
+<li>Choose the Columns to sort.</li>
+<li>Choose the order by in specify the sort order.</li>
+<li>Choose the column index to sort. Click <b>Sort Values</b> to sort based on values and view the document.</li>
+<li> Click <b>Sort Colors</b> to sort based on colors and view the document.</li>
+</ul>
+
+<p> Below is an illustration of the output.</p>
+<p><div align = "Center"><img src="images/Sorting.png" alt="XlsIO" title="" /></div></p>
+
+<p>Here are code snippets that show how to sort the data with different sorting algorithm:</p>
+<pre>
+			//Create the data sorter.
+            IDataSort sorter = book.CreateDataSorter();
+            //Specify the range to sort.
+            sorter.SortRange = range;
+
+            //Specify the sort field attributes (column index and sort order)
+            ISortField field = sorter.SortFields.Add(columnIndex, SortOn.Values, OrderBy.Ascending);
+
+            //sort the data based on the sort field attributes.
+            sorter.Sort();
+</pre>

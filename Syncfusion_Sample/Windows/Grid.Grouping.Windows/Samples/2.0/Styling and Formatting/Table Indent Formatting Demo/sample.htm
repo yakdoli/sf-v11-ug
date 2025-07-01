@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3240892">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Table Indent Formatting Demo </H1>
+<P>This sample allows you to display nested tables in a Grid Grouping
+control without indenting the children of the records in the parent
+table.</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>Can be achieved by hiding the default <strong>Record Plus-Minus</strong>
+	buttons and having them in the same level as the parent.</P>
+	<LI><P>Set the <STRONG>TableOptions.ShowIndentTable</STRONG>
+	property of the <STRONG>ChildTableDescriptor</STRONG> to <EM>false
+	</EM><EM><SPAN STYLE="font-style: normal">to</SPAN></EM><SPAN STYLE="font-style: normal">
+	</SPAN>hide the default plus-minus buttons.</P>
+	<LI><P>Handle the <STRONG>QueryCellStyleInfo</STRONG> and
+	<STRONG>TableControlCellClick</STRONG> events to provide the required 
+	functionality.</P>
+	<LI><P>This process is illustrated in the image below.</P>
+</UL>
+
+<UL>
+	<LI><P>The<STRONG> QueryCellStyleInfo</STRONG> event is used to format
+	the plus-minus buttons.</P>
+	<LI><P>The<STRONG> TableControlCellClick</STRONG> event is responsible
+	for expanding and collapsing a record when the plus-minus
+	button is clicked.</P>
+</UL>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><img src="images/sample.png" NAME="graphics1" ALT="NestedTables screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+<P>The following code is used to turn off the default Record
+Plus-Minus buttons.</P>
+<PRE STYLE="margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">this.gridGroupingControl1.GetTableDescriptor(&quot;MyChildTable&quot;).TableOptions.ShowTableIndent = false;</FONT></PRE><P>
+The <STRONG>QueryCellStyleInfo</STRONG> event is used to format the
+plus-minus buttons.</P>
+<PRE><FONT COLOR="#8d2e1c">void gridGroupingControl1_QueryCellStyleInfo(object sender, GridTableCellStyleInfoEventArgs e)</FONT>
+<FONT COLOR="#8d2e1c">{</FONT>
+<FONT COLOR="#8d2e1c">    if (e.TableCellIdentity.TableCellType == GridTableCellType.NestedTableIndentCell)</FONT>
+<FONT COLOR="#8d2e1c">    {</FONT>
+<FONT COLOR="#8d2e1c">         if (e.TableCellIdentity.DisplayElement.Kind == DisplayElementKind.NestedTable)</FONT>
+<FONT COLOR="#8d2e1c">         {</FONT>
+<FONT COLOR="#8d2e1c">             // NestedTable</FONT>
+<FONT COLOR="#8d2e1c">             GridNestedTable nt = (GridNestedTable)e.TableCellIdentity.DisplayElement;</FONT>
+<FONT COLOR="#8d2e1c">              foreach (Element el in nt.ChildTable.Elements)</FONT>
+<FONT COLOR="#8d2e1c">               {</FONT>
+<FONT COLOR="#8d2e1c">                 if (el.Kind == DisplayElementKind.Record)</FONT>
+<FONT COLOR="#8d2e1c">                 {</FONT>
+<FONT COLOR="#8d2e1c">                    if (e.TableCellIdentity.RowIndex == this.gridGroupingControl1.Table.NestedDisplayElements.IndexOf(el))</FONT>
+<FONT COLOR="#8d2e1c">                    {</FONT>
+<FONT COLOR="#8d2e1c">                       Record r = Record.GetParentRecord(el);</FONT>
+<FONT COLOR="#8d2e1c">                       e.TableCellIdentity.TableCellType = GridTableCellType.RecordPlusMinusCell;</FONT>
+<FONT COLOR="#8d2e1c">                       e.Style.Description = r.IsExpanded ? &quot;-&quot; : &quot;+&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                       e.Style.BorderMargins = new Syncfusion.Windows.Forms.Grid.GridMarginsInfo(3, 3, 3, 3);</FONT>
+<FONT COLOR="#8d2e1c">                       e.Style.Themed = false;</FONT>
+<FONT COLOR="#8d2e1c">                       e.Style.Enabled = true;</FONT>
+<FONT COLOR="#8d2e1c">                    }</FONT>
+<FONT COLOR="#8d2e1c">                 }</FONT>
+<FONT COLOR="#8d2e1c">              }</FONT>
+
+<FONT COLOR="#8d2e1c">        }</FONT>
+<FONT COLOR="#8d2e1c">   }</FONT>
+<FONT COLOR="#8d2e1c">}</FONT></PRE><P>
+The <STRONG>TableControlCellClick</STRONG> event is responsible for expanding 
+and collapsing the record when the Record Plus-Minus button
+is clicked.</P>
+<PRE><FONT COLOR="#8d2e1c">void gridGroupingControl1_TableControlCellButtonClicked(object sender, GridTableControlCellButtonClickedEventArgs e)</FONT>
+<FONT COLOR="#8d2e1c"> {</FONT>
+<FONT COLOR="#8d2e1c">      GridTableCellStyleInfo style = this.gridGroupingControl1.Table.GetTableCellStyle(e.Inner.RowIndex, e.Inner.ColIndex);</FONT>
+<FONT COLOR="#8d2e1c">      if (style.TableCellIdentity.TableCellType == GridTableCellType.RecordPlusMinusCell)</FONT>
+<FONT COLOR="#8d2e1c">      {</FONT>
+<FONT COLOR="#8d2e1c">         if (style.TableCellIdentity.DisplayElement.Kind == DisplayElementKind.NestedTable)</FONT>
+<FONT COLOR="#8d2e1c">         {</FONT>
+<FONT COLOR="#8d2e1c">              // NestedTable</FONT>
+<FONT COLOR="#8d2e1c">            GridNestedTable nt = (GridNestedTable)style.TableCellIdentity.DisplayElement;</FONT>
+
+<FONT COLOR="#8d2e1c">             foreach (Element el in nt.ChildTable.Elements)</FONT>
+<FONT COLOR="#8d2e1c">             {</FONT>
+<FONT COLOR="#8d2e1c">                 if (el.Kind == DisplayElementKind.Record)</FONT>
+<FONT COLOR="#8d2e1c">                 {</FONT>
+<FONT COLOR="#8d2e1c">                   if (style.TableCellIdentity.RowIndex == this.gridGroupingControl1.Table.NestedDisplayElements.IndexOf(el))</FONT>
+<FONT COLOR="#8d2e1c">                   {</FONT>
+<FONT COLOR="#8d2e1c">                       Record r = Record.GetParentRecord(el);</FONT>
+<FONT COLOR="#8d2e1c">                       bool shouldExpand = !r.IsExpanded;</FONT>
+<FONT COLOR="#8d2e1c">                       this.gridGroupingControl1.Table.CurrentRecord = r;</FONT>
+<FONT COLOR="#8d2e1c">                       r.IsExpanded = shouldExpand;</FONT>
+<FONT COLOR="#8d2e1c">                       e.Inner.Cancel = true;</FONT>
+<FONT COLOR="#8d2e1c">                   }</FONT>
+<FONT COLOR="#8d2e1c">                 }</FONT>
+<FONT COLOR="#8d2e1c">             }</FONT>
+<FONT COLOR="#8d2e1c">       }</FONT>
+<FONT COLOR="#8d2e1c">   }</FONT>
+<FONT COLOR="#8d2e1c">}</FONT></PRE>
+</BODY>
+</HTML>

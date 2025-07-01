@@ -1,0 +1,133 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template}![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+:::: {.d2h_secondary_topic style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"}
+#### Events of BarItem {#events-of-baritem style="tab-stops: 0pt"}
+
+[]{style="COLOR: #15428b"} 
+
+This section discusses the events of bar item.
+
+[]{style="COLOR: #15428b"} 
+
+::: {align="center"}
+  ---------------- -----------------------------------------------------------------------------------------------------
+  BarItem Events   Description
+  Click            It is handled when the bar item is clicked by the user.
+  DoubleClick      It is handled when the bar item is double clicked by the user.
+  Selected         It is handled when the user selects a bar item during menu navigation using mouse or keyboard.
+  UnSelected       It is handled when the bar item has been unselected during menu navigation using mouse or keyboard.
+  ---------------- -----------------------------------------------------------------------------------------------------
+:::
+
+**[]{style="COLOR: #15428b"}** 
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]{style="FONT-FAMILY: 'Courier New'; COLOR: black"}**                                                                                                                                             |
+|                                                                                                                                                                                                            |
+| **[]{style="FONT-FAMILY: 'Courier New'; COLOR: black"}**                                                                                                                                                   |
+|                                                                                                                                                                                                            |
+| [//Enable themes when a BarItem is clicked]{style="FONT-FAMILY: 'Courier New'; COLOR: green"}                                                                                                              |
+|                                                                                                                                                                                                            |
+| [private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [void]{style="COLOR: blue"} barItem_Click([object]{style="COLOR: blue"} sender, System.EventArgs e)]{style="FONT-FAMILY: 'Courier New'"}       |
+|                                                                                                                                                                                                            |
+| [{]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                    |
+|                                                                                                                                                                                                            |
+| [this]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[.barManager1.ThemesEnabled = [true]{style="COLOR: blue"};]{style="FONT-FAMILY: 'Courier New'"}                                                     |
+|                                                                                                                                                                                                            |
+| [}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                    |
+|                                                                                                                                                                                                            |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                     |
+|                                                                                                                                                                                                            |
+| [//Disable themes when a BarItem is double clicked]{style="FONT-FAMILY: 'Courier New'; COLOR: green"}                                                                                                      |
+|                                                                                                                                                                                                            |
+| [private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [void]{style="COLOR: blue"} barItem_Click([object]{style="COLOR: blue"} sender, System.EventArgs e)]{style="FONT-FAMILY: 'Courier New'"}       |
+|                                                                                                                                                                                                            |
+| [{]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                    |
+|                                                                                                                                                                                                            |
+| [this]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[.barManager1.ThemesEnabled = [true]{style="COLOR: blue"};]{style="FONT-FAMILY: 'Courier New'"}                                                     |
+|                                                                                                                                                                                                            |
+| [}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                    |
+|                                                                                                                                                                                                            |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                     |
+|                                                                                                                                                                                                            |
+| [//Displays the text of selected BarItem in the status bar]{style="FONT-FAMILY: 'Courier New'; COLOR: green"}                                                                                              |
+|                                                                                                                                                                                                            |
+| [private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [void]{style="COLOR: blue"} barItem_Selected([object]{style="COLOR: blue"} sender, System.EventArgs e)]{style="FONT-FAMILY: 'Courier New'"}    |
+|                                                                                                                                                                                                            |
+| [{]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                    |
+|                                                                                                                                                                                                            |
+| [BarItem item = sender [as]{style="COLOR: blue"} BarItem;]{style="FONT-FAMILY: 'Courier New'"}                                                                                                             |
+|                                                                                                                                                                                                            |
+| [this]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[.staticBarItem1.Text = item.Text;]{style="FONT-FAMILY: 'Courier New'"}                                                                             |
+|                                                                                                                                                                                                            |
+| [}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                    |
+|                                                                                                                                                                                                            |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                     |
+|                                                                                                                                                                                                            |
+| [private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [void]{style="COLOR: blue"} barItem1_Unselected([object]{style="COLOR: blue"} sender, System.EventArgs e)]{style="FONT-FAMILY: 'Courier New'"} |
+|                                                                                                                                                                                                            |
+| [{]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                    |
+|                                                                                                                                                                                                            |
+| [ParentBarItem barItem = sender [as]{style="COLOR: blue"} BarItem;]{style="FONT-FAMILY: 'Courier New'"}                                                                                                    |
+|                                                                                                                                                                                                            |
+| [Console.WriteLine(barItem.Text + \" Unselected.\");]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                  |
+|                                                                                                                                                                                                            |
+| [}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                    |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+**[]{style="COLOR: #15428b"}** 
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[VB.NET\]]{style="FONT-FAMILY: 'Courier New'; COLOR: black"}**                                                                                                                                                                                                                                                      |
+|                                                                                                                                                                                                                                                                                                                         |
+| **[]{style="FONT-FAMILY: 'Courier New'; COLOR: black"}**                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                         |
+| [\'Enable themes when a BarItem is clicked]{style="FONT-FAMILY: 'Courier New'; COLOR: green"}                                                                                                                                                                                                                           |
+|                                                                                                                                                                                                                                                                                                                         |
+| [Private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"} barItem_Click([ByVal]{style="COLOR: blue"} sender [As]{style="COLOR: blue"} [Object]{style="COLOR: blue"}, [ByVal]{style="COLOR: blue"} e [As]{style="COLOR: blue"} System.EventArgs)]{style="FONT-FAMILY: 'Courier New'"}       |
+|                                                                                                                                                                                                                                                                                                                         |
+| [Me]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[.barManager1.ThemesEnabled = [true]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                         |
+| [End]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                                         |
+| []{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}                                                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                         |
+| [\'Disable themes when a BarItem is double clicked]{style="FONT-FAMILY: 'Courier New'; COLOR: green"}                                                                                                                                                                                                                   |
+|                                                                                                                                                                                                                                                                                                                         |
+| [Private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"} barItem_Click([ByVal]{style="COLOR: blue"} sender [As]{style="COLOR: blue"} [Object]{style="COLOR: blue"}, [ByVal]{style="COLOR: blue"} e [As]{style="COLOR: blue"} System.EventArgs)]{style="FONT-FAMILY: 'Courier New'"}       |
+|                                                                                                                                                                                                                                                                                                                         |
+| [Me]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[.barManager1.ThemesEnabled = [true]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                         |
+| [End]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                                         |
+| []{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}                                                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                         |
+| [\'Displays the text of selected BarItem in the status bar]{style="FONT-FAMILY: 'Courier New'; COLOR: green"}                                                                                                                                                                                                           |
+|                                                                                                                                                                                                                                                                                                                         |
+| [Private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"} barItem_Selected([ByVal]{style="COLOR: blue"} sender [As]{style="COLOR: blue"} [Object]{style="COLOR: blue"}, [ByVal]{style="COLOR: blue"} e [As]{style="COLOR: blue"} System.EventArgs)]{style="FONT-FAMILY: 'Courier New'"}    |
+|                                                                                                                                                                                                                                                                                                                         |
+| [    [Dim]{style="COLOR: blue"} item [As]{style="COLOR: blue"} BarItem = [CType]{style="COLOR: blue"}(IIf([TypeOf]{style="COLOR: blue"} sender [Is]{style="COLOR: blue"} BarItem, sender, [Nothing]{style="COLOR: blue"}), BarItem)]{style="FONT-FAMILY: 'Courier New'"}                                                |
+|                                                                                                                                                                                                                                                                                                                         |
+| [    [Me]{style="COLOR: blue"}.staticBarItem1.Text = item.Text]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                         |
+| [End]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                                         |
+| []{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}                                                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                         |
+| [Private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"} barItem1_Unselected([ByVal]{style="COLOR: blue"} sender [As]{style="COLOR: blue"} [Object]{style="COLOR: blue"}, [ByVal]{style="COLOR: blue"} e [As]{style="COLOR: blue"} System.EventArgs)]{style="FONT-FAMILY: 'Courier New'"} |
+|                                                                                                                                                                                                                                                                                                                         |
+| [    [Dim]{style="COLOR: blue"} barItem [As]{style="COLOR: blue"} ParentBarItem = [CType]{style="COLOR: blue"}(IIf([TypeOf]{style="COLOR: blue"} sender [Is]{style="COLOR: blue"} BarItem, sender, [Nothing]{style="COLOR: blue"}), BarItem)]{style="FONT-FAMILY: 'Courier New'"}                                       |
+|                                                                                                                                                                                                                                                                                                                         |
+| [    Console.WriteLine(barItem.Text & [\" Unselected.\"]{style="COLOR: maroon"})]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                   |
+|                                                                                                                                                                                                                                                                                                                         |
+| [End]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+More:
+
+[ ]{#related-topics}
+
+[![](button.gif){border="0" align="absMiddle"}UpdateUI Event](ms-xhelp:///?Id=e8e528e4-c9c7-4998-a6fc-1d7ceb68f055){style="TEXT-DECORATION: none"}
+::::

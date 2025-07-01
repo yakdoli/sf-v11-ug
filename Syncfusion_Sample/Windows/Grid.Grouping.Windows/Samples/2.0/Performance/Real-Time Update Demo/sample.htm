@@ -1,0 +1,33 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;4145885">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Real-Time Update Demo</H1>
+<P>This sample shows you how to optimize the refreshing of individual
+cells or summaries when an underlying data source is frequently
+changed. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="RealtimeUpdates" ALIGN=BOTTOM BORDER=0></P>
+<P>The sample after execution is illustrated above.</P>
+<P><b>Interactive Features:</b></P>
+<ul>
+	<li>When the <STRONG>Start Timer</STRONG> button is clicked, it starts
+a timer that changes the Freight column repeatedly.</li>
+	<li>The Grid caches the graphics context between updates and draws only
+columns and summaries that were changed using the
+<STRONG>GridControlBase.DrawClippedGrid</STRONG> method.</li>
+</ul>
+</BODY>
+</HTML>

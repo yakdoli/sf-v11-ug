@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3205585">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Conditional Formatting Demo</H1>
+<P>This sample demonstrates how to selectively apply styles to table
+cells. 
+</P>
+<h3><FONT SIZE=4><B>Features:</B></FONT></h3>
+<UL>
+	<LI><P>Table cells can be formatted conditionally by defining the
+	<STRONG>GridConditionalFormatDescriptor.</STRONG></P>
+	<LI><P>Using this descriptor, you can provide a filter criteria for
+	the cell values along with a style setting.</P>
+	<LI><P>Style is applied only to cells whose values satisfy the given
+	condition.</P>
+</UL>
+<P>The following code sets the text color of those record-field cells whose 
+Customer ID values start with &quot;A.&quot;</P>
+<PRE><FONT COLOR="#8d2e1c">                GridConditionalFormatDescriptor Descriptor1 = new GridConditionalFormatDescriptor();</FONT>
+<FONT COLOR="#8d2e1c">                Descriptor1.Appearance.AnyRecordFieldCell.TextColor = System.Drawing.Color.White;</FONT>
+<FONT COLOR="#8d2e1c">                gridConditionalFormatDescriptor1.Expression = &quot;[CustomerID]  LIKE \'A*\'&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.TableDescriptor.ConditionalFormats.Add(Descriptor1);  </FONT></PRE><P ALIGN=CENTER>
+<img src="images/sample.png" NAME="graphics1" ALT="Conditional Formatting screenshot" ALIGN=BOTTOM  BORDER=0></P>
+</BODY>
+</HTML>

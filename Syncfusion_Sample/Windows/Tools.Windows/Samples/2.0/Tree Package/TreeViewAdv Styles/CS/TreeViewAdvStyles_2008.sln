@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewAdvStyles_2008", "TreeViewAdvStyles_2008.csproj", "{01EA0851-6FC3-401E-A267-C0D89135B3AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{01EA0851-6FC3-401E-A267-C0D89135B3AD}.Debug.ActiveCfg = Debug|.NET
+		{01EA0851-6FC3-401E-A267-C0D89135B3AD}.Debug.Build.0 = Debug|.NET
+		{01EA0851-6FC3-401E-A267-C0D89135B3AD}.Release.ActiveCfg = Release|.NET
+		{01EA0851-6FC3-401E-A267-C0D89135B3AD}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

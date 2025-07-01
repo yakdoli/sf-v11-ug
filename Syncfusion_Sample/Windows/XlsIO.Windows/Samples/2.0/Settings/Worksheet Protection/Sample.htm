@@ -1,0 +1,62 @@
+<h1>
+    Worksheet Protection</h1>
+<p>
+    Microsoft Excel offers a special way for protecting specific data and certain worksheets
+    with or without a password. This prevents anyone from changing, moving, or deleting
+    important data.</p>
+<p>
+    Excel allows you to edit or lock a range of cells in a protected worksheet by using
+    the <strong>Protection</strong> tab in the <strong>Format</strong> <strong>Cells</strong>
+    dialog. By default, all cells are locked, but they are not hidden when the worksheet
+    is protected. Worksheets can be protected by choosing the <strong>Tools - Protection
+        - Protect Sheet</strong> option in Excel.</p>
+<p>
+    Below is an image for cell locking and unlocking.</p>
+<p>
+    <div align="Center">
+        <img src="images/sample.png" alt="XlsIO" title="" /></div>
+</p>
+
+<p style="font-size:large">Features:</p>
+<ul>
+<li>Worksheet protection with a password</li>
+<li>Cell locking and unlocking</li>
+<li>Removing worksheet protection</li>
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+<li>Click <b>Worksheet Locking</b> to protect a worksheet and lock cells with 
+the password "syncfusion" and view the document</li>
+<li>Click <b>Worksheet Unlocking</b> to remove worksheet protection and unlock cells with 
+the password "syncfusion" and view the document</li>
+
+</ul>
+
+<p>
+    Below is an image of the output.</p>
+<p>
+    <div align="Center">
+        <img src="images/sample1.png" alt="XlsIO" title="" /></div>
+</p>
+<p>
+    <div align="Center">
+        <img src="images/sample3.png" alt="XlsIO" title="" /></div>
+</p>
+<p>
+    Below is an image of Excel when un-protecting a worksheet.</p>
+<p>
+    <div align="Center">
+        <img src="images/sample2.png" alt="XlsIO" title="" /></div>
+</p>
+<p>
+    Here is a code snippet:</p>
+<pre>
+//Protecting Worksheet using Password
+sheet.Protect("syncfusion");
+
+//Unlocking the cells which are needed to be edited
+sheet.Range["A1"].CellStyle.Locked = false;
+
+//Unprotect the sheet
+sheet.UnProtect();
+</pre>

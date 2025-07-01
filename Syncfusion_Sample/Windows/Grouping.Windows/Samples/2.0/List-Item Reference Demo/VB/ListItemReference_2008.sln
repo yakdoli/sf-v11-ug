@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ListItemReference_2008", "ListItemReference_2008.vbproj", "{DB4A4DFD-F7CE-429E-81EF-09D7B84651FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DB4A4DFD-F7CE-429E-81EF-09D7B84651FA}.Debug.ActiveCfg = Debug|.NET
+		{DB4A4DFD-F7CE-429E-81EF-09D7B84651FA}.Debug.Build.0 = Debug|.NET
+		{DB4A4DFD-F7CE-429E-81EF-09D7B84651FA}.Release.ActiveCfg = Release|.NET
+		{DB4A4DFD-F7CE-429E-81EF-09D7B84651FA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

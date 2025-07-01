@@ -1,0 +1,60 @@
+﻿<html><h1>Box-and-Whisker Chart</h1>
+
+<p>This sample illustrates a box-and-whisker chart.</p>
+
+
+<div align=center><img src="images/Sample.png" alt= "BoxAndWhisker Chart" title=""/></div>
+<div align=center><b>Box-and-Whisker Chart</b></div>
+<h3><strong>Features</strong></h3>
+<ul>
+<li>
+<b>Box-and-Whisker Chart</b><p>The box-and-whisker chart type is set as shown below. 
+
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the Chart Type as BoxAndWhisker</font>
+this.chartControl1.Series[0].Type = ChartSeriesType.BoxAndWhisker;
+</code></pre></font></p>
+</li>
+
+<p>The box-and-whisker plot is interpreted as follows:</p>
+
+<li><p>
+The box itself contains the middle 50% of the data. The upper edge (hinge) of the box indicates the 75th percentile of the data set and the lower hinge indicates the 25th percentile. The range of the middle two quartiles is known as the inter-quartile range.
+</p></li>
+<li><p>The line in the box indicates the median value of the data.
+</p></li>
+<li><p>If the median line within the box is not equidistant from the hinges, then the data is skewed.
+</p></li>
+<li><p>The ends of the vertical lines or "whiskers" indicate the minimum and maximum data values, unless outlier's are present, in which case the whiskers extend to a maximum of 1.5 times the inter-quartile range.
+</p></li>
+
+</ul>
+<ul>
+<li>
+<b>Percentile Mode:</b>
+<p>This property is used to indicate whether the box-and-whisker chart is rendered in percentile mode or normal mode.
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the Chart mode as percentile mode.</font>
+this.chartControl1.Series[0].ConfigItems.BoxAndWhiskerItem.PercentileMode = true;
+</code></pre></font></p>
+</li>
+
+<li>
+<b>Percentile:</b>
+<p>This property is used to set the percentile value, which should be lie between 0.0 to 0.25.
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the percentile value.</font>
+this.chartControl1.Series[0].ConfigItems.BoxAndWhiskerItem.Percentile = 0.15;
+</code></pre></font></p>
+</li>
+
+<li>
+<b>OutLierWidth:</b>
+<p>This property is used to set the width of the outlier. This value should be greater than zero.
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//Sets the outlier width.</font>
+this.chartControl1.Series[0].ConfigItems.BoxAndWhiskerItem.OutLierWidth = 5;
+</code></pre></font></p>
+</li>
+</ul>
+</html>

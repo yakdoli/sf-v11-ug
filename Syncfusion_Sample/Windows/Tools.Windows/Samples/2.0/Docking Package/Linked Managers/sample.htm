@@ -1,0 +1,102 @@
+﻿<h1>Linked Manager</h1>
+<p>The Linked Manager concept allows us to transfer docked windows among two or 
+more forms or user controls. This can be accomplished within a single method call.
+Also, it raises events according to the operations.</P>
+<p><strong>Features</strong>:</P>
+
+<P><h3>Methods
+related to the linked manager function</h3></P>
+<br><ul>
+<li><p><strong>AddToTargetManagersList</strong></P></li>
+<p>This
+method lets us add a docking manager to the <strong>TargetDockingManagers</strong>
+list. With the docking manager added, it allows the transfer of docking controls
+to that form.</P>
+
+<li><p><strong>RemoveFromTargetManagersList</strong></P></li>
+<p>This
+method lets us remove a docking manager from the <strong>TargetDockingManagers</strong>
+list. Once this is done, the docking manager will not allow the transfer of docking controls
+to that particular docking layout.</P>
+</ul>
+
+
+<p><h3>Events
+used with linked manager</h3></P>
+<ul>
+<li><p><strong>TransferredToManager</Strong></P></li>
+<p>This event will be triggered whenever any control comes from other docking managers.</P>
+
+<p><strong>Event Data</Strong></P>
+<p>This event handler
+receives an object of type <strong>TransferManagerEventArgs</strong>.
+It has one main property.
+</P>
+<P><strong>Control</strong>
+</P>
+<p>The instance of the docked control that comes to the layout of the docking manager.</P>
+
+<li><p><strong>TransferringFromManager</Strong></P>
+
+<p>This event will
+be triggered when a control is transferred out to other docking managers.</P>
+</P>
+<p><strong>Event Data</Strong></P>
+<p>This event handler
+receives an object of type <Strong>TransferManagerEventArgs.</strong>
+It has one main property.</P>
+
+<p><strong>Control</Strong>
+</P>
+
+<P>The instance of the docked control goes out of the docking manager.</P>
+
+</ul>
+<p><strong>How
+to enable the linked manager facility?</Strong></P>
+
+
+<P>The docking manager
+has a method called <strong>AddToTargetManagersList</strong>. We can specify
+all the linked managers that are capable of receiving
+the docked controls using this method.</P>
+
+<p>For example
+consider there are two forms: <strong>form1</strong> and <strong>form2</strong>. We want to
+transfer the docked controls of <strong>form1</strong> to <strong>form2</strong>. In such a case, we
+should use this method as follows.</P>
+<p>//inside the class
+Form1</P>
+<p>dockingManager1.AddtoTargetManagersList(&lt;dockingmanager&gt;);</P>
+
+<p><strong>//dockingmanager</strong>
+is the instance of <strong>form2</strong>. To access that instance, we may use a
+property that returns the instance of docking manager from <strong>form2</strong>.</P>
+
+
+<p><h3>Sample used in
+Essential Suite</h3></P>
+<P>This sample
+implements the linked manager concept using user controls. These user controls are placed in the 
+tab pages of the tab control. All these are linked together so that we can
+transfer docked controls between them.</P>
+
+<P><strong>How
+to transfer a control from one docking layout to another in the sample?</Strong></P>
+<p>1. Run the sample.</P>
+<p>2. Initially there will be no docked window. We can make it visible by selecting the appropriate items from the view menu.</P>
+
+<p><div align=center><img src="images/linkedmanagers_1.png" alt="Linked Manager sample" title="" /></div></p>
+
+
+
+<p>3. To transfer a control, first make it float.</P>
+
+<p><div align=center><img src="images/LinkedManagers_2.png" alt="Linked Manager sample" title="" /></div></p>
+
+<p>4. Then, change the tab page.</P>
+<p>5. Dock the control to the new tab page.</P>
+
+<p><div align=center><img src="images/linkedmanagers_3.png" alt="Linked Manager sample" title="" /></div></p>
+
+<p>6. Now, the control will have been transferred to a new docking layout.</P>

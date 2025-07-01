@@ -1,0 +1,75 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template}![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+::::: {#nsbanner .d2h_main_nsbanner style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px"}
+:::: {#TitleRow .d2h_main_titlerow style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px"}
+::: {#ienav .d2h_main_ienav style="DISPLAY: none"}
+[](ms-xhelp:///?Id=8cf8159c-d1ff-46d1-9b4a-01e40df4b239){#D2HPrevious .D2HPreviousEnabled}  [](ms-xhelp:///?Id=5db540de-ef5a-498c-bd61-ebcb4d3b5e17){#D2HNext .D2HNextEnabled}
+:::
+::::
+:::::
+
+:::: {#nstext .d2h_main_nstext style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" hasuserbackground="true" valign="bottom"}
+::: {#d2h_breadcrumbs .d2h_breadcrumbs}
+[Essential Studio User Guide Documentation](ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Reporting Edition](ms-xhelp:///?Id=027aa5b6-6676-4f93-ad23-c20e8c45792e){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Essential PDF Viewer](ms-xhelp:///?Id=72561ebd-77ed-4f2a-94a7-2b4b635d1dd6){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[PDF Viewer MVC]{.d2h_breadcrumbsContentsOnly}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Installation and Deployment](ms-xhelp:///?Id=07f3d384-2fa6-4ba1-a133-a91895f7f55f){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Where to Find Samples?](ms-xhelp:///?Id=f462a4f0-ffd9-4ab9-8e9b-3f94fd6c504b){.d2h_breadcrumbsNormal}
+:::
+
+### Viewing Samples {#viewing-samples style="tab-stops: 0pt"}
+
+To view the PdfViewer samples:
+
+ 
+
+1.   Click **Start** -\> **All Programs**-\> **Syncfusion** -\> **Essential Studio \<x.x.x.x\>** -\> **Dashboard** -\> **Reporting**.
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+![](ImagesExt/image33_2.png){border="0"}
+
+Figure 2: Syncfusion Essential Studio Dashboard Reporting Edition
+
+ 
+
+To view the PdfViewer samples for MVC platform:
+
+2.   Click the drop-down button of the **MVC** platform. The following options are displayed and you can view the samples in the following three ways:
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+[·      ]{style="FONT-FAMILY: Symbol"}**Run Samples**-View the locally installed PdfViewer samples for MVC using the sample browser
+
+[·      ]{style="FONT-FAMILY: Symbol"}**Online Samples**-View the online PdfViewer samples for MVC
+
+[·      ]{style="FONT-FAMILY: Symbol"}**Explore Samples**-Locate the samples for PdfViewer on the disk
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+3.   Click **Run Samples** link. Essential Studio - Reporting Edition sample browser is displayed.
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+![](ImagesExt/image33_3.jpg){border="0"}
+
+Figure 3: MVC Sample Browser
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+4.   Click **Pdf** **Viewer** from the **FishEye** panel that is displayed at the top of the page.
+
+ 
+
+![](ImagesExt/image33_4.jpg){border="0"}
+
+Figure 4: PDF Viewer Samples for MVC
+
+[]{style="FONT-FAMILY: 'Trebuchet MS','sans-serif'; COLOR: #15428b; FONT-SIZE: 9pt"} 
+
+5.   A list of samples will be displayed on the left pane.
+
+6.   Select any sample and click **Run Sample** to browse through the sample features.
+
+[]{style="COLOR: #c00000"} 
+
+[]{#related-topics}
+::::

@@ -1,0 +1,94 @@
+<html><h1>Custom Field Type Demo</h1>
+
+<p><p>This sample shows custom types in a record. Custom types can have <strong>UITypeEditor</strong> 
+or <strong>TypeConverters</strong>. It also demonstrates how to show the nested properties of a custom type in a record row.
+</p></p>
+
+<p>This is how the sample looks.</p>
+
+<p><p align=center><img src="images/sample.png" alt="CustomFiledType" title="CustomFieldType" /></p>
+
+<p><p>Two classes called <strong>Foo</strong> and <strong>NestedFoo</strong> are declared with 
+two properties.  A table is created with columns that are declared as <strong>Property</strong> 
+classes. Two columns are created with the data type declared as <strong>Foo</strong> 
+and <strong>NestedFoo</strong>.</p></p>
+
+<p><font color="#8D2E1C"><pre>
+    		DataTable table = new DataTable();
+    		table.Columns.Add("FooColumn1", typeof(Foo));
+    		table.Columns.Add("FooColumn2", typeof(NestedFoo));
+    		table.Columns.Add("Boolean", typeof(bool));
+    		table.Columns.Add("Color", typeof(Color));
+    		table.Columns.Add("Font", typeof(Font));
+    		table.Columns.Add("PatternStyle", typeof(Syncfusion.Drawing.PatternStyle));
+    		table.Columns.Add("DockStyle", typeof(DockStyle));
+    		table.Columns.Add("FieldDescriptor", typeof(FieldDescriptor));
+    		table.Columns.Add("BordersInfo", typeof(GridBordersInfo));  </pre></font></p>
+
+<p><p>A column can be manually added through the following code:</p></p>
+
+<p><font color="#8D2E1C"><pre>
+    		gridGroupingControl1.TableDescriptor.Columns.Clear();
+    		gridGroupingControl1.TableDescriptor.Columns.Add("FooColumn1&#95;PropertyOne");
+    		gridGroupingControl1.TableDescriptor.Columns.Add("FooColumn1&#95;PropertyTwo"); </pre></font></p>
+
+<p><p>An unbound column can be added as follows:</p></p>
+
+<p><font color="#8D2E1C"><pre>
+    		GridTableDescriptor td = this.gridGroupingControl1.TableDescriptor;
+    		FieldDescriptor unboundFd = new FieldDescriptor("Unbound");
+    		td.UnboundFields.Add(unboundFd);  </pre></font></p>
+
+<p><p>The UI's <strong>Type Editors </strong>feature can be implemented using 
+the following code:</p></p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.gridGroupingControl1.TableOptions.AllowDropDownCell = showUITypeEditors;  </pre></font></p>
+
+<p><p>The following code shows how to enable or disable the UI-type editor for the 
+check-box 
+column.</p></p>
+<font color="#8D2E1C"><pre> 
+    		bool displayCheckBoxForBooleanFields = false;
+    			if (displayCheckBoxForBooleanFields)
+    			{
+    				GridPropertyTypeDefaultStyle booleanDefault = this.gridGroupingControl1.Engine.PropertyTypeDefaultStyles["System.Boolean"];
+    				booleanDefault.AllowDropDown = false;
+    			}  </pre></font></p>
+
+<p><p>Here is the sample code to get the row and column index in the grid for a column (this works if column-sets with multiple rows are specified).</p></p>
+<p><br />
+<font color="#8D2E1C"><pre>
+    		bool useOldCodeToGetCellInfo = false;
+    		if (useOldCodeToGetCellInfo)
+    		{
+    			GridColumnDescriptor cd = this.gridGroupingControl1.TableDescriptor.Columns["Boolean"];
+    			int relativeRowIndex, colIndex;
+    			this.gridGroupingControl1.TableDescriptor.ColumnToRowColIndex(cd.MappingName, out relativeRowIndex, out colIndex);
+    			Record r = this.gridGroupingControl1.Table.Records[0];
+    			int recordRowIndex = this.gridGroupingControl1.Table.DisplayElements.IndexOf(r);
+    			int rowIndex = recordRowIndex + relativeRowIndex;
+    			GridTableCellStyleInfo style = this.gridGroupingControl1.Table.GetTableCellStyle(rowIndex, colIndex +this.gridGroupingControl1.
+    			TableDescriptor.GetColumnIndentCount());
+    			Console.WriteLine(style.TableCellIdentity.ToString());
+    			Console.WriteLine(style.ToString());
+    		}
+    		else
+    		{
+    			// Newer code using new GetTableCellStyle overloads after version 3.0.0.16.
+    			Record r = this.gridGroupingControl1.Table.Records[0];
+    			GridTableCellStyleInfo style = this.gridGroupingControl1.Table.GetTableCellStyle(r, "Boolean");
+    			Console.WriteLine(style.TableCellIdentity.ToString());
+    			Console.WriteLine(style.ToString());
+    		}  </pre></font></p>
+
+<p><p>Subscribe to the <strong>QueryValue</strong> and <strong>SaveValue</strong> events to save the 
+unbound-field 
+values.</p></p>
+
+<p><font color="#8D2E1C"><pre>
+    		private void grid_QueryValue(object sender, FieldValueEventArgs e)
+    		{
+    			e.Value = e.Record.ParentTable.Records.IndexOf(e.Record);
+    		}  </pre></font></p>
+</html>

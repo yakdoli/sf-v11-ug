@@ -1,0 +1,41 @@
+<html><h1>Hierarchical Grid Demo</h1>
+
+<p>This sample demonstrates how to print or preview the content of a Grid Grouping 
+Control.
+</p>
+<h3><FONT SIZE=4><B>Features</B></FONT></h3>
+<UL>
+	<LI><p>This is how the sample will look after clicking the <strong>Print</strong> 
+option in the <strong>File</strong> menu.</p>
+
+<p><p align=center><img src="images/sample1.png" alt="Print HierarchicalGrid-Print" title="Print HierarchicalGrid-Print" /></p>
+
+<LI><p>This is how the sample will look after clicking the <strong>Print Preview</strong> 
+option in the <strong>File </strong>menu.</p>
+
+<p><p align=center><img src="images/sample2.png" alt="Print HierarchicalGrid-PrintPreview" title="Print HierarchicalGrid-PrintPreview" /></p>
+</UL>
+
+<P><FONT SIZE=4><B>Implementation</B></FONT></P>
+<UL>
+
+<LI><p>The following code explains how to show a preview of data from the Grid Grouping 
+Control.</p>
+
+    <font color="#8D2E1C"><pre>
+    		GridPrintDocument pd = new GridPrintDocument(this.gridGroupingControl1.TableControl, true); 
+    		PrintPreviewDialog ppv = new PrintPreviewDialog(); 
+    		ppv.Document = pd; 
+    		pd.DefaultPageSettings.Landscape = true;
+    		ppv.ShowDialog();  </pre></font>
+<LI><p>The following code shows how to print data from the data grid.</p>
+
+    <font color="#8D2E1C"><pre>
+    		GridPrintDocument pd = new GridPrintDocument(this.gridGroupingControl1.TableControl); 
+    		PrintDialog printDialog = new PrintDialog(); 
+    		printDialog.Document = pd;
+    		pd.DefaultPageSettings.Landscape = true;
+    		printDialog.ShowDialog();  </pre></font></p>
+
+</UL>
+</html>

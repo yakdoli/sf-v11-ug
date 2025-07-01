@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081230;7140126">
+	<META NAME="CHANGED" CONTENT="20081230;7160465">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Grid Population Demo</H1>
+<P>This sample illustrates three ways of Essential Grid population.
+The first technique loops through the cells and uses an indexer on
+the <B>GridControl</B> to set values. The second technique uses the
+<STRONG>PopulateValues()</STRONG> method to optimally place data from
+a data source into a grid range. The last technique uses Essential
+Grid in a virtual manner. 
+</P>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="Grid Population Sample screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P><FONT SIZE=4><B>Features</B></FONT><BR>
+</P>
+<UL>
+	<LI><P><STRONG>Indexer Technique</STRONG></P>
+</UL>
+<PRE STYLE="margin-left: 0.5in"><FONT COLOR="#8d2e1c">            for (int i = 0; i &lt; this.numArrayRows; ++i)</FONT>
+<FONT COLOR="#8d2e1c">            for(int j = 0; j &lt; this.numArrayCols; ++j)</FONT>
+<FONT COLOR="#8d2e1c">            this.gridControl1[i + 1, j + 1].CellValue = this.intArray[i,j]; </FONT> </PRE>
+<UL>
+	<LI><P><STRONG>PopulateValues() Method</STRONG></P>
+</UL>
+<PRE STYLE="margin-left: 0.5in; margin-bottom: 0.2in"><FONT COLOR="#8d2e1c">            gridControl1.Model.PopulateValues(GridRangeInfo.Cells(top, left, bottom, right), this.intArray); </FONT> </PRE>
+<UL>
+	<LI><P><STRONG>Virtual Mode</STRONG></P>
+</UL>
+<P STYLE="margin-left: 0.5in">Three handlers are to be used:</P>
+<PRE STYLE="margin-left: 0.5in"><FONT COLOR="#8d2e1c">            this.gridControl1.QueryCellInfo += new GridQueryCellInfoEventHandler(QueryCellInfoHandler);  </FONT>  
+<FONT COLOR="#8d2e1c">            this.gridControl1.QueryColCount += new GridRowColCountEventHandler(GridQueryColCount); </FONT>               
+<FONT COLOR="#8d2e1c">            this.gridControl1.QueryRowCount += new GridRowColCountEventHandler(GridQueryRowCount); </FONT> </PRE>
+<UL>
+	<LI><P STYLE="margin-bottom: 0in">The <STRONG>QueryColCount</STRONG>
+	and <STRONG>QueryRowCount</STRONG> are the events that are used to
+	return the column and row count that are in demand. 
+	</P>
+	<LI><P>Data from the data source is set through the <STRONG>QueryCellInfo </STRONG>handler.</P>
+</UL>
+<UL>
+	<LI><P>It can be noted that for more than 5,000 cells, the
+	virtual mode is far better than the <STRONG>PopulateValues()</STRONG>
+	method.</P>
+</UL>
+<UL>
+	<LI><P>The grid is purely virtual only when the <STRONG>e.Handled
+	</STRONG>property is set to <EM>true.</EM></P>
+</UL>
+<OL>
+	<H1 ALIGN=LEFT STYLE="margin-top: 0in; font-weight: medium"></H1>
+</OL>
+<P>When you run this sample, you can specify the size of the grid
+that is to be populated, and then you can try all three methods to
+compare their performance. However, be aware that the .NET Framework
+JIT will make the first population a little slower because of the
+one-time <EM>jitting </EM>of the code. 
+</P>
+<P ALIGN=LEFT><SPAN STYLE="font-weight: medium">This
+sample also uses the </SPAN><STRONG>OperationFeedback
+</STRONG><SPAN STYLE="font-weight: medium">class
+to provide a progress bar in the first population technique to allow
+you to potentially cancel a long operation. </SPAN>
+</P>
+</BODY>
+</HTML>

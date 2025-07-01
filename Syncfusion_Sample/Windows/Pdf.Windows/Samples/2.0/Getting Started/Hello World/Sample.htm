@@ -1,0 +1,51 @@
+<h1>Hello World</h1>
+
+<h3>
+    Features:</h3>
+<ul>
+
+    <p>
+	Drawing text in a PDF document is now easier. Now, it is very similar to 
+drawing in .NET GDI. This section demonstrates how a string is drawn in a PDF 
+page using Essential PDF. The process is very similar to drawing any other 
+object on a PDF page. The string is created using the <b>DrawString</b> method of the 
+<strong>Graphics</strong> class. Be sure to specify the font and brush with 
+which you want the string to be drawn.</p>
+
+<p>Given below is an image of the output using <b>Graphics.DrawString</b>.</p>
+
+<div align=center><img src="images/Helloworld.png" alt="PDF" title="" /></div>
+
+<p>Here is the code snippet used in this sample:</p>
+<pre>
+//Create a new document.
+PdfDocument doc = new PdfDocument();
+
+//Add a page
+PdfPage page = doc.Pages.Add();
+            
+//Create Pdf graphics for the page
+PdfGraphics g = page.Graphics;
+                        
+//Create a solid brush
+PdfBrush brush = new PdfSolidBrush(Color.Black);
+          
+//Set the font
+PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, fontSize);
+            
+//Draw the text
+g.DrawString("Hello world!", font, brush,new PointF(20,20));
+
+//Save the document.           
+doc.Save("Sample.pdf");
+</pre>
+	</Ul>
+
+<h3>
+    Interactive Features</h3>
+<Ul>
+  <li>Click the PDF button to generate the Pdf document.</li>
+  <li>Click Yes on the message box to view the generated Pdf file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+</Ul>

@@ -1,0 +1,41 @@
+<html><h1>Sorting Demo</h1>
+
+<p><p>Sorting is directly supported in a GridDataBoundGrid 
+based on the grids in the underlying data table. For grid control-based grids, this sample will show you how to implement 
+header-click sorting in your grid. The header cell draws a sort icon to indicate that the column has been sorted in a particular direction.
+</p></p>
+
+<p>The following screenshot illustrates this. </p>
+
+<p><p align=center><img src="images/sample.png" alt="GridControlSort screenshot" title="GridControlSort" />        </p>
+
+<p><strong>Features</strong></p>
+
+<ul>
+	<li> The built-in class, <strong>GridSortColumnHeaderCellModel,</strong> 
+	passes an instance through the <strong>CellModels.Add</strong> function, to create a 
+	cell type.</ul>
+
+<p><font color="#8D2E1C"><pre>
+    		this.gridControl1.CellModels.Add("ColumnHeaderCell", new GridSortColumnHeaderCellModel(this.gridControl1.Model));
+    		this.gridControl1[0, col].CellType = "ColumnHeaderCell";  </pre></font></p>
+
+<ul><li> The direction of the sort icon is controlled by passing the <strong>Ascending</strong> or 
+	<strong>Descending</strong> options of the 
+	<strong>ListSortDirection</strong> enumerator through the <strong>Tag property</strong> of the grid.</ul>
+
+<p><font color="#8D2E1C"><pre>
+    		ListSortDirection dir = ListSortDirection.Ascending;
+    		this.gridControl1[0, col].Tag = dir;  </pre></font></p>
+
+<ul><li> Sorting is achieved by using the <strong>Data.SortByColumn </strong>function. This function has 
+	five overloads, and is also used to enable comparisons through the 
+	custom comparer.</ul>
+
+<p><font color="#8D2E1C"><pre>
+    		this.gridControl1.Data.SortByColumn(col, dir, new FormulaComparer());  </pre></font></p>
+
+<ul><li> A <strong>CustomComparer</strong> class that derives the <strong>IComparer</strong> is used to compare formula values and not formulas.</ul>
+
+<ul><li> The <strong>FormulaTag.Text</strong> property has the formula result, and it is used to compare two cells.</ul>
+</html>

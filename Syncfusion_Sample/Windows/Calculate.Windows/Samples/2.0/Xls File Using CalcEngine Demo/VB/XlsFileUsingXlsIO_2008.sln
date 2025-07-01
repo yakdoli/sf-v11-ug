@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "XlsFileUsingXlsIO_2008", "XlsFileUsingXlsIO_2008.vbproj", "{C66A1EEC-79DF-46EC-A52A-A16DD9CBC875}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C66A1EEC-79DF-46EC-A52A-A16DD9CBC875}.Debug.ActiveCfg = Debug|.NET
+		{C66A1EEC-79DF-46EC-A52A-A16DD9CBC875}.Debug.Build.0 = Debug|.NET
+		{C66A1EEC-79DF-46EC-A52A-A16DD9CBC875}.Release.ActiveCfg = Release|.NET
+		{C66A1EEC-79DF-46EC-A52A-A16DD9CBC875}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

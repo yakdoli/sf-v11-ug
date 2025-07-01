@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<organization>
+<Employee>
+<EmployeeName>John Smith</EmployeeName> 
+<EmployeeTitle>CEO</EmployeeTitle>
+<EmployeeDept>0</EmployeeDept>
+<EmployeeType>1</EmployeeType>
+<EmployeeNumber>1</EmployeeNumber>
+</Employee>
+
+<Employee>
+<EmployeeName>Joe Robert</EmployeeName> 
+<EmployeeTitle>Manager-SLS</EmployeeTitle>
+<EmployeeDept>1</EmployeeDept>
+<EmployeeType>2</EmployeeType>
+<EmployeeNumber>2</EmployeeNumber>
+</Employee>
+
+<Employee>
+<EmployeeName>Jack Kent</EmployeeName> 
+<EmployeeTitle>Manager-MKT</EmployeeTitle>
+<EmployeeDept>2</EmployeeDept>
+<EmployeeType>2</EmployeeType>
+<EmployeeNumber>3</EmployeeNumber>
+</Employee>
+
+
+<Employee>
+<EmployeeName>Ravi Kumar</EmployeeName> 
+<EmployeeTitle>Manager-DEV</EmployeeTitle>
+<EmployeeDept>3</EmployeeDept>
+<EmployeeType>2</EmployeeType>
+<EmployeeNumber>4</EmployeeNumber>
+</Employee>
+
+
+<Employee>
+<EmployeeName>Sue Raymond</EmployeeName> 
+<EmployeeTitle>CSR</EmployeeTitle>
+<EmployeeDept>1</EmployeeDept>
+<EmployeeType>3</EmployeeType>
+<EmployeeNumber>5</EmployeeNumber>
+</Employee>
+
+<Employee>
+<EmployeeName>Lisa Simpson</EmployeeName> 
+<EmployeeTitle>CSR</EmployeeTitle>
+<EmployeeDept>1</EmployeeDept>
+<EmployeeType>3</EmployeeType>
+<EmployeeNumber>6</EmployeeNumber>
+</Employee>
+
+<Employee>
+<EmployeeName>Bob Woley</EmployeeName> 
+<EmployeeTitle>PM</EmployeeTitle>
+<EmployeeDept>2</EmployeeDept>
+<EmployeeType>3</EmployeeType>
+<EmployeeNumber>7</EmployeeNumber>
+</Employee>
+
+<Employee>
+<EmployeeName>Ron Jones</EmployeeName> 
+<EmployeeTitle>Engineer</EmployeeTitle>
+<EmployeeDept>3</EmployeeDept>
+<EmployeeType>3</EmployeeType>
+<EmployeeNumber>8</EmployeeNumber>
+</Employee>
+
+<Employee>
+<EmployeeName>Dave Mason</EmployeeName> 
+<EmployeeTitle>Engineer</EmployeeTitle>
+<EmployeeDept>3</EmployeeDept>
+<EmployeeType>3</EmployeeType>
+<EmployeeNumber>9</EmployeeNumber>
+</Employee>
+
+
+</organization>
+

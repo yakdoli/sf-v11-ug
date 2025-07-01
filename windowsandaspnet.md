@@ -1,0 +1,58 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template}![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+::::: {#nsbanner .d2h_main_nsbanner style="BORDER-BOTTOM: #999999 1px solid; POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: none; BORDER-TOP: #999999 1px solid; PADDING-TOP: 0px; LEFT: 0px"}
+:::: {#TitleRow .d2h_main_titlerow style="PADDING-BOTTOM: 4px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; WIDTH: 100%; PADDING-RIGHT: 10px; DISPLAY: none; PADDING-TOP: 4px"}
+::: {#ienav .d2h_main_ienav style="DISPLAY: none"}
+[](ms-xhelp:///?Id=a2071daa-56d8-44d1-acea-00b126de4238){#D2HPrevious .D2HPreviousEnabled}  [](ms-xhelp:///?Id=ed5a75d7-66ec-4f9a-b76d-4ca8ef330296){#D2HNext .D2HNextEnabled}
+:::
+::::
+:::::
+
+::::: {#nstext .d2h_main_nstext style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 22px; PADDING-RIGHT: 10px; HEIGHT: 100%; OVERFLOW: auto; PADDING-TOP: 5px" hasuserbackground="true" valign="bottom"}
+::: {#d2h_breadcrumbs .d2h_breadcrumbs}
+[Essential Studio User Guide Documentation](ms-xhelp:///?Id=12457748-09e3-4d74-a240-8e049cedf030){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Essential Common](ms-xhelp:///?Id=2bfe10b6-fac1-4f91-a173-04db314f10c3){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[Frequently Asked Questions](ms-xhelp:///?Id=8c0b82fa-382a-437e-9ce1-9b9ffd3f2ead){.d2h_breadcrumbsNormal}[ \> ]{.d2h_breadcrumbsLinkSeparator}[How to Implement Localization Support](ms-xhelp:///?Id=7c104b30-cfaa-4a58-a14e-9015a1f96ad4){.d2h_breadcrumbsNormal}
+:::
+
+### Windows and ASP.NET {#windows-and-asp.net style="tab-stops: 0pt"}
+
+ 
+
+The Windows and ASP.Net products have extended its support for Localization.Samples and description is available in the following locations.
+
+ 
+
+::: {align="center"}
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Product                           | Sample location                                                                                                                                                                                                                                                                                                                                                            |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Tools\[ASP.NET\]                  | <http://samples.syncfusion.com/ASPNET/8.4.0.10/Web/Tools.Web/samples/3.5/EditorsPackage/Spell%20Check/Localization/cs/SpellCheckWithContextMenu.aspx?args=0>[]{.UGHyperlink}                                                                                                                                                                                               |
+|                                   |                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   | [[]{style="COLOR: windowtext; TEXT-DECORATION: none; text-underline: none"}]{.UGHyperlink}                                                                                                                                                                                                                                                                                 |
+|                                   |                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   | [http://samples.syncfusion.com/ASPNET/8.4.0.10/Web/Tools.Web/samples/3.5/EditorsPackage/RichTextEditor/Localization/cs/Localization.aspx?args=0](http://samples.syncfusion.com/ASPNET/8.4.0.10/Web/Tools.Web/samples/3.5/EditorsPackage/RichTextEditor/Localization/cs/Localization.aspx?args=0%20)[[]{style="TEXT-DECORATION: none; text-underline: none"}]{.UGHyperlink} |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Chart\[Windows\]                  | {Installed Drive}:\\Syncfusion\\EssentialStudio\\{Version}\\Windows\\Chart.Windows\\Samples\\2.0\\Culture Localization\\Localization Demo\\cs                                                                                                                                                                                                                              |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Diagram \[Windows\]               | {Installed Drive}:\\\\Syncfusion\\EssentialStudio\\{version}\\Windows\\Diagram.Windows\\Samples\\2.0\\Localizing Dialogs\\Localization Demo\\cs                                                                                                                                                                                                                            |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Chart\[ASP.NET\]                  | Currently not supports localization                                                                                                                                                                                                                                                                                                                                        |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Diagram\[ASP.NET\]                | Currently not supports localization                                                                                                                                                                                                                                                                                                                                        |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Windows Forms \[Grid,Tools\]      | Samples are available in the machine installed with Essential Studio.\                                                                                                                                                                                                                                                                                                     |
+|                                   | {Installed Drive}:\\Syncfusion\\EssentialStudio\\8.4.0.8\\Windows\\Tools.Windows\\Samples\\2.0\\Localizatio                                                                                                                                                                                                                                                                |
+|                                   |                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   |                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   |                                                                                                                                                                                                                                                                                                                                                                            |
+|                                   | n Demo\\Localization Demo                                                                                                                                                                                                                                                                                                                                                  |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+
+ 
+
+ 
+
+[]{#related-topics}
+:::::

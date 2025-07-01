@@ -1,0 +1,53 @@
+﻿<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 0px;
+}
+</style>
+</head>
+
+<h1>Map Demo</h1>
+<p>The highlight sample demonstrates, mouse hover effects implemented in Essential Diagram.</p>
+
+<p><div align=center><img src="images/sample.png" alt="HighLight Image" title="" /></div></p>
+
+<p class="style1"><strong>Features</strong></p>
+
+<ul>
+<li> It is a read-only diagram.</li>
+<li> The tooltip displays the node name when the pointer is hovering over it.</li>
+<li> The objects in the diagram are not movable and editable.</li>
+<li> Part of the diagram can be highlighted when the pointer 	hovers over it. </li>
+</ul>
+<ul>
+	
+	<p class="style1">Using the <strong>GetNodeUnderMouse</strong> method, you can 
+	retrieve a node under the pointer.</p>	
+<p><font color="#8D2E1C"><pre><code>
+// Retrives node under the mouse action.<br>
+Node node1 = (Node)this.diagram1.Controller.GetNodeUnderMouse(new Point(e.X, e.Y));</pre>
+</code></font></p></ul>
+<ul>
+<p>We can highlight a node by changing the <strong>LineStyle</strong>
+and <strong>FillColor</strong> effects.</p>
+<p><font color="#8D2E1C"><pre><code>
+// Convert node as polygon.<br>
+Polygon poly = globelNode as Polygon;<br>
+Random r = new Random();&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+// Setting fill style for the ploygon.<br>
+poly.FillStyle.Color = Color.FromArgb(r.Next(255), r.Next(255), r.Next(255));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+globelNode.LineStyle.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;<br>
+globelNode.LineStyle.LineWidth = 3;<br>
+<br>
+// Resetting the node with default values.<br>
+poly.FillStyle.Color = defaultColor;<br>
+globelNode.LineStyle.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;<br>
+globelNode.LineStyle.LineWidth = 1;<br>
+</pre></code></font></p></ul>
+
+
+</html>

@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{618726BF-DDA8-48F9-A00D-F912708F46F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication626</RootNamespace>
+    <AssemblyName>WindowsFormsApplication626</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syncfusion.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAs32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoverPage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlankPage32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageBreak32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Italic16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bold16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Underline16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strikethrough16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subscript16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Superscript16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextHighlightColor16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontColor16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextHighlightColor161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClearFormatting16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShrinkFont16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrowFont16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoComplete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackStageView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonEdit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalculatorControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckBoxAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckBoxItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildFrameBarManager.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorPickerUIAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorUIAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBoxAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBoxAutoComplete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboListBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commandbarcontroller.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ContextMenuStripEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CurrencyEdit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CurrencyTextBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DateTimePickerExt.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docking.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dockingpanel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DomainUpDownExt.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontComboBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontListBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gallery.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GradientLabel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageStreamer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainFrameBarManager.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaskedEditBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MiniToolBar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonthCalendarExt.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultiColumnTreeView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavigationView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumericUpDownExt.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OfficeButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OfficeDropDownButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OfficeSplitButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PopupMenu.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PopupMenusManager.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBarEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RadioButtonAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RadioButtonItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RibbonControlAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RibbonPanelMergeContainer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RibbonTabControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slider.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashPanel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplitButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplitContainerAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusBarAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusBarAdvPanel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusStripEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuperAccelerator.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabbedGroup.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabbedMDIManager.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabControlExt.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabSplitterContainer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TileLayout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripComboBoxEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripPanelItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripSplitButtonEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolTip.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrackBarEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TreeViewAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WizardControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XPTaskBar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XPTaskBarBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XPTaskPane.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XPToolBar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoLabel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BannerTextProvider.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderLayout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonAdv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CardLayout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorPickerButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorUIControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBoxBase.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboDropDown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CurrencyTextBox1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleTextBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditableList.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlowLayout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FolderBrowser.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GradientPanel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GradientPanelExt.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridBagLayout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridLayout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupviewcontrol.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagelistadv.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IntegerTextBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaskedEditBox1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PercentTextBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PopupControlContainer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressBarEx1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordNavigationBar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordNavigationControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScrollersFrame.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkinManager.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpellChecker.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplitterControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabBarSplitterControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextBoxExt.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TypeLoader.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Birds.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boxes3D.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Tools1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Tools2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Tools3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Tools4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Tools5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

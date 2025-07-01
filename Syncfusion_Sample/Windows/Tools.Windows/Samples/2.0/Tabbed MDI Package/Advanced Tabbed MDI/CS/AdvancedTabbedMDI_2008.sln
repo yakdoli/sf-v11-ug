@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedTabbedMDI_2008", "AdvancedTabbedMDI_2008.csproj", "{CE08DEB1-7077-4E53-821A-0140795D8B73}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CE08DEB1-7077-4E53-821A-0140795D8B73}.Debug.ActiveCfg = Debug|.NET
+		{CE08DEB1-7077-4E53-821A-0140795D8B73}.Debug.Build.0 = Debug|.NET
+		{CE08DEB1-7077-4E53-821A-0140795D8B73}.Release.ActiveCfg = Release|.NET
+		{CE08DEB1-7077-4E53-821A-0140795D8B73}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

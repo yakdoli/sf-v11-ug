@@ -1,0 +1,46 @@
+<h1>Workbook Protection</h1>
+<p>You can lock the structure of a workbook, which prevents users from adding or
+deleting worksheets or from displaying hidden worksheets. You can also prevent
+users from changing the size or position of worksheet windows. Workbook
+structure and window protection apply to the entire workbook.</p>
+
+<p>To protect a workbook, point to <strong>Protection</strong> on the <strong>Tools</strong> menu, and then click
+<strong>Protect</strong> <strong>Workbook</strong>.
+You can choose which elements you want to protect (workbook structure, windows, or both) by selecting or clearing the corresponding check boxes.</p>
+
+<p>Below is an image showing workbook protection in Microsoft Excel.</p>
+<p><div align = "Center"><img src="images/sample.png" alt="XlsIO" title="" /></div></p>
+
+<p style="font-size:large">Features:</p>
+<ul>
+<li>Protecting a workbook with a password</li>
+<li>Protecting a window or structure from modification</li>
+<li>Removing protection of a workbook with a password</li>
+
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+
+<li>Click <b>Protect Workbook</b> to protect a workbook with the password "syncfusion" and view the document.</li>
+<li>Click <b>Unprotect Workbook</b> to remove protection in the workbook with the password "syncfusion" and view the document.</li>
+
+</ul>
+
+<p>Below is an image of the output.</p>
+<p><div align = "Center"><img src="images/sample1.png" alt="XlsIO" title="" /></div></p>
+
+<p>You can see from the output that the window and structure of the file cannot be modified
+and no new sheets can be added or moved.</p>
+
+<p>Here is a code snippet:</p>
+<p><pre>
+//Protect Workbook.
+workbook.Protect(true, true, "syncfusion");
+
+//Unprotect workbook.
+// Opening a Existing(Protected) Worksheet from a Workbook
+IWorkbook workbook = application.Workbooks.Open(@"ProtectedWorkbook.xls");
+
+//Unprotecting( unlocking) Workbook using the Password
+workbook.Unprotect("syncfusion");
+</pre></p>

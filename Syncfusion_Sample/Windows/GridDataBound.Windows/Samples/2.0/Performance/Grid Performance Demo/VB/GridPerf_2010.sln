@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GridPerf_2010", "GridPerf_2010.vbproj", "{D75FEB1E-AFD9-4DD8-8002-660BB0CDEACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D75FEB1E-AFD9-4DD8-8002-660BB0CDEACE}.Debug.ActiveCfg = Debug|.NET
+		{D75FEB1E-AFD9-4DD8-8002-660BB0CDEACE}.Debug.Build.0 = Debug|.NET
+		{D75FEB1E-AFD9-4DD8-8002-660BB0CDEACE}.Release.ActiveCfg = Release|.NET
+		{D75FEB1E-AFD9-4DD8-8002-660BB0CDEACE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

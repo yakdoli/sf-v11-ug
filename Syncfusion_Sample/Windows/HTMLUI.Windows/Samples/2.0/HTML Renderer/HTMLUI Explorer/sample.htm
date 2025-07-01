@@ -1,0 +1,34 @@
+﻿<html><h1>HTMLUI Explorer</h1>
+
+<p>This sample shows how the HTML content available in the <strong>URI</strong> 
+is rendered in the HTMLUI control.</p>
+
+<p><p align=center>
+<img src="images/sample.png" alt="HTMLUI Explorer " title="" width="591" height="432" /></p>
+
+<p><strong>Features</strong>:</p>
+
+<ul>
+	<li>The <strong>LoadHTML(Uri uri)</strong> method of the HTMLUI control 
+	helps in rendering HTML content from the Web.</ul>
+
+<ul><li>The HTMLUI control also comes with the <strong>History</strong> option, 
+	which keeps an account of the documents that are loaded into the control.</ul>
+
+<ul><li>The user can also navigate through the documents that are loaded in the 
+	<strong>History</strong> with the help of the <strong>Back()</strong> and the <strong>Forward()</strong> methods.</ul></p>
+
+<p>Here is the code to load the URI into a HTMLUI control.</p>
+<p><font color="#8D2E1C"><pre> 
+	try	{
+		Uri uri = new Uri(this.comboBox1.Text);
+		this.htmluiControl1.LoadHTML(uri);
+		this.htmluiControl1.Cursor = Cursors.Arrow;
+	}
+	catch(Exception exc)
+	{
+		MessageBox.Show(exc.ToString());
+	}
+</pre>
+</font></p>
+</html>

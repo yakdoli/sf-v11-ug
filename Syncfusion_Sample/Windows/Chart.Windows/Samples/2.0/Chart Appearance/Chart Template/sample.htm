@@ -1,0 +1,41 @@
+﻿<html><h1>Chart Template</h1>
+
+<p>This sample illustrates the chart template features supported by Essential Chart.</p>
+
+
+<div align=center><img src="images/Sample1.png" alt= "Chart Template"title=""/></div>
+
+<p><div align=center><b>Chart Template</b></p></div>
+
+<h3><strong>Features</strong></h3>
+
+<p>Chart control appearance settings are edited as required and saved as a 
+template that can be applied to other chart controls. </p>
+<ul>
+<li><b>Save Chart Template</b>
+<p>The code below shows how the appearance of a chart can be saved to a XML template file.</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//create an instance of ChartTemplate, scan the appearance related settings in the chart control and save it to an xml file</font>
+ChartTemplate ct = new ChartTemplate(typeof(ChartControl));
+ct.Scan(this.chartControl1);                        
+ct.Save("MyTemplate.xml");
+</code></pre></font>
+</li>
+
+
+<li><b>Load Chart Template</b>
+<p>The code below shows how the appearance of a chart can be applied from a 
+XML template file.</p>
+<font color="#8D2E1C"><pre><code>
+<font color="#008000">//create an instance of ChartTemplate, scan the appearance related settings in the chart control and save it to an xml file</font>
+ChartTemplate ct = new ChartTemplate(typeof(ChartControl));
+ct.Load("MyTemplate.xml");                    
+ct.Apply(this.chartControl1);
+</code></pre></font>
+</li>
+</ul>
+<h3><strong>Interactive Features</strong></h3>
+<ul>
+<li>New and existing chart appearances can be saved as XML template files using the Save button in the application.</li>
+</ul>
+</html>

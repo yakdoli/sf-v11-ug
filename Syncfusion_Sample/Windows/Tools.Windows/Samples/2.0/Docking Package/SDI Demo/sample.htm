@@ -1,0 +1,55 @@
+﻿<h1>SDI Demo</h1>
+
+<p>This sample demonstrates the docking layout in a standard form-type application. </p>
+<p>The docking manager is hosted on a form and the docked controls share the 
+form&#39;s client surface with the other controls.</p> 
+<p>This screenshot shows the typical display of docked controls.</p>
+
+<p><div align=center><img src="images/sdidemo_intro.png" alt="SDI Demo introduction tab" title="" /></div></p>
+
+<p>
+<p><strong>Features</strong>:</p>
+<ul>
+	<li>This sample shows you how to use the <strong>DockingClientPanel
+	</strong>class to provide a static region for the form's non-<em>dockable</em> controls. It also features the 
+	docking manager's powerful event-based customization model.</ul>
+<p><ul><li>In this sample, all the <em>dockable</em> controls are set using the <strong>DockingManager.SetEnableDocking Extended</strong> property.</ul></p>
+
+<h3></h3>
+<h3><strong>Docking Client Panel</strong></h3>
+
+<p>The<strong> DockingClientPanel </strong>class is intended to serve as a container for the non-<em>dockable</em> controls on non-MDI Container forms. When using docking windows in the non-MDI case, all non-<em>dockable</em> controls originally intended to be located on the form should instead be placed on the 
+docking client panel. 
+</p>
+
+<p><ul><li>The <strong>Docking Windows framework </strong>repositions or resizes the 
+	docking client panel 
+	in tandem with changes in the host form’s client area during docking-undocking operations; thus, 
+	it provides a static surface for hosting the form’s non-<em>dockable</em> controls.</p> 
+<li><p>The <strong>DockingClientPanel.SizeToFit </strong>property is set to <em>True</em>. Turning on the
+<strong>SizeToFit</strong> property will force the docking client panel to start interacting with the Essential Tools docking architecture, and the control will automatically be resized-repositioned to occupy the form's client bounds that are left unoccupied by the docking windows. </ul></p>
+
+<h3>Tab Control in  the sample</h3>
+
+<p><ul><li>On the docking client panel, a tab control with four <strong>TabPageAdv</strong> 
+	controls is hosted, which in turn hosts other controls.</ul>
+
+
+<p><div align=center><img src="images/SDIdemo_mis.png" alt="SDI Demo miscelleneous tab" title="" /></div><ul><li>The<strong> DockLabelAlignment </strong>style property changes the docking caption alignment. The 
+<strong>DockTabAlignment</strong> style property changes the position of the docking windows tabs.</p>
+		<li>
+		<p>The <strong>DragProviderStyle</strong> property changes the dragging style of the docking windows. There are two styles: Standard and VS 2005.</p>
+		<li>
+		<p>The <strong>DockingManager </strong>provides functionality to freeze-unfreeze the 
+		docking windows. 
+The <strong>SetFreezeResize</strong> (<strong>controlname, true / false</strong>) is used for this purpose.</ul>
+
+
+</p>
+
+<ul>
+<li><p><strong>EventLogs Tab </strong>-<strong> </strong>This tab hosts a 
+list box that displays the sequence for firing various events.</p></li>
+</ul>
+
+<p><div align=center><img src="images/sdidemo_evt.png" alt="SDI Demo event logs tab" title="" /></div></p>

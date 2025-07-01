@@ -1,0 +1,81 @@
+﻿<html><h1> Drag-Drop </h1>
+
+<p>This sample illustrates the implementation of the drag-and-drop feature of the 
+<strong>TreeViewAdv</strong> control.</p>
+
+<p><div align=center><img src="images/sample.png" alt="TreeViewAdv DragDrop" title="" /></div></p>
+
+<h3>Features</h3>
+<ul>
+<p><strong><li>Initialization</li></strong></p>
+<p>Initialization of OLE drag-and-drop on mouse down-and-drag</p>
+
+<br>
+
+<p><strong><li>Listening and Accepting</li></strong></p>
+<p>Listening to drag-over messages and accepting drag-and-drop operations</p>
+<br>
+
+<p><strong><li>Show Drag NodeCu</li></strong></p>
+<p>Allows users to specify whether a semi-transparent image of a selected node should be drawn beside the cursor during a drag-and-drop 
+operation</p>
+<br>
+
+<p><strong><li>Drag on Text</li></strong></p>
+<p>Indicates whether a drag-drop operation will occur if a node is dragged onto 
+a text area.</p>
+<br>
+
+<p><strong><li>Tracker</li></strong></p>
+<p>The <strong>Tracker</strong> class can be used to support a drop operation adjacent to a node; 
+otherwise, listening to the <strong>DragOver</strong> and
+ <strong>DragDrop</strong> events are enough. The tracker will draw indicators above or below a node while dragging an item over the node. </p>
+
+<p><strong>The usage semantics for the tracker are given as follows. </strong></p>
+
+<p>1.Create an instance of the tracker class and listen to the <strong>QueryAllowedPositionForNode </strong> event. 
+A user can listen to this event and prevent 
+drawing highlights for specific nodes.</p>
+
+<p>2.The <strong>TreeViewAdv</strong>'s <strong> DragOver</strong> event updates the highlighted node by calling the 
+<strong>SetHighLightNode</strong> method.</p> 
+
+<p>3.The  <strong>TreeViewAdv</strong>'s <strong> DragLeave </strong>event clears the highlighted node by calling the 
+<strong>ClearHighlightNode</strong> method.</p>
+
+<p>4.The <strong>QueryAllowedPositionsForNode</strong> event handler specifies whether a computed adjacent position should be allowed or not. </p>
+
+<p>5.The <strong>TreeViewAdv</strong>'s <strong>DragDrop</strong> event allows a user to 
+retrieve a highlighted node and drop position from the tracker, helping to insert 
+a new node.</p>
+<br>
+
+<p><strong><li>Drag Highlight Tracker&#39;s “QueryDragInsertInfo”</li></strong></p>
+
+<p>The <strong>TreeViewAdvDragHighlightTracker</strong> pen can be modified by the added event
+<strong>TreeViewAdvDragHighlightTracker.QueryDragInsertInfo</strong>.
+This allows users to select the color of the <strong>TreeViewAdvDragHighlightTracker</strong> 
+pen based on the current background. </p>
+<br>
+
+<p><strong><li>Selection Mode</li></strong></p>
+<p>There are three types of selection modes in the <strong>TreeViewAdv</strong>;<strong>
+</strong>they are as given below.</p>
+
+<p><strong>Single - </strong>Users can select only one node at a time and implement the 
+drag-drop operation in the <strong>TreeViewAdv</strong>.</p>
+
+<p><strong>Multi-Select Same Level - </strong>Users can select only the nodes of 
+the same level, for example, only child nodes or only parent nodes.</p>
+
+<p><strong>Multi-Select All - </strong>Users can select multiple nodes used for implementing the 
+drag-drop operation in the <strong>TreeViewAdv</strong>.</p>
+<br>
+
+<p><strong><li>Scrolling Property</li></strong></p>
+
+<p> AutoScrolling of the <strong>TreeViewAdv</strong> happens when dragging the mouse 
+pointer near the border while a multiple
+ selection is being performed. </p>
+</ul>
+</html>

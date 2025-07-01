@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3004668">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Collection Base Demo</H1>
+<P>The implementation of a custom collection through a collection
+base is simpler when derived from the <STRONG>IList</STRONG>.</P>
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>Features:</B></FONT></FONT></FONT></P>
+<UL>
+	<LI><P>Changing the content of the collection will not update the
+	grid.</P>
+	<LI><P>Set <STRONG>grid.Table.TableDirty = </STRONG><STRONG><I><SPAN STYLE="font-weight: medium">true
+	</SPAN></I></STRONG>after making changes directly to the underlying
+	collection since no <STRONG>ListChanged</STRONG> event is raised in
+	this limited implementation.</P>
+	<LI><P>The Grid Grouping control relies upon the
+	<STRONG>IBindingList.ListChanged</STRONG> event to react to changes
+	in the underlying data.</P>
+	<LI><P>If this event is not raised by the data collection, then set
+	<STRONG>Table.TableDirty = </STRONG><STRONG><I><SPAN STYLE="font-weight: medium">true</SPAN></I></STRONG>
+	and force the grid to refresh itself.</P>
+	<LI><P>A more robust implementation would also implement
+	<STRONG>IBindingList</STRONG> and listen to the collection-base
+	notifications such as <STRONG>OnClear</STRONG>, <STRONG>OnInsert,</STRONG>
+	etc.</P>
+	<LI><P>Also, raise the<B> </B><STRONG>IBindingList.ListChanged</STRONG><B>
+	</B>
+	event with appropriate arguments to notify event listeners to
+	changes.</P>
+</UL>
+<P><B>C# code</B> 
+</P>
+<PRE><FONT COLOR="#8d2e1c">                public class DataCollection : System.Collections.CollectionBase</FONT>
+<FONT COLOR="#8d2e1c">                {</FONT>
+<FONT COLOR="#8d2e1c">                        public DataCollection()</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                        public void Add(Data info)</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                                this.List.Add(info);</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                        public void Remove(Data info)</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                                this.List.Remove(info);</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                        public Data this[int index]</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                                get</FONT>
+<FONT COLOR="#8d2e1c">                                {</FONT>
+<FONT COLOR="#8d2e1c">                                        return (Data)base.List[index];</FONT>
+<FONT COLOR="#8d2e1c">                                }</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                }  </FONT></PRE><P>
+<B>VB Code</B> 
+</P>
+<PRE><FONT COLOR="#8d2e1c">                Public Class DataCollection : Inherits System.Collections.CollectionBase</FONT>
+<FONT COLOR="#8d2e1c">                        Public Sub New()</FONT>
+<FONT COLOR="#8d2e1c">                        End Sub</FONT>
+<FONT COLOR="#8d2e1c">                        Public Sub Add(ByVal info As Data)</FONT>
+<FONT COLOR="#8d2e1c">                                Me.List.Add(info)</FONT>
+<FONT COLOR="#8d2e1c">                        End Sub</FONT>
+<FONT COLOR="#8d2e1c">                        Public Sub Remove(ByVal info As Data)</FONT>
+<FONT COLOR="#8d2e1c">                                Me.List.Remove(info)</FONT>
+<FONT COLOR="#8d2e1c">                        End Sub</FONT>
+<FONT COLOR="#8d2e1c">                        Public ReadOnly Default Property Item(ByVal index As Integer) As Data</FONT>
+<FONT COLOR="#8d2e1c">                                Get</FONT>
+<FONT COLOR="#8d2e1c">                                        Return CType(MyBase.List(index), Data)</FONT>
+<FONT COLOR="#8d2e1c">                                End Get</FONT>
+<FONT COLOR="#8d2e1c">                        End Property</FONT>
+<FONT COLOR="#8d2e1c">                End Class  </FONT></PRE><P>
+<STRONG>Note: </STRONG>Changing the contents of the collection will
+not update the grid. 
+</P>
+<P>For this reason, you should always set <STRONG>grid.Table.TableDirty
+= true </STRONG>after making changes directly to the underlying
+collection since no <STRONG>ListChanged</STRONG> event is raised in
+this limited implementation. The Grid Grouping control relies upon
+the <STRONG>IBindingList.ListChanged</STRONG> event to react to
+changes in the underlying data. If this event is not raised by the
+data collection, then you can set <STRONG>Table.TableDirty = true</STRONG>
+to force the grid to refresh itself.</P>
+<P>A more robust implementation would also implement <STRONG>IBindingList</STRONG>
+and listen to the collection-base notifications such as <STRONG>OnClear</STRONG>,
+<STRONG>OnInsert,</STRONG> etc., and raise the
+<STRONG>IBindingList.ListChanged</STRONG> event with appropriate
+arguments to notify event listeners to changes. 
+</P>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="Cutom Collection screenshot" ALIGN=BOTTOM  BORDER=0></P>
+</BODY>
+</HTML>

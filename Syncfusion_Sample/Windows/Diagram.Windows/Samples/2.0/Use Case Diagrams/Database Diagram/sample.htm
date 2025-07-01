@@ -1,0 +1,49 @@
+﻿<html><h1>Database Diagram</h1>
+
+<p>This sample creates a database diagram like MS-SQL server with the given data. A custom symbol, which gives the SQL server database diagram symbol’s look and feel, is used in the sample. 
+You can create your own custom symbol derived from the base node class according to your requirement.</p>
+
+<div align=center><img src="images/sample.png" alt="Database Diagram Image" title="" /></div>
+
+<p><strong>Features</strong></p>
+<ul>
+<li>	The custom symbol “RowRectangle” draws the each entity of database diagram.</li>
+<li>	The RadialTreeLayoutManager is used to laying out the nodes on the digram.</li>
+
+			
+<li>Save As - Saves the diagram in the binary/xml file.</li>
+<p>Use the below code to save the diagram in binary/xml format.</p>
+<p><font color="#8D2E1C"><pre>
+		// Saves the diagram to a file in the binary format.
+        diagram1.SaveBinary (strFileName);
+        // Saves the diagram to a file in the SOAP format.
+        diagram1.SaveSoap(strFileName) ;
+</pre></font></p></ul>
+<ul>
+<li>Export - Exports a diagram as an image with the given image format. This sample has an option to export the image in the PNG, JPEG and GIF formats.</li>
+<p>Use the below code to exports a diagram as an image.</p>
+<p><font color="#8D2E1C"><pre>
+Image img = diagram1.View.ExportDiagramAsImage(false);		
+</pre></font></p></ul>
+<ul>
+<li>ZoomIn - Zooms in the diagram document. </li>
+<p>Use the below code to zoom-in the diagram document.</p>
+<p><font color="#8D2E1C"><pre>
+// Zoom in the document.
+diagram1.View.ZoomIn();
+</pre></font></p></ul>
+<ul>
+<li>ZoomOut - Zooms out the diagram document. </li>
+<p>Use the below code to zoom-out the diagram document.</p>
+<p><font color="#8D2E1C"><pre>
+// Zoom out the document.
+diagram1.View.ZoomOut();
+</pre></font></p></ul>	
+<ul>
+<li>ZoomToActual - Zooms to the actual size of the document.</li>
+<p>Use the below code to zoom the diagram document to its actual size.</p>
+<p><font color="#8D2E1C"><pre>
+// Zoom the document to the actual size.
+diagram1.View.ZoomToActual();
+</pre></font></p></ul>	
+</html>

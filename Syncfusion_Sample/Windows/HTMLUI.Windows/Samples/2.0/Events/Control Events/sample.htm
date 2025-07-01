@@ -1,0 +1,59 @@
+<html><h1>Control Events</h1>
+
+<p>This sample illustrates the different<strong> </strong> events executed by the HTMLUI control.</p>
+
+<p><p align=center><img src="images/sample.png" title=""/></p>
+
+<p><strong>Features</strong>:</p>
+
+<ul>
+	<li>
+	<p>The HTMLUI control executes events like the <strong>LoadStarted</strong>, <strong>LoadFinished</strong>, <strong>PreRenderDocument,</strong> 
+and <strong>LoadError </strong>events while loading the HTML document into the control.</p></li>
+<li><p>Other events, like the <strong>TitleChanged</strong>, <strong>ShowTitleChanged, </strong>
+and <strong>LinkClicked</strong> events, are executed when any change occurs in these properties.</p></li>
+<li><p>The handlers for these events are customized so the user can access the state of the control at the execution of 
+the event. For example, with the help of the <strong>LinkClickedEventArgs</strong>, the user can change the file to be opened 
+by clicking the link from the mentioned file in the document.</p></li>
+</ul>
+
+<p>Here is the code for the control events:<p/>
+<font color="#8D2E1C"><pre><ul>
+
+		private void htmluiControl1_LoadError(object sender, Syncfusion.Windows.Forms.HTMLUI.LoadErrorEventArgs e)
+		{
+			if(this.checkBoxLoadError.Checked)
+			{
+				OutputText("LoadError event.");
+			}	
+		}
+
+		private void htmluiControl1_PreRenderDocument(object sender, Syncfusion.Windows.Forms.HTMLUI.PreRenderDocumentArgs e)
+		{
+			if(this.checkBoxPreRenderDocument.Checked)
+			{
+				OutputText("LoadPrerenderDocument event.");
+			}
+		}
+
+		private void htmluiControl1_TitleChanged(object sender, Syncfusion.Windows.Forms.HTMLUI.ValueChangedEventArgs e)
+		{
+			if(this.checkBoxTitleChanged.Checked)
+			{
+				OutputText("TitleChanged event.");
+			}
+		}
+
+         private void htmluiControl1_ShowTitleChanged(object sender, Syncfusion.Windows.Forms.HTMLUI.ValueChangedEventArgs e)
+		{
+			if(this.checkBoxShowTitleChanged.Checked)
+			{
+				OutputText("ShowTitleChanged event.");
+			}
+
+		}
+
+</ul></pre></font>
+
+
+</html>

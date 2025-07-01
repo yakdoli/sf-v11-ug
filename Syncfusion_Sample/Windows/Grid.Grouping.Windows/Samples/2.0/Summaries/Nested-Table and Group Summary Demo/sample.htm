@@ -1,0 +1,48 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2300425">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Group Summary Demo</H1>
+<P>This sample demonstrates adding summaries through code. The
+summaries that are set for the top table are sufficient enough to
+create summaries in groups. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>To create summaries through code:</P>
+</UL>
+<UL>
+	<UL>
+		<LI><P>Create an instance of the <STRONG>GridSummaryColumnDescriptor</STRONG>
+		specifying the summary type, summary column, and format type.</P>
+		<LI><P>Create an instance of <STRONG>GridSummaryRowDescriptor</STRONG>
+		by passing the <STRONG>GridSummaryColumnDescriptor</STRONG> object.</P>
+		<LI><P><STRONG>GridSummaryRowDescriptor</STRONG> object can be
+		added to the <STRONG>GridSummaryRowDescriptorCollection</STRONG>
+		for the required table.</P>
+	</UL>
+</UL>
+<P><BR><BR>
+</P>
+<PRE><FONT COLOR="#8d2e1c">                // Adding Summaries for the Details Table.</FONT>
+<FONT COLOR="#8d2e1c">                GridSummaryColumnDescriptor scd = new GridSummaryColumnDescriptor(&quot;Sum&quot;,  SummaryType.Int32Aggregate, &quot;Quantity&quot;, &quot;{Sum:#}&quot;);</FONT>
+<FONT COLOR="#8d2e1c">                GridSummaryRowDescriptor srd = new GridSummaryRowDescriptor(&quot;Sum&quot;,&quot;Total&quot;, scd);</FONT>
+<FONT COLOR="#8d2e1c">                srd.Appearance.AnyCell.HorizontalAlignment = GridHorizontalAlignment.Right;</FONT>
+<FONT COLOR="#8d2e1c">                srd.Appearance.AnyCell.BackColor = SystemColors.Info;</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.GetTableDescriptor(&quot;Order Details&quot;).SummaryRows.Add(srd);  </FONT></PRE><P ALIGN=CENTER>
+<img src="images/sample.png" NAME="graphics1" ALT="Summaries" ALIGN=BOTTOM  BORDER=0></P>
+<P ALIGN=CENTER><BR><BR>
+</P>
+</BODY>
+</HTML>

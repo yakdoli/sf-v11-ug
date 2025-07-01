@@ -1,0 +1,48 @@
+<html>
+<h1>Overlay Documents</h1>
+<h3>
+    Features:</h3>
+
+<ul>
+<p>This sample demonstrates Essential PDF's support for importing pages, from existing 
+PDF documents, as templates. This feature can be used to overlap two PDF pages, one above the other. In this sample, two template documents are used where one stores a set of images and another contains a margin. When you overlap pages from these two documents, the resultant page will contain the images aligned within the specified margin.</p>
+
+<p>Below is an image of the output.</p>
+
+<div align=center><img src="images/Sample.png" alt="PDF" title="" /></div>
+
+<p>Here is the code snippet used to overlay the two documents and create a new 
+one:</p>
+
+<p><code><pre>
+//Create a new document.
+PdfDocument doc = new PdfDocument();
+PdfPage page = doc.Pages.Add();
+PdfGraphics g = page.Graphics;
+
+//Get the first template
+PdfPageBase lpage = document1.Pages[0];
+PdfTemplate template = lpage.CreateTemplate();
+
+g.DrawPdfTemplate(template, PointF.Empty, page.GetClientSize());
+
+//Get the second template
+lpage = document2.Pages[0];
+template = lpage.CreateTemplate();
+
+g.DrawPdfTemplate(template, PointF.Empty, page.GetClientSize());
+
+//Save the new document
+doc.Save("NewPDF.pdf");
+</pre></code></p>
+</ul>
+<h3>
+    Interactive Features:</h3>
+<ul>
+  <li>Choose any existing PDF document using the Browse button.</li>
+  <li>Click the PDF button to generate the PDF document.</li>
+  <li>Click Yes on the message box to view the generated PDF document.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+</ul>
+</html>

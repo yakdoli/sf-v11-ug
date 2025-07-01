@@ -1,0 +1,40 @@
+<h1>Invoice</h1>
+<p>This sample focuses on creating an application using an Essential XlsIO and
+ADO connection.</p>
+<p>An Excel template is read by XlsIO and an invoice is generated for the given
+invoice ID; this is done by fetching data corresponding to the particular ID from
+the Northwind database. Price, total, and other calculations are performed with simple formulas using Essential XlsIO.</p>
+
+<p style="font-size:large">Features:</p>
+<ul>
+<li>Creating rich reports with styles</li>
+<li>ADO .NET  connectivity</li>
+<li>Formulas</li>
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+<li>Select the invoice ID from the list.</li>
+<li>Choose one from the options --Excel 2003,Excel 2007,Excel 2010--to generate 
+a document in Excel 2003, Excel 2007,Excel 2010 respectively.</li>
+<li>Click <b>Create</b> to generate and view the invoice generated for 
+the corresponding invoice ID.</li>
+<li>All features in the preceding list are illustrated in this file.</li>
+</ul>
+
+<p>Below are illustrations of the output.</p>
+
+<p><div align = "Center"><img src="images/Invoicedesign.png" alt="XlsIO" title="" /></div></p>
+<p><div align = "Center"><img src="images/invoice.png" alt="XlsIO" title="" /></div></p>
+
+<p>Here is the code snippet:</p>
+
+<p><code><pre>
+//Load the invoice template spreadsheet
+IWorkbook workbook = application.Workbooks.Open("Invoice.xls");
+
+IWorksheet sheet = workbook.Worksheets[0];
+/* Update the spreadsheet to calculate invoice */
+
+//Import data from database
+sheet.ImportDataTable ( dataTable, false, 17, 1);
+</pre></code></p>

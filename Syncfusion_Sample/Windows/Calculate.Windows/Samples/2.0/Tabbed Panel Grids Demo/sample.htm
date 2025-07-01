@@ -1,0 +1,79 @@
+﻿<html><h1>Tabbed Panel Grids Demo</h1>
+
+<p>This sample illustrates the several aspects of working with a <strong>CalcWorkbook,</strong> which holds a collection of 
+<strong>CalcSheet</strong> objects. The <strong>CalcSheet</strong> objects give you an 
+<strong>ICalcData</strong> implementation for a rectangular collection of cells. These cells can be referenced using an Excel-like notation, A1, B13, and AB21. Thus, a
+<strong>CalcSheet</strong> object can recognize formulas such as =A1 + B3 or =Sum(A1:D5). </p>
+
+<p><strong>Features</strong>:</p>
+
+<p><ul><li>Loading an SSS file
+<li>Saving an SSS file
+<li>Adding a <strong>CalcSheet</strong> to a <strong>CalcWorkbook</strong>
+<li>Removing a <strong>CalcSheet</strong> from a <strong>CalcWorkbook</strong>
+<li>Populating random data or formulas in several ways</p>
+
+</ul>
+<p>
+<STYLE="margin-bottom: 0in; text-decoration: none">The sample uses a 
+	tab control with one tab page for each <strong>CalcSheet</strong> so that the you are able to 
+	see the effects of working with the <strong>CalcWorkbook</strong>.
+<STYLE="margin-bottom: 0in; text-decoration: none"></p>
+<p>To display the cells, each tab page has a panel (referred to as 
+	a <strong>PanelGrid</strong>) with an array of text boxes that are displayed in a tabular fashion. Each text box maps to a cell in a
+<strong>CalcSheet</strong> and displays the values or formulas for a particular cell. The top-left 
+text box is A1; the one under A1 is A2, and so on.</p>
+<p>This is displayed in the following image. </p>
+<p></p>
+<div align=center>
+	<img src="images//samplePanelGrid.png" alt="Rectangular array of textboxes to display data from a CalcSheet object screenshot" title="Rectangular Array of Textboxes to Display Data from CalcSheet Object" ></div>
+<div align=center>
+	<b>Rectangular Array of Text Boxes Displaying Data from CalcSheet Object</b>
+</center></div>
+<p></p>
+<p><b>Loading an SSS file</b></p>
+<p>An SSS file is basically a tab delimited file that holds a collection of
+<strong>CalcSheets</strong> in a <strong>CalcWorkbook</strong> object. 
+
+<p>There is additional work required to create the supporting <strong>PanelGrid</strong> in this particular sample. 
+
+<p><b>Saving an SSS file</b></p>
+<p>Saving a <strong>CalcWorkbook</strong> as an SSS file is a matter of calling the <strong>WriteSSS</strong> method on the 
+<strong>CalcWorkbook</strong> object.</p>
+
+<p><b>Adding a CalcSheet to a CalcWorkbook</b></p>
+<p>A <strong>CalcWorkbook</strong> has a <strong>CalcSheetList</strong> collection that holds the 
+<strong>CalcSheets</strong> within a <strong>CalcWorkbook</strong>. To add a 
+<strong>CalcSheet</strong>, you must use the <strong>CalcSheetList</strong> collection.</p>
+
+<p><b>Removing a CalcSheet from a CalcWorkbook</b></p>
+<p>You can again use the <strong>CalcSheetList</strong> collection when you want to remove a sheet from a 
+<strong>CalcWorkbook</strong>.</p>
+
+<p><b>Populating random data or formulae in several ways</b></p>
+<p>Menu handlers populate a <strong>CalcSheet</strong> in various ways. 
+<p>The following image depicts this placement of values.</p>
+<p></p>
+<div align=center>
+	<img src="images//random.png" alt="CalcSheet initialized with random data screenshot" title="CalcSheet initialized with random data" ></div>
+<div align=center>
+	<b>CalcSheet Initialized with Random Data</b></div>
+<p></p>
+<p>This handler adds sum functions to the last row and last column, to sum the other cells in the row and column.</p>
+
+<p>A sample is illustrated in the following image.</p>
+<p></p>
+<div align=center>
+	<img src="images//sums.png" alt="CalcSheet with summations in the bottom-most row and right-most column. Cell E2 is displaying its formula screenshot" title="CalcSheet with summations in the bottom-most row and right-most column. Cell E2 is displaying its formula" ></div>
+<div align=center>
+	<b>CalcSheet with Summations</b></div>
+
+<p>Another sample is illustrated in the following image.</p>
+<p></p>
+<div align=center>
+	<img src="images//chain.png" alt="CalcSheet with a 'chain' of formulas. Changing the value in cell A1 will affect all the other cells screenshot" title="CalcSheet with a 'chain' of formulas. Changing the value in cell A1 will affect all the other cells" ></div>
+<div align=center>
+	<b>CalcSheet with  &quot;Chain&quot; of Formulae</b></div>
+
+
+</html>

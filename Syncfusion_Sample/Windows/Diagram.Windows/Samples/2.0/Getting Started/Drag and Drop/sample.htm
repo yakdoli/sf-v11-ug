@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Drag and Drop</h1>
+
+<p>The Drag &amp; Drop sample demonstrates how to implement<strong> </strong> drag-drop support in an Essential Diagram application.</p>
+<p>Any symbol from the palette-group-bar control can be dragged and dropped onto another symbol in the 
+diagram. A node of the dragged type 
+is created and connected to its parent symbol in response to the drop-event.</p>
+
+<p><div align=center><img src="images/sample.png" alt="DragDrop Image" title="" /></div></p>
+
+<p>
+<p><strong>Features</strong></p>
+<ul>
+	<li> To trigger the diagram <strong>DragDrop</strong> and <strong>DragEnter</strong> 
+	events, use the following code.</li>
+
+<p><font color="#8D2E1C"><pre>
+            this.diagram1.DragEnter += new System.Windows.Forms.DragEventHandler(this.diagram1_DragEnter);
+            this.diagram1.DragDrop += new System.Windows.Forms.DragEventHandler(this.diagram1_DragDrop);  </pre></font></p></ul>
+
+<ul><li>To validate a dropped node, and to connect nodes when a dragged node is 
+	dropped over another node, use the following code.</li>
+
+<p><font color="#8D2E1C"><pre>
+    		private void diagram1_DragDrop(object sender, DragEventArgs e)
+			{
+	            // Check if the dropped node is a valid node.
+				if(e.Data.GetDataPresent(typeof(DragDropData) ))
+	            {
+	                Group draggedNode = this.diagram1.Controller.SelectionList[0] as Group;
+	                if (draggedNode.Name.StartsWith("M"))
+	                    this.managers.Add(draggedNode);
+	                else
+	                    this.employees.Add(draggedNode);
+	                foreach (Group node in this.managers)
+	                {
+	                    // If the dropped node contains the pinpoint as that of manager node, connect both the nodes.
+	                    if (draggedNode.ContainsPoint(node.PinPoint))
+	                        this.ConnectNodes(node, draggedNode);                         
+	                }
+	            }
+	            // Update the layout for better appearance of nodes.
+	            this.UpdateDiagramLayout();
+			}  </pre></font></p></ul>
+
+<ul><li> To update the diagram layout<strong> </strong>for a better appearance, 
+	employ the following code.</li>
+
+<p><font color="#8D2E1C"><pre>
+    		public void UpdateDiagramLayout()
+        {
+            this.diagram1.LayoutManager.Nodes.AddRange(this.diagram1.Model.Nodes);
+
+            this.diagram1.LayoutManager.UpdateLayout(true);
+            this.diagram1.LayoutManager.Model.BoundaryConstraintsEnabled = false;
+            this.diagram1.LayoutManager.Model.SizeToContent = false;
+            this.diagram1.UpdateView();
+        }</pre></font></p></p></ul>
+</html>

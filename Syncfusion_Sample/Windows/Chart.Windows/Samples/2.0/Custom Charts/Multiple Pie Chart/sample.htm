@@ -1,0 +1,62 @@
+﻿<html>
+<h1>Multiple Pie Chart</h1>
+<p>This sample demonstrates how to implement multiple pie chart using Essential Chart.</p>
+<p><div align=center>
+<TABLE id="Table1" >
+<tr><td align=center><b>Multiple Pie Chart</b></td>
+<TR>
+<TD><div align=center><img src="images/Sample.png" alt= "Multiple pies"title=""/></div></TD>
+</TR>
+</TABLE>
+</div></p>
+<h3><strong>Features</strong></h3>
+
+<p>The chart control supports to add multiple pie in a chart using 'MultiplePies' boolean property and also set specific doughnut co - efficient value for each pie chart series to get this complete functionality of this feature.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ChartArea.MultiplePies = true;
+</code></pre></font>
+
+<p>This implementation will work only in SingleArea Chart, will not work when chart is in DivideArea.</p>
+
+<ul>
+<li><b>Pie Chart Types</b>
+<p>The various types of pie charts are set as shown in the following code. </p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Series[0].ConfigItems.PieItem.PieType = ChartPieType.Bevel;
+this.chartControl1.Series[0].ConfigItems.PieItem.PieType = ChartPieType.Custom;
+this.chartControl1.Series[0].ConfigItems.PieItem.PieType = ChartPieType.InSide;
+this.chartControl1.Series[0].ConfigItems.PieItem.PieType = ChartPieType.OutSide;
+this.chartControl1.Series[0].ConfigItems.PieItem.PieType = ChartPieType.Round;
+</code></pre></font>
+</li>
+
+<li><b>Doughnut, PieHeight structure</b>
+<p>A pie chart can be rendered to a doughnut structure by making use of the
+<strong>ChartConfigItem.DoughnutCoeficient</strong> property. Height of the 
+chart can also be adjusted, as shown in the following code.</p>
+
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Series[0].ConfigItems.PieItem.DoughnutCoeficient = 0.1;
+this.chartControl1.Series[0].ConfigItems.PieItem.PieHeight=0.5;
+</pre></code></font></li>
+
+<li><b>DrawItemText Event</b>
+<p>The <strong>DrawItemText</strong> event to customize the rendering of the legend item text using the following code snippets. 
+</p> 
+
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.Legend.DrawItemText += new LegendDrawItemTextEventHandler(Legend_DrawItemText);
+</pre></code></font></li>
+
+</ul>
+</html>
+
+
+
+
+
+
+
+
+
+

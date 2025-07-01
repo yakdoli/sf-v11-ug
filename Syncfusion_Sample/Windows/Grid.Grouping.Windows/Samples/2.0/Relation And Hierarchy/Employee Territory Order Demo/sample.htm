@@ -1,0 +1,203 @@
+<html>
+<h1>Employee Territory&nbsp; Order Demo</h1>
+<p>This sample demonstrates the different kinds of relations that exist between 
+tables in a data set. Relations can be automatically populated from the 
+information stored in a data set or manually set up in the designer. </p>
+<p><b>Features</b>:</p>
+<p>The following types of relations are shown in this example:</p>
+<p><b>Master-Details Relations</b> </p>
+<p>In this type, the matching keys in columns in the parent and child tables 
+define a relationship between two tables. This is a 1:n relation where each 
+record in the child table can belong to only one parent record. Each record can 
+have multiple nested tables and the end user can expand or collapse the nested 
+tables. </p>
+<p><b>Foreign-Key Relations</b> </p>
+<p>This is for looking up values in cases where an I.D. column in the main table 
+can be used to show a record in a related table. This is a n:1 relation where 
+multiple records in the parent table can reference the same record in a related 
+table. Fields in the related table can be referenced using a '.' (dot) in the
+<strong>FieldDescriptor.MappingName</strong> of the main table. Multiple columns 
+of a foreign-key table can be imported into the main table and used just like 
+any other regular field of the main table. You can use these foreign columns in 
+expressions, filters, sorting, or to group by operations. </p>
+<p><b>Foreign-Key Word Relations</b> </p>
+<p>This is a unique relation that is offered by the grouping engine. It is 
+a foreign-key relation where matching keys in the columns of the parent and 
+child table define a relationship between the two tables. This is a m:n 
+relation. Field summaries of the related child table can be referenced using a 
+'.' (dot) in the <strong>FieldDescriptor.MappingName </strong>of the main table<strong>.
+</strong></p>
+<p>This example also shows you how to implement unbound fields inside one of the 
+foreign-key relations. </p>
+<p>This is how the sample looks.</p>
+
+<p><p align=center><img src="images/sample1.png" alt="EmployeeTerritoryOrder screenshot" title="EmployeeTerritoryOrder - Startup" /></p>
+
+<p><b>Interactive Features:</b></p>
+<ul>
+	<li>Expand and collapse nested tables (Employee Territories and Orders). 
+	You will notice that the Orders table itself will have a nested table.</li>
+</ul>
+<ul>
+	<li>Some columns are foreign-key or look-up columns and have drop-down 
+	buttons. When you click on the drop-down buttons, you will see the content of 
+	the related table in a drop-down table. You can select an entry from this 
+	related table and the cell will be updated accordingly.</li>
+</ul>
+<ul>
+	<li>These foreign-key columns also let you change their content in-place. As 
+	you type, the AutoComplete feature will update the displayed text.</li>
+</ul>
+<ul>
+	<li>You also have the option to edit existing records or add new records to 
+	the related table. Click the pencil button on the top-right corner of the 
+	drop-down. This will switch the drop-down table into edit mode, and then you can 
+	start making changes to it.</li>
+</ul>
+
+<p><p align=center><img src="images/sample2.png" alt="EmployeeTerritoryOrder screenshot" title="EmployeeTerritoryOrder - Edit Territories" /></p>
+
+<p><p align=center><b>Employee Territory Order - Edit Territories</b></p>
+
+<ul><li>Observe what happens when you switch the combo box in the bottom-right 
+	corner to a <strong>ForeignKeyKeyWords</strong> relation. The <strong>
+	EmployeeTerritories</strong> relation will be displayed as a <strong>
+	ForeignKeyKeyWord</strong> column in the main record. The collection of 
+	territories (i.e. the Distinct Values summary) is shown in the column, and 
+	when you click the drop-down button, you can modify the collection of 
+	territories that belong to the employee.</ul>
+
+<p><p align=center><img src="images/sample3.png" alt="EmployeeTerritoryOrder screenshot" title="EmployeeTerritoryOrder - ForeignKeyKeyWords" /></p>
+
+<p><p align=center><b>Employee Territory Order - Foreign-Key Keywords</b></p>
+
+<ul><li>Finally, notice the <strong>ReportsTo</strong> column. It uses an 
+	unbound field to display title information about the manager inside the 
+	field.</ul>
+
+<p><p align=center><img src="images/sample4.png" alt="EmployeeTerritoryOrder screenshot" title="EmployeeTerritoryOrder - ReportsTo" /></p>
+
+<p><p align=center><b>Employee Territory Order - Foreign-Key Keywords</b></p>
+
+<p>In this sample, a data set has been created where the designer and foreign-key 
+constraints have been defined with related tables at design time. The <strong>GridRelationDescriptor</strong> is created through code and the name of the 
+foreign-key constraints are assigned to <strong>GridRelationDescriptor.MappingName</strong>.
+</p>
+
+<p>The grouping engine automatically extracts all the relation keys and the child 
+table name from the foreign-key constraint of the data set.</p>
+<br />
+<font color="#8D2E1C"><pre>
+    		// Setting up Master-Details Relation between Employees and Territories. 
+    		GridRelationDescriptor gridRelationDescriptor1 = new GridRelationDescriptor();
+    		gridRelationDescriptor1.MappingName = "EmployeesEmployeeTerritories";
+<font color="#8D2E1C"><pre>
+    		...
+    		this.gridGroupingControl1.TableDescriptor.Relations.Add(gridRelationDescriptor1);  </pre></font></pre>
+</font>
+<p>This sample extracts the relationship information, between the Employees 
+table and the employee territories, from the data set. The data set has a data 
+relation with the same name, and the grouping engine knows how to extract the 
+primary-key and the foreign-key information from the data relation. </p>
+<p>You also have the option to manually specify the relations between the two 
+tables.</p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Add an additional foreign key relation for ReportsTo.
+    		GridRelationDescriptor reportsToRd = new GridRelationDescriptor();
+    		reportsToRd.RelationKind = RelationKind.ForeignKeyReference;
+    		reportsToRd.Name = "ReportsTo";                            // Prefix for fields that get added to main table (e.g. ReportsTo_Title).
+    		reportsToRd.ChildTableName = "Employees";                  // Name to look up a related table in the Engine.SourceListSet.
+    		reportsToRd.RelationKeys.Add("ReportsTo", "EmployeeID");   // Foreign key and primary key in related table.
+    		reportsToRd.ChildTableDescriptor.Relations.Clear();        // don't autopopulate further nested relations - avoid recursion.    </pre></font></p>
+
+<p>In the above code, we establish a relationship between <em>employees </em>and 
+specify the exact fields that define the relationship with the <strong>
+RelationKeys</strong> collection. </p>
+<p>You can also create relations to collections not belonging to the data set. 
+You can create relationships between any IList-derived collection. The 
+following example creates a collection, adds it to the engine's source-list set, 
+and defines a foreign-key relation. </p>
+<p>First, we register the collection and give it a name so that it can later be 
+referenced.</p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.gridGroupingControl1.Engine.SourceListSet.Add("USStates", USStatesCollection.CreateDefaultCollection());   </pre></font></p>
+
+<p>Now, you can bind this collection to the <strong>Region</strong> field of the 
+Employees table.</p>
+
+<p><font color="#8D2E1C"><pre>
+    		//
+    		// USStates
+    		//</p>
+
+<p><font color="#8D2E1C"><pre>
+    		GridRelationDescriptor usStatesRd = new GridRelationDescriptor();
+    		usStatesRd.Name = "State";
+    		usStatesRd.RelationKind = RelationKind.ForeignKeyReference;
+    		usStatesRd.ChildTableName = "USStates";  // SourceListSet name for lookup
+    		usStatesRd.RelationKeys.Add("Region", "Key");</p>
+
+<p><font color="#8D2E1C"><pre>
+    		// Let's also customize the appearance of the dropdown table here.
+    		usStatesRd.ChildTableDescriptor.Appearance.AlternateRecordFieldCell.BackColor = Color.Beige;
+<font color="#8D2E1C"><pre> 		
+    		// Description is a a custom property descriptor in USStatesCollection.			
+    		usStatesRd.ChildTableDescriptor.Columns.Add(new GridColumnDescriptor("State", "Description")); 
+    		usStatesRd.ChildTableDescriptor.SortedColumns.Add("State");
+    		usStatesRd.ChildTableDescriptor.AllowEdit = false;
+    		usStatesRd.ChildTableDescriptor.AllowNew = false;  // Make pencil icon disappear, users can't modify states.
+    		mainTd.Relations.Add(usStatesRd);  </pre></font></pre></font></pre></font></pre></font></p>
+
+<p>As mentioned earlier, this example also demonstrates setting up an unbound 
+field. The <strong>Reports</strong> field in the main table shows the title 
+information inside the field. </p>
+<p>This is the code that is used to provide data for the unbound field at run 
+time.</p>
+<p><br />
+<font color="#8D2E1C"><pre>
+    		// Unbound field: Event to fill ReportsTo&#95;LastNameAndTitle with formatted text.
+    		reportsToRd.ChildTableDescriptor.UnboundFields.Add("LastNameAndTitle"); // "[LastName] + '(' + [Title] + ')'"));
+    		this.gridGroupingControl1.QueryValue += new FieldValueEventHandler(gridGroupingControl1&#95;QueryValue);
+    		private void gridGroupingControl1_QueryValue(object sender, FieldValueEventArgs e)
+    		{
+    			if (e.TableDescriptor.Name == "ReportsTo" &amp;&amp; e.Field.Name == "LastNameAndTitle")
+    			{
+    				// "[LastName] + '(' + [Title] + ')'"));
+    				e.Value = String.Format("{0} ({1})", e.Record.GetValue("LastName"), e.Record.GetValue("Title"));
+    			}
+    		}   </pre></font></p>
+
+<p>Once you set up an unbound field, it can be used just like any other regular 
+field in a table. You can add it to the <strong>SortedColumns</strong> or
+<strong>GroupedColumns</strong> collections, filter by it, or&nbsp;it can be used as 
+a display member of a foreign-key column, as shown in the code 
+below.</p>
+<p><br />
+<font color="#8D2E1C"><pre>
+    		mainTd.VisibleColumns.Add("ReportsTo&#95;LastNameAndTitle");      // will be shown as ReportsTo_LastNameAndTitle in main table.  </pre></font></p>
+
+<p>Finally, if you want to access nested tables at run time and expand or 
+collapse them from code, follow the sample given below that shows how to gain access to a specific element.</p>
+<p><br />
+<font color="#8D2E1C"><pre>
+    		this.gridGroupingControl1.Table.Records[0].NestedTables["EmployeeTerritories"].IsExpanded = true;  </pre></font></p>
+
+<p><strong>GridGroupingControl.Table.Records</strong> is a collection of all 
+employee records. You can gain access to employee territories that belong to a 
+record using its <strong>NestedTables</strong> collection and then set its
+<strong>Expanded</strong> state to <em>true</em>.</p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.gridGroupingControl1.Table.Records[0].NestedTables["Orders"].Records[0].NestedTables["Order
+    		Details"].Records[0].SetCurrent("Products_ProductName");  </pre></font></p>
+
+<p>In the above code, the current record is moved to the first record in the Order 
+Details nested table of the first record.&nbsp; You can then set the current 
+cell in the <strong>
+Products_ProductName</strong> field. </p>
+<p>When this sample starts, check where the current record and field are being 
+displayed.</p>
+
+</html>

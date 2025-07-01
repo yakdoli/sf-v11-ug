@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Working with CalcQuick Demo</h1>
+
+<p>This sample is a combination of six other samples that share common tasks. The sample guides you through these 
+associated tasks using <strong>CalcQuick</strong> objects. </p>
+<p>The samples can be divided into ones that require <strong>manual</strong> retrieval of computed values and <strong>automatic</strong> updating of calculations as trigger values change. These two sub-divisions are explained in the following sections.
+The last section deals with a simple way to set up auto-calculations when using 
+control-derived objects. </p>
+<p><strong>Features</strong>:</p>
+
+<p><b>Manual Calculations</b></p>
+
+<p class="style1">
+Manual calculations provide the simplest way to use a <strong>CalcQuick</strong> object, but the computed values have to be manually retrieved when required. 
+<font color="#8D2E1C"><pre><code> 		
+    			//calculator is a CalcQuick object...
+    			//calculator = new CalcQuick();
+
+    			//Set the values of A, B, C, D
+    			calculator["A"] = this.textBox1.Text;
+    			calculator["B"] = this.textBox2.Text;
+    			calculator["C"] = this.textBox3.Text;
+    			calculator["D"] = this.textBox4.Text;
+
+    			//mark as dirty so any formulas will be recomputed
+    			calculator.SetDirty();
+
+    			//Get the values
+    			this.textBox1.Text = calculator["A"].ToString();
+    			this.textBox2.Text = calculator["B"].ToString();
+    			this.textBox3.Text = calculator["C"].ToString();
+    			this.textBox4.Text = calculator["D"].ToString();
+</code></pre></font></p>
+
+<p>The following image was captured before pressing the Calculate button. It displays values as typed into the text boxes.</p>
+
+<p><div align=center><img src="images//first.png" alt="Before Code Execution" title="Before Code Execution" ></div></font>
+
+<div align=center><b>Before Code Execution</b></div></p>
+
+<p><br /></p>
+
+<p>The following image was captured after pressing the Calculate button. It displays values computed from formulae in the text boxes.</p>
+
+<p><div align=center><img src="images//second.png" alt="After Code Execution" title="After Code Execution" ></div>
+
+<div align=center><b>After Code Execution</b></div></font></p>
+
+<p><br /></p>
+
+<p>The 'Reset Keys' button help us to clear all the registered keys with the CalcQuickBase object.</p>
+
+<p><b>AutoCalculations</b></p>
+
+<p class="style1">AutoCalculations are events that need to be handled to receive calculated formula values and notify
+<strong>CalcQuick</strong> of a value change.</p>
+
+<p><b>Controls as Keys</b></p>
+
+<p><strong class="style1">CalcQuick</strong> has a method that allows setting up all events necessary to support automatic calculations in one method call, provided the objects holding values 
+or formulas are control-derived classes.&nbsp;&nbsp;&nbsp;&nbsp; 
+</p>
+
+<p>This feature is illustrated in the following image.</p>
+
+<p><div align=center><img src="images//third.png" alt="Automatic Total Adjustment On Adding Information" title="Automatic Total Adjustment On Adding Information" ></div>
+
+<div align=center><b>Automatic Total Adjustment on Adding Information</b></div></p>
+</html>

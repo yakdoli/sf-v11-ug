@@ -1,0 +1,122 @@
+﻿<html><h1> Chart Toolbar </h1>
+
+<p> This sample illustrates the toolbar feature in Essential Chart.</p>
+
+<div align=center><img src="images/sample.png" alt="Chart Tool Bar Sample" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Chart Toolbar</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+
+<p>Using a toolbar makes certain actions easier, like saving a chart as an 
+image, copying it as an image, changing styles, printing, and changing chart types.</p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li><b>Toolbar Visibility</b>
+<p>A toolbar can be displayed by using the <b>ShowToolBar</b> property.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ShowToolbar = true;
+</code></pre></font>
+</li>
+<li><b>Toolbar Grip</b>
+<p>A toolbar grip is used to drag a toolbar. It is made visible by using the <b>ShowGrip</b> property.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ToolBar.ShowGrip = true;
+</code></pre></font>
+</li>
+<li><b>Toolbar Border</b>
+<p>The border of a toolbar can be made visible by setting the <b>ShowBorder</b> property.
+<font color="#8D2E1C"><pre><code>
+ this.chartControl1.ToolBar.ShowBorder = true;
+<font color="#008000">//sets the Border width of the ToolBar</font>
+ this.chartControl1.ToolBar.Border.Width = 1;
+</code></pre></font>
+</li>
+<li><b>Dock-Free Toolbar</b>
+<p>A toolbar can be docked by using the <strong>DockingFree</strong> property. 
+It can 
+be made dock-free by setting the property as <em>true.</em>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ToolBar.DockingFree = false;
+</code></pre></font>
+</li>
+<li><b>Toolbar Position</b>
+<p>A toolbar can be positioned on top of a chart by using the <b>Position</b> property.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ToolBar.Position = ChartDock.Top;
+</code></pre></font>
+</li>
+<li><b>Toolbar Header</b>
+<p>A toolbar header is made visible by setting the header size.
+<font color="#8D2E1C"><pre><code>
+ this.chartControl1.ToolBar.Header = 7;
+</code></pre></font>
+</li>
+<li><b>Spacing</b>
+<p>The spacing between items of a toolbar is set using the <b>Spacing</b> property.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ToolBar.Spacing = 2;
+</code></pre></font>
+</li>
+<li><b>Toolbar Color</b>
+<p>The color of various parts of a toolbar can be set using the following code.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ToolBar.BackColor = Color.DarkGray;
+this.chartControl1.ToolBar.ButtonBackColor = Color.DimGray;
+this.chartControl1.ToolBar.ButtonForeColor = Color.Gray;
+</code></pre></font>
+</li>
+<li><b>Custom Items</b>
+<p>Custom items can be added to a toolbar as shown in the following code.
+<font color="#8D2E1C"><pre><code>
+ChartToolBarItem rotateItem = new ChartToolBarItem();
+rotateItem.Name = "Rotation";
+rotateItem.Image = Image.FromFile(@"..\..\Rotation.png");
+this.chartControl1.ToolBar.Items.Add(rotateItem);
+this.chartControl1.ToolBar.ItemClick += new EventHandler(ToolBar_ItemClick);
+
+<font color="#008000">// Click event of the custom item</font>
+private void ToolBar_ItemClick(object sender, EventArgs e)
+{
+     ChartToolBarItem tt = sender as ChartToolBarItem;
+     if (tt.Name == "Rotation")
+     {
+        this.chartControl1.Series3D = true;
+        if ((float)this.chartControl1.Rotation == 90)
+            this.chartControl1.Rotation = 30;
+        else
+            this.chartControl1.Rotation = this.chartControl1.Rotation + 5;
+      }
+}
+</code></pre></font>
+</ul>
+<ul>
+<li><b>Disallow the Chart Toolbar</b>
+<p>The chart control supports preventing the moving of a chart toolbar by using 
+the <strong>Behavior</strong> property.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.ToolBar.Behavior=ChartDockingFlags.Movable;
+this.chartControl1.ToolBar.Behavior=ChartDockingFlags.Dockable;
+this.chartControl1.ToolBar.Behavior=ChartDockingFlags.All;
+this.chartControl1.ToolBar.Behavior=ChartDockingFlags.None;
+</code></pre></font></li>
+</ul>
+
+<ul>
+<li><b>Toolbar Zoom-In, Zoom-Out, and Panning behavior</b>
+<p>The chart control allows zooming in, zooming out, and panning using toolbar icons.</p>
+<font color="#8D2E1C"><pre><code>
+ChartToolBarCommandItem x1 = new ChartToolBarCommandItem();
+x1.Command = ChartCommands.TogglePanning;
+Image v = System.Drawing.Image.FromFile(@"..\..\Data\Visio.png");
+x1.Image = v;
+x1.Name = "Customtools";
+x1.ToolTip = "Toggle3d";
+x1.Checked = true;
+this.chartControl1.ToolBar.Items.Add(x1);
+</code></pre></font></li>
+</ul>
+
+</html>

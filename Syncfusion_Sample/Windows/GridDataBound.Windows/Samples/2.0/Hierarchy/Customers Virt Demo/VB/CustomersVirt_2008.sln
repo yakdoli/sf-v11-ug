@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CustomersVirt_2008", "CustomersVirt_2008.vbproj", "{B5DDF152-B6E3-44D9-880B-B6B9A6F33D74}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B5DDF152-B6E3-44D9-880B-B6B9A6F33D74}.Debug.ActiveCfg = Debug|.NET
+		{B5DDF152-B6E3-44D9-880B-B6B9A6F33D74}.Debug.Build.0 = Debug|.NET
+		{B5DDF152-B6E3-44D9-880B-B6B9A6F33D74}.Release.ActiveCfg = Release|.NET
+		{B5DDF152-B6E3-44D9-880B-B6B9A6F33D74}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

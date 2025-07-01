@@ -1,0 +1,41 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3124596">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Excel-Like Cell Comment Tip Demo</H1>
+<P>This sample demonstrates the addition of Excel-Like comments in grid cells. A custom mousecontroller implementing IMouseController interface has been created to display comments for each cell..</P>
+<P> <FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>Features:</B></FONT></FONT></FONT></P>
+<UL>
+	<LI><P>The comments to the cells are binded based on the record id.</P>
+	<LI><P>To change, add, or delete a comment, you must right click the cell, or left click the red corner.</P>
+	<LI><P>The comment window shown is a form with a rich text box.</P>
+	<LI><P>A red comment indicator is drawn in the cell-drawn handler using the graphics class <STRONG>FillPolygon</STRONG> function.</P>
+	<LI><P>A black arrow is drawn when the mouse pointer hovers over the comment indicator using the graphics class <STRONG>FillPolygon</STRONG> and <STRONG>DrawLine</STRONG> function.</P>
+	<LI><P>When the mouse pointer hovers over the comment indicator through the <STRONG>PointToRowCol</STRONG> function, it is converted to a row index on the layout using the <STRONG>ViewLayout.RowIndexToVisibleClient</STRONG>. Then it is converted to drawing points using the <STRONG>ViewLayout.ClientRowColToPoint</STRONG> function.</P>
+	<LI><P>The comments for respective record cells, display accordingly eventhough grouping or filtering is applied in grid.</P>
+</UL>
+<P>Here is the image:</P>
+
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="ColumnStyles screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P>Here is a sample code snippet:</P>
+<PRE><FONT COLOR="#8d2e1c">                //create the Comment mousecontroller.</FONT>
+<FONT COLOR="#8d2e1c">                commentMouseController = new CommentMouseController(gridGroupingControl1.TableControl,comments);</FONT>
+<FONT COLOR="#8d2e1c"></FONT>
+<FONT COLOR="#8d2e1c">                //allow context menu to edit/add comments</FONT>
+<FONT COLOR="#8d2e1c">                commentMouseController.ContextMenuEnabled = true;</FONT>
+<FONT COLOR="#8d2e1c"></FONT>
+<FONT COLOR="#8d2e1c">                //register the controller  </FONT>
+<FONT COLOR="#8d2e1c">                gridGroupingControl1.TableControl.MouseControllerDispatcher.Add(commentMouseController);  </FONT></PRE><P ALIGN=CENTER>
+</BODY>
+</HTML>

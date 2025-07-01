@@ -1,0 +1,48 @@
+<html>
+<h1>Stamp Document</h1>
+<h3>
+    Features:</h3>
+<ul>
+	<li>Essential PDF provides support for importing content from an existing PDF document and stamping 
+	it.</li>
+	<li>This sample demonstrates the import and stamp functionality of Essential PDF.</li>
+</ul>
+<p>Below is an image of the output.</p>
+<div align=center>
+	<img src="images/Sample.png" alt="PDF" title="" /></div>
+<p>Here is the code snippet used in this sample:</p>
+<p><code>
+<pre>//Load the document
+PdfLoadedDocument lDoc = new PdfLoadedDocument("Essential_Studio.pdf");
+PdfPageBase lPage = lDoc.Pages[0];
+PdfGraphics g = lPage.Graphics;
+
+//Stamp text
+PdfGraphicsState state= g.Save();
+g.SetTransparency(0.25f);
+g.RotateTransform(-40);
+g.DrawString("Imported using Essential PDF", font, PdfPens.Red, PdfBrushes.Red, new PointF(-150, 450));
+
+//Image watermark
+PdfImage image = new PdfBitmap("Ani.gif");
+g.Restore(state);
+g.SetTransparency(0.25f);
+g.DrawImage(image, new PointF(0,0), lPage.Graphics.ClientSize);
+</pre>
+</code></p>
+<h3>
+    Interactive Features:</h3>
+	
+<ul>
+  <li>Choose any existing PDF document using the Browse button.</li>
+  <li>Provide a Stamping Text.</li>
+  <li>The default setting generate a document with a text stamping.</li>
+  <li>Choose the Image Watermark option to add an image watermark to the generated PDF document.</li>
+  <li>Click the PDF button to generate the PDF document.</li>
+  <li>Click Yes on the message box to view the generated PDF file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+
+</ul>
+	
+</html>

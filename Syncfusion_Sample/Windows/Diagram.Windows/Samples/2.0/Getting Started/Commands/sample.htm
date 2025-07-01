@@ -1,0 +1,141 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Commands</h1>
+
+<p> This sample illustrates the various types of commands supported by Essential Diagram</p>
+
+<div align=center><img src="images/sample.png" alt="Connector Sample Image" title="" /></div>
+
+<p><strong>Features</strong></p>
+<ul>
+<li>Cut - Cuts the selected node in the diagram and moves it to the clipboard.</li>
+<p>Use the below code to cut the selected node from the Diagram control.</p>
+<p><font color="#8D2E1C"><pre>
+// Remove the currently selected nodes from the diagram and move it to the clipboard.
+diagram1.Controller.Cut();
+</pre></font></p></ul>
+<ul>
+<li>Copy - Copies the selected node in the diagram and moves them to the clipboard. </li>
+<p>Use the below code to copy the selected node from the Diagram control.</p>
+<p><font color="#8D2E1C"><pre>
+// Copy the currently selected nodes to the clipboard.
+diagram1.Controller.Copy();
+</pre></font></p></ul>
+<ul>
+<li>Paste - Pastes the node in the clipboard to the diagram.</li>
+<p>Use the below code to paste the nodes to the diagram.</p>
+<p><font color="#8D2E1C"><pre>
+// Paste the contents of the clipboard to the diagram.
+diagram1.Controller.Paste();
+</pre></font></p></ul>
+<ul>
+<li>Align Left - Aligns the selected node to the left side of the previously selected node</li>
+<p>Use the below code to align the node to the left side of the previously selected node in the diagram.</p>
+<p><font color="#8D2E1C"><pre>
+// Align the selected nodes along the left edge of the first node.
+diagram1.AlignLeft();
+</pre></font></p></ul>
+<ul>
+<li>Align Center - Aligns the selected node to the center side of the previously selected node</li>
+<p>Use the below code to align the node to the center side of the previously selected node in the diagram.</p>
+<p><font color="#8D2E1C"><pre>
+// Align the selected nodes along the vertical center of the first node.
+diagram1.AlignCenter();
+</pre></font></p></ul>
+<ul>
+<li>Align Center - Aligns the selected node to the right side of the previously selected node</li>
+<p>Use the below code to align the node to the right side of the previously selected node in the diagram.</p>
+<p><font color="#8D2E1C"><pre>
+// Align the selected nodes along the left edge of the first node.
+diagram1.AlignRight();
+</pre></font></p></ul>
+<ul>
+<li>Align Top - Aligns the selected node at the top of the previously selected node</li>
+<p>Use the below code to align the node to the top of the previously selected node in the diagram.</p>
+<p><font color="#8D2E1C"><pre>
+// Align the selected nodes along the top edge of the first node.
+diagram1.AlignTop();
+</pre></font></p></ul>
+<ul>
+<li>Align Middle - Aligns the selected node to the middle of the previously selected node</li>
+<p>Use the below code to align the node to the middle of the previously selected node in the diagram.</p>
+<p><font color="#8D2E1C"><pre>
+// Align the selected nodes along the horizontal center of the first node.
+diagram1.AlignMiddle();
+</pre></font></p></ul>
+<ul>
+<li>Align Bottom - Aligns the selected node at the bottom of the previously selected node</li>
+<p>Use the below code to align the node to the bottom of the previously selected node in the diagram.</p>
+<p><font color="#8D2E1C"><pre>
+// Align the selected nodes along the bottom edge of the first node.
+diagram1.AlignBottom();
+</pre></font></p></ul>
+<ul>
+<li>Rotate - Rotates the selected nodes in a diagram with the specified number of degrees</li>
+<p>Use the below code to rotate the node in the diagram</p>
+<p><font color="#8D2E1C"><pre>
+// Rotate the selected nodes about their logical origin by the specified number of degrees.
+diagram1.Rotate(90);
+</pre></font></p></ul>
+<ul>
+<li>Flip Vertical - Flip the selected nodes relatively to the vertical axis</li>
+<p>Use the below code to flip the node to vertical axis</p>
+<p><font color="#8D2E1C"><pre>
+// Flips the selected nodes about their vertical(Y) axis.
+diagram1.FlipVertical();
+</pre></font></p></ul>
+<ul>
+<li>Flip Horizontal - Flip the selected nodes relatively to the Horizontal axis</li>
+<p>Use the below code to flip the node to horizontal axis</p>
+<p><font color="#8D2E1C"><pre>
+// Flips the selected nodes about their horizontal(X) axis.
+diagram1.FlipHorizontal();
+</pre></font></p></ul>
+<ul>
+<li>Space Acorss - Positions the selected node for equal horizontal spacing</li>
+<p>Use the below code to postion the node horizontally</p>
+<p><font color="#8D2E1C"><pre>
+// Positions the selected node for equal horizontal spacing
+diagram1.SpaceAcross();
+</pre></font></p></ul>
+<ul>
+<li>Space Down - Positions the selected node for equal vertical spacing</li>
+<p>Use the below code to postion the node vertically</p>
+<p><font color="#8D2E1C"><pre>
+// Positions the selected node for equal vertical spacing
+diagram1.SpaceDown();
+</pre></font></p></ul>
+
+<ul>
+<li>Same Width - sets the width of all selected nodes to be equal </li>
+<p>Use the below code to set the width of all selected nodes to be equal</p>
+<p><font color="#8D2E1C"><pre>
+// sets the width of all selected nodes to be equal
+diagram1.SameWidth();
+</pre></font></p></ul>
+
+<ul>
+<li>Same Height - sets the height of all selected nodes to be equal </li>
+<p>Use the below code to set the height of all selected nodes to be equal</p>
+<p><font color="#8D2E1C"><pre>
+// sets the height of all selected nodes to be equal 
+diagram1.SameHeight();
+</pre></font></p></ul>
+
+<ul>
+<li>Same Size - sets the width and height of all selected nodes to be equal</li>
+<p>Use the below code to sets the width and height of all selected nodes to be equal</p>
+<p><font color="#8D2E1C"><pre>
+// sets the width and height of all selected nodes to be equal
+diagram1.SameSize();
+</pre></font></p></ul>
+ 
+</html>

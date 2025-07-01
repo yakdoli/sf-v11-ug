@@ -1,0 +1,46 @@
+﻿<html><h1>Action Grouping</h1>
+
+<p>This sample demonstrates how you could group a set of actions as one entity, and then undo or redo these actions using one single 
+<strong>Undo</strong> or <strong>Redo</strong> method call. Run this sample and open an action group using the <strong>ActionMenu</strong>. Perform a set of actions on the 
+edit control, and close the action group. Now you can undo or redo these actions using the 
+<strong>Undo-Redo</strong> menu items in the <strong>Action</strong> menu.</p>
+
+<p><div align=center><img src="images/ActionGroupingDemo.png" alt="Action Grouping Image" title="" /></div></p>
+
+<p><h3>Features :</h3></p>
+
+<p><ul><li>The default edit control in Windows Forms supports just one level of undo-redo operations, whereas Essential Edit supports multiple levels. </li>
+
+<li>The <strong>Undo</strong> and <strong>Redo</strong> methods are used to accomplish undo and redo operations, respectively. </li>
+<li>This can also be accomplished with default keyboard shortcuts like Ctrl-Z and Ctrl-Y key combinations.</li>. 
+<li>It also supports action grouping which allows the users to specify a set of actions as groups for undo-redo purposes.</li> 
+<li>When an action group is created and a set of actions is added to it, the entire set is considered as one entity.</li>
+<li>It has methods such as <strong>UndoGroupOpen</strong>, <strong>UndoGroupClose</strong>, and <strong>UndoGroupCancel</strong>, to programmatically manipulate the undo-redo action grouping.</li>
+</ul></p>
+
+<p><h3>Interactive Features :</h3></p>
+<p><ul><li>Click Action Menu and select Open Group menu item.</li>
+<li>Modify the text more than once in EditControl.</li>
+<li>Click Action Menu and select Close Group menu item</li>
+<li>Click Action Menu and select Undo menu item and the modified text will be removed.</li>
+<li>Click Action Menu and select Redo menu item and the removed text will be replaced.</li>
+</ul>
+</p>
+<font color="#8D2E1C">
+<code>
+<pre>
+<ul>// To open a group.
+this.editControl1.UndoGroupOpen();
+
+// To close a group.
+this.editControl1.UndoGroupClose();
+
+// To cancel a group.
+this.editControl1.UndoGroupCancel();
+
+// To save the undo or redo information.
+this.editControl1.ResetUndoInfo();</ul>
+</pre>
+</code>
+</font>
+</html>

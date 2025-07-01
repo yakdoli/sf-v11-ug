@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RepeaterUserControlSample_2010", "RepeaterUserControlSample_2010.vbproj", "{2E29C5DC-D304-4015-8A15-3DD35856812F}"
+EndProject
+Global
+	GlobalSection(DevPartner Solution Properties) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2E29C5DC-D304-4015-8A15-3DD35856812F}.Debug.ActiveCfg = Debug|.NET
+		{2E29C5DC-D304-4015-8A15-3DD35856812F}.Debug.Build.0 = Debug|.NET
+		{2E29C5DC-D304-4015-8A15-3DD35856812F}.Release.ActiveCfg = Release|.NET
+		{2E29C5DC-D304-4015-8A15-3DD35856812F}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

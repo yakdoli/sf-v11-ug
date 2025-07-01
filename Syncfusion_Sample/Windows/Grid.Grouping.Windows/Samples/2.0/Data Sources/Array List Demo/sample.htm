@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2591598">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Array List Demo</H1>
+<P>An array list can be directly bound to the data source of the Grid
+Grouping control. 
+</P>
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>Features:</B></FONT></FONT></FONT></P>
+<UL>
+	<LI><P>An array list that can be directly bound to the data source of a Grid 
+	Grouping control</P>
+	<LI><P>An
+	object that has information for each column added for
+	each item in the array list</P>
+	<LI><P>A relationship between tables established by the grid
+	relation descriptor's <STRONG>UniformChildList</STRONG></P>
+</UL>
+<PRE><FONT COLOR="#8d2e1c">                ArrayList al = new ArrayList();</FONT>
+<FONT COLOR="#8d2e1c">                al.Add(new ParentItem(&quot;Condiments&quot;, &quot;Charlotte Cooper&quot;,&quot;Bigfoot Breweries&quot;, cl1));</FONT>
+<FONT COLOR="#8d2e1c">                al.Add(new ParentItem(&quot;Confections&quot;, &quot;Regina Murphy&quot;,&quot;Grandma Kelly's Homestead&quot;,cl2));</FONT>
+<FONT COLOR="#8d2e1c">                al.Add(new ParentItem(&quot;Grains/Cereals&quot;,&quot;Jean-Guy Lauzon&quot;,&quot;Ma Maison&quot;, cl3));</FONT>
+<FONT COLOR="#8d2e1c">                al.Add(new ParentItem(&quot;Meat/Poultry&quot;,&quot;Shelley Burke&quot;,&quot;New Orleans Cajun Delights&quot;, cl4));</FONT>
+<FONT COLOR="#8d2e1c">                al.Add(new ParentItem(&quot;Produce&quot;, &quot;Mayumi Ohno&quot;,&quot;Mayumi's&quot;,cl5));</FONT>
+<FONT COLOR="#8d2e1c">                al.Add(new ParentItem(&quot;Seafood&quot;,&quot;Robb Merchant&quot;,&quot;New England Seafood Cannery&quot;, cl6));</FONT>
+
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.DataSource = al;  </FONT></PRE><P>
+For each item present in an array list, an object with information
+for each column is added.</P>
+<PRE><FONT COLOR="#8d2e1c">                public class ParentItem</FONT>
+<FONT COLOR="#8d2e1c">                {</FONT>
+<FONT COLOR="#8d2e1c">                        string name;</FONT>
+<FONT COLOR="#8d2e1c">                        ChildList child;</FONT>
+<FONT COLOR="#8d2e1c">                        public string CategoryName</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                                get{return name;}</FONT>
+<FONT COLOR="#8d2e1c">                                set{name = value;}</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                        public string SupplierName</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                                get{return supplier_name;}</FONT>
+<FONT COLOR="#8d2e1c">                                set{supplier_name = value;}</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                        public string CompanyName</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                                get{return company_name;}</FONT>
+<FONT COLOR="#8d2e1c">                                set{company_name = value;}</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                        public ChildList Child</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                                get{return child;}</FONT>
+<FONT COLOR="#8d2e1c">                                set{child = value;}</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                        public ParentItem():this(&quot;&quot;,&quot;&quot;,&quot;&quot;,null)</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                        public ParentItem(string name ,string sname,string cname,ChildList dt)</FONT>
+<FONT COLOR="#8d2e1c">                        {</FONT>
+<FONT COLOR="#8d2e1c">                                this.name = name;</FONT>
+<FONT COLOR="#8d2e1c">                                this.supplier_name = sname;</FONT>
+<FONT COLOR="#8d2e1c">                                this.company_name = cname;</FONT>
+<FONT COLOR="#8d2e1c">                                this.child = dt;</FONT>
+<FONT COLOR="#8d2e1c">                        }</FONT>
+<FONT COLOR="#8d2e1c">                }  </FONT></PRE><P>
+A relation between the tables is established by the grid relation
+descriptor's <STRONG>UniformChildList</STRONG>.</P>
+<PRE><FONT COLOR="#8d2e1c">                // Binding the child table.</FONT>
+<FONT COLOR="#8d2e1c">                GridRelationDescriptor grd = new GridRelationDescriptor();</FONT>
+<FONT COLOR="#8d2e1c">                grd.RelationKind = RelationKind.UniformChildList;</FONT>
+<FONT COLOR="#8d2e1c">                grd.MappingName = &quot;Child&quot;;//name of  property with child arraylist</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.TableDescriptor.Relations.Add(grd);  </FONT></PRE><P ALIGN=CENTER>
+<img src="images/sample.png" NAME="graphics1" ALT="BindToArrayList screenshot" ALIGN=BOTTOM  BORDER=0></P>
+</BODY>
+</HTML>

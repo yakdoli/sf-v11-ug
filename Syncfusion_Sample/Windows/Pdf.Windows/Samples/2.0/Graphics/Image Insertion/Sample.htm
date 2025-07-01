@@ -1,0 +1,64 @@
+<h1>Image Insertion</h1>
+<h3>
+    Features</h3>
+
+<ul>
+    <p>
+	Essential PDF consists of a comprehensive set of APIs that can be used to create Adobe PDF documents with text and rich graphics, including custom drawings and images. It also has support for loading images from streams, files on disk, and
+<strong>System.Drawing.Bitmap</strong> objects. Images can be resized and 
+inserted into a PDF document at the required size. Even advanced features, like transparency and soft masking, are supported. </p>
+
+<p>Given below is an image of the output with a multi-frame TIFF image.</p>
+<div align=center><img src="images/tiffimage.png" alt="PDF" title="" /></div>
+
+<p>Given below is an image of the output with an image mask.</p>
+<div align=center><img src="images/imagemask.png" alt="PDF" title="" /></div>
+
+<p>Given below is an image of the output with an EMF image.</p>
+<div align=center><img src="images/metafile.png" alt="PDF" title="" /></div>
+
+<p>Below is an image of the output with image pagination.</p>
+<div align=center><img src="images/imagepagination.png" alt="PDF" title="" /></div>
+
+<p>Here is the code snippet that is used to insert various images in this sample:</p>
+<pre>
+//Draw bitmage image with image size
+PdfImage image = new PdfBitmap(pngImage);
+g.DrawImage(image, 0, 0, image.Width , image.Height);
+
+//Draw metafile
+PdfMetafile metafile = new PdfMetafile(emfImage);
+g.DrawImage(metafile, new PointF(0,50));
+
+//Image pagination jpg
+image = new PdfBitmap(jpgImage);
+//Set layout format for paginate the image to multiple pages.
+PdfLayoutFormat format = new PdfLayoutFormat();
+format.Layout = PdfLayoutType.Paginate;  
+PointF location = new PointF(0, 400);
+SizeF size = new SizeF(400, -1);
+RectangleF rect = new RectangleF(location, size);
+image.Draw(page, rect, format);
+
+//Multiframe Tiff image
+PdfBitmap tiffImage = new PdfBitmap(multiframeImage);
+int frameCount = tiffImage.FrameCount;
+for (int i = 0; i < frameCount; i++)
+{
+    page = section.Pages.Add();
+    section.PageSettings.Margins.All = 0; 
+    g = page.Graphics;
+    tiffImage.ActiveFrame = i;
+    g.DrawImage(tiffImage, 0, 0,page.GetClientSize().Width,page.GetClientSize().Height);
+}
+</pre>
+</ul>
+<h3>
+    Interactive Features</h3>
+	
+<Ul>
+  <li>Click the PDF button to generate the Pdf document.</li>
+  <li>Click Yes on the message box to view the generated Pdf file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+</Ul>

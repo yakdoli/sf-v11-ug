@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Ports</h1>
+
+<p>The Ports sample demonstrates creating and adding new ports to 
+a symbol. </p>
+<p><div align=center><img src="images/sample.png" alt="PortsAhoy Image" title="" /></div></p>
+<p><strong>Features</strong></p>
+
+<ul><li>Using the <strong>Ports</strong> property in the property editor, different 
+types of ports can be added to a selected node.</li></ul>
+<ul><p>To insert a triangle port into a node according to a specified 
+	position, use the following code.</p>
+<ul><p><font color="#8D2E1C"><pre><code>
+	private void InsertPort( Node node, GraphicsPath grphPath )
+	{
+	   ConnectionPoint port = new ConnectionPoint( node, grphPath );
+	   if (grphPath == PortVisuals.CirclePort)
+           {
+             port.FillStyle.Color=Color.Blue;
+             port.LineStyle.LineColor = Color.Red;
+             port.LineStyle.LineWidth = 2;
+             port.ConnectionPointSize = ConnectionPointSize.Medium;
+           }
+           if( m_bUpdateLocation )
+	   {
+	     PointF[] ptsMouseLocation = new PointF[]{ this.diagram1.Controller.MouseLocation };
+      	     // transform point to local coordinates.
+	     Matrix mtxTransform = HandlesHitTesting.GetParentsTransformations( node, true );
+	     mtxTransform.Invert();
+	     mtxTransform.TransformPoints( ptsMouseLocation );
+   	     port.OffsetX = ptsMouseLocation[0].X;
+	     port.OffsetY = ptsMouseLocation[0].Y;
+           }
+
+             node.Ports.Add( port );
+     	     this.diagram1.Invalidate(true);
+	     m_bUpdateLocation = false;
+			
+	}</code></pre></font></p></ul>
+
+</html>

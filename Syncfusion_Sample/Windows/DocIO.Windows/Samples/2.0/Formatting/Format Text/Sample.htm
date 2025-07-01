@@ -1,0 +1,74 @@
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Format Text</h1>
+<p> This sample illustrates Essential DocIO's support for formatting text with various formatting's such as character/text level formatting's, paragraph level formatting's, list level formatting's etc.,.</p>
+
+
+<p>Below is the illustration of the text formatting capabilities of Essential DocIO.</p>
+
+<p><div align = "Center"><img src="images/TextFormatting1.png" alt="DocIO" title="" /></div></p>
+
+<p>Below is the illustration of the paragraph formatting capabilities of Essential DocIO.</p>
+<p><div align = "Center"><img src="images/TextFormatting2.png" alt="DocIO" title="" /></div></p>
+<p>Here is a code snippet</p><pre>
+//To apply character format
+IWTextRange txtRange = paragraph.AppendText("Apply character format");
+txtRange.CharacterFormat.FontSize = (float)34.5;
+txtRange.CharacterFormat.FontName = "Verdana";
+textRange.CharacterFormat.Strikeout = true;
+textRange.CharacterFormat.UnderlineStyle = UnderlineStyle.Dash;
+//To apply paragraph format
+IWParagraph paragraph = section.AddParagraph();
+paragraph.AppendText("This is a sample paragraph. It is used to illustrate alignment. Left-justified text is aligned on the left. Right-justified text is aligned with on the right. Centered text is centered between the left and right margins. You can use Center to center your titles. Justified text is flush on both sides.");
+paragraph.ParagraphFormat.LineSpacing = 20f;
+paragraph.ParagraphFormat.HorizontalAlignment = Syncfusion.DocIO.DLS.HorizontalAlignment.Right;
+paragraph.ParagraphFormat.LineSpacingRule = LineSpacingRule.Exactly;</pre>
+<p><strong>Bullets and Numbering</strong> </p>
+
+<p> This sample demonstrates the insertion of bulleted and numbered lists into a document and the application of list styles and levels using Essential DocIO.</p>
+
+<p>Below is the illustration of the output document.</p>
+
+<p><div align = "Center"><img src="images/BulletsandNumbering1.png" alt="DocIO" title="" /></div></p>
+<p>Here is a code snippet</p>
+<pre>
+//Write default numbered list         
+IWParagraph paragraph = section.AddParagraph();
+paragraph.AppendText( "First Numbered ( level 0 )" );     
+paragraph.ListFormat.ApplyDefNumberedStyle();
+paragraph = section.AddParagraph();
+paragraph.AppendText( "Level 1" );
+paragraph.ListFormat.ContinueListNumbering();
+paragraph.ListFormat.IncreaseIndentLevel();
+paragraph = section.AddParagraph();
+paragraph.AppendText( "Level 0" );
+paragraph.ListFormat.ContinueListNumbering();
+paragraph.ListFormat.DecreaseIndentLevel();
+section.AddParagraph();
+
+//Write default bulleted list 
+paragraph = section.AddParagraph();
+paragraph.AppendText( "First bulleted ( level 0 )" );     
+paragraph.ListFormat.ApplyDefBulletStyle();
+paragraph = section.AddParagraph();
+paragraph.AppendText( "Level 1" );
+paragraph.ListFormat.ContinueListNumbering();
+paragraph.ListFormat.IncreaseIndentLevel();
+paragraph = section.AddParagraph();
+paragraph.AppendText( "Level 0" );
+paragraph.ListFormat.ContinueListNumbering();
+paragraph.ListFormat.DecreaseIndentLevel();
+</pre>
+<p style="font-size:large">Features:</p>
+<ul>
+ <li>Supports text formatting and bulleted and numbered lists</li>
+<li>Formatting includes the setting up of Font Name, Font Color, Font Size, Font Styles (such as Italic, Underline and Bold), Alignment, Indent, Subscript and Superscript, Shadow, and Spacing</li>
+<li>Supports special formatting for a paragraph as well, including Keeping lines together, and Keeping with next</li>
+</ul>

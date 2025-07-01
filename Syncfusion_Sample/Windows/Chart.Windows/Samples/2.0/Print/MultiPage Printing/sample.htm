@@ -1,0 +1,52 @@
+﻿<html><h1>MultiPage Printing</h1>
+
+<p>This sample demonstrates multiple page printing in Essential Chart.  </p>
+
+<p><div align=center>
+<TABLE id="Table1" >
+
+    		<TR>
+<TD align=center><b>Chart in First Page PrintPreview</b></TD>
+<TD align=center><b>Chart in Second Page PrintPreview</b></TD>
+  			</TR>
+
+    			<TR>
+    				<TD align=center><div align=center><img src="images/sample1.png" alt= "StripLine "title=""/></div></TD>&nbsp;&nbsp;
+    				<TD align=center><div align=center><img src="images/Sample2.png" alt= "StripLine"title=""/></div></TD>
+    			</TR>
+</TABLE>
+<TABLE id="Table2">		
+			<TR>
+				<TD align=center><b>MultiPage Printing</b></TD>
+			</TR>
+		</TABLE>
+		</div></p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li><b>PrintPage Event</b>
+<p>The PrintPage event can be triggered when printing a chart. This event is used to divide the axis range and print the chart across multiple pages.</p>
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(PrintDocument_PrintPage);
+</code></pre></font>
+</li>
+<li><b>HasMorePages</b>
+<p>Set the HasMorePages property as true if an additional page should be printed; otherwise, false. The default is false.</p></li>
+<li><b>Axis Range</b>
+<p>Set the axis minimum and maximum range in the PrintPage event. The initial minimum will be zero, and the maximum will be given a divided value. As the event progresses, the maximum will be the sum of the minimum and the given divided value. The PrintPage event will be triggered until the maximum exceeds the range.</p></li>
+<li><b>Printing Chart</b>
+<p>A chart can be printed in gray scale, color, or "Print Preview" mode. The following code shows how a chart can be printed in color.</p>
+<font color="#8D2E1C"><pre><code>
+PrintDialog printDialog1 = new PrintDialog();
+printDialog1.Document = this.chartControl1.PrintDocument;
+if (printDialog1.ShowDialog() == DialogResult.OK)
+{
+   this.chartControl1.PrintColorMode = ChartPrintColorMode.Color;
+   this.chartControl1.PrintDocument.Print();
+}
+</code></pre></font>
+</li>
+</ul>
+<ul>
+</ul>
+</html>
+

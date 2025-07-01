@@ -1,0 +1,322 @@
+<h1>XPS to PDF</h1>
+
+<p>This sample illustrates the conversion of a XML Paper Specification (XPS) document into PDF format.</p>
+<p>Essential PDF allows exporting a XPS document to a PDF document. Use the <b>Convert</b> method of 
+the <b>XPSToPdfConverter</b> class to convert the XPS document to a PDF.</p>
+
+<p><P>Below is an illustration of the exported file.</P></p>
+<p><div align = "Center"><img src="images/sample.png" alt="PDF" title="" /></div></p>
+
+<p>Following is the list of supported elements with XPS to PDF conversion:</p>
+<div align=center>
+
+<table border=1 cellspacing=0 cellpadding=0>
+ <tr>
+  <td>
+  <p><b>Element</b></p>
+  </td>
+  <td>
+  <p><b>Convert to PDF</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>ArcSegment</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Canvas</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>DocumentOutline</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>DocumentReference</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>FigureStructure</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>FixedPageResources</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Glyphs</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Gradient</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>ImageBrush</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Intent</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>LinkTarget</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>ListItemStructure</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>ListStructure</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>MatrixTransform</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>NamedElement</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>OutlineEntry</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>PageContent</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>PageContentLinkTargets</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>ParagraphStructure</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Path</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>PolyBezierSegment</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>PolyLineSegment</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>PolyQuadraticBezierSegment</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>ResourceDictionary</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>SectionStructure</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>SignBy</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>SignatureDefinition</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>SignatureDefinitions</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>SigningLocation</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>SolidColorBrush</p>
+  </td>
+  <td>
+  <p>Yes</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>SpotLocation</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>Story</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>TableStructure</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <p>VisualBrush</p>
+  </td>
+  <td>
+  <p>No</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+<p>Here is a code snippet to convert a XPS document to a PDF document using 
+Essential PDF.</p>
+<pre>
+                // Initialize XPS converter.
+                XPSToPdfConverter converter = new XPSToPdfConverter();
+               
+                // Convert XPS document into PDF document.
+                PdfDocument document = converter.Convert("sample.xps");
+                
+                // Save & close the pdf file.
+                document.Save("Sample.pdf");
+                document.Close(true);</pre>
+<p style="font-size:large">Features:</p>
+<ul>
+	<li>Essential PDF allows you to convert a XPS document to PDF format.</li>		
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+  <li>Choose any existing XPS document using the button near the textbox.</li>
+  <li>Click the XPS to PDF button to convert the specified XPS document to Pdf file format.</li>
+  <li>Click Yes on the message box to view the generated Pdf file.</li>
+  <li>The displayed PDF file was created using Essential PDF source code.</li>
+  <li>All features in the preceding list are illustrated in this file.</li>
+
+</ul>
+</html>

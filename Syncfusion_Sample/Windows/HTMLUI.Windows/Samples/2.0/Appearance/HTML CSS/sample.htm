@@ -1,0 +1,53 @@
+﻿<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	text-align: left;
+}
+</style>
+</head>
+
+<h1>HTML CSS</h1>
+
+<p>This sample illustrates the <strong>Cascading Style Sheets</strong> support in HTMLUI.</p>
+
+<p><p align=center><img src="images/sample.png" title=""/></p>
+<ul>
+	<p>
+	<p>
+	<strong>Features</strong>:<li class="style1">
+	<div>
+	The support for style sheets in HTMLUI enables the user to define styles for HTML elements and decide 
+		on the appearance of the HTML elements in the application.</l></div>
+	</p>
+	<li>
+	<p>HTMLUI supports the use of three types of style sheets. They are: (1) External Style 
+	Sheets (2) Internal Style Sheets (3) Inline Style Sheets. 
+	<ul>
+	</ul>
+	</p>
+	<li>
+	<p>External Style Sheets are linked to the file through the <strong>Link</strong> 
+	tag. Internal Style Sheets are applied with the help of the <strong>Style</strong> tag inside the head section 
+	while Inline style sheets are applied as the values of the style attributes of the specific HTML element.</p>
+	</li>
+</ul>
+
+<p>Here is the code to apply the file containing CSS styles to the HTMLUI control.</p>
+
+<p><font color="#8D2E1C"><pre> 
+	if(this.radioButton1.Checked == true)
+	{
+		LoadCSSFromFile("style.css");
+	}
+
+	if(this.radioButton1.Checked == true)
+	{
+			LoadCSSFromFile("style2.css");
+	}
+
+	string filePath = GetFilesLocation() + fileName;
+	this.htmluiControl1.LoadCSS(filePath);
+</pre></font></p>
+</html>

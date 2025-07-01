@@ -1,0 +1,60 @@
+﻿<html><h1>HTMLUI Chat</h1>
+
+<p>This sample shows how HTMLUI can be used to create a<strong> chat </strong>application.</p>
+
+<p><p align=center>
+<img src="images/sample.png" alt="HTMLUI Chat " title="" /></p>
+
+<p><strong>Features</strong>:</p>
+
+<ul>
+	<li> HTMLUI is helpful in creating cool UI applications.</ul>
+
+<ul><li>The HTMLUI control helps the user to change text content at run time. The user can convert text to an image as needed.</ul>
+
+<ul><li>Also, with the HTMLUI control, the user can save changes made to the rendered document as XML and retrieve the same whenever needed.</ul>
+
+<ul><li>The user can also customize the position of the <strong>Scroll</strong> control in UI applications according to the 
+	needs of 
+	those applications.</ul>
+
+<ul>
+<p> 
+<pre><font color="#8D2E1C">
+<br>
+//To change the image displayed in the messenger.
+
+	this.openFileDialog1.Filter = "Bmp files|*.bmp|Jpg files|*.jpg|Gif files|*.gif";
+	this.openFileDialog1.InitialDirectory = Directory.CreateDirectory(@"..\..\").FullName.ToString();
+	if(this.openFileDialog1.ShowDialog() == DialogResult.OK)
+	{
+		this.pictureBox2.Image = Image.FromFile(this.openFileDialog1.FileName.ToString());
+	}
+
+
+//To get the HTML Element present in the .htm file.
+
+
+	this.htmluiControl1.LoadFromString(OuterXML);
+	IHTMLElement[] element = this.htmluiControl1.Document.GetElementsByName("body");
+	IHTMLElementsCollection collection = element[0].Children;
+
+	foreach(IHTMLElement elem in collection)
+	{
+		WriteElement(elem);
+	}
+	return this.htmluiControl1.Document.Document.OuterXml;
+
+
+
+//Here is the code to add the attribute value to the .htm file.
+
+	if(elem.ID == "smile")
+	{
+		Console.WriteLine(elem.Attributes["src"].Value.ToString());
+		elem.Attributes["src"].Value = GetLocation() + @"\smile.gif";
+	}
+</font>	
+</pre></p>
+</ul>
+</html>

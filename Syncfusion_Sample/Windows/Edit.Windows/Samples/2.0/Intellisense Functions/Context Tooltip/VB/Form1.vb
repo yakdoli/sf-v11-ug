@@ -1,0 +1,254 @@
+#Region "Copyright Syncfusion Inc. 2001 - 2013"
+'
+'  Copyright Syncfusion Inc. 2001 - 2013. All rights reserved.
+'
+'  Use of this code is subject to the terms of our license.
+'  A copy of the current license can be obtained at any time by e-mailing
+'  licensing@syncfusion.com. Any infringement will be prosecuted under
+'  applicable laws. 
+'
+#End Region
+
+Imports System
+Imports System.Drawing
+Imports System.Collections
+Imports System.ComponentModel
+Imports System.Windows.Forms
+Imports System.Data
+Imports System.IO
+Imports System.Text
+Imports System.Xml
+Imports System.Xml.Serialization
+
+Imports Syncfusion.IO
+Imports Syncfusion.Windows.Forms.Edit
+Imports Syncfusion.Windows.Forms.Edit.Dialogs
+Imports Syncfusion.Windows.Forms.Edit.Implementation.Config
+Imports Syncfusion.Windows.Forms.Edit.Interfaces
+Imports Syncfusion.Windows.Forms.Edit.Implementation.IO
+Imports Syncfusion.Windows.Forms.Edit.Implementation.Formatting
+Imports Syncfusion.Windows.Forms.Edit.Implementation.Parser
+Imports Syncfusion.Windows.Forms.Edit.Implementation
+
+
+'/ <summary>
+'/ Summary description for Form1.
+'/ </summary>
+
+Public Class Form1
+    Inherits System.Windows.Forms.Form
+    Private WithEvents editControl1 As Syncfusion.Windows.Forms.Edit.EditControl
+    Private mainMenu1 As System.Windows.Forms.MainMenu
+    Private menuItem1 As System.Windows.Forms.MenuItem
+    Private WithEvents menuItem2 As System.Windows.Forms.MenuItem
+    Private WithEvents menuItem3 As System.Windows.Forms.MenuItem
+    Private menuItem4 As System.Windows.Forms.MenuItem
+    Private WithEvents menuItem5 As System.Windows.Forms.MenuItem
+    Private WithEvents menuItem6 As System.Windows.Forms.MenuItem
+    Private menuItem7 As System.Windows.Forms.MenuItem
+    Private WithEvents menuItem8 As System.Windows.Forms.MenuItem
+    '/ <summary>
+    '/ Required designer variable.
+    '/ </summary>
+    Private components As System.ComponentModel.Container = Nothing
+    
+    Private BasePath As String = Path.GetDirectoryName(Application.ExecutablePath) + "\..\Form1.vb"
+    
+    
+    Public Sub New()
+        '
+        ' Required for Windows Form Designer support
+        '
+        InitializeComponent()
+        Me.editControl1.ShowOutliningCollapsers = True
+        Me.editControl1.LoadFile(BasePath)
+    End Sub 'New
+    
+    
+    '/ <summary>
+    '/ Clean up any resources being used.
+    '/ </summary>
+    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing Then
+            If Not (components Is Nothing) Then
+                components.Dispose()
+            End If
+        End If
+        MyBase.Dispose(disposing)
+    End Sub 'Dispose
+
+#Region "Windows Form Designer generated code"
+
+    '/ <summary>
+    '/ Required method for Designer support - do not modify
+    '/ the contents of this method with the code editor.
+    '/ </summary>
+    Private Sub InitializeComponent()
+        Dim resources As New System.Resources.ResourceManager(GetType(Form1))
+        Me.editControl1 = New Syncfusion.Windows.Forms.Edit.EditControl()
+        Me.mainMenu1 = New System.Windows.Forms.MainMenu()
+        Me.menuItem1 = New System.Windows.Forms.MenuItem()
+        Me.menuItem2 = New System.Windows.Forms.MenuItem()
+        Me.menuItem3 = New System.Windows.Forms.MenuItem()
+        Me.menuItem4 = New System.Windows.Forms.MenuItem()
+        Me.menuItem5 = New System.Windows.Forms.MenuItem()
+        Me.menuItem6 = New System.Windows.Forms.MenuItem()
+        Me.menuItem7 = New System.Windows.Forms.MenuItem()
+        Me.menuItem8 = New System.Windows.Forms.MenuItem()
+        CType(Me.editControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        ' 
+        ' editControl1
+        ' 
+        Me.editControl1.AutoScrollPosition = New System.Drawing.Point(0, 0)
+        Me.editControl1.BackColor = System.Drawing.SystemColors.Window
+        Me.editControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.editControl1.CurrentColumn = 1
+        Me.editControl1.CurrentLine = 1
+        Me.editControl1.CurrentPosition = New System.Drawing.Point(1, 1)
+        Me.editControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.editControl1.FileOpened = Nothing
+        Me.editControl1.GraphicsCompositingQuality = System.Drawing.Drawing2D.CompositingQuality.Default
+        Me.editControl1.GraphicsInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Default
+        Me.editControl1.GraphicsSmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default
+        Me.editControl1.GraphicsTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.editControl1.Name = "editControl1"
+        Me.editControl1.ScrollOffsetBottom = 0
+        Me.editControl1.ScrollOffsetLeft = 2
+        Me.editControl1.ScrollOffsetRight = 0
+        Me.editControl1.ScrollOffsetTop = 0
+        Me.editControl1.ShowCollapse = False
+        Me.editControl1.ShowLineNumbers = False
+        Me.editControl1.ShowMarkers = False
+        Me.editControl1.ShowWhitespaces = False
+        Me.editControl1.Size = New System.Drawing.Size(542, 445)
+        Me.editControl1.TabIndex = 0
+        Me.editControl1.TabSize = 2
+        Me.editControl1.Text = ""
+        Me.editControl1.VirtualSize = New System.Drawing.Size(101, 17)
+        Me.editControl1.WordWrap = True
+        ' 
+        ' mainMenu1
+        ' 
+        Me.mainMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.menuItem1})
+        ' 
+        ' menuItem1
+        ' Demo
+
+
+
+        Me.menuItem1.Index = 0
+        Me.menuItem1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.menuItem2, Me.menuItem3, Me.menuItem4, Me.menuItem5, Me.menuItem6, Me.menuItem7, Me.menuItem8})
+        Me.menuItem1.Text = "File"
+        ' 
+        ' menuItem2
+        ' 
+        Me.menuItem2.Index = 0
+        Me.menuItem2.Text = "New"
+        ' 
+        ' menuItem3
+        ' 
+        Me.menuItem3.Index = 1
+        Me.menuItem3.Text = "Open"
+        ' 
+        ' menuItem4
+        ' 
+        Me.menuItem4.Index = 2
+        Me.menuItem4.Text = "-"
+        ' 
+        ' menuItem5
+        ' 
+        Me.menuItem5.Index = 3
+        Me.menuItem5.Text = "Save"
+        ' 
+        ' menuItem6
+        ' 
+        Me.menuItem6.Index = 4
+        Me.menuItem6.Text = "SaveAs"
+        ' 
+        ' menuItem7
+        ' 
+        Me.menuItem7.Index = 5
+        Me.menuItem7.Text = "-"
+        ' 
+        ' menuItem8
+        ' 
+        Me.menuItem8.Index = 6
+        Me.menuItem8.Text = "Exit"
+        ' 
+        ' Form1
+        ' 
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(542, 445)
+        Me.Controls.AddRange(New System.Windows.Forms.Control() {Me.editControl1})
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Menu = Me.mainMenu1
+        Me.Name = "Form1"
+        Me.Text = "Context Tooltip"
+        CType(Me.editControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+    End Sub 'InitializeComponent 
+#End Region
+
+
+    '/ <summary>
+    '/ The main entry point for the application.
+    '/ </summary>
+    <STAThread()> _
+    Shared Sub Main()
+Application.EnableVisualStyles()
+        Application.Run(New Form1())
+    End Sub 'Main
+
+
+    Private Sub menuItem2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles menuItem2.Click
+        Me.editControl1.NewFile()
+    End Sub 'menuItem2_Click
+
+
+    Private Sub menuItem3_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles menuItem3.Click
+        Me.editControl1.LoadFile()
+    End Sub 'menuItem3_Click
+
+
+    Private Sub menuItem5_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles menuItem5.Click
+        Me.editControl1.Save()
+    End Sub 'menuItem5_Click
+
+
+    Private Sub menuItem6_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles menuItem6.Click
+        Me.editControl1.SaveAs()
+    End Sub 'menuItem6_Click
+
+
+    Private Sub menuItem8_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles menuItem8.Click
+        Me.Close()
+    End Sub 'menuItem8_Click
+
+
+    Private Sub Form1_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+    End Sub 'Form1_Closing
+
+
+    Private Sub editControl1_UpdateContextToolTip(ByVal sender As Object, ByVal e As Syncfusion.Windows.Forms.Edit.UpdateTooltipEventArgs) Handles editControl1.UpdateContextToolTip
+        If e.Text = String.Empty Then
+            Dim pointVirtual As Point = editControl1.PointToVirtualPosition(New Point(e.X, e.Y))
+
+            If pointVirtual.Y > 0 Then
+                ' Get the current line
+                Dim line As ILexemLine = editControl1.GetLine(pointVirtual.Y)
+
+                If Not (line Is Nothing) Then
+                    ' Get tokens from the current line
+                    Dim lexem As ILexem = line.FindLexemByColumn(pointVirtual.X)
+
+                    If Not (lexem Is Nothing) Then
+                        Dim configLexem As IConfigLexem = lexem.Config
+                        e.Text = "This is of type " + configLexem.Format.Name + " : " + lexem.Text
+                    End If
+                End If
+            End If
+        End If
+    End Sub 'editControl1_UpdateContextToolTip
+End Class 'Form1

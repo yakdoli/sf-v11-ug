@@ -1,0 +1,52 @@
+﻿<html><h1>Selection Margin</h1>
+
+<p>This sample illustrates the use of the <strong>Selection Margin</strong> feature and 
+the <strong>Changed Lines</strong> marking feature in the edit control. It also shows how the 
+selection margin background and width can be customized.</p>
+
+<p><div align=center><img src="images/SelectionMarginDemo.png" alt="Selection Margin Image" title="" /></div></p>
+
+<p><h3>Features</h3></p>
+<p><ul><li>The<strong> Selection Margin</strong> is a thin vertical margin along the left side of Essential Edit that allows the selection of content for the entire line by simply clicking on the corresponding selection margin area of that particular line.</li>
+<li>This is a very user friendly feature that simplifies the line selection process. </li>
+<li>The selection margin can be enabled using the <strong>ShowSelectionMargin</strong> property in 
+the edit control.</li>
+<li>The lines that are changed in the edit control can be clearly identified by a difference in color in the selection margin using 
+the <strong>Changed lines</strong> marking feature. </li>
+<li>Also it is possible to differentiate the lines that are changed after saving a file.</li>
+<li>This can be enabled using the <strong>SavedLinesMarkingLineColor</strong> property in the Edit control.</li></ul></p>
+
+<p><h3>Intereactive Features</h3></p>
+<p><ul><li>Using Background Color and Foreground Color menu items in the Selection Margin menu, 
+	you can customize the background color and the foreground color of the Selection Margin.</li>
+<li>Using the Margin Width menu item in the Selection Margin menu, you can set the Selection Margin's width.</li>
+<li>Using the Saved lines color and Changed lines color menu items in the Changed Line Marking Menu, 
+you can customize the saved lines color and changed lines color.</li></ul></p>
+
+<font color="#8D2E1C"><code></p>
+<pre>// To change the selection margin background color.
+this.editControl1.SelectionMarginBackgroundColor = Color.LightBlue;
+
+// To change the selection margin foreground color.
+this.editControl1.SelectionMarginForegroundColor = Color.Gray;
+
+// To change the selection margin width.
+this.editControl1.SelectionMarginWidth = 20;
+</pre>
+</code></font>
+
+
+<font color="#8D2E1C">
+<code>
+<pre>
+// To change the color of changed lines in selection margin.
+editControl1.ChangedLinesMarkingLineColor = Color.Yellow;
+
+// To change the color of saved changed lines in selection margin.
+editControl1.SavedLinesMarkingLineColor = Color.Green;
+</pre>
+</code>
+</font>
+</ul>
+
+</html>

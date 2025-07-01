@@ -1,0 +1,22 @@
+<h1>RTL Support</h1>
+
+<p>This sample illustrates the Essential DocIO's support for creation of a MS Word document with Right-To-Left language text.</p>
+
+<p>Below is the illustration of the output document.</p>
+<p><div align = "Center"><img src="images/sample.png" alt="DocIO" title="" /></div></p>
+<p>Here is a code snippet</p>
+<pre>
+// Reading Arabic text from text file.
+StreamReader s = new StreamReader( @"..\..\..\..\..\..\..\..\..\Common\Data\DocIO\Arabic.txt" , System.Text.Encoding.ASCII );
+string text = s.ReadToEnd();						
+// Appending Arabic text to the document.
+document.LastParagraph.ParagraphFormat.Bidi = true;
+IWTextRange txtRange = document.LastParagraph.AppendText ( text );
+txtRange.CharacterFormat.Bidi = true;			
+// Set the RTL text font size.
+txtRange.CharacterFormat.FontSizeBidi = 16;
+</pre>
+<p style="font-size:large">Features: </p>
+<ul>
+	<li>All text formatting options available to left-to-right languages are also available for RTL and Unicode content.</li>
+</ul>

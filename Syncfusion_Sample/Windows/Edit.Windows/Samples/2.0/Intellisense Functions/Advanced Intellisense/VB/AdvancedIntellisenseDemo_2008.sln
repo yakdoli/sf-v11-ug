@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AdvancedIntellisenseDemo_2008", "AdvancedIntellisenseDemo_2008.vbproj", "{3E74E229-5F59-46D7-993D-6099E4FB032A}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3E74E229-5F59-46D7-993D-6099E4FB032A}.Debug.ActiveCfg = Debug|.NET
+		{3E74E229-5F59-46D7-993D-6099E4FB032A}.Debug.Build.0 = Debug|.NET
+		{3E74E229-5F59-46D7-993D-6099E4FB032A}.Release.ActiveCfg = Release|.NET
+		{3E74E229-5F59-46D7-993D-6099E4FB032A}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

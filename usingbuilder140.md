@@ -1,0 +1,137 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template} ![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+::: {.d2h_secondary_topic style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"}
+##### Using Builder {#using-builder style="tab-stops: 0pt"}
+
+The following steps guide in handling client side events through Builder:
+
+1.   In **View**, invoke the Toolbar helper with Toolbar ID as the first argument and enable the **ClientSideOnCreate** and **ClientSideOnClick** with the respective handlers as:
+
+ 
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[ASPX\]]{style="FONT-FAMILY: 'Courier New'"}**                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                        |
+| [ [\<%]{style="BACKGROUND: yellow"}[=]{style="COLOR: blue"}Html.MobSyncfusion().Toolbar([\"EventsToolbar\"]{style="COLOR: #a31515"})]{style="FONT-FAMILY: 'Courier New'"}                                                              |
+|                                                                                                                                                                                                                                        |
+| [    .ClientSideEvents(events =\> events]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                          |
+|                                                                                                                                                                                                                                        |
+| [      .ClientSideOnCreate([\"onCreate\"]{style="COLOR: #a31515"})]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                |
+|                                                                                                                                                                                                                                        |
+| [      .ClientSideOnClick([\"onClick\"]{style="COLOR: #a31515"}))]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                 |
+|                                                                                                                                                                                                                                        |
+| [    .Items(items =\>]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                             |
+|                                                                                                                                                                                                                                        |
+| [    {]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                        |
+| [                   items.Add().Value([\"New\"]{style="COLOR: #a31515"}).Text([\"New\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/new.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"}       |
+|                                                                                                                                                                                                                                        |
+| [                   items.Add().Value([\"Open\"]{style="COLOR: #a31515"}).Text([\"Open\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/open.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"}    |
+|                                                                                                                                                                                                                                        |
+| [                   items.Add().Value([\"Save\"]{style="COLOR: #a31515"}).Text([\"Save\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/save.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"}    |
+|                                                                                                                                                                                                                                        |
+| [                   items.Add().Value([\"Print\"]{style="COLOR: #a31515"}).Text([\"Print\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/print.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"} |
+|                                                                                                                                                                                                                                        |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                        |
+| [items.Add().IsSeparator([true]{style="COLOR: blue"});]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                            |
+|                                                                                                                                                                                                                                        |
+| [                   items.Add().Value([\"Cut\"]{style="COLOR: #a31515"}).Text([\"Cut\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/Cut.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"}       |
+|                                                                                                                                                                                                                                        |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                        |
+| [    })[%\>]{style="BACKGROUND: yellow"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                          |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+ 
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[Razor\]]{style="FONT-FAMILY: 'Courier New'"}**                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                     |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                              |
+|                                                                                                                                                                                                                                     |
+| [ [\@{]{style="BACKGROUND: yellow"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                            |
+|                                                                                                                                                                                                                                     |
+| [   Html.MobSyncfusion().Toolbar([\"EventsToolbar\"]{style="COLOR: #a31515"})]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                  |
+|                                                                                                                                                                                                                                     |
+| [   .ClientSideEvents(events =\> events]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                        |
+|                                                                                                                                                                                                                                     |
+| [     .ClientSideOnCreate([\"onCreate\"]{style="COLOR: #a31515"})]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                              |
+|                                                                                                                                                                                                                                     |
+| [     .ClientSideOnClick([\"onClick\"]{style="COLOR: #a31515"}))]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                               |
+|                                                                                                                                                                                                                                     |
+| [   .Items(items =\>]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                           |
+|                                                                                                                                                                                                                                     |
+| [   {]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                     |
+| [                items.Add().Value([\"New\"]{style="COLOR: #a31515"}).Text([\"New\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/new.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"}       |
+|                                                                                                                                                                                                                                     |
+| [                items.Add().Value([\"Open\"]{style="COLOR: #a31515"}).Text([\"Open\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/open.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"}    |
+|                                                                                                                                                                                                                                     |
+| [                items.Add().Value([\"Save\"]{style="COLOR: #a31515"}).Text([\"Save\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/save.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"}    |
+|                                                                                                                                                                                                                                     |
+| [                items.Add().Value([\"Print\"]{style="COLOR: #a31515"}).Text([\"Print\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/print.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"} |
+|                                                                                                                                                                                                                                     |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                              |
+|                                                                                                                                                                                                                                     |
+| [items.Add().IsSeparator([true]{style="COLOR: blue"});]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                         |
+|                                                                                                                                                                                                                                     |
+| [                items.Add().Value([\"Cut\"]{style="COLOR: #a31515"}).Text([\"Cut\"]{style="COLOR: #a31515"}).ImageUrl([\"\~/Content/Toolbar/Images/Cut.png\"]{style="COLOR: #a31515"});]{style="FONT-FAMILY: 'Courier New'"}       |
+|                                                                                                                                                                                                                                     |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                              |
+|                                                                                                                                                                                                                                     |
+| [   })]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                     |
+| [   .Render();[}]{style="BACKGROUND: yellow"}]{style="FONT-FAMILY: 'Courier New'"} []{style="FONT-FAMILY: 'Courier New'"}                                                                                                           |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+ 
+
+2.   Define the call back methods in the script to handle the specified events.
+
+**[]{style="FONT-FAMILY: 'Courier New'"}**  
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[Javascript\]]{style="FONT-FAMILY: 'Courier New'"}**                                                                                                                  |
+|                                                                                                                                                                           |
+| [    [\<]{style="COLOR: blue"}[script]{style="COLOR: maroon"}[type]{style="COLOR: red"}[=\"text/javascript\"\>]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"} |
+|                                                                                                                                                                           |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                    |
+|                                                                                                                                                                           |
+| [        [function]{style="COLOR: blue"} onCreate(inst) {]{style="FONT-FAMILY: 'Courier New'"}                                                                            |
+|                                                                                                                                                                           |
+| [            [//inst - Toolbar object]{style="COLOR: darkgreen"}]{style="FONT-FAMILY: 'Courier New'"}                                                                     |
+|                                                                                                                                                                           |
+| [        }]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                           |
+|                                                                                                                                                                           |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                    |
+|                                                                                                                                                                           |
+| [        [function]{style="COLOR: blue"} onClick(inst, args) {]{style="FONT-FAMILY: 'Courier New'"}                                                                       |
+|                                                                                                                                                                           |
+| [            [//inst - instance of Toolbar object]{style="COLOR: darkgreen"}]{style="FONT-FAMILY: 'Courier New'"}                                                         |
+|                                                                                                                                                                           |
+| [            [//args :    args.element   - current Toolbar item ]{style="COLOR: darkgreen"}]{style="FONT-FAMILY: 'Courier New'"}                                          |
+|                                                                                                                                                                           |
+| [            [//          args.value            - Toolbar id]{style="COLOR: darkgreen"}]{style="FONT-FAMILY: 'Courier New'"}                                              |
+|                                                                                                                                                                           |
+| [            [//          args.text          - text of the current Toolbar item ]{style="COLOR: darkgreen"}]{style="FONT-FAMILY: 'Courier New'"}                          |
+|                                                                                                                                                                           |
+| [        }]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                           |
+|                                                                                                                                                                           |
+| []{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                    |
+|                                                                                                                                                                           |
+| [    [\</]{style="COLOR: blue"}[script]{style="COLOR: maroon"}[\>]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                              |
+|                                                                                                                                                                           |
+| []{style="FONT-FAMILY: 'Courier New'; BACKGROUND: yellow"}                                                                                                                |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+**[]{style="FONT-FAMILY: 'Calibri','sans-serif'"}**  
+
+3.   Run the application.
+
+**[]{style="FONT-SIZE: 12pt"}**  
+
+[]{#related-topics}
+:::

@@ -1,0 +1,54 @@
+﻿<html><h1>Chart Custom Drawing</h1>
+
+<p>This sample illustrates how to customize a chart&#39;s appearance by drawing designs over the 
+chart area. 
+</p>
+<p>
+<div align =center> <img src="images/sample.png" alt="Custom Drawing Sample" title=""/>
+</div>
+</p>
+
+<h3>
+<strong>Features</strong></h3>
+<ul>
+<li>
+<p>
+On the primary axis, arrows and a line are drawn over the chart area using the <b>ChartAreaPaint</b> event.
+This event is raised when the chart area is painted. </p> 
+
+<p>
+The start and end positions of the primary axes are obtained using the <b>GetPointByValue</b> method to draw the arrows.</p>
+</li>
+<p><font color="#8D2E1C"><pre><code>
+private void chartControl1_ChartAreaPaint(object sender, PaintEventArgs e)
+{
+          
+            // Get the right end of the X axis
+            Point ptX = this.chartControl1.ChartArea.GetPointByValue(new ChartPoint(this.chartControl1.PrimaryXAxis.Range.Max, this.chartControl1.PrimaryYAxis.Range.Min));
+
+            PointF ptX1 = new PointF(ptX.X - 10, ptX.Y - 6);
+            PointF ptX2 = new PointF(ptX.X, ptX.Y);
+            PointF ptX3 = new PointF(ptX.X - 10, ptX.Y + 6);
+
+            Brush arrowBrush = new SolidBrush(Color.FromArgb(125, 96, 160));
+            // Draws an arrow at the end of the X axis
+            e.Graphics.FillPolygon(arrowBrush, new PointF[] { ptX1, ptX2, ptX3 });
+
+            // Get the top end of the Y axis
+            Point ptY = this.chartControl1.ChartArea.GetPointByValue(new ChartPoint(this.chartControl1.PrimaryXAxis.Range.Min, this.chartControl1.PrimaryYAxis.Range.Max));
+
+            PointF ptY1 = new PointF(ptY.X - 6, ptY.Y + 10);
+            PointF ptY2 = new PointF(ptY.X, ptY.Y);
+            PointF ptY3 = new PointF(ptY.X + 6, ptY.Y + 10);
+
+            // Draws an arrow at the top of the Y Axis.
+            e.Graphics.FillPolygon(arrowBrush, new PointF[] { ptY1, ptY2, ptY3 });
+
+            // Draws a line through the center of the chart.
+            Pen pp = new Pen(Color.FromArgb(125, 96, 160), 1);
+            e.Graphics.DrawLine(pp, ptY.X, ptX.Y, ptX.X, ptY.Y);
+}
+</code></pre></font>
+</p>
+</ul>
+</html>

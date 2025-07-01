@@ -1,0 +1,36 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3124596">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Column Style Demo</H1>
+<P>This sample demonstrates the formatting of columns. This can be achieved
+by defining a <STRONG>GridColumnDescriptor</STRONG>.</P>
+<P> <FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>Features:</B></FONT></FONT></FONT></P>
+<UL>
+	<LI><P>Provides mapping information to a column in the underlying
+	data source</P>
+	<LI><P>Descriptor associated with a particular column by
+	initializing its mapping name to the required column name</P>
+	<LI><P>Descriptor that can be used to set the style settings
+	for the specified column</P>
+</UL>
+<P>Here is a sample code snippet:</P>
+<PRE><FONT COLOR="#8d2e1c">                GridColumnDescriptor Descriptor1 = new GridColumnDescriptor();</FONT>
+<FONT COLOR="#8d2e1c">                Descriptor1.MappingName = &quot;ProductID&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                Descriptor1.Appearance.AlternateRecordFieldCell.TextColor=Color.White;</FONT>
+<FONT COLOR="#8d2e1c">                ...</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.TableDescriptor.Columns.Add(Descriptor1);  </FONT></PRE><P ALIGN=CENTER>
+<img src="images/sample.png" NAME="graphics1" ALT="ColumnStyles screenshot" ALIGN=BOTTOM  BORDER=0></P>
+</BODY>
+</HTML>

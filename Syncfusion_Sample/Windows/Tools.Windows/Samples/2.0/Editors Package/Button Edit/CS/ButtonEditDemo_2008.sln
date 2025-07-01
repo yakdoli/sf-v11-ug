@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonEditDemo_2008", "ButtonEditDemo_2008.csproj", "{CDA6EF37-5E45-4F3C-B547-41A3A03907DF}"
+EndProject
+Global
+	
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CDA6EF37-5E45-4F3C-B547-41A3A03907DF}.Debug.ActiveCfg = Debug|.NET
+		{CDA6EF37-5E45-4F3C-B547-41A3A03907DF}.Debug.Build.0 = Debug|.NET
+		{CDA6EF37-5E45-4F3C-B547-41A3A03907DF}.Release.ActiveCfg = Release|.NET
+		{CDA6EF37-5E45-4F3C-B547-41A3A03907DF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

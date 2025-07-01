@@ -1,0 +1,184 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.20706</ProductVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0DC7D9A-51FE-408A-A242-6961E7B3B48A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>TopLevelGroupOptions</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace></RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject></StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "> <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "> <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE" />
+    <Reference Include="Syncfusion.Core">
+      <Name>Syncfusion.Core</Name>
+      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\Assemblies\1.1\Syncfusion.Core.dll</HintPath>
+      <AssemblyFolderKey>hklm\syncfusionassemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base">
+      <Name>Syncfusion.Grid.Base</Name>
+      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\Assemblies\1.1\Syncfusion.Grid.Base.dll</HintPath>
+      <AssemblyFolderKey>hklm\syncfusionassemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Grouping.Base">
+      <Name>Syncfusion.Grid.Grouping.Base</Name>
+      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\Assemblies\1.1\Syncfusion.Grid.Grouping.Base.dll</HintPath>
+      <AssemblyFolderKey>hklm\syncfusionassemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Grouping.Windows">
+      <Name>Syncfusion.Grid.Grouping.Windows</Name>
+      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\Assemblies\1.1\Syncfusion.Grid.Grouping.Windows.dll</HintPath>
+      <AssemblyFolderKey>hklm\syncfusionassemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows">
+      <Name>Syncfusion.Grid.Windows</Name>
+      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\Assemblies\1.1\Syncfusion.Grid.Windows.dll</HintPath>
+      <AssemblyFolderKey>hklm\syncfusionassemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Base">
+      <Name>Syncfusion.Grouping.Base</Name>
+      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\Assemblies\1.1\Syncfusion.Grouping.Base.dll</HintPath>
+      <AssemblyFolderKey>hklm\syncfusionassemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base">
+      <Name>Syncfusion.Shared.Base</Name>
+      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\Assemblies\1.1\Syncfusion.Shared.Base.dll</HintPath>
+      <AssemblyFolderKey>hklm\syncfusionassemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows">
+      <Name>Syncfusion.Shared.Windows</Name>
+      <HintPath>..\..\..\Program Files\Syncfusion\Essential Studio\Assemblies\1.1\Syncfusion.Shared.Windows.dll</HintPath>
+      <AssemblyFolderKey>hklm\syncfusionassemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base" />
+    <Reference Include="Syncfusion.Tools.Windows" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <EmbeddedResource Include="Resources\close.png" />
+    <Content Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Resources\info.PNG" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Suite.ico" />
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

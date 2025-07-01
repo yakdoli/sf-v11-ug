@@ -1,0 +1,119 @@
+﻿<html><h1>Chart Strip Line</h1>
+
+<p>Strip lines are background bands rendered in a chart area. This sample demonstrates the implementation of 
+strip lines in Essential Chart.  </p>
+
+<p><div align=center>
+<TABLE id="Table1" >
+
+    		<TR>
+<TD align=center><b>Strip Line with Image in X-Axis</b></TD>
+<TD align=center><b>Strip Line with Gradient Interior in Y-Axis</b></TD>
+  			</TR>
+
+    			<TR>
+    				<TD align=center><div align=center><img src="images/sample1.png" alt= "StripLine "title=""/></div></TD>
+    				<TD align=center><div align=center><img src="images/Sample2.png" alt= "StripLine"title=""/></div></TD>
+    			</TR>
+</TABLE>
+<TABLE id="Table2">		
+			<TR>
+				<TD align=center><b>Fixed-Width Strip Line</b></TD>
+			</TR>
+			<TR><TD style="height:10"></TD></TR>
+    		<TR>
+    			<TD><div align=center><img src="images/Sample3.png" alt= "StripLine "title=""/></div></TD>
+    		</TR>
+		</TABLE>
+		</div></p>
+<p><strong>Features:</strong></p>
+<ul>
+<li><b>Strip Lines</b>
+<p>A strip line can be created  with the code below.</p>
+<font color="#8D2E1C"><pre><code>
+ChartStripLine thermoStripLine = new ChartStripLine();
+thermoStripLine.Enabled = true;
+thermoStripLine.BackImage = img;
+thermoStripLine.Period = 50;
+thermoStripLine.Width = 0.4;
+</code></pre></font>
+</li>
+
+<li><b>Strip Line Axis</b>
+<p>A strip line can be added to a chart control's primary x-axis as shown below.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.StripLines.Add(thermoStripLine);
+</code></pre></font>
+It can also be added to the y-axis using the code given below.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.StripLines.Add(StripLine);
+</code></pre></font>
+</li>
+
+<li><b>Strip Line Customization</b>
+<p>Various appearance settings for a strip line can be customized. The strip line 
+used to mark &quot;Historical High Temp&quot; can be customized, as shown below.
+<font color="#8D2E1C"><pre><code>
+Color[] stripLineColor = new Color[] { Color.FromArgb(229, 150, 32), Color.FromArgb(252, 247, 235), Color.FromArgb(229, 150, 32) };
+stripLine1.Vertical = false;
+stripLine1.Text = "Historical High: 93'F";
+stripLine1.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+stripLine1.Interior = new BrushInfo(GradientStyle.Vertical, stripLineColor);
+</code></pre></font></p>
+</li>
+
+<li><b>Strip Line Position</b>
+<p>A strip line is configured by setting its start, end, period, and width with the same value-type as the axis that holds it.</p>
+<ul>
+<li><b>Strip Lines with a Primary X-Axis of the Date-Time Type</b><p><ul>
+<li><b>Strip Line Start</b>
+<br>Sets the start point of a strip line<font color="#8D2E1C"><pre><code>
+ StripLine.Start = 3;
+</code></pre></font>
+</li>
+<li><b>Strip Line End</b>
+<br>Sets the end range of a strip line<font color="#8D2E1C"><pre><code>
+StripLine.End = 4;
+</code></pre></font>
+</li>
+<li><b>Strip Line Width</b>
+<br>Sets the width of each strip line<font color="#8D2E1C"><pre><code>
+StripLine.Width = 1;
+</code></pre></font>
+</li></ul>
+</p></li>
+
+<li><b>Strip Lines with a Primary X-Axis of the Date-Time Type</b>
+<p><ul>
+<li><b>Start at Axis Position</b>
+<br>Sets whether or not the strip line will start at the beginning of the axis 
+range<font color="#8D2E1C"><pre><code>
+StripLine.StartAtAxisPosition = true;
+</code></pre></font></li>
+<li><b>Date Offset</b>
+<br>Sets the offset of a strip line if the primary x-axis is of the date-time 
+type and <strong>StartAtAxisPosition</strong> is set to <em>true</em><font color="#8D2E1C"><pre><code>
+StripLine.DateOffset = new TimeSpan(3, 0, 0, 0, 0);
+</code></pre></font></li>
+<li><b>Width Date</b>
+<br>Sets the width of each strip line as a time span<font color="#8D2E1C"><pre><code>
+StripLine.WidthDate = new TimeSpan(1, 0, 0, 0, 0);
+</code></pre></font></li>
+<li><b>Period Date</b>
+<br>Sets the period over which the strip line will appear<font color="#8D2E1C"><pre><code>
+StripLine.PeriodDate = new TimeSpan(4, 0, 0, 0, 0);
+</code></pre></font></li>
+<li><b>Fixed-Width Strip Line</b>
+<p>The chart control supports setting a fixed width for strip lines, irrespective of the axis 
+range. The default value of the fixed-width property is zero.</p>
+<font color="#8D2E1C"><pre><code>
+StripLine.FixedWidth=10;
+</code></pre></font></li>
+</ul>
+</p>
+</li>
+</ul>
+</li>
+</ul>
+</html>
+

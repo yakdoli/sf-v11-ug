@@ -1,0 +1,90 @@
+﻿<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>TreeViewAdv Styles</h1>
+
+<p>This sample illustrates how base styles can be set up and effectively reused between different nodes in a
+<strong>TreeViewAdv</strong>. </p>
+
+<p><div align=center><img src="images/sample.PNG" alt="TreeViewAdv Styles" title="" /></div></p>
+
+<p><strong>Features:</strong></p>
+<p><strong>Unique Styles</strong></p>
+
+<p class="style1">Unique styles for different portions of a tree can be defined with the styles architecture 
+that is employed. Each node inherits these
+ different styles before being yielded. </p>
+<p class="style1">Users may specify different styles in the tree in the order of their 
+inheritance.</p>
+
+<p class="style1"><strong>Global Style -</strong>  is defined in the <strong>TreeViewAdv</strong> 
+instance&nbsp;&nbsp;&nbsp; </p>
+
+<p class="style1"><strong>Child Style -</strong> is defined in a parent node that applies to all the immediate children of that 
+node</p>
+
+<p class="style1"><strong>Node Level Style -</strong> can be defined for nodes in a particular 
+level of a tree</p>
+
+<p class="style1"><strong>Node Specific Style - </strong>is defined in each <strong>TreeNodeAdv</strong></p>
+
+<p class="style1"><strong>The styles set in the TreeViewAdv are given as follows.</strong></p>
+<p><strong>Base Styles Collections</strong></p>
+
+<p class="style1">The <strong>TreeViewAdv</strong> Base Styles collection contains the <strong>Panthers</strong>,<strong> 
+Packers</strong>,<strong> Vikings</strong>,<strong>
+Chiefs,</strong> and<strong> Redskins </strong>styles that are defined to 
+indicate the background color of the nodes with corresponding layers. The following code&nbsp; 
+retrieves and modifies a base style from the base style's collection and also synthesizes text color for these styles based 
+upon their background color.&nbsp;&nbsp;&nbsp; </p>
+
+<pre><code>
+private Color GetGoodForeColor(Color backColor)
+{
+Color goodTextColor = SystemColors.ControlText;
+DrawingUtils.AdjustForeColorBrightnessForBackColor(ref goodTextColor, backColor, 0.75f);
+return goodTextColor;
+}
+
+TreeNodeAdvStyleInfo panthers = this.treeViewAdv1.BaseStyles["Panthers"] as TreeNodeAdvStyleInfo;
+panthers.TextColor = this.GetGoodForeColor(panthers.Background.BackColor);
+</code></pre>
+<p><strong>Node Level Style</strong></p>
+
+<p class="style1">The Node Level style specifies the properties of nodes at their level. In this sample, 
+<strong>NodeLevel3</strong> specifies the appearance of the nodes at <strong>level 3</strong>. For 
+example, the font style of the nodes has been specified as <em>Italic</em> in 
+<strong>NodeLevel3</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p class="style1">Users can also define base styles that can be inherited when defining any of the 
+mentioned styles.</p>
+
+<p>
+
+
+<strong>TreeViewAdv TriState</strong></p>
+
+<p class="style1">The <strong>TriState</strong> in <strong>TreeViewAdv</strong> can be displayed by setting a different left image 
+that is associated with each of the 
+three states for the <strong>TreeNodeAdv</strong>. The three types of states
+ are <em>True</em>,<strong> </strong> <em>False</em>, and <em>Intermediate</em>. 
+This can be done in the following ways.</p>
+
+<p class="style1">1. Creating three different base styles, one corresponding to each state, by using the
+<strong>TreeViewAdv</strong>'s &quot;Base Styles Collection Editor&quot; dialog</p>
+<p class="style1">2. Assigning appropriate values to image indices within the &quot;Base Styles 
+Collection Editor&quot; dialog for each of the three base styles</p>
+<p class="style1">3. Dragging and dropping image lists onto a form; assigning these lists to the 
+<strong>TreeViewAdv</strong>'s 
+<strong>ImageList</strong> properties</p>
+<p class="style1">4. Applying a desired style by setting the <strong>TreeNodeAdv</strong>'s 
+<strong>BaseStyle</strong> property</p>
+
+</html>

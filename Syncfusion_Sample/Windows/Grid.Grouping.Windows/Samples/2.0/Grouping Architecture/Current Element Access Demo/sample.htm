@@ -1,0 +1,42 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3583926">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Current Element Access Demo</H1>
+<P>This sample shows how you can retrieve the values of the current
+element and the current cell in a Grid Grouping control. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>In this sample, the Grid Grouping Control is bound to a
+	hierarchical data set customized at design-time.</P>
+	<LI><P>Results are displayed through labels.</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="GGCCurrentRecord screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<UL>
+	<LI><P>Information about the current record is retrieved by capturing
+	the element at the current mouse pointer location.</P>
+	<LI>
+	<P>When
+	activating a grid cell, the sample retrieves its value by handling the
+	<STRONG>TableControlCurrentCellActivated</STRONG> event.</P>
+	<LI><P>This in-turn employs the user-defined method
+	<STRONG>GetNestedCurrentElement,</STRONG> which returns the element  
+	corresponding to the cell being activated.</P>
+	<LI><P>The<STRONG> CurrentRecordManager.CurrentField</STRONG>
+	property on the instances of the <STRONG>Element.ParentTable</STRONG>
+	will  provide details of the active field.</P>
+</UL>
+</BODY>
+</HTML>

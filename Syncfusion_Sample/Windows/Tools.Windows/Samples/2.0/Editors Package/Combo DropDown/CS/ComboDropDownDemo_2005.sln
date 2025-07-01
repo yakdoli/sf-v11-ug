@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboDropDownDemo_2005", "ComboDropDownDemo_2005.csproj", "{6D33C020-4885-4F81-A338-94067983CC92}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6D33C020-4885-4F81-A338-94067983CC92}.Debug.ActiveCfg = Debug|.NET
+		{6D33C020-4885-4F81-A338-94067983CC92}.Debug.Build.0 = Debug|.NET
+		{6D33C020-4885-4F81-A338-94067983CC92}.Release.ActiveCfg = Release|.NET
+		{6D33C020-4885-4F81-A338-94067983CC92}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

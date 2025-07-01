@@ -1,0 +1,43 @@
+<h1>
+    Tables</h1>
+<p>
+    Microsoft Office Excel 2007 provides tables support that makes managing and analyzing data easy and efficient. These tables come with specific style support.</p>
+<p>
+    XlsIO supports reading and writing tables in Excel 2007 format. Tables can be created from any input range of sheet data and 
+	the total row can be inserted into the table. Styles can also be applied to the tables.</p>
+
+<p style="font-size:large">Features:</p>
+<ul>
+<li>Adding tables to a spreadsheet</li>
+<li>Advanced options of Excel tables such as Total Rows and Styles</li>
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+<li>Choose option from the options --Excel 2007,Excel 2010--to generate 
+a document in  Excel 2007,Excel 2010 respectively.</li>
+<li>Click <b>Create</b> to generate and view the document.</li>
+<li>All features in the preceding list are illustrated in this file.</li>
+</ul>
+
+<p>
+    Here is an image of the output file.</p>
+<p>
+    <div align="Center">
+        <img src="images/sample.png" alt="XlsIO" title="" /></div>
+</p>
+<p>
+    Here is a code snippet used:</p>
+<p>
+    <pre>
+// Create table
+IListObject table1 = sheet.ListObjects.Create("Table1", sheet["A1:C8"]);
+
+// Apply builtin style
+table1.BuiltInTableStyle = TableBuiltInStyles.TableStyleMedium9;
+
+// Total row
+table1.Columns[0].TotalsRowLabel = "Total";
+table1.Columns[1].TotalsCalculation = ExcelTotalsCalculation.Sum;
+table1.Columns[2].TotalsCalculation = ExcelTotalsCalculation.Sum;
+</pre>
+</p>

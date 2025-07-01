@@ -1,0 +1,43 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;4034196">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Engine Optimization Demo</H1>
+<P>This sample demonstrates virtual-mode and without-counter-mode
+optimization. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>Based on the schema specified, the engine determines whether
+	specific optimizations may be applied.</P>
+	<LI><P>If records are not sorted for a flat table, then the <B>Virtual</B>
+	mode is applied.</P>
+	<LI><P>Records do not have to be touched (except when
+	drawing).</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="EngineOptimizations screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P ALIGN=CENTER style="text-align: left"><b>Interactive Features:</b></P>
+<ul>
+	<li>You will be able to see the automatic switching between the
+virtual mode and without-counter mode when you select the &quot;Flat
+List VirtualMode&quot; example. </li>
+	<li>The engine will be initialized using the virtual mode. </li>
+	<li>Once you
+sort by a column, the virtual mode will be turned off, but the
+without-counter mode will still continue to work. </li>
+	<li>Once you sort by a
+column, the counters will then be enabled. </li>
+</ul>
+</BODY>
+</HTML>

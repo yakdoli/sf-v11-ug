@@ -1,0 +1,69 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;3480618">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>XML Serialization Demo</H1>
+<P>This sample demonstrates the serialization and de-serialization of
+schema information using XML serialization. 
+</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>Serialization and de-serialization of the grid's
+	schema information using XML serialization</P>
+	<LI><P>Saving the state of an object
+	by converting it into a stream of bytes</P>
+	<LI><P>Reversing serialization, also called de-serialization 
+	</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="XML Serialization screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P><b>Interactive Features:</b></P>
+<ul>
+	<LI>
+	<P>The methods to achieve this are <STRONG>WriteXmlSchema</STRONG>
+	and <STRONG>CreateFromXml</STRONG> of the grid engine.</P>
+	<LI>
+	<P ALIGN=LEFT>The code to load the schema uses a
+	combination of <STRONG>XmlReader</STRONG> and <STRONG>CreateFromXml</STRONG>
+	or <STRONG>ApplyXmlSchema</STRONG>.</P>
+	<li>By storing the initial state, the schema can be reset.</li>
+	<P><BR>Here is the code used to save the schema with <STRONG>XmlTextWriter</STRONG>
+	and <STRONG>WriteXmlSchema</STRONG>. 
+	</P>
+	<PRE><FONT COLOR="#8d2e1c">                FileDialog dlg = new SaveFileDialog();</FONT>
+<FONT COLOR="#8d2e1c">                dlg.AddExtension = true;</FONT>
+<FONT COLOR="#8d2e1c">                dlg.Filter = &quot;xml files (*.xml)|*.xml|All files (*.*)|*.*&quot; ;</FONT>
+<FONT COLOR="#8d2e1c">                if (dlg.ShowDialog() == DialogResult.OK)</FONT>
+<FONT COLOR="#8d2e1c">                {</FONT>
+<FONT COLOR="#8d2e1c">                        XmlTextWriter xw = new XmlTextWriter(dlg.FileName, System.Text.Encoding.UTF8);</FONT>
+<FONT COLOR="#8d2e1c">                        this.gridGroupingControl1.WriteXmlSchema(xw);</FONT>
+<FONT COLOR="#8d2e1c">                        xw.Close();</FONT>
+<FONT COLOR="#8d2e1c">                }   </FONT></PRE>
+	<P>The code to load the schema is performed using a combination of&nbsp;
+	<STRONG>XmlReader</STRONG> and <STRONG>CreateFromXml</STRONG> or
+	<STRONG>ApplyXmlSchema</STRONG>.</P>
+	<PRE><FONT COLOR="#8d2e1c">                FileDialog dlg = new OpenFileDialog();</FONT>
+<FONT COLOR="#8d2e1c">                dlg.Filter = &quot;xml files (*.xml)|*.xml|All files (*.*)|*.*&quot; ;</FONT>
+<FONT COLOR="#8d2e1c">                if (dlg.ShowDialog() == DialogResult.OK)</FONT>
+<FONT COLOR="#8d2e1c">                {</FONT>
+<FONT COLOR="#8d2e1c">                        XmlReader xr = new XmlTextReader(dlg.FileName);</FONT>
+<FONT COLOR="#8d2e1c">                        GridEngine engine = GridEngine.CreateFromXml(xr);</FONT>
+<FONT COLOR="#8d2e1c">                        if (engine != null)</FONT>
+<FONT COLOR="#8d2e1c">                                this.gridGroupingControl1.Engine.InitializeFrom(engine);</FONT>
+<FONT COLOR="#8d2e1c">                        xr.Close();</FONT>
+<FONT COLOR="#8d2e1c">                }   </FONT></PRE>
+</ul>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

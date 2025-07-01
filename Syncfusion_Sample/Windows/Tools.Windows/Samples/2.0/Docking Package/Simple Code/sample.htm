@@ -1,0 +1,21 @@
+﻿<h1>Simple Code</h1>
+
+<p>This sample shows you how to initialize and set up a docking layout using the 
+docking manager's programmatic API.</p>
+
+<p><div align=center><img src="images/sample.png" alt="SimpleCode Demo" title="" /></div>
+</p>
+
+<p>
+<p><strong>Features</strong>:</p>
+<ul>
+	<li>Creation and initialization of the docking windows are done inside the   <strong>InitializeDockingWindows()</strong> method, which is invoked from its constructor. Unlike the other 
+	Docking Windows samples, the docking manager is not added to the form during design time.</p></ul>
+
+<p><ul><li>The <strong>BeginInit()</strong> and <strong>EndInit()</strong> methods are used to indicate that the initialization has started and ended. All the initialization code should be placed between these method calls.</p></ul>
+
+<p><ul><li>In order to convert a control as a <em>dockable</em> window, here we are using the <strong>DockControl</strong> method of the 
+	docking manager. Similarly, to set a control as a floatable window, the
+	<strong>FloatControl</strong> method is used. <p>The <strong>Syncfusion.Windows.Forms.Tools.DockingStyle</strong> enumeration is used to specify the dock type and position when calling the 
+	<strong>DockingManager.DockControl</strong> method. As the docking manager is only initialized programmatically, it is necessary to explicitly set its host control.</p>
+</ul>

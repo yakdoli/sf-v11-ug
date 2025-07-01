@@ -1,0 +1,34 @@
+<h1>LINQ Wrapper</h1>
+
+<p>This sample demonstrates the usage of LINQ queries to retrieve data from worksheet using XlsIO. This range of data can then be formatted, or it
+can retrieve details of the data.</p>
+
+<p style="font-size:large">Features:</p>
+<ul>
+<li>Working with LINQ using XlsIO</li>
+<li>Querying values in a range</li>
+</ul>
+<p style="font-size:large">Interactive Features:</p>
+<ul>
+<li>Select a name from the combo box.</li>
+<li>Type in the LINQ query.</li>
+<li>Click <b>Query Data</b> to view the result in textbox and to generate and view the document.</li>
+<li>All features in the preceding list are illustrated in this file.</li>
+</ul>
+
+<p>Below is an image of the output generated when simple data is queried through LINQ.</p>
+<p><div align = "Center"><img src="images/sample.png" alt="XlsIO" title="" /></div></p>
+
+<p>Here is a code snippet:</p>
+<pre><code>
+  var matchingRanges = from IRange s in sheet["FirstName"]
+                                 where s.Text == cmbName.SelectedItem.ToString()
+                                 select s;
+
+            foreach (var range in matchingRanges)
+            {
+
+              result = range.Text + " Found at:" + range.Address + "\r\nCell Color:" + range.CellStyle.Color;
+
+            }
+</code></pre>

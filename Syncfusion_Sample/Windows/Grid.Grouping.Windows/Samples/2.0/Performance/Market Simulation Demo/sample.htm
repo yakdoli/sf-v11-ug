@@ -1,0 +1,133 @@
+
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;4120090">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Market Simulation Demo</H1>
+<P>This sample shows a typical market update simulation and how a
+Grid Grouping Control handles those high-frequency updates. It also
+discusses various built-in optimization properties.</P>
+<P><FONT SIZE=4><B>Features:</B></FONT></P>
+<P ALIGN=CENTER><img src="images/sample1.png" NAME="graphics1" ALT="MarketSimulation screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P ALIGN=LEFT>The sample design is explained in the following
+illustration:</P>
+<P ALIGN=CENTER><img src="images/sample2.PNG" NAME="graphics2" ALT="Market Simulation sample design" ALIGN=BOTTOM  BORDER=0></P>
+<UL>
+	<LI><P><FONT FACE="Times New Roman, serif" COLOR="#000000">The d</FONT><FONT COLOR="#000000">a</FONT>ta
+	table is filled with data objects and bound to the grid.</P>
+	<LI><P>On the <STRONG>Form_load</STRONG>, a worker thread is invoked
+	(<STRONG>System.Timers</STRONG>) and updates the data objects
+	randomly based on the<B> Symbols</B> fields.</P>
+	<LI><P>It raises an event with the changed data objects.</P>
+	<LI><P>The main GUI thread subscribes to this event and synchronizes
+	changes to the bound data table.</P>
+	<LI><P>The built-in properties the grid provides for high-frequency
+	updates and optimizations are as follows:</P>
+</UL>
+<UL>
+	<UL>
+		<LI><P><B>GridGroupingControl.BlinkTime-</B>Adds optional support
+		to highlight values in a record for a short time after a change is
+		detected.</P>
+	</UL>
+</UL>
+<P STYLE="margin-left: 0.75in">The engine will highlight a cell for
+the specified period in milliseconds if the value is increased or
+decreased.</P>
+<UL>
+	<UL>
+		<LI><P><B>GridGroupingControl.UpdateDisplayFrequency-</B>Allows
+		specification of how often the display should be updated when a new
+		<STRONG>ListChanged</STRONG> event-handler logic is used.</P>
+	</UL>
+</UL>
+<P STYLE="margin-left: 0.75in">This property will have no effect if
+the <STRONG>UseOldListChangedHandler</STRONG> is set to <EM>true</EM>.</P>
+<UL>
+	<UL>
+		<LI><P><B>GridGroupingControl.InvalidateAllWhenListChanged-</B><SPAN STYLE="font-weight: medium">L</SPAN>ets
+		you specify if the grid should simply call <STRONG>Invalidate</STRONG>
+		when a <STRONG>ListChanged</STRONG> event is handled or if it
+		should determine the area that is affected by the change and call
+		<STRONG>InvalidateRange</STRONG></P>
+		<LI><P>It may seem better to determine the affected area by a change
+		and call <STRONG>InvalidateRange,</STRONG> but when calling
+		<STRONG>InvalidateRange</STRONG>, the grid needs to know the exact
+		position of the record in the table before it can mark that area
+		as dirty.</P>
+	</UL>
+</UL>
+<P STYLE="margin-left: 0.75in">In order to determine the record
+position (and y-position of the row in the display), counters need to
+be evaluated. This operation can cost more time than simply calling
+<STRONG>Invalidate</STRONG> in high-frequency update scenarios.</P>
+<P STYLE="margin-left: 0.75in">Also, the group caption bar needs to
+be updated when a record changes. Check out the
+<STRONG>TableListChangedEventArgs</STRONG> class for the
+<STRONG>Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl.SourceListListChanged</STRONG>
+event. 
+</P>
+<P STYLE="margin-left: 0.75in">It provides properties to not mark specific 
+counters as dirty. In cases when counters are not marked
+dirty, <STRONG>InvalidateRange</STRONG> will be much faster. Counters
+only need to be marked dirty when there is a chance that the sort
+order is affected, if the filter-hidden state of a record is
+affected, or if custom counters are used.</P>
+<UL>
+	<UL>
+		<LI><P><B>GridGroupingControl.UseDefaultsForFasterDrawing-</B>Initializes
+		recommended settings to improve handling of <STRONG>ListChanged
+		</STRONG>events and scrolling through a grid</P>
+	</UL>
+</UL>
+<P STYLE="margin-left: 0.75in">Affected settings are: 
+</P>
+<UL>
+	<UL>
+		<OL>
+			<LI><P><STRONG>TableOptions.ColumnsMaxLengthStrategy</STRONG></P>
+			<LI><P><STRONG>TableOptions.GridLineBorder</STRONG></P>
+			<LI><P><STRONG>TableOptions.DrawTextWithGdiInterop</STRONG></P>
+			<LI><P><STRONG>TableOptions.VerticalPixelScroll</STRONG></P>
+			<LI><P><STRONG>Appearance.AnyRecordFieldCell.WrapText</STRONG></P>
+			<LI><P><STRONG>Appearance.AnyRecordFieldCell.Trimming</STRONG></P>
+		</OL>
+		<LI><P><B>GridGroupingControl.SortPositionChangedBehavior-</B>Specifies
+		grid reaction when sort position of a record changes</P>
+		<LI><P><B>GridGroupingControl.InsertRemoveBehavior-</B>Specifies
+		grid reaction when records are inserted or deleted</P>
+	</UL>
+</UL>
+<UL>
+	<UL>
+		<LI><P><B>Enums for SortPositionChangedBehavior and
+		InsertRemoveBehavior</B> 
+		</P>
+		<LI><P><B>InvalidateAll</B>-Invalidate the display, do not check
+		position of record</P>
+		<LI><P><B>InvalidateVisible</B>-Invalidate only the visible portion of
+		a display affected by a change</P>
+	</UL>
+</UL>
+<P STYLE="margin-left: 0.75in">If the record is above the current
+view, change the top row to minimize scrolling.</P>
+<UL>
+	<UL>
+		<LI><P><B>ScrollWithImmediateUpdate</B>-Scroll contents</P>
+	</UL>
+</UL>
+<P STYLE="margin-left: 0.75in">If the record is above the current view,
+change the top row to minimize scrolling. Changes are visible
+immediately.</P>
+</BODY>
+</HTML>

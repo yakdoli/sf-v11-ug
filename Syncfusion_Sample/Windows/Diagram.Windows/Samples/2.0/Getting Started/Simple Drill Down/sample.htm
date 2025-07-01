@@ -1,0 +1,104 @@
+﻿<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Simple Drill Down</h1>
+
+<p>The Simple Drill Down sample uses Essential Diagram&#39;s control to create a 
+drill-down diagram so users can follow a path through different levels.</p>
+<p>Symbol relationships are represented using orthogonal links and line connectors.</p>
+<p><div align=center><img src="images/sample.png" alt="DrillDown Image" title="" /></div></p>
+
+<p>
+<p><strong>Features</strong></p>
+<ul>
+	<li> Connecting nodes using orthogonal<strong> </strong>connectors can be 
+	implimented with the following code.</li>
+<p><font color="#8D2E1C"><pre>
+        private  void ConnectNodes(Node parentNode, Node subNode)
+        {
+            if (parentNode.CentralPort == null || subNode.CentralPort == null)
+                return;
+            this.dig.Model.BeginUpdate();
+            // Create links
+            PointF[] pts = new PointF[] { PointF.Empty, new PointF(0, 1) };
+            OrthogonalConnector  line = new OrthogonalConnector (pts[0], pts[1]);
+            line.HeadDecorator.DecoratorShape = DecoratorShape.Filled45Arrow;
+            this.dig.Model.AppendChild(line);
+            parentNode.CentralPort.TryConnect(line.TailEndPoint);
+            subNode.CentralPort.TryConnect(line.HeadEndPoint);
+            this.dig.Model.EndUpdate();
+        }</pre></font></p></ul>
+		<ul><li>Collapsing or expanding sub-nodes can be performed with the 
+	following code.</li>
+<p><font color="#8D2E1C"><pre>
+        public void ExpandSubNodes(bool clickednode)
+        {
+            IGraphNode thisNode = this as IGraphNode;
+            if (thisNode != null)
+            {
+                ICollection edgesLeaving = thisNode.EdgesLeaving;
+                if (edgesLeaving != null)
+                {
+                    foreach (IGraphEdge curEdge in edgesLeaving)
+                    {
+                        // Get from IGraphEdge link.
+                        ConnectorBase outlink = curEdge as ConnectorBase;
+                        if (outlink != null)
+                        {
+                            // Set connected link as visible too.
+                            Node node1 = outlink.ToNode as Node;
+                            if (node1 != null)
+                            {
+                                // Set current symbol as invisible.
+                                node1.Visible = true;
+                            }
+                            outlink.Visible = true;
+                        }
+                    }
+                }
+            }
+            // If this symbol is node under mouse click, set node state as 
+            // expanded by making the plus vertical line visible.
+            if (clickednode && HasChild())
+            {
+                // Set symbol shapes to indicate an expanded state.
+                m_bExpanded = true;
+            }
+        }
+
+        public void CollapseSubNodes(IGraphNode thisNode)
+        {           
+            IGraphNode thisNode = this as IGraphNode;
+            if (thisNode != null)
+            {
+                ICollection edgesLeaving = thisNode.EdgesLeaving;
+                if (edgesLeaving != null)
+                {
+                    // Convert to collection of IGraphEdges type.
+                    foreach (IGraphEdge curEdge in edgesLeaving)
+                    {
+                        // Get from IGraphEdge link.
+                        ConnectorBase outlink = curEdge as ConnectorBase;
+                        if (outlink != null)
+                        {
+                            // Set connected link as invisible too.
+                            Node node1 = outlink.ToNode as Node;
+                            CollapseSubNodes(node1 as IGraphNode);
+                            if (node1 != null)
+                            {
+                                // Set current symbol as invisible.
+                                node1.Visible = false;
+                            }
+                            outlink.Visible = false;
+                        }
+                    }
+                }
+            }</pre></font></p></ul>
+</html>

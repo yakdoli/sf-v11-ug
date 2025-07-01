@@ -1,0 +1,59 @@
+﻿
+<head>
+<style type="text/css">
+.style1 {
+	font-family: "Times New Roman";
+}
+</style>
+</head>
+
+<h1>MDI Demo</h1>
+
+<p>This sample illustrates the usage of XP Menus in a MDI scenario. It also illustrates how menu 
+and toolbar structure can be continuously displayed using the <strong>RegisterMDIChildType</strong> function.</p>
+
+<p>
+<p>&nbsp;<div align=center><img src="images/sample.png" alt="xpmenusmdi sample" title="" /></div></p>
+
+<p><h3>Features</h3></p>
+<p>Once a MDI child form is associated with a child frame bar manager, the XP Menus 
+framework merges the menus and toolbars of the child form with that of the main 
+form. </p>
+<p>The two ways in which MDI merging takes place are given below.</p>
+<p><ul>
+	<li><b>AutoMerging - </b>The framework will automatically merge the menus 
+	of the child forms with that of the main form when a new instance of the 
+	child type is parented by a MDI parent. This merging will be undone when all instances of 
+	the child type are closed. This is the default behavior. </li>
+</ul></p>
+<p><ul>
+	<li><b>Explicit Merging - </b>Explicitly merging child types when an application loads will provide a completely merged menu 
+	or toolbar structure. This merged state will stay unaffected throughout the 
+	life of an application, whether or not&nbsp; instances of the child type are currently loaded.</p>
+	</li>
+</ul> <p>
+	<strong><br>Note: </strong>The merged bar items of MDI child forms will 
+	display only in the run-time customization dialog; they will not be visible in the parent form's menus or toolbars until an actual instance of 
+	a child form is loaded. This is the behavior exhibited in VS.NET. </p><p>
+<strong>You can explicitly merge child types by registering the child-form types with the MainFrameBarManager, as follows.</strong></p>
+<pre><code>// TextEditorForm and ImageEditorForm are form-derived classes that are MDIChildren.</code></pre>
+<pre><code>this.mainFrameBarManager1.RegisterMdiChildTypes(new Type[]{typeof(TextEditorForm), typeof(ImageEditorForm)});
+</code></pre></p>
+<p>The <strong>MainFrameBarManager</strong> will then create an instance of these form types and obtain the main menu and toolbars associated with these child-forms.
+	</li></p>
+<p>The child windows are listed in the &quot;Window&quot; parent bar item using <strong>MdiListBarItem</strong>.</p>
+<p>The Image List Editor form<span class="style1">—</span>a pop-up control container 
+with button controls<span class="style1">—</span>is associated to the 
+&quot;Alignment&quot; parent bar item in order to change the alignment of an image</li>.<br>
+</p>
+<p>Recently viewed items are listed using the list bar item.<b> </b>The <strong>ListBarItem.ChildCaptions</strong> property specifies the captions for the expanded 
+bar items.</li><br></p>
+<p>Pop-up menus<b> </b>are associated to the picture box in the image editor form and 
+	to the rich text box in the text editor form by using the pop-up menus manager.</li><br>
+</p>
+<p>A list box is associated to the &quot;Undo&quot; drop-down bar item in order to have an Office-like 
+	undo style in the menus.</li><br></p>
+<p>All the toolbars can be floated by dragging and docking them to any side of the form.</li><br>
+</p>
+<p>Visual styles can be changed at run time using toolbar items in the Visual Style bar</li>.<br>
+</p>

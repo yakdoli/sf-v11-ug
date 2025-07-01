@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20090102;3244201">
+	<META NAME="CHANGEDBY" CONTENT="jisha j">
+	<META NAME="CHANGED" CONTENT="20090102;3252001">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Virtual Merge Cell Demo</H1>
+<P>This sample demonstrates dynamic(on the fly) merging of cells. It uses the derived classes, 
+<STRONG>GridControl</STRONG> and <STRONG>GridModel</STRONG> to handle
+this task. For more static(predefined) merge cells, you have to set the
+properties as shown.
+</P>
+<PRE STYLE="margin-left: 0.49in"><FONT COLOR="#8d2e1c">				GridStyleInfo standardStyle = BaseStylesMap["Standard"].StyleInfo;</FONT>
+<FONT COLOR="#8d2e1c">				standardStyle.MergeCell = GridMergeCellDirection.RowsInColumn;</FONT></PRE>
+
+<PRE STYLE="margin-left: 0.49in"><FONT COLOR="#8d2e1c">				GridStyleInfo rowHeaderStyle = BaseStylesMap["Row Header"].StyleInfo;</FONT>
+<FONT COLOR="#8d2e1c">				rowHeaderStyle.MergeCell = GridMergeCellDirection.RowsInColumn;</FONT></PRE>
+
+<P>We derive a class from a base class for overriding the existing methods of the base class to implement dynamic
+merging. 
+</P>
+<P><FONT SIZE=4><B>Features</B></FONT></P>
+<UL>
+	<LI><P>Illustrates how to
+	merge cells with the same value dynamically.</P>
+	<LI><P><SPAN LANG="en-US">In this sample, the first three columns are filled with virtual data in
+	</SPAN><STRONG><SPAN LANG="en-US">OnQueryCellInfo</SPAN></STRONG><SPAN LANG="en-US"> method.
+	The grid checks which cells have the same value using </SPAN><STRONG><SPAN LANG="en-US">OnQueryCanMergeCells</SPAN></STRONG><SPAN LANG="en-US">
+	method and automatically merges those cells on the fly.</SPAN>
+	</P>
+	<LI><P><SPAN LANG="en-US">Changes
+	in the columns are ignored because the value is always calculated in
+	</SPAN><STRONG><SPAN LANG="en-US">OnQueryCellInfo</SPAN></STRONG><SPAN LANG="en-US"> method.
+	</SPAN>
+	</P>
+	<LI><P>The remaining columns contain regular
+	cells where you can enter data and save them in the regular grid
+	data object.</P>
+	<LI><P>Entering the same value in
+	neighboring cells will automatically merge them.</P>
+	<LI><P>When you change the value of a cell within the merged range, the 
+	merged cells will automatically split, seperating the cell containing the changed value.</P>
+	<LI><P>The sample also includes a
+	technique to dynamically center the text in the current visible region of a	merged cell which can be 
+	enabled through the custom property <STRONG>CenterTextInVisibleCellPart</STRONG>.</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="VirtualMergeCell screenshot" ALIGN=BOTTOM  BORDER=0></P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+</BODY>
+</HTML>

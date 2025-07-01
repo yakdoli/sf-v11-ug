@@ -1,0 +1,139 @@
+<html>
+<h1>Custom Cell Type Demo</h1>
+<p>This sample demonstrates how you can replace any cell used in the Grid 
+Grouping control by registering a different cell type. It shows a custom-header 
+cell type that has an extra button inside. This sample also shows the code for 
+handling the pointer when hovering over a cell, expanding records without moving 
+the current one, and much more.<br><br>This is how the sample looks.</p>
+<p><p align=center><img src="images//sample.png" alt="CustomCellType screenshot" title="CustomCellType" /></p>
+<p align=center>&nbsp;</p>
+
+<p>In this sample, the My Header cell is customized in the <strong>HeaderCell</strong> 
+class. </p>
+<p>It contains the following three classes:</p>
+<p></p>
+<ul>
+	<li><b>MyHeaderCellModel </b></li>
+</ul>
+<ul>
+	<li><b>MyHeaderCellRenderer</b></li>
+</ul>
+<ul>
+	<li><b>MyCellButton</b></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>MyHeaderCellModel </strong>is inherited from <strong>
+GridTableColumnHeaderCellModel</strong>. It fixes the size of the button in the 
+constructor using the following code:</p>
+<p><font color="#8D2E1C"><pre>
+    		ButtonBarSize = new Size(10, 10);  </pre></font></p>
+
+<p><p><strong>MyHeaderCellRenderer</strong> is inherited from <strong>
+GridTableColumnHeaderCellRenderer</strong>. It adds the customized cell button in its constructor using the following code:</p>
+<p>
+<font color="#8D2E1C"><pre>
+    		this.AddButton(new MyCellButton(this));  </pre></font></p>
+
+<p><strong>MyCellButton</strong> is inherited from <strong>GridCellButton</strong>. 
+It overrides<strong> DrawButton,</strong> where the customized button is drawn 
+using the following code:</p>
+<p>
+<font color="#8D2E1C"><pre>
+    		ControlPaint.DrawButton(g, rect, buttonState); // Icon rect.Inflate(-3, -3); 
+    		Syncfusion.Drawing.BrushPaint.FillRectangle(g, rect, new Syncfusion.Drawing.
+    		BrushInfo(Syncfusion.Drawing.GradientStyle.PathEllipse, Color.Black, Color.Wheat));  </pre></font></p>
+<p>After defining <strong>MyHeaderCell</strong>, it is instantiated in the main 
+form using the following code:</p>
+<font color="#8D2E1C"><pre> 
+    		 MyHeaderCellModel header = new MyHeaderCellModel(this.gridGroupingControl1.TableModel); 
+    		 this.gridGroupingControl1.TableModel.CellModels["My Column Header"] = header;  </pre></font>
+
+<p><p> <strong>ColumnHeaderCellType</strong> is initialized with the customized 
+header cell.</p></p>
+
+<p><font color="#8D2E1C"><pre>
+    		this.gridGroupingControl1.Appearance.ColumnHeaderCell.CellType = "My Column Header";  </pre></font></p>
+
+<p><p>In the <strong>TableControlCellClick</strong> event, if the clicked cell 
+is a column-header cell, the cell layout is calculated using the following code: </p></p>
+<p>
+<font color="#8D2E1C"><pre>
+    		GridCellRendererBase r = e.TableControl.CellRenderers[style.CellType]; 
+    		r.PerformLayout(e.Inner.RowIndex, e.Inner.ColIndex, style, e.TableControl.RangeInfoToRectangle		
+    		(GridRangeInfo.Cell(e.Inner.RowIndex, e.Inner.ColIndex)));   </pre></font></p>
+
+<p><p> The following code checks whether the pointer is on the cell-button element and if the cell is clickable. If it is <em>true</em>, 
+then it displays a message box with the column name.</p></p>
+<p><font color="#8D2E1C"><pre>
+    		if (r.RaiseHitTest(e.Inner.RowIndex, e.Inner.ColIndex, e.Inner.MouseEventArgs, null) == GridHitTestContext.CellButtonElement) 
+    		{
+    			 string column = (id.Column != null) ? id.Column.ToString() : ""; string s = "Clicked on " 
+    			+ id.TableCellType.ToString() + "(" + column + ", " + id.DisplayElement.GetType().						
+    			Name + ")"; 
+    			MessageBox.Show(s); e.Inner.Cancel = true; 
+    		}  </pre></font></p>
+
+<p><p> In the <strong>TableControlCellMouseHover</strong> event, there is an 
+option for not being <strong>GridTableCellType.NestedTableCell</strong>,<strong>
+</strong>as given below. If the pointer hovers over an area of a nested table, 
+this event will be hit twice: first for the outer table control (which routes 
+the event to the inner table control), then for the inner table control. For the 
+outer table control, the table cell type is <strong>
+GridTableCellType.NestedTableCell</strong>.</p></p>
+<p>
+<font color="#8D2E1C"><pre>
+    		private void gridGroupingControl1_TableControlCellMouseHover(object sender, GridTableControlCellMouseEventArgs e) 
+    		{
+    			 GridTableCellStyleInfo style = (GridTableCellStyleInfo) e.TableControl.Model[e.Inner.RowIndex, e.Inner.ColIndex]; 
+    			GridTableCellStyleInfoIdentity id = style.TableCellIdentity;
+    			 if (id.TableCellType != GridTableCellType.NestedTableCell)
+    			 {
+    			   	 string column = (id.Column != null) ? id.Column.ToString() : ""; Console.WriteLine("MouseHover over " + id.TableCellType.ToString() +
+    				 "(" + column + ", " + id.DisplayElement.GetType().Name + ")");
+    			 }
+    		 }  </pre></font></p>
+
+<p>
+<p>In the <strong>TableControlCellButtonClicked</strong> event, the cell&nbsp; 
+type is checked to expand or collapse the record or group without moving the 
+current record or group. </p>
+<p></p>
+<p><b>Record Plus-Minus Cell</b></p>
+<p></p>
+<p>The clicked record is expanded if it is collapsed or collapsed if it is 
+expanded. The event is then cancelled to stop further processing and thereby 
+stops the <strong>IsExpanded </strong>call again. <br></p>
+<p><b>Group Caption Plus-Minus Cell</b></p>
+<p>The group is expanded if it is collapsed or collapsed if it is expanded. The 
+event is then cancelled to stop further processing and thereby stops the <strong>
+IsExpanded </strong>call again.</p>
+<p>
+<font color="#8D2E1C"><pre>
+    		private void gridGroupingControl1_TableControlCellButtonClicked(object sender, GridTableControlCellButtonClickedEventArgs e)
+    		{
+    			GridTableCellStyleInfo style = (GridTableCellStyleInfo) e.TableControl.Model[e.Inner.RowIndex, e.Inner.ColIndex]; 
+    			GridTableCellStyleInfoIdentity id = style.TableCellIdentity;
+    			if (id.TableCellType != GridTableCellType.NestedTableCell) 
+    			{
+    				 string column = (id.Column != null) ? id.Column.ToString() : ""; 
+    				 string s = "TableControlCellButtonClicked on " + id.TableCellType.ToString() + "(" + column + ", " + id.DisplayElement.GetType().Name + ")"; 	
+    					Console.WriteLine(s); 
+    					 e.Inner.Cancel = true;
+    			}
+    			  if (id.TableCellType == GridTableCellType.RecordPlusMinusCell) 
+    			  {
+    					 Record r = id.DisplayElement.ParentRecord;
+    					 r.IsExpanded = !r.IsExpanded; 	
+    						e.Inner.Cancel = true;
+    			  }
+    			 if (id.TableCellType == GridTableCellType.GroupCaptionPlusMinusCell) 
+    			 { 
+    					Group g = id.DisplayElement.ParentGroup;
+    					 g.IsExpanded = !g.IsExpanded;
+    					 e.Inner.Cancel = true;
+    			  }
+    		 }  
+			 </pre>
+			 </font>
+			 </p>
+</html>

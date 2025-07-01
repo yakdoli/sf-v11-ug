@@ -1,0 +1,25 @@
+<html><h1> Chart Point</h1>
+
+<p> This sample shows the usage of the <b>GetPointByValue</b> and <b>GetValueByPoint</b> methods.</p>
+
+<div align=center><img src="images/sample.png" alt="ChartGetValue Sample" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Get Chart Point Values </b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+
+<p><strong>Features</strong>:</p>
+
+<ul>
+	<li><b>Get Point by Value</b>
+<p>This method retrieves the corresponding point of a value in a chart region.</p>
+</li>
+<li><b>Get Value by Point</b>
+<p>This sample also demonstrates the <strong>GetValueByPoint</strong> method that can be used to calculate chart coordinates at a given client point.</p>
+<font color="#8D2E1C"><pre><code>
+ChartPoint chpt = chartControl1.ChartArea.GetValueByPoint( new Point( e.X, e.Y ) );
+Point pt = chartControl1.ChartArea.GetPointByValue( chpt );
+</code></pre></font>
+</html>

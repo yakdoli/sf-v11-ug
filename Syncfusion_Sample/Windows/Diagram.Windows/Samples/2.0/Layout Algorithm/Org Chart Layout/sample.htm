@@ -1,0 +1,44 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<h1>Org Chart Layout</h1>
+
+<p>The OrgLayout sample uses Essential Diagram to create and display an organizational chart using the employee data sourced from the XML data file.</p>
+
+<p><div align=center><img src="images/sample.png" alt="OrgLayout Image" title="" /></div></p>
+
+<p><strong>Features</strong></p>
+<ul>
+<li>	Horizontal Spacing - Sets the horizontal spacing between the adjacent nodes.</li>
+<li>	Vertical Spacing - Sets the vertical spacing between the adjacent nodes.</li>
+<li>	Top Margin - Sets the top margin of the layout manager.</li>
+<li>	Left Margin - Sets the left margin of the layout manager.</li>
+<li>	RotationAngle - Sets the rotation angle for the layout manager.</li>
+<li>	OrgChartLayoutManager  supports two different type of LayoutType.</li>
+<ul>
+		<li>Horizontal</li>
+		<li>Waterfall</li>
+</ul>
+
+<li>	AutoLayout - Updates the layout of the model, automatically.</li>
+
+<li>   The EmployeeSymbol custom symbol class extends Essential Diagram Symbol base type, and adds the functionality for containing and displaying the child symbols. 
+The expanded-collapsed state of the symbol is indicated by using +/- entities or RightDownTriangle with ellipse or rectangle as backgroundShape drawn by the EmployeeSymbol.</li>
+</ul><ul>
+<p>	To create <strong>OrgChartLayoutManager</strong> with the LayoutType as "Waterfall", the tree rotation as "TopToBottom" (i.e.RotationAngle =0),  horizontal spacing and vertical spacing as 40 and 50 respectively, use the following code.</p>
+
+<p><font color="#8D2E1C"><pre>
+			OrgChartLayoutManager dtLayoutMgr = new OrgChartLayoutManager(this.diagram1.Model, RotateDirection.TopToBottom, 40, 50, LayoutType.Waterfall, 1);
+            //Sets the DirectedTreeLayoutManager as the responsible for updating the layout of the diagram.
+            this.diagram1.LayoutManager = dtLayoutMgr;
+            // Updates the layout of the nodes in the model.
+            this.diagram1.LayoutManager.UpdateLayout(null);
+</pre></font></p></ul>
+</html>

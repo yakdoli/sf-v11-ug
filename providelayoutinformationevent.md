@@ -1,0 +1,91 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template}![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+:::: {.d2h_secondary_topic style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"}
+#### ProvideLayoutInformation Event {#providelayoutinformation-event style="tab-stops: 0pt"}
+
+[]{style="COLOR: #15428b"} 
+
+This event is triggered to obtain the preferred size information for a Child control during layout.
+
+ 
+
+The event handler receives an argument of type **ProvideLayoutInformationEventArgs** containing data related to this event. The ProvideLayoutInformationEventArgs members provide information specific to this event.
+
+[]{style="COLOR: #15428b"} 
+
+::: {align="center"}
+  ----------- -----------------------------------------------------------------------
+  Members     Description
+  Control     Specifies whether the child controls should be automatically aligned.
+  Handle      Specifies whether this event was handled and a value provided.
+  Requested   Returns the type of information requested.
+  Size        Gets / sets the size to be returned.
+  ----------- -----------------------------------------------------------------------
+:::
+
+[]{style="COLOR: #15428b"} 
+
+You can handle this event to autosize the Label control when you increase / decrease the form width.
+
+[]{style="COLOR: #15428b"} 
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[C#\]]{style="FONT-FAMILY: 'Courier New'; COLOR: black"}**                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                    |
+| []{style="FONT-FAMILY: 'Courier New'; COLOR: black"}                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                    |
+| [private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [void]{style="COLOR: blue"} flowLayout1_ProvideLayoutInformation([object]{style="COLOR: blue"} sender, Syncfusion.Windows.Forms.Tools.[ProvideLayoutInformationEventArgs]{style="COLOR: teal"} e)]{style="FONT-FAMILY: 'Courier New'"} |
+|                                                                                                                                                                                                                                                                                                    |
+| [{]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                                    |
+| [if]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ (e.Control == [this]{style="COLOR: blue"}.label1 && e.Requested == LayoutInformationType.PreferredSize)]{style="FONT-FAMILY: 'Courier New'"}                                                                                                |
+|                                                                                                                                                                                                                                                                                                    |
+| [{]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                                    |
+| [Graphics]{style="FONT-FAMILY: 'Courier New'; COLOR: teal"}[ g = [this]{style="COLOR: blue"}.CreateGraphics();]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                    |
+| [SizeF]{style="FONT-FAMILY: 'Courier New'; COLOR: teal"}[ szPref = g.MeasureString([this]{style="COLOR: blue"}.label1.Text, [this]{style="COLOR: blue"}.label1.Font, [this]{style="COLOR: blue"}.ClientRectangle.Width);]{style="FONT-FAMILY: 'Courier New'"}                                      |
+|                                                                                                                                                                                                                                                                                                    |
+| [e.Size = [new]{style="COLOR: blue"} [Size]{style="COLOR: teal"}([this]{style="COLOR: blue"}.ClientRectangle.Width-20, ([int]{style="COLOR: blue"})szPref.Height + 5);     ]{style="FONT-FAMILY: 'Courier New'"}                                                                                   |
+|                                                                                                                                                                                                                                                                                                    |
+| [e.Handled = [true]{style="COLOR: blue"};]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                    |
+| [g.Dispose();]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                    |
+| [}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                                    |
+| [}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                            |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[]{style="COLOR: #15428b"} 
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **[\[VB.NET\]]{style="FONT-FAMILY: 'Courier New'; COLOR: black"}**                                                                                                                                                                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| []{style="FONT-FAMILY: 'Courier New'; COLOR: black"}                                                                                                                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [Private]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"} flowLayout1_ProvideLayoutInformation([ByVal]{style="COLOR: blue"} sender [As]{style="COLOR: blue"} [Object]{style="COLOR: blue"}, [ByVal]{style="COLOR: blue"} e [As]{style="COLOR: blue"} Syncfusion.Windows.Forms.Tools.ProvideLayoutInformationEventArgs)]{style="FONT-FAMILY: 'Courier New'"} |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [If]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ e.Control = [Me]{style="COLOR: blue"}.label1 [AndAlso]{style="COLOR: blue"} e.Requested = LayoutInformationType.PreferredSize [Then]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                    |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [Dim]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ g [As]{style="COLOR: blue"} Graphics = [Me]{style="COLOR: blue"}.CreateGraphics()]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                           |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [Dim]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ szPref [As]{style="COLOR: blue"} SizeF = g.MeasureString([Me]{style="COLOR: blue"}.label1.Text, [Me]{style="COLOR: blue"}.label1.Font, [Me]{style="COLOR: blue"}.ClientRectangle.Width)]{style="FONT-FAMILY: 'Courier New'"}                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [e.Size = [New]{style="COLOR: blue"} Size([Me]{style="COLOR: blue"}.ClientRectangle.Width - 20, [CInt]{style="COLOR: blue"}(szPref.Height) + 5)]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [e.Handled = [True]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [g.Dispose()]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [End]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [If]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                                   |
+|                                                                                                                                                                                                                                                                                                                                                                                          |
+| [End]{style="FONT-FAMILY: 'Courier New'; COLOR: blue"}[ [Sub]{style="COLOR: blue"}]{style="FONT-FAMILY: 'Courier New'"}                                                                                                                                                                                                                                                                  |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+ 
+
+[]{#related-topics}
+::::

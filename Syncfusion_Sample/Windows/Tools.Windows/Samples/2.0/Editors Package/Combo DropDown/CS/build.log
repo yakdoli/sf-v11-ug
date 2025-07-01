@@ -1,0 +1,666 @@
+빌드 시작: 2025-03-27 오후 2:31:44
+"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 프로젝트의 "GetFrameworkPaths" 대상을 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets" 프로젝트의 "GetFrameworkPaths" 대상으로 재정의하고 있습니다.
+"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 프로젝트의 "SatelliteDllsProjectOutputGroup" 대상을 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" 프로젝트의 "SatelliteDllsProjectOutputGroup" 대상으로 재정의하고 있습니다.
+1 노드의 "C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트(기본 대상)입니다.
+도구 버전 "4.0"(을)를 사용하여 빌드하고 있습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_CheckForInvalidConfigurationAndPlatform" 대상(진입점):
+조건이 잘못되어 "Error" 작업을 건너뜁니다. ( '$(_InvalidConfigurationError)' == 'true' )이(가) ( '' == 'true' )(으)로 확인되었습니다.
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ( '$(_InvalidConfigurationWarning)' == 'true' )이(가) ( '' == 'true' )(으)로 확인되었습니다.
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "Message" 작업을 사용합니다.
+"Message" 작업
+  Configuration=Release
+"Message" 작업을 실행했습니다.
+"Message" 작업
+  Platform=AnyCPU
+"Message" 작업을 실행했습니다.
+조건이 잘못되어 "Error" 작업을 건너뜁니다. ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)'))이(가) ('bin\Release\' != '' and !HasTrailingSlash('bin\Release\'))(으)로 확인되었습니다.
+조건이 잘못되어 "Error" 작업을 건너뜁니다. ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)'))이(가) ('obj\' != '' and !HasTrailingSlash('obj\'))(으)로 확인되었습니다.
+조건이 잘못되어 "Error" 작업을 건너뜁니다. ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)'))이(가) ('obj\Release\' != '' and !HasTrailingSlash('obj\Release\'))(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_CheckForInvalidConfigurationAndPlatform" 대상을 빌드했습니다.
+조건이 잘못되어 "EntityDeploy" 대상을 건너뜁니다. ('@(EntityDeploy)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "BeforeBuild" 대상("Build" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "BeforeBuild" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "BuildOnlySettings" 대상("CoreBuild" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "BuildOnlySettings" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets" 파일에 있는 "GetFrameworkPaths" 대상("PrepareForBuild" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "GetFrameworkPaths" 대상을 빌드했습니다.
+조건이 잘못되어 "GetWinFXPath" 대상을 건너뜁니다. (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' ))이(가) (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' ))(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "GetReferenceAssemblyPaths" 대상("PrepareForBuild" 대상이 종속됨):
+조건이 잘못되어 "GetReferenceAssemblyPaths" 작업을 건너뜁니다. ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == ''))이(가) ('.NETFramework,Version=v4.0' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == ''))(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "GetReferenceAssemblyPaths" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "PrepareForBuild" 대상("CoreBuild" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "FindAppConfigFile" 작업을 사용합니다.
+"FindAppConfigFile" 작업
+"FindAppConfigFile" 작업을 실행했습니다.
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "MakeDir" 작업을 사용합니다.
+"MakeDir" 작업
+  "bin\Release\" 디렉터리를 만들고 있습니다.
+  "obj\Release\" 디렉터리를 만들고 있습니다.
+"MakeDir" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "PrepareForBuild" 대상을 빌드했습니다.
+조건이 잘못되어 "PreBuildEvent" 대상을 건너뜁니다. ('$(PreBuildEvent)'!='')이(가) (''!='')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "BeforeResolveReferences" 대상("ResolveReferences" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "BeforeResolveReferences" 대상을 빌드했습니다.
+조건이 잘못되어 "AssignProjectConfiguration" 대상을 건너뜁니다. ('$(CurrentSolutionConfigurationContents)' != '' or '@(ProjectReference)'!='')이(가) ('' != '' or ''!='')(으)로 확인되었습니다.
+조건이 잘못되어 "AssignProjectConfiguration" 대상을 건너뜁니다. ('$(CurrentSolutionConfigurationContents)' != '' or '@(ProjectReference)'!='')이(가) ('' != '' or ''!='')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_SplitProjectReferencesByFileExistence" 대상("ResolveProjectReferences" 대상이 종속됨):
+조건이 잘못되어 "ResolveNonMSBuildProjectOutput" 작업을 건너뜁니다. ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='')이(가) (''=='true' and ''!='')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_SplitProjectReferencesByFileExistence" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "ResolveProjectReferences" 대상("ResolveReferences" 대상이 종속됨):
+조건이 잘못되어 "MSBuild" 작업을 건너뜁니다. ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '')이(가) ('' == 'true' and '' != '' and ('' == 'true' or 'true' != 'true') and '11.0' != '10.0' and '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "MSBuild" 작업을 건너뜁니다. ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '')이(가) ('' == 'true' and '' != '' and ('' == 'true' or 'true' != 'true') and '11.0' == '10.0' and '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "MSBuild" 작업을 건너뜁니다. ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '')이(가) ('' == 'true' and '' != '' and '' != 'true' and 'true' == 'true' and '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "MSBuild" 작업을 건너뜁니다. ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '')이(가) ('' == 'true' and '' != '' and 'true' == 'true' and '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '')이(가) ('' != '' and '' != '')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "ResolveProjectReferences" 대상을 빌드했습니다.
+조건이 잘못되어 "ResolveNativeReferences" 대상을 건너뜁니다. ('@(NativeReference)'!='')이(가) (''!='')(으)로 확인되었습니다.
+"GetFrameworkPaths" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"GetReferenceAssemblyPaths" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"PrepareForBuild" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "GetInstalledSDKLocations" 대상("ResolveSDKReferences" 대상이 종속됨):
+조건이 잘못되어 "GetInstalledSDKLocations" 작업을 건너뜁니다. ('@(SDKReference)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "GetInstalledSDKLocations" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "ResolveSDKReferences" 대상("ResolveAssemblyReferences" 대상이 종속됨):
+조건이 잘못되어 "ResolveSDKReference" 작업을 건너뜁니다. ('@(SDKReference)'!='')이(가) (''!='')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "ResolveSDKReferences" 대상을 빌드했습니다.
+"ResolveSDKReferences" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "ExpandSDKReferences" 대상("ResolveAssemblyReferences" 대상이 종속됨):
+조건이 잘못되어 "GetSDKReferenceFiles" 작업을 건너뜁니다. ('@(ResolvedSDKReference)'!='')이(가) (''!='')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "ExpandSDKReferences" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "ResolveAssemblyReferences" 대상("ResolveReferences" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "ResolveAssemblyReference" 작업을 사용합니다.
+"ResolveAssemblyReference" 작업
+  TargetFrameworkMoniker:
+      .NETFramework,Version=v4.0
+  TargetFrameworkMonikerDisplayName:
+      .NET Framework 4
+  TargetedRuntimeVersion:
+      v4.0.30319
+  Assemblies:
+      DemoCommon
+      Syncfusion.Core
+      Syncfusion.Grid.Base
+      Syncfusion.Grid.Windows
+      Syncfusion.Shared.Base
+      Syncfusion.Shared.Windows
+      Syncfusion.Tools.Base
+      Syncfusion.Tools.Windows
+      System
+      System.Data
+      System.Design
+      System.Drawing
+      System.Drawing.Design
+      System.Runtime.Serialization.Formatters.Soap
+      System.Windows.Forms
+      System.Xml
+      System.Core
+  AssemblyFiles:
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll
+  CandidateAssemblyFiles:
+  TargetFrameworkDirectories:
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+  InstalledAssemblyTables:
+  IgnoreInstalledAssemblyTable:
+      False
+  SearchPaths:
+      {CandidateAssemblyFiles}
+      {HintPathFromItem}
+      {TargetFrameworkDirectory}
+      {Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}
+      {AssemblyFolders}
+      {GAC}
+      {RawFileName}
+      bin\Release\
+  AllowedAssemblyExtensions:
+      .winmd
+      .dll
+      .exe
+  AllowedRelatedFileExtensions:
+      .pdb
+      .xml
+      .pri
+  AppConfigFile:
+      
+  AutoUnify:
+      False
+  CopyLocalDependenciesWhenParentReferenceInGac:
+      True
+  FindDependencies:
+      True
+  TargetProcessorArchitecture:
+      x86
+  StateFile:
+      obj\Release\ComboDropDownDemo_2010.csprojResolveAssemblyReference.cache
+  InstalledAssemblySubsetTables:
+  IgnoreInstalledAssemblySubsetTable:
+      False
+  TargetFrameworkSubsets:
+  FullTargetFrameworkSubsetNames:
+      Full
+  ProfileName:
+      
+  FullFrameworkFolders:
+      C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+  LatestTargetFrameworkDirectories:
+  ProfileTablesLocation:
+  통합된 기본 참조 "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"입니다.
+      이 프레임워크 파일의 최신 버전이 있으므로 "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\EnvDTE.dll" 에서 원래 버전 "1.0.3300.0" 대신 이 버전을 사용합니다.
+      이 프레임워크 파일의 최신 버전이 있으므로 "c:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\stdole.dll" 에서 원래 버전 "1.0.3300.0" 대신 이 버전을 사용합니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll"입니다.
+      검색 경로 위치 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll"에서 참조를 찾았습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "DemoCommon, Version=11.104.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\DemoCommon.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DemoCommon.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DemoCommon.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DemoCommon.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "Syncfusion.Core, Version=11.104.0.21, Culture=neutral, PublicKeyToken=632609b4d040f6b4"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Core.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Core.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Core.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Core.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "Syncfusion.Grid.Base, Version=11.104.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Grid.Base.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Grid.Base.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Grid.Base.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Grid.Base.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      관련 파일 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Grid.Base.xml"을(를) 찾았습니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "Syncfusion.Grid.Windows, Version=11.104.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Grid.Windows.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Grid.Windows.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Grid.Windows.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Grid.Windows.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      관련 파일 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Grid.Windows.xml"을(를) 찾았습니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "Syncfusion.Shared.Base, Version=11.104.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Shared.Base.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Shared.Base.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Shared.Base.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Shared.Base.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      관련 파일 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Shared.Base.xml"을(를) 찾았습니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "Syncfusion.Shared.Windows, Version=11.104.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Shared.Windows.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Shared.Windows.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Shared.Windows.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Shared.Windows.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      관련 파일 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Shared.Windows.xml"을(를) 찾았습니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "Syncfusion.Tools.Base, Version=11.104.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Tools.Base.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Tools.Base.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Tools.Base.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Tools.Base.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      관련 파일 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Tools.Base.xml"을(를) 찾았습니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "Syncfusion.Tools.Windows, Version=11.104.0.21, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Tools.Windows.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Tools.Windows.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Tools.Windows.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Syncfusion.Tools.Windows.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      관련 파일 "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Tools.Windows.xml"을(를) 찾았습니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Design.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Design.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.Design.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.Design.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System.Runtime.Serialization.Formatters.Soap, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.Formatters.Soap.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.Formatters.Soap.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  기본 참조 "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.winmd"(으)로 간주했지만 존재하지 않습니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 종속성입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\UIAutomationProvider.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0"에 사용됩니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\UIAutomationProvider.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\UIAutomationProvider.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\UIAutomationProvider.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\UIAutomationProvider.winmd"(으)로 간주했지만 존재하지 않습니다.
+      "Syncfusion.Tools.Windows"에 필요합니다.
+      "Syncfusion.Grid.Windows"에 필요합니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  "WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 종속성입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WindowsBase.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0"에 사용됩니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\WindowsBase.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\WindowsBase.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\WindowsBase.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WindowsBase.winmd"(으)로 간주했지만 존재하지 않습니다.
+      "Syncfusion.Tools.Windows"에 필요합니다.
+      "Syncfusion.Grid.Windows"에 필요합니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  "UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 종속성입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\UIAutomationTypes.dll"입니다.
+      검색 경로 위치 "{TargetFrameworkDirectory}"에서 참조를 찾았습니다.
+          SearchPath "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0"에 사용됩니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\UIAutomationTypes.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\UIAutomationTypes.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\UIAutomationTypes.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\UIAutomationTypes.winmd"(으)로 간주했지만 존재하지 않습니다.
+      "Syncfusion.Tools.Windows"에 필요합니다.
+      "Syncfusion.Grid.Windows"에 필요합니다.
+      이 참조는 필수 파일이므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v4.0.30319"입니다.
+  "EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 종속성입니다.
+      확인된 파일 경로는 "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\EnvDTE.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0"에 사용됩니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\EnvDTE.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\EnvDTE.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\EnvDTE.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\EnvDTE.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\EnvDTE.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\EnvDTE.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      "Syncfusion.Tools.Windows"에 필요합니다.
+      이 참조의 ImageRuntimeVersion은 "v1.0.3705"입니다.
+  "stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 종속성입니다.
+      확인된 파일 경로는 "c:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\stdole.dll"입니다.
+      검색 경로 위치 "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에서 참조를 찾았습니다.
+          SearchPath "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies"에 사용됩니다.
+          "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\stdole.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\stdole.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\stdole.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{TargetFrameworkDirectory}"에 사용됩니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\stdole.winmd"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\stdole.dll"(으)로 간주했지만 존재하지 않습니다.
+          "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\stdole.exe"(으)로 간주했지만 존재하지 않습니다.
+          SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"에 사용됩니다.
+          AssemblyFoldersEx 위치로 간주했습니다.
+      "Syncfusion.Tools.Windows"에 필요합니다.
+      이 참조는 GAC에 등록되었으므로 "CopyLocal"이 아닙니다.
+      이 참조의 ImageRuntimeVersion은 "v1.0.3705"입니다.
+  AssemblyFoldersEx 위치: "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"
+          C:\Program Files (x86)\Microsoft Visual Studio\Shared\SDKs\Azure\v2.9\ToolsRef\
+          C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0
+          c:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\
+          C:\app\client\ydjo\product\19.0.0\client_1\ASP.NET\bin\4\
+          C:\app\client\ydjo\product\19.0.0\client_1\ODP.NET\managed\common\EF6\
+          C:\Program Files\Oracle Client for Microsoft Tools\odp.net\managed\common
+          C:\app\client\ydjo\product\19.0.0\client_1\ODP.NET\bin\4\EF6\
+          C:\Program Files\Oracle Client for Microsoft Tools\odp.net\bin\4
+          C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\ref
+          C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies
+          C:\app\client\ydjo\product\19.0.0\client_1\ASP.NET\bin\2.x\
+          C:\app\client\ydjo\product\19.0.0\client_1\ODP.NET\bin\2.x\
+          C:\Program Files (x86)\Microsoft Chart Controls\Assemblies
+          C:\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.9\ref
+"ResolveAssemblyReference" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "ResolveAssemblyReferences" 대상을 빌드했습니다.
+조건이 잘못되어 "ResolveComReferences" 대상을 건너뜁니다. ('@(COMReference)'!='' or '@(COMFileReference)'!='')이(가) (''!='' or ''!='')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "AfterResolveReferences" 대상("ResolveReferences" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "AfterResolveReferences" 대상을 빌드했습니다.
+조건이 잘못되어 "ImplicitlyExpandDesignTimeFacades" 대상을 건너뜁니다. ('$(ImplicitlyExpandDesignTimeFacades)' == 'true')이(가) ('' == 'true')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "ResolveReferences" 대상("CoreBuild" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "ResolveReferences" 대상을 빌드했습니다.
+조건이 잘못되어 "XamlMarkupCompilePass1" 대상을 건너뜁니다. ('@(XamlPage)' != '' or '@(XamlAppDef)' != '')이(가) ('' != '' or '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "XamlMarkupCompileReadGeneratedFileList" 대상을 건너뜁니다. ('@(XamlPage)' != '' or '@(XamlAppDef)' != '')이(가) ('' != '' or '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "XamlMarkupCompileAddFilesGenerated" 대상을 건너뜁니다. ('@(XamlPage)' != '' or '@(XamlAppDef)' != '')이(가) ('' != '' or '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "XamlMarkupCompilePass2" 대상을 건너뜁니다. ('$(XamlRequiresCompilationPass2)' == 'true' )이(가) ('false' == 'true' )(으)로 확인되었습니다.
+조건이 잘못되어 "XamlMarkupCompileReadPass2Flag" 대상을 건너뜁니다. ('@(XamlPage)' != '' or '@(XamlAppDef)' != '')이(가) ('' != '' or '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "XamlMarkupCompileAddExtensionFilesGenerated" 대상을 건너뜁니다. ('@(XamlPage)' != '' or '@(XamlAppDef)' != '')이(가) ('' != '' or '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "MarkupCompilePass1" 대상을 건너뜁니다. ('@(Page)' != '' or '@(ApplicationDefinition)' != '' )이(가) ('' != '' or '' != '' )(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" 파일에 있는 "AfterMarkupCompilePass1" 대상("PrepareResources" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "AfterMarkupCompilePass1" 대상을 빌드했습니다.
+조건이 잘못되어 "MarkupCompilePass2ForMainAssembly" 대상을 건너뜁니다. ('$(_RequireMCPass2ForMainAssembly)' == 'true' )이(가) ('false' == 'true' )(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" 파일에 있는 "FileClassification" 대상("PrepareResources" 대상이 종속됨):
+조건이 잘못되어 "FileClassifier" 작업을 건너뜁니다. ('@(GeneratedBaml)' != '' or '@(Resource)' != '' or '@(Font)' != '')이(가) ('' != '' or '' != '' or '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "Message" 작업을 건너뜁니다. ('$(MSBuildTargetsVerbose)'=='true')이(가) (''=='true')(으)로 확인되었습니다.
+조건이 잘못되어 "Message" 작업을 건너뜁니다. ('$(MSBuildTargetsVerbose)'=='true')이(가) (''=='true')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "FileClassification" 대상을 빌드했습니다.
+조건이 잘못되어 "MainResourcesGeneration" 대상을 건너뜁니다. ('@(MainEmbeddedFiles)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "AssignWinFXEmbeddedResource" 대상을 건너뜁니다. ('@(WinFXEmbeddedResource)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "AssignTargetPaths" 대상("PrepareResourceNames" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "AssignTargetPath" 작업을 사용합니다.
+"AssignTargetPath" 작업
+"AssignTargetPath" 작업을 실행했습니다.
+"AssignTargetPath" 작업
+"AssignTargetPath" 작업을 실행했습니다.
+"AssignTargetPath" 작업
+"AssignTargetPath" 작업을 실행했습니다.
+"AssignTargetPath" 작업
+"AssignTargetPath" 작업을 실행했습니다.
+조건이 잘못되어 "AssignTargetPath" 작업을 건너뜁니다. ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest')이(가) (''=='' and ''=='.manifest')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "AssignTargetPaths" 대상을 빌드했습니다.
+"AssignTargetPaths" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "SplitResourcesByCulture" 대상("PrepareResourceNames" 대상이 종속됨):
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(ResxWithNoCulture)'!='')이(가) (''!='')(으)로 확인되었습니다.
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(ResxWithCulture)'!='')이(가) (''!='')(으)로 확인되었습니다.
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(NonResxWithCulture)'!='')이(가) (''!='')(으)로 확인되었습니다.
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(NonResxWithNoCulture)'!='')이(가) (''!='')(으)로 확인되었습니다.
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "AssignCulture" 작업을 사용합니다.
+"AssignCulture" 작업
+  ""의 문화권을 "Form1.resx" 파일에 지정했습니다.
+"AssignCulture" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "SplitResourcesByCulture" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" 파일에 있는 "CreateManifestResourceNames" 대상("PrepareResourceNames" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "CreateCSharpManifestResourceName" 작업을 사용합니다.
+"CreateCSharpManifestResourceName" 작업
+  루트 네임스페이스가 'ComboDropDownDemo'입니다.
+  리소스 파일 'Form1.resx'은(는) 'Form1.cs'에 종속됩니다.
+  리소스 파일 'Form1.resx'은(는) 매니페스트 리소스 이름 'ComboDropDownDemo.Form1'을(를) 가져옵니다.
+"CreateCSharpManifestResourceName" 작업을 실행했습니다.
+조건이 잘못되어 "CreateCSharpManifestResourceName" 작업을 건너뜁니다. ('%(EmbeddedResource.ManifestResourceName)' == '' and '%(EmbeddedResource.WithCulture)' == 'true' and '%(EmbeddedResource.Type)' == 'Non-Resx')이(가) ('' == '' and 'false' == 'true' and 'Resx' == 'Non-Resx')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "CreateManifestResourceNames" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "CreateCustomManifestResourceNames" 대상("PrepareResourceNames" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "CreateCustomManifestResourceNames" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "PrepareResourceNames" 대상("PrepareResources" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "PrepareResourceNames" 대상을 빌드했습니다.
+"ResolveAssemblyReferences" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"SplitResourcesByCulture" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "BeforeResGen" 대상("ResGen" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "BeforeResGen" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "CoreResGen" 대상("ResGen" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "GenerateResource" 작업을 사용합니다.
+"GenerateResource" 작업
+  "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\resgen.exe" /useSourcePath /r:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\DemoCommon.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /r:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Core.dll" /r:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Grid.Base.dll" /r:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Grid.Windows.dll" /r:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Shared.Base.dll" /r:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Shared.Windows.dll" /r:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Tools.Base.dll" /r:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Tools.Windows.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Design.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.Design.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.Formatters.Soap.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /compile Form1.resx,obj\Release\ComboDropDownDemo.Form1.resources
+  리소스 파일 "Form1.resx"을(를) "obj\Release\ComboDropDownDemo.Form1.resources"(으)로 처리하고 있습니다.
+  "Form1.resx" 파일에서 7 리소스를 처리하고 있습니다.
+"GenerateResource" 작업을 실행했습니다.
+조건이 잘못되어 "GenerateResource" 작업을 건너뜁니다. ('%(EmbeddedResource.Type)' == 'Resx' and '%(EmbeddedResource.GenerateResource)' != 'false' and '$(GenerateResourceMSBuildRuntime)' == 'CLR2')이(가) ('Resx' == 'Resx' and '' != 'false' and 'CLR4' == 'CLR2')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "CoreResGen" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "AfterResGen" 대상("ResGen" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "AfterResGen" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "ResGen" 대상("PrepareResources" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "ResGen" 대상을 빌드했습니다.
+조건이 잘못되어 "CompileLicxFiles" 대상을 건너뜁니다. ('@(_LicxFile)'!='')이(가) (''!='')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "PrepareResources" 대상("CoreBuild" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "PrepareResources" 대상을 빌드했습니다.
+조건이 잘못되어 "ResolveKeySource" 대상을 건너뜁니다. ($(SignManifests) == 'true' or $(SignAssembly) == 'true')이(가) ( == 'true' or  == 'true')(으)로 확인되었습니다.
+"ResolveReferences" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+조건이 잘못되어 "ResolveKeySource" 대상을 건너뜁니다. ($(SignManifests) == 'true' or $(SignAssembly) == 'true')이(가) ( == 'true' or  == 'true')(으)로 확인되었습니다.
+조건이 잘못되어 "ResolveComReferences" 대상을 건너뜁니다. ('@(COMReference)'!='' or '@(COMFileReference)'!='')이(가) (''!='' or ''!='')(으)로 확인되었습니다.
+조건이 잘못되어 "ResolveNativeReferences" 대상을 건너뜁니다. ('@(NativeReference)'!='')이(가) (''!='')(으)로 확인되었습니다.
+조건이 잘못되어 "_SetExternalWin32ManifestProperties" 대상을 건너뜁니다. ('$(GenerateClickOnceManifests)'=='true' or '@(NativeReference)'!='' or '@(ResolvedIsolatedComModules)'!='')이(가) (''=='true' or ''!='' or ''!='')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_SetEmbeddedWin32ManifestProperties" 대상("SetWin32ManifestProperties" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "GetFrameworkPath" 작업을 사용합니다.
+"GetFrameworkPath" 작업
+"GetFrameworkPath" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_SetEmbeddedWin32ManifestProperties" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "SetWin32ManifestProperties" 대상("Compile" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "SetWin32ManifestProperties" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_GenerateCompileInputs" 대상("Compile" 대상이 종속됨):
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(ManifestResourceWithNoCulture)'!='' and '%(ManifestResourceWithNoCulture.EmittedForCompatibilityOnly)'=='')이(가) ('obj\Release\ComboDropDownDemo.Form1.resources'!='' and 'true'=='')(으)로 확인되었습니다.
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(ManifestNonResxWithNoCultureOnDisk)'!='' and '%(ManifestNonResxWithNoCultureOnDisk.EmittedForCompatibilityOnly)'=='')이(가) (''!='' and ''=='')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_GenerateCompileInputs" 대상을 빌드했습니다.
+"PrepareForBuild" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"GetReferenceAssemblyPaths" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" 파일에 있는 "_SetTargetFrameworkMonikerAttribute" 대상("GenerateTargetFrameworkMonikerAttribute" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_SetTargetFrameworkMonikerAttribute" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "GenerateTargetFrameworkMonikerAttribute" 대상("BeforeCompile" 대상이 종속됨):
+"GenerateTargetFrameworkMonikerAttribute" 대상을 모두 빌드하고 있습니다.
+출력 파일 "C:\Users\ydjo\AppData\Local\Temp\1\.NETFramework,Version=v4.0.AssemblyAttributes.cs"이(가) 없습니다.
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "WriteLinesToFile" 작업을 사용합니다.
+"WriteLinesToFile" 작업
+"WriteLinesToFile" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "GenerateTargetFrameworkMonikerAttribute" 대상을 빌드했습니다.
+조건이 잘못되어 "GenerateAdditionalSources" 대상을 건너뜁니다. ('@(AssemblyAttributes)' != '' and '$(GenerateAdditionalSources)' == 'true')이(가) ('' != '' and '' == 'true')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "BeforeCompile" 대상("Compile" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "BeforeCompile" 대상을 빌드했습니다.
+조건이 잘못되어 "_TimeStampBeforeCompile" 대상을 건너뜁니다. ('$(RunPostBuildEvent)'=='OnOutputUpdated' or ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library'))이(가) ('OnBuildSuccess'=='OnOutputUpdated' or ('false'=='true' and 'WinExe'=='library'))(으)로 확인되었습니다.
+조건이 잘못되어 "_ComputeNonExistentFileProperty" 대상을 건너뜁니다. (('$(BuildingInsideVisualStudio)' == 'true') and ('$(BuildingOutOfProcess)' != 'true') and (('$(BuildingProject)' == 'false') or ('$(UseHostCompilerIfAvailable)' == 'true')))이(가) (('' == 'true') and ('' != 'true') and (('true' == 'false') or ('true' == 'true')))(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.ServiceModel.targets" 파일에 있는 "PreXsdCodeGen" 대상("CoreCompile" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "CallTarget" 작업을 사용합니다.
+"CallTarget" 작업
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.ServiceModel.targets" 파일에 있는 "CleanXsdCodeGen" 대상("PreXsdCodeGen" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "Delete" 작업을 사용합니다.
+"Delete" 작업
+"Delete" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "CleanXsdCodeGen" 대상을 빌드했습니다.
+"CallTarget" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "PreXsdCodeGen" 대상을 빌드했습니다.
+조건이 잘못되어 "XsdCodeGen" 대상을 건너뜁니다. ( '$(XsdCodeGenPreCondition)' == 'True' )이(가) ( 'False' == 'True' )(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.CSharp.targets" 파일에 있는 "CoreCompile" 대상("Compile" 대상이 종속됨):
+"CoreCompile" 대상을 모두 빌드하고 있습니다.
+출력 파일 "obj\Release\ComboDropDownDemo.exe"이(가) 없습니다.
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "Csc" 작업을 사용합니다.
+"Csc" 작업
+  C:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /unsafe- /checked- /nowarn:1701,1702 /nostdlib+ /platform:x86 /errorreport:prompt /warn:4 /baseaddress:285212672 /define:TRACE;SyncfusionFramework2_0 /highentropyva- /reference:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\DemoCommon.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /reference:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Core.dll" /reference:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Grid.Base.dll" /reference:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Grid.Windows.dll" /reference:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Shared.Base.dll" /reference:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Shared.Windows.dll" /reference:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Tools.Base.dll" /reference:"C:\Program Files (x86)\Syncfusion\Essential Studio\11.1.0.21\Assemblies\4.0\Syncfusion.Tools.Windows.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Design.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.Design.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.Formatters.Soap.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /debug- /filealign:4096 /optimize+ /out:obj\Release\ComboDropDownDemo.exe /resource:obj\Release\ComboDropDownDemo.Form1.resources /target:winexe /warnaserror- /utf8output /win32icon:App.ico AssemblyInfo.cs Form1.cs "C:\Users\ydjo\AppData\Local\Temp\1\.NETFramework,Version=v4.0.AssemblyAttributes.cs"
+  Microsoft (R) Visual C# Compiler version 4.8.9232.0
+  
+  for C# 5
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  
+  
+  This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+  
+"Csc" 작업을 실행했습니다.
+조건이 잘못되어 "CallTarget" 작업을 건너뜁니다. ('$(TargetsTriggeredByCompilation)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "CoreCompile" 대상을 빌드했습니다.
+조건이 잘못되어 "_TimeStampAfterCompile" 대상을 건너뜁니다. ('$(RunPostBuildEvent)'=='OnOutputUpdated' or ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library'))이(가) ('OnBuildSuccess'=='OnOutputUpdated' or ('false'=='true' and 'WinExe'=='library'))(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "AfterCompile" 대상("Compile" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "AfterCompile" 대상을 빌드했습니다.
+조건이 잘못되어 "PrepareResourcesForSatelliteAssemblies" 대상을 건너뜁니다. ('$(UICulture)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "MergeLocalizationDirectives" 대상을 건너뜁니다. ('@(GeneratedLocalizationFiles)' !='')이(가) ('' !='')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" 파일에 있는 "AfterCompileWinFX" 대상("_AfterCompileWinFXInternal" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "AfterCompileWinFX" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" 파일에 있는 "_AfterCompileWinFXInternal" 대상("Compile" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_AfterCompileWinFXInternal" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "Compile" 대상("CoreBuild" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "Compile" 대상을 빌드했습니다.
+조건이 잘못되어 "ExportWindowsMDFile" 대상을 건너뜁니다. ('$(ExportWinMDFile)' == 'true')이(가) ('' == 'true')(으)로 확인되었습니다.
+조건이 잘못되어 "UnmanagedUnregistration" 대상을 건너뜁니다. ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
+                    ('$(_AssemblyTimestampBeforeCompile)' == '')) and
+                   Exists('@(_UnmanagedRegistrationCache)'))이(가) ((('' != '' or 'false' != 'true' or 'WinExe' != 'library') or
+                    ('' == '')) and
+                   Exists('obj\ComboDropDownDemo_2010.csproj.UnmanagedRegistration.cache'))(으)로 확인되었습니다.
+조건이 잘못되어 "GenerateSerializationAssemblies" 대상을 건너뜁니다. ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto'))이(가) ('Auto' == 'On' or (''!='' and 'Auto' == 'Auto'))(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_GenerateSatelliteAssemblyInputs" 대상("CreateSatelliteAssemblies" 대상이 종속됨):
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='')이(가) (''!='' and ''=='')(으)로 확인되었습니다.
+조건이 잘못되어 "Warning" 작업을 건너뜁니다. ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='')이(가) (''!='' and ''=='')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_GenerateSatelliteAssemblyInputs" 대상을 빌드했습니다.
+"CreateManifestResourceNames" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "ComputeIntermediateSatelliteAssemblies" 대상("CreateSatelliteAssemblies" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "ComputeIntermediateSatelliteAssemblies" 대상을 빌드했습니다.
+조건이 잘못되어 "GenerateSatelliteAssemblies" 대상을 건너뜁니다. ('@(_SatelliteAssemblyResourceInputs)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "CreateSatelliteAssemblies" 대상("CoreBuild" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "CreateSatelliteAssemblies" 대상을 빌드했습니다.
+조건이 잘못되어 "GenerateManifests" 대상을 건너뜁니다. ('$(GenerateClickOnceManifests)'=='true' or '@(NativeReference)'!='' or '@(ResolvedIsolatedComModules)'!='' or '$(GenerateAppxManifest)' == 'true')이(가) (''=='true' or ''!='' or ''!='' or '' == 'true')(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "GetTargetPath" 대상("CoreBuild" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "GetTargetPath" 대상을 빌드했습니다.
+"ComputeIntermediateSatelliteAssemblies" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_CopyFilesMarkedCopyLocal" 대상("CopyFilesToOutputDirectory" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "Copy" 작업을 사용합니다.
+"Copy" 작업
+  "C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\EnvDTE.dll"에서 "bin\Release\EnvDTE.dll"(으)로 파일을 복사하고 있습니다.
+"Copy" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_CopyFilesMarkedCopyLocal" 대상을 빌드했습니다.
+"AssignTargetPaths" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"_SplitProjectReferencesByFileExistence" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" 파일에 있는 "GetCopyToOutputDirectoryXamlAppDefs" 대상("GetCopyToOutputDirectoryItems" 대상이 종속됨):
+"AssignTargetPath" 작업
+"AssignTargetPath" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "GetCopyToOutputDirectoryXamlAppDefs" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "GetCopyToOutputDirectoryItems" 대상("_CopySourceItemsToOutputDirectory" 대상이 종속됨):
+조건이 잘못되어 "MSBuild" 작업을 건너뜁니다. ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true')이(가) ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true')(으)로 확인되었습니다.
+"AssignTargetPath" 작업
+"AssignTargetPath" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "GetCopyToOutputDirectoryItems" 대상을 빌드했습니다.
+조건이 잘못되어 "_CopyOutOfDateSourceItemsToOutputDirectory" 대상을 건너뜁니다. ( '@(_SourceItemsToCopyToOutputDirectory)' != '' )이(가) ( '' != '' )(으)로 확인되었습니다.
+조건이 잘못되어 "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" 대상을 건너뜁니다. ( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' )이(가) ( '' != '' )(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_CopySourceItemsToOutputDirectory" 대상("CopyFilesToOutputDirectory" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_CopySourceItemsToOutputDirectory" 대상을 빌드했습니다.
+조건이 잘못되어 "_CopyAppConfigFile" 대상을 건너뜁니다. ( '@(AppConfigWithTargetPath)' != '' )이(가) ( '' != '' )(으)로 확인되었습니다.
+조건이 잘못되어 "_CopyManifestFiles" 대상을 건너뜁니다. ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' )이(가) ( ''=='true' or ''=='true' )(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_CheckForCompileOutputs" 대상("CopyFilesToOutputDirectory" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_CheckForCompileOutputs" 대상을 빌드했습니다.
+조건이 잘못되어 "_SGenCheckForOutputs" 대상을 건너뜁니다. ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto'))이(가) ('Auto' == 'On' or (''!='' and 'Auto' == 'Auto'))(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "CopyFilesToOutputDirectory" 대상("PrepareForRun" 대상이 종속됨):
+"Copy" 작업
+  "obj\Release\ComboDropDownDemo.exe"에서 "bin\Release\ComboDropDownDemo.exe"(으)로 파일을 복사하고 있습니다.
+"Copy" 작업을 실행했습니다.
+"Message" 작업
+  ComboDropDownDemo_2010 -> C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\bin\Release\ComboDropDownDemo.exe
+"Message" 작업을 실행했습니다.
+조건이 잘못되어 "Copy" 작업을 건너뜁니다. ('@(AddModules)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "Copy" 작업을 건너뜁니다. ('$(_SGenDllCreated)'=='true')이(가) ('false'=='true')(으)로 확인되었습니다.
+조건이 잘못되어 "Copy" 작업을 건너뜁니다. ('$(_DebugSymbolsProduced)'=='true' and '$(SkipCopyingSymbolsToOutputDirectory)' != 'true' and '$(CopyOutputSymbolsToOutputDirectory)'=='true')이(가) ('false'=='true' and '' != 'true' and 'true'=='true')(으)로 확인되었습니다.
+조건이 잘못되어 "Copy" 작업을 건너뜁니다. ('$(_DocumentationFileProduced)'=='true')이(가) ('false'=='true')(으)로 확인되었습니다.
+조건이 잘못되어 "Copy" 작업을 건너뜁니다. ('@(IntermediateSatelliteAssembliesWithTargetPath)' != '')이(가) ('' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "Copy" 작업을 건너뜁니다. ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' )이(가) ('' != '' or '' != '' or '' != '' or '' != '' )(으)로 확인되었습니다.
+조건이 잘못되어 "Copy" 작업을 건너뜁니다. ('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '')이(가) ('' != 'true' and '' != '')(으)로 확인되었습니다.
+조건이 잘못되어 "Message" 작업을 건너뜁니다. ('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '')이(가) ('' != 'true' and '' != '')(으)로 확인되었습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "CopyFilesToOutputDirectory" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "PrepareForRun" 대상("CoreBuild" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "PrepareForRun" 대상을 빌드했습니다.
+조건이 잘못되어 "UnmanagedRegistration" 대상을 건너뜁니다. ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library')이(가) ('false'=='true' and 'WinExe'=='library')(으)로 확인되었습니다.
+"_CheckForCompileOutputs" 대상을 건너뜁니다. 이전에 빌드되었습니다.
+조건이 잘못되어 "_SGenCheckForOutputs" 대상을 건너뜁니다. ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto'))이(가) ('Auto' == 'On' or (''!='' and 'Auto' == 'Auto'))(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "_CleanGetCurrentAndPriorFileWrites" 대상("IncrementalClean" 대상이 종속됨):
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "ReadLinesFromFile" 작업을 사용합니다.
+"ReadLinesFromFile" 작업
+"ReadLinesFromFile" 작업을 실행했습니다.
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "ConvertToAbsolutePath" 작업을 사용합니다.
+"ConvertToAbsolutePath" 작업
+"ConvertToAbsolutePath" 작업을 실행했습니다.
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "FindUnderPath" 작업을 사용합니다.
+"FindUnderPath" 작업
+  비교 경로는 "C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs"입니다.
+"FindUnderPath" 작업을 실행했습니다.
+"FindUnderPath" 작업
+  비교 경로는 "bin\Release\"입니다.
+"FindUnderPath" 작업을 실행했습니다.
+"FindUnderPath" 작업
+  비교 경로는 "obj\Release\"입니다.
+"FindUnderPath" 작업을 실행했습니다.
+"Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 어셈블리에서 "RemoveDuplicates" 작업을 사용합니다.
+"RemoveDuplicates" 작업
+"RemoveDuplicates" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "_CleanGetCurrentAndPriorFileWrites" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "IncrementalClean" 대상("CoreBuild" 대상이 종속됨):
+"FindUnderPath" 작업
+  비교 경로는 "bin\Release\"입니다.
+"FindUnderPath" 작업을 실행했습니다.
+"FindUnderPath" 작업
+  비교 경로는 "obj\Release\"입니다.
+"FindUnderPath" 작업을 실행했습니다.
+"Delete" 작업
+"Delete" 작업을 실행했습니다.
+"RemoveDuplicates" 작업
+"RemoveDuplicates" 작업을 실행했습니다.
+"WriteLinesToFile" 작업
+"WriteLinesToFile" 작업을 실행했습니다.
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "IncrementalClean" 대상을 빌드했습니다.
+조건이 잘못되어 "PostBuildEvent" 대상을 건너뜁니다. ('$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)' != 'OnOutputUpdated' or '$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)'))이(가) ('' != '' and ('OnBuildSuccess' != 'OnOutputUpdated' or '' != ''))(으)로 확인되었습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "CoreBuild" 대상("Build" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "CoreBuild" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "AfterBuild" 대상("Build" 대상이 종속됨):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "AfterBuild" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트의 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" 파일에 있는 "Build" 대상(진입점):
+"ComboDropDownDemo_2010.csproj" 프로젝트에 "Build" 대상을 빌드했습니다.
+"C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Combo DropDown\cs\ComboDropDownDemo_2010.csproj" 프로젝트를 빌드했습니다(기본 대상).
+
+
+빌드했습니다.
+    경고 0개
+    오류 0개
+
+경과 시간: 00:00:01.77

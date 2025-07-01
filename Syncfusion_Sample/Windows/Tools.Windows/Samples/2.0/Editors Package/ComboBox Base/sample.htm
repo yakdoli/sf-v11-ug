@@ -1,0 +1,33 @@
+<h1>Combo Box Base</h1>
+
+<p>
+This sample demonstrates data binding and adding list controls to the combo box 
+base.
+</P>
+
+<p><div align=center><img src="images/sample.png" alt="ComboBoxBase Demo" title="" /></div></p>
+
+<p>
+The Combo Box Base is an advanced combo box control that provides many improvements over the standard 
+combo box control. 
+It essentially separates the edit portion from the drop-down portion, thereby making this architecture powerful and flexible. 
+Users may plug-in any list control-derived class as the list for the portion of the 
+combo box using the 
+<strong>ListControl </strong>property.</p>
+<p>
+<strong>Features</strong>:</p>
+
+
+<p>
+<ul><li>The <strong>Text</strong> property of the Combo Box Base can be bound to 
+	a database as shown below.<pre><code>
+
+this.comboBoxBase.DataBindings.Add("Text",this.dataSet11.Products,"Discontinued");
+
+</code></pre>
+
+<li>Use the <strong>ListControl</strong> property to set any list control to the Combo Box Base.</p>
+
+<p>
+<li>
+Any list control that is already bounded can be attached to the Combo Box Base. Use the <strong>SelectionChangeCommitted</strong> event when the text property of the Combo Box Base changes.</ul></p>

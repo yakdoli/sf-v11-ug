@@ -1,0 +1,183 @@
+<html>
+<h1>Group Bar Demo</h1>
+
+<p>The Group Bar is a part of the Navigation package that is used to implement list-type controls for facilitating navigation within 
+an application's user interface. This function is frequently seen in the Microsoft Outlook Navigation bar.</p>
+
+<p>It implements a tab-type container that can serve as a host for a collection of 
+group views or other Windows Forms controls. </p>
+
+<p>This sample illustrates the usage of a Group Bar control that creates clones of the Microsoft Outlook Bar and VS .NET Toolbox  windows.</p>
+
+
+
+<div align=center>
+<TABLE id="Table1" >
+
+    	
+<TR>
+  
+<TD align=center><div align=center><img src="images/GroupBar2.png"  alt="groupbar demo image" title="" /></div></TD>
+<TD>&nbsp;&nbsp;</TD>
+    		<TD align=center><div align=center><img src="images/GroupBar1.png"  alt="groupbar demo image" title="" /></div></TD>
+</TR>	<TR>
+
+<TD align=center><b>VS-Like Group Bar</b></TD>
+
+<TD>&nbsp;&nbsp;</TD>
+<TD align=center><b>Outlook Group Bar</b></TD>
+</TR></TABLE><br>
+
+<TABLE id="Table2"  >
+
+
+  
+<TR>
+<TD><div align=center><img src="images/GroupBar3.png"  alt="groupbar demo image" title="" /></div></TD>
+</TR><TR>
+<TD align=center><b>Group Bar with Custom Colors</b></TD>
+</TR>
+</TABLE></div></p>
+
+
+
+
+
+
+
+
+<p><strong>Features</strong>:</p>
+
+<p><b>Appearance Settings</b></p>
+<ol>
+<li> <p><b>Background Color</b><br>
+The background color for the Group Bar and the Group View is set using the 
+<strong>BackColor</strong> property, as shown.
+<font color="#8d2e1c"><pre><code>
+ this.gbVisualStudio.BackColor = cpBack.SelectedColor;
+ this.GeneralGroupView.BackColor = Color.White; 
+</code></pre></font>
+</p>
+</li>
+
+<li> <p><b>Border</b>
+<ul>
+<li><b>Group Bar Border</b>
+- The border for the Group Bar can be specified in the <strong>BorderStyle</strong> property. This border 
+is drawn as the outer rectangle for an entire Group Bar control.
+
+<font color="#8d2e1c"><pre><code>
+this.gbVisualStudio.BorderStyle =  BorderStyle.FixedSingle
+</code></pre></font>
+</li>
+<li><b>GroupBar ClientBorder - </b>The<b> </b>client area of each Group Bar item can have borders of different colors for each side 
+by using the <strong>DrawClientBorder</strong> property.
+<font color="#8d2e1c"><pre><code>
+this.gbVisualStudio.DrawClientBorder =  this.cbDrawClientBorder.Checked;
+            foreach (GroupBarItem gbItem in  this.gbVisualStudio.GroupBarItems)
+            {
+                gbItem.ClientBorderColors = new  Syncfusion.Windows.Forms.Tools.BorderColors(cpBack.Sele ctedColor, cpBack.SelectedColor, cpBack.SelectedColor,  cpBack.SelectedColor);
+            }
+
+</code></pre></font></li>
+</ul></p></li>
+
+<li><p> <b>Visual Styles</b><br>
+The
+Group Bar provides options for various visual styles such as <strong>Default</strong>, 
+<strong>Office 2003</strong>, and <strong>Office 2007</strong>.
+
+<font color="#8d2e1c"><pre><code>
+this.gbVisualStudio.VisualStyle =  VisualStyle.Office2003
+</code></pre></font>
+</p></li>
+<li>  <p><b>Color Schemes</b><br>
+The
+Group Bar supports all three Office 2007 color schemes as well as custom colors.
+<font color="#8d2e1c"><pre><code>
+this.gbOutlook.Office2007Theme = Office2007Theme.Blue;
+
+</code></pre></font>
+</p></li>
+</ol>
+<p><b>Behavior Settings</b></p>
+<ul>
+<p><li><b>Animated Selection</b><br>
+Switching between two Group Bar items can be animated by using the <strong>AnimatedSelection</strong> property.
+<font color="#8d2e1c"><pre><code>
+ this.gbVisualStudio.AnimatedSelection  = true;
+</code></pre></font>
+</li></p>
+<p><li><b>Integrated Scrolling</b><br>
+Integrated scroll buttons of the Group Bar can scroll items in the group view by setting the <b>IntegratedScrolling </b>property.
+<font color="#8d2e1c"><pre><code>
+this.gbVisualStudio.IntegratedScrolling = true;
+</code></pre></font>
+</li></p>
+<p><li><b>Stacked Group Bar</b><br>
+	This is a full-featured implementation of a "Navigation Pane Options" dialog that allows users to show, hide, or move Group Bar 
+	items; it is similar to the functionality available in Microsoft Outlook 2007.
+</p><ul>
+<li><p><b>Stacked Mode</b><br>
+Group Bar items can be stacked, similar to the Outlook Bar, by using the <b>StackedMode  </b>property.
+<font color="#8d2e1c"><pre><code>
+this.gbOutlook.StackedMode = true;
+</code></pre></font>
+</p></li>
+<li><p><b>Chevron in Group Bar</b><br>
+When the Group Bar is in Stacked mode, the chevron button can be visible by using the <b>ShowChevron </b>property.
+<font color="#8d2e1c"><pre><code>
+ this.gbOutlook.ShowChevron = true;
+</code></pre></font>
+</p></li>
+<li><p><b>Item Image in Header</b><br>
+Images associated with a Group Bar item can be displayed in the Group Bar header when a particular 
+item is selected; this is done using the <b>ShowItemImageInHeader </b>property.
+<font color="#8d2e1c"><pre><code>
+this.gbOutlook.ShowItemImageInHeader = true;
+</code></pre></font>
+</p></li></ul>
+</li>
+<li><p><b>Collapsible Group Bar</b><br>
+A stacked Group Bar can be collapsed or expanded to save application space. The Essential Group Bar provides various customization options for this feature.</p>
+<p><ul>
+<li><b>AllowCollapse </b>indicates whether a group bar can be collapsed.</li>
+<li><b>Collapsed </b>indicates whether a group bar is collapsed.</li>
+<li><b>CollapsedText </b>indicates what text is to be shown in the collapsed client area of the group bar.</li>
+<li><b>CollapsedWidth </b>allows setting the width of a collapsed group bar.</li>
+<li><b>CollapseImage </b>allows setting the image of a collapse button when in expanded state.</li>
+<li><b>ExpandButtonToolTip </b>is the ToolTip for the collapse button when the control is collapsed.</li>
+<li><b>ExpandImage </b>allows setting the image of the collapse button when in the collapsed state.</li>
+<li><b>MinimizeButtonToolTip </b>is the ToolTip for the collapse button when the control is expanded.</li>
+<li><b>NavigationPaneToolTip </b>is the ToolTip for a navigation pane.</li>
+<li><b>PopupAutoClose </b>indicates whether a pop-up should close when clicking on another Group Bar 
+item.</li>
+<li><b>PopupClientSize </b>is used to set the size of the pop-up window.</li>
+<li><b>PopupResizeMode </b>indicates how the pop-up window can be resized. It allows 
+horizontal resizing, vertical resizing, both, or none of these options.</li>
+<li><b>ShowPopupGripper </b>is used to show a pop-up windows gripper.</li>
+<li><b>BeforePopup </b>is an<b> </b>event that occurs before the Group Bar item’s pop-up is shown.</li>
+<li><b>StateChanging </b>is an<b> </b>event that is triggered when a state is about to change.</li>
+<li><b>StateChanged  </b>is an<b>  </b>event that occurs when a state is changed.</li>
+</ul>
+</p>
+</li>
+
+</ul>
+
+
+<p><b>Events</b></p>
+<p>The Group Bar provides an option to add, remove, or rename Group Bar items at run time. 
+A context menu can be associated with a Group Bar to perform user-defined actions.
+Various events supported by the Group Bar are as follows.</p>
+<ul>
+<li><strong>GroupBarItemAdded</strong></li>
+<li><strong>ProvideGroupBarItemBrush</strong></li>
+<li><strong>GroupBarItemSelectionChanging</strong></li>
+<li><strong>GroupBarItemSelected</strong></li>
+<li><strong>GroupBarItemAdded</strong></li>
+<li><strong>GroupBarItemRenamed</strong></li>
+<li><strong>GroupBarItemRemoved</strong></li>
+<li><strong>ShowContextMenu</strong></li>
+<li><strong>NavigationPaneDropDownClick </strong> </li> 
+</ul></p></html>

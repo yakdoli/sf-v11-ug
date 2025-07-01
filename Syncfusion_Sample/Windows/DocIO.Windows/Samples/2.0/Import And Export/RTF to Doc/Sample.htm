@@ -1,0 +1,14 @@
+<h1>RTF to DOC</h1>
+
+<p>This sample illustrates Essential DocIO's support for converting an RTF file to a Microsoft Word document.</p>
+
+<p><P>Here's an example of what the conversion looks like.</P></p>
+<p><div align = "Center"><img src="images/RTFToWord.png" alt="DocIO" title="" /></div></p>
+
+<p>Here is a code snippet to convert RTF document to Word document using Essential DocIO</p>
+<pre>
+                //Open the RTF document to convert
+                WordDocument document = new WordDocument();
+                document.Open("RTFToDoc.rtf",FormatType.Rtf  );
+				//Save the document with FormatType Doc or Docx
+            	document.Save("Sample.doc", FormatType.Doc);</pre>

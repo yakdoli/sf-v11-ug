@@ -1,0 +1,103 @@
+<html>
+
+<head>
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=style1>
+
+<h1>Grid Data Bound Grid
+Calculator Demo</h1>
+
+<p>This sample shows you how to implement <strong>ICalcData</strong> on a <strong>GridDataBoundGrid</strong>
+object whose <strong>Datasource</strong> property is a data table. The class <b
+style='mso-bidi-font-weight:normal'>CalcDataGrid</b> derives the <b
+style='mso-bidi-font-weight:normal'>GridDataBoundGrid</b> and implements the
+<strong>ICalcData</strong>. </p>
+	<p><strong>Features</strong>:</p>
+
+<p class="style1">A form displaying a single instance of the <strong>CalcDataGrid</strong> populated with data
+is illustrated below.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><img
+width=686 height=355 id="_x0000_i1027" src="images/sample1.png"
+alt="CalcGridDataBoundGrid that is capable of accepting Excel-Like formulas screenshot"></span><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='mso-fareast-font-family:"Times New Roman"'>CalcGridDataBoundGrid Capable
+of Accepting Excel-Like formulas</span></b><span style='mso-fareast-font-family:
+"Times New Roman"'><o:p></o:p></span></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p class="style1">A <strong>CalcGridDataBoundGrid</strong> can be tweaked to display any underlying formulae. Notice
+that in Column B, changing the first cell affects all the other cells of that
+column.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><img
+width=686 height=357 id="_x0000_i1026" src="images/sample2.png"
+alt="CalcGridDataBoundGrid showing formulas screenshot"></span><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='mso-fareast-font-family:"Times New Roman"'>CalcGridDataBoundGrid Displaying
+Formulae</span></b><span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>The <strong>ICalcData</strong> interface has just three methods and one event. </p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><b><span style='mso-fareast-font-family:
+     "Times New Roman"'>GetValueRowCol</span></b><span style='mso-fareast-font-family:
+     "Times New Roman"'>-Returns the data value at a given row or column <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><b><span style='mso-fareast-font-family:
+     "Times New Roman"'>SetValueRowCol</span></b><span style='mso-fareast-font-family:
+     "Times New Roman"'>-Sets the data value at a given row or column<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list .5in'><b><span style='mso-fareast-font-family:
+     "Times New Roman"'>WireParentObject</span></b><span style='mso-fareast-font-family:
+     "Times New Roman"'>-Callback immediately after a <b style='mso-bidi-font-weight:
+     normal'>CalcEngine</b> object is created <o:p></o:p></span></li>
+</ul>
+
+<p>This sample also shows that it is possible to have multiple <b
+style='mso-bidi-font-weight:normal'>GridDataBoundGrid</b><span
+style='mso-bidi-font-weight:normal'>s</span><b
+style='mso-bidi-font-weight:normal'> </b>in a t<span
+style='mso-bidi-font-weight:normal'>able control</span><b
+style='mso-bidi-font-weight:normal'> </b>to support a
+workbook-type application. Cells can be referenced on different
+grids in a formula. </p>
+
+<p>The following image illustrates multiple <b style='mso-bidi-font-weight:
+normal'>GridDataBoundGrid</b><span style='mso-bidi-font-weight:
+normal'>s</span><b style='mso-bidi-font-weight:
+normal'> </b>in a t<span style='mso-bidi-font-weight:normal'>ab control.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><img
+width=680 height=500 id="_x0000_i1025" src="images/sample3.png"
+alt="A Workbook of CalcGridDataBoundGrids screenshot"></span><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='mso-fareast-font-family:"Times New Roman"'>Workbook of CalcGridDataBound
+Grids</span></b><span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

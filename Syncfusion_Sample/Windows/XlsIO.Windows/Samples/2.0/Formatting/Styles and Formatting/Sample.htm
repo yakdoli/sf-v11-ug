@@ -1,0 +1,54 @@
+<h1>
+    Styles and Formatting</h1>
+<p>
+    Excel 2007 is known for its various styles and formatting that give it an 
+	attractive appearance. Microsoft brings up the gradient styles and a number of new colors.
+    Essential XlsIO supports formatting cells with gradient and RGB colors. You can
+    also set styles and formatting that are supported in Biff8 format.</p>
+<p>
+    This sample demonstrates Essential XlsIO's support for various styles and formatting
+    in Excel 2007 format. Both built-in styles and custom styles using the interior
+	method <strong>IStyle</strong> are used for setting gradient styles.
+    <br />
+    <b>Note:</b> This can apply gradient styles only for the Excel 2007 format.</p>
+
+    <p style="font-size:large">Features:</p>
+	<ul>
+	<li>Creating a calendar using XlsIO</li>
+	<li>Built-in styles</li>
+	<li>Custom styles</li>
+	<li>Gradients</li>
+
+	</ul>
+	<p style="font-size:large">Interactive Features:</p>
+	<ul>
+	<li>Choose one from the options--Excel 2007,Excel 2010--to generate 
+a document in  Excel 2007,Excel 2010 respectively.</li>
+	<li>Click <b>Create</b> button to generate and view the document.</li>
+<li>Click <b>Input Template</b> button to view the Input Template file.</li>
+	<li>All features in the preceding list are illustrated in this file.</li>
+</ul>
+
+<p>
+    Here is an image of the output file that shows rich formatting applied.</p>
+<p>
+    <div align="Center">
+        <img src="images/styles.png" alt="XlsIO" title="" /></div>
+</p>
+<p>
+    Here is code a snippet used to apply a gradient:</p>
+<p>
+    <pre>
+// Set builtin style
+sheet["K7"].BuiltInStyle = BuiltInStyles.Accent2_20;
+sheet["K8"].BuiltInStyle = BuiltInStyles.Accent4_20;
+
+// Set Gradient pattern for the cell.
+IStyle style = sheet.Range["B3"].CellStyle;
+style.HorizontalAlignment = ExcelHAlign.HAlignCenter;
+style.Interior.FillPattern = ExcelPattern.Gradient;
+style.Interior.Gradient.TwoColorGradient(ExcelGradientStyle.Diagonl_Up, ExcelGradientVariants.ShadingVariants_3);
+style.Interior.Gradient.ForeColorIndex = ExcelKnownColors.White;
+style.Interior.Gradient.BackColor = colorArray[monIndex - 1];
+</pre>
+</p>

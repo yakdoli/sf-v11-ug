@@ -1,0 +1,55 @@
+﻿<html><h1>Image Overlay</h1>
+
+<p>This sample illustrates how to draw an image over the <strong>TreeViewAdv</strong>.</p>
+
+<p><div align=center><img src="images/sample.PNG" alt="Image Overlay Demo" title="" /></div></p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+	<li>The <strong>TreeViewAdv</strong>&#39;s <strong>OwnerDrawNodes</strong> property has to be turned 
+	<em>ON</em> in order to draw the image.</li>
+	<li>A selected node can be highlighted by overlaying its existing image with another 
+image; this is done by handling the 
+<strong>AfterNodePaint</strong> event.</li>
+	<li>To overlay an image, the <strong>Graphic&#39;</strong>s <strong>DrawImage</strong> method 
+is used to draw the specified image object at the specified location with a specified size.</li>
+</ul>
+
+
+<Nodes StateImageX/LeftImagesX/RightImagesX property plays a great role in setting the type of ImageOverlay</p>
+
+<p><strong>Overlaying State Images</strong></p>
+
+<pre><code>
+private void treeViewAdv1_AfterNodePaint(object sender, Syncfusion.Windows.Forms.Tools.TreeNodeAdvPaintEventArgs e)
+{
+TreeNodeAdv node = this.treeViewAdv1.SelectedNode;
+Point point = new Point(node.StateImageX, node.TextAndImageBounds.Y);
+e.Graphics.DrawImage(imageList1.Images[4], point);
+}
+</code></pre>
+
+<p><strong>Overlaying Left Images</strong></p>
+
+<pre><code>
+private void treeViewAdv1_AfterNodePaint(object sender, Syncfusion.Windows.Forms.Tools.TreeNodeAdvPaintEventArgs e)
+{
+TreeNodeAdv node = this.treeViewAdv1.SelectedNode;
+Point point = new Point(node.LeftImagesX, node.TextAndImageBounds.Y);
+e.Graphics.DrawImage(imageList1.Images[4], point);
+}
+</code></pre>
+
+<p><strong>Overlaying Right Images</strong></p>
+
+<pre><code>
+private void treeViewAdv1_AfterNodePaint(object sender, Syncfusion.Windows.Forms.Tools.TreeNodeAdvPaintEventArgs e)
+{
+TreeNodeAdv node = this.treeViewAdv1.SelectedNode;
+Point point = new Point(Point point=new Point(node.RightImagesX,node.TextAndImageBounds.Y);
+e.Graphics.DrawImage(imageList1.Images[4], point);
+}
+</code></pre>
+
+</html>
+

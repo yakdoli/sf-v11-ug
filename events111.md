@@ -1,0 +1,43 @@
+::: {style="DISPLAY: none"}
+[](ms-xhelp:///?Id=d2h_url_template){#d2h_url_template}![](!package_url!){#d2h_package_url style="WIDTH: 0px; DISPLAY: none; HEIGHT: 0px"}
+:::
+
+:::: {.d2h_secondary_topic style="PADDING-BOTTOM: 10pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"}
+##### Events {#events style="tab-stops: 0pt"}
+
+::: {align="center"}
++---------------------+-------------------------+------------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Name                | Event Type              | Event Args Parameter               | Description                                                      | Reference Link                                                                                                                                        |
++---------------------+-------------------------+------------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| PercentValueChanged | PropertyChangedCallback | DependencyPropertyChangedEventArgs | Occurs after the PercentValue of the PercentTextBox has changed. | [[PercentValueChanged]{style="COLOR: windowtext; TEXT-DECORATION: none; text-underline: none"}](ms-xhelp:///?Id=e1e14f9b-8e53-4294-84ad-fbc1d660123a) |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
++---------------------+-------------------------+------------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| TextChanged         | TextChangedEventHandler | TextChangedEventArgs               | Occurs when the text changes in the PercentTextBox.              | [[TextChanged]{style="COLOR: windowtext; TEXT-DECORATION: none; text-underline: none"}](ms-xhelp:///?Id=b39c1935-3a38-473e-aa0d-badc81dba430)         |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
++---------------------+-------------------------+------------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CultureChanged      | PropertyChangedCallback | DependencyPropertyChangedEventArgs | Occurs after the Culture of the PercentTextBox has changed.      | [[CultureChanged]{style="COLOR: windowtext; TEXT-DECORATION: none; text-underline: none"}](ms-xhelp:///?Id=0148783f-96ad-4e7c-9092-d7ef1d2c1db8)      |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
++---------------------+-------------------------+------------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| MaxValueChanged     | PropertyChangedCallback | DependencyPropertyChangedEventArgs | Occurs after the MaxValue of the PercentTextBox has changed.     | [[MaxValueChanged]{style="COLOR: windowtext; TEXT-DECORATION: none; text-underline: none"}](ms-xhelp:///?Id=63bb3542-6eb9-4944-bdf6-d5b14ab974e1)     |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
++---------------------+-------------------------+------------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| MinValueChanged     | PropertyChangedCallback | DependencyPropertyChangedEventArgs | Occurs after the MinValue of the PercentTextBox has changed.     | [[MinValueChanged]{style="COLOR: windowtext; TEXT-DECORATION: none; text-underline: none"}](ms-xhelp:///?Id=2089139a-91a3-4493-970c-6f6a36cf8e9c)     |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
++---------------------+-------------------------+------------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SelectionChanged    | RoutedEventHandler      | RoutedEventArgs                    | Occurs when the text selection has changed.                      | [[SelectionChanged]{style="COLOR: windowtext; TEXT-DECORATION: none; text-underline: none"}](ms-xhelp:///?Id=40ea85e9-5b0b-454e-ad73-03dc935e504e)    |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
+|                     |                         |                                    |                                                                  |                                                                                                                                                       |
++---------------------+-------------------------+------------------------------------+------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+:::
+
+ 
+
+ 
+
+[]{#related-topics}
+::::

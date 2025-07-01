@@ -1,0 +1,32 @@
+<html><h1>Dates in  a Data Set</h1>
+
+<p>This sample demonstrates binding a chart series to a data set with date-time values.</p>
+
+<div align=center><img src="images/sample.png" alt="DateDataBinding Image" title="" /></div>
+<p><div align=center><TABLE><TR>
+		<TD align=center><b>Data-Bound Chart</b></TD>
+	</TR>
+		
+		<tr><td style="height:5"> </td></tr>
+		</TABLE></div></p>
+
+<p><strong>Features:</strong> </p>
+
+<ul>
+	<li><b>Chart Data-Bind Model</b>
+<p><b>ChartDataBindModel</b> allows a data source to bind with a chart series.
+<font color="#8D2E1C"><pre><code>
+ChartDataBindModel model = new ChartDataBindModel(this.prodDs1,"Products");
+model.XName = "ExpiresDate";
+model.YNames = new string[]{"Quantity"};
+series.SeriesModel = model;
+</code></pre></font></p>
+
+<p>Since the values in the data set are of the date-time type, the value type of 
+the primary x-axis is set as <strong>DateTime</strong>.
+<font color="#8D2E1C"><pre><code>
+this.chartControl1.PrimaryXAxis.ValueType = ChartValueType.DateTime;  
+</code></pre></font></p>
+</li>
+</ul>
+</html>

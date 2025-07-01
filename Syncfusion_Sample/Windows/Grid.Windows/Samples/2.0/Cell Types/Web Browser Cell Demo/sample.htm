@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20081230;3312942">
+	<META NAME="CHANGED" CONTENT="20081230;3324812">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Web Browser Cell Demo</H1>
+<P>This demo illustrates hosting a Web browser in a grid cell. 
+</P>
+<P ALIGN=LEFT>An event log is implemented in addition, to show the order of current cell
+events that are raised and the values present in cells as events occur. Mouse
+events can be viewed as well.
+</P>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="WebBrowser Cells screenshot" ALIGN=BOTTOM  BORDER=0>
+</P>
+<P><FONT COLOR="#000000"><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>A Web
+	browser can be placed in a grid cell by setting its <STRONG>CellType</STRONG> to &quot;Control&quot;.</P>	
+<PRE STYLE="margin-left: 0.75in"><FONT COLOR="#800000"> this.gridControl1[2,2].CellType = &quot;Control&quot;;</FONT></PRE>
+    <LI><P>Assign the web browser instance to the grid as follows.
+<PRE STYLE="margin-left: 0.75in"><FONT COLOR="#800000"> this.gridControl1[2,2].Control = this.axWebBrowser1;</FONT> </PRE>
+</UL>
+<P STYLE="margin-left: 0.40in"><STRONG>Note:</STRONG> &quot;axWebBrowser1&quot; is an instance of <STRONG>AxSHDocVw.AxWebBrowser()</STRONG>.</P>
+<PRE STYLE="margin-left: 0.75in; margin-bottom: 0.2in; text-align: left"><FONT COLOR="#8d2e1c"><FONT COLOR="#800000"> this.axWebBrowser1 = new AxSHDocVw.AxWebBrowser();  </PRE>
+</BODY>
+</HTML>

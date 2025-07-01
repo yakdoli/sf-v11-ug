@@ -1,0 +1,45 @@
+﻿<html>
+ 
+ <head>
+ <style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+ </head>
+
+ <h1>Seat Reservation</h1>
+ <p>	This sample demonstrates the flexibility of the diagram nodes by simulating a seat reservation system.</p>
+
+ <div align=center><img src="images/sample.png" alt="seat Image" title="seat resevation system" /></div>
+ 
+ <p><strong>Features</strong></p>
+ <ul>
+ <li>	You can select and deselect the desired seats by simply clicking on the seats and then click the &quot;Submit&quot; button to reserve a selection.</li>
+ </ul>
+<ul><p>The following code illustrate how to reserve your selection.</p>
+<p><font color="#8D2E1C"><pre><code>
+ //Reserve your selection
+ private void btnSubmit_Click(object sender, EventArgs e)
+ {
+   diagram1.BeginUpdate();
+   lblSeatsReserved.Text = "";
+   foreach (object val in selectedSeats)
+   {
+     Node node1 = diagram1.Model.Nodes.FindNodeByName(val.ToString());
+     seatsReserved.Add(node1.Name, "Reserved");
+     Syncfusion.Windows.Forms.Diagram.Rectangle rect = node1 as Syncfusion.Windows.Forms.Diagram.Rectangle;
+     rect.FillStyle.Color = Color.FromArgb(143, 160, 194);
+     if (lblSeatsReserved.Text != "")
+        lblSeatsReserved.Text += ", " + node1.Name;
+     else
+        lblSeatsReserved.Text = node1.Name;
+   }
+   selectedSeats.Clear();
+   diagram1.EndUpdate();
+   newSelection = true;
+ }
+</code></pre></font></p></ul>
+
+ 
+</html>

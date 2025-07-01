@@ -1,0 +1,45 @@
+<html><h1>Element CSS</h1>
+
+<p>This sample shows how a style is applied to a HTML element in the HTMLUI control at run time.</p>
+
+
+<p><p align=center>
+<img src="images/sample.png" title="" width="591" height="433"/></p>
+
+<p><strong>Features</strong>:</p>
+
+<ul>
+	<li>
+	<p>The HTMLUI control allows the user to add an attribute to a HTML element and also access its values at runtime with the help of the <strong>Attributes</strong> 
+property associated with the HTML element.</p></li>
+<li><p>By accessing this property, the user can check whether the specified attribute is present in the HTML element with the help of 
+the<strong> elem.Attributes.Contains(string attributeName)</strong> method.</p>
+</li>
+<li><p>If the specified attribute is not present, the user can add the attribute with the help of the <strong>Attributes.Add(string attributeName)</strong> method and apply the required style.</p></li>
+</ul>
+<br/>
+<p>Here is the code that adds the attribute at run time and sets the style for the element.</p>
+
+<p><font color="#8D2E1C"><pre>   
+	BaseElement elem = this.htmluiControl1.GetElementAtClientPoint(e.X,e.Y) as BaseElement;
+	if(elem.Attributes.Contains("class")==false)
+	{
+		elem.Attributes.Add("class");
+	}
+	if(elem.Attributes["class"] != null)
+	{
+		if(radioButton1.Checked == true)
+		{
+			elem.Attributes["class"].Value = "tttRed";
+		}
+		else if(radioButton2.Checked == true)
+		{
+			elem.Attributes["class"].Value = "tttBlack";
+		}
+		else
+		{
+			MessageBox.Show("Check a style for the elements display.");
+		}
+	}
+ </pre></font></p>	
+</html>

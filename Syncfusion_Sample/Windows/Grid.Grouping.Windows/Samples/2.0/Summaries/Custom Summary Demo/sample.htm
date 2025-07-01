@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20090103;2311621">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Custom Summary Demo</H1>
+<P>This sample demonstrates the implementation of custom summaries
+and custom counters. 
+</P>
+<P ALIGN=LEFT><FONT SIZE=4><B>Features:</B></FONT></P>
+<UL>
+	<LI><P>In this image, the last two columns show the custom counters</P>
+	<LI><P>One counter automatically counts the quantity of all the
+	records while the other counter counts the quantity of only the
+	visible records (with a filter set [UnitPrice] &lt;&gt; 20).</P>
+	<LI><P>Changing the quantity in one record will automatically update
+	all subsequent records.</P>
+	<LI><P>Examples for custom summaries are shown at the bottom of the
+	grid.</P>
+	<LI><P>A simple custom summary counts only the total value while an
+	advanced summary can create a vector of values and perform
+	statistical functions.</P>
+</UL>
+<P ALIGN=CENTER><img src="images/sample.png" NAME="graphics1" ALT="CustomSummary" ALIGN=BOTTOM  BORDER=0>
+</P>
+<UL>
+	<P>The following code shows how to set up an integrated summary.</P>
+	<PRE><FONT COLOR="#8d2e1c">                GridSummaryColumnDescriptor sd0 = new GridSummaryColumnDescriptor();</FONT>
+<FONT COLOR="#8d2e1c">                sd0.DataMember = &quot;Quantity&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                sd0.DisplayColumn = &quot;Quantity&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                sd0.Format = &quot;{Average:#.00}&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                sd0.SummaryType = SummaryType.DoubleAggregate;</FONT>
+<FONT COLOR="#8d2e1c">        </FONT>
+
+<FONT COLOR="#8d2e1c">        </FONT>
+<FONT COLOR="#8d2e1c">                // Adding SummaryRow with the SummaryColumn.</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.TableDescriptor.SummaryRows.Add(new GridSummaryRowDescriptor(&quot;Row 0&quot;, &quot;Average&quot;, sd0));  </FONT></PRE><P>
+	The following code shows how to set up custom summaries.</P>
+	<PRE><FONT COLOR="#8d2e1c">                GridSummaryColumnDescriptor sd3 = new GridSummaryColumnDescriptor();</FONT>
+<FONT COLOR="#8d2e1c">                sd3.Name = &quot;QuantityMedian&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                sd3.DataMember = &quot;Quantity&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                sd3.DisplayColumn = &quot;Quantity&quot;;</FONT>
+<FONT COLOR="#8d2e1c">                sd3.Format = &quot;{Median}&quot;;</FONT>
+<FONT COLOR="#8d2e1c">        </FONT>
+
+<FONT COLOR="#8d2e1c">        </FONT>
+<FONT COLOR="#8d2e1c">                // Declaring the Summary type to be Custom.</FONT>
+<FONT COLOR="#8d2e1c">                sd3.SummaryType = SummaryType.Custom;</FONT>
+<FONT COLOR="#8d2e1c">        </FONT>
+
+<FONT COLOR="#8d2e1c">        </FONT>
+<FONT COLOR="#8d2e1c">                // Adding the SummaryColumn to the SummaryRow.</FONT>
+<FONT COLOR="#8d2e1c">                this.gridGroupingControl1.TableDescriptor.SummaryRows.Add(new GridSummaryRowDescriptor(&quot;Row 3&quot;, &quot;Statistic Median&quot;, sd3));  </FONT></PRE>
+</UL>
+<P>Interactive Features:</P>
+<UL>
+	<LI>
+	<P>Subscribe to the <STRONG>Table_QueryCustomCount </STRONG>event
+	and fill in the custom counter. This event is called for by every
+	record in the table. The custom counter will increase whether or not
+	a record meets the filter criteria. 
+	</P>
+	<PRE><FONT COLOR="#8d2e1c">                private void Table_QueryCustomCount(object sender, CustomCountEventArgs e)</FONT>
+<FONT COLOR="#8d2e1c">                {</FONT>
+<FONT COLOR="#8d2e1c">                        if (e.Record is AddNewRecord)</FONT>
+<FONT COLOR="#8d2e1c">                                return;</FONT>
+<FONT COLOR="#8d2e1c">                        object obj = e.Record.GetValue(quantityFieldDescriptor);</FONT>
+<FONT COLOR="#8d2e1c">                        double quantity = Convert.ToDouble(obj);</FONT>
+<FONT COLOR="#8d2e1c">                        e.CustomCount = quantity;</FONT>
+<FONT COLOR="#8d2e1c">                }  </FONT></PRE>
+	<LI><P>Subscribe to the <STRONG>Table_QueryVisibleCustomCounter</STRONG>
+	event and fill in the visible custom counter. This event is called
+	for by every visible record in the table. The custom counter will
+	increase only for records that meet the filter criteria.</P>
+	<PRE><FONT COLOR="#8d2e1c">                private void Table_QueryVisibleCustomCount(object sender, CustomCountEventArgs e)</FONT>
+<FONT COLOR="#8d2e1c">                {</FONT>
+<FONT COLOR="#8d2e1c">                                if (e.Record is AddNewRecord)</FONT>
+<FONT COLOR="#8d2e1c">                                        return;</FONT>
+<FONT COLOR="#8d2e1c">                                object obj = e.Record.GetValue(quantityFieldDescriptor);</FONT>
+<FONT COLOR="#8d2e1c">                                double quantity = Convert.ToDouble(obj);</FONT>
+<FONT COLOR="#8d2e1c">                                e.CustomCount = quantity;</FONT>
+<FONT COLOR="#8d2e1c">                }  </FONT></PRE>
+</UL>
+</BODY>
+</HTML>
