@@ -1,6 +1,0 @@
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Grid.Grouping.Windows\Samples\2.0\Grouping\Grouping Demo\cs\bin\Release\Grouping_GGC.exe
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Grid.Grouping.Windows\Samples\2.0\Grouping\Grouping Demo\cs\bin\Release\EnvDTE.dll
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Grid.Grouping.Windows\Samples\2.0\Grouping\Grouping Demo\cs\obj\Release\Grouping_2010.csprojResolveAssemblyReference.cache
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Grid.Grouping.Windows\Samples\2.0\Grouping\Grouping Demo\cs\obj\Release\Grouping_GGC.Form1.resources
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Grid.Grouping.Windows\Samples\2.0\Grouping\Grouping Demo\cs\obj\Release\Grouping_2010.csproj.GenerateResource.Cache
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Grid.Grouping.Windows\Samples\2.0\Grouping\Grouping Demo\cs\obj\Release\Grouping_GGC.exe

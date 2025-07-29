@@ -1,6 +1,0 @@
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Autocomplete Demo\cs\bin\Release\AutoCompleteDemo.exe
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Autocomplete Demo\cs\bin\Release\EnvDTE.dll
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Autocomplete Demo\cs\obj\Release\AutoCompleteDemo_2010.csprojResolveAssemblyReference.cache
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Autocomplete Demo\cs\obj\Release\AutoCompleteDemo.Form1.resources
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Autocomplete Demo\cs\obj\Release\AutoCompleteDemo_2010.csproj.GenerateResource.Cache
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\Tools.Windows\Samples\2.0\Editors Package\Autocomplete Demo\cs\obj\Release\AutoCompleteDemo.exe

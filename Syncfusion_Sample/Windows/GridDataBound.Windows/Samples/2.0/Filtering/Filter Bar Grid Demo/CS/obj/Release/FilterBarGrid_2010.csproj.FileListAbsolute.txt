@@ -1,5 +1,0 @@
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter Bar Grid Demo\cs\bin\Release\FilterBarGrid.exe
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter Bar Grid Demo\cs\obj\Release\FilterBarGrid_2010.csprojResolveAssemblyReference.cache
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter Bar Grid Demo\cs\obj\Release\FilterBarGrid.Form1.resources
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter Bar Grid Demo\cs\obj\Release\FilterBarGrid_2010.csproj.GenerateResource.Cache
-C:\Users\ydjo\AppData\Local\Syncfusion\EssentialStudio\11.1.0.21\Windows\GridDataBound.Windows\Samples\2.0\Filtering\Filter Bar Grid Demo\cs\obj\Release\FilterBarGrid.exe
